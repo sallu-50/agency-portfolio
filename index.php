@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agency Portfolio</title>
+  <title>Marvitation</title>
   <!-- ✅ Correct Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -133,8 +133,8 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="p-6 bg-white rounded-lg shadow" data-aos="zoom-in">
           <h3 class="text-xl font-semibold text-blue-600 mb-3">Data Annotation</h3>
-          <p class="text-gray-600">Annotation Solution is a leading annotation providing service company
-            that specializes in delivering high-quality data annotation solutions
+          <p class="text-gray-600">Marveit Solution is a leading annotation providing service company
+            that specializes in delivering high-quality data Marveit solutions
             to businesses and organizations across various industries...... <a href="annotation.php" class="text-blue-600 font-bold">Reed With Details</a></p>
         </div>
         <div class="p-6 bg-white rounded-lg shadow" data-aos="zoom-in" data-aos-delay="100">

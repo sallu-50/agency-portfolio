@@ -127,7 +127,7 @@
 
   <!-- Footer -->
   <footer class="text-center py-6 text-gray-600">
-    &copy; 2025 Annotation Solution. All rights reserved.
+    &copy; 2025 Marveit Solution. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
