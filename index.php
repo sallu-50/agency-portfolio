@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marvelus IT</title>
+  <title>Marvelous IT</title>
   <!-- ✅ Correct Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -287,7 +287,7 @@
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://github.com/yourprofile" target="_blank" class="text-blue-600 text-2xl hover:text-blue-800 transition">
-          <i class="fab fa-github"></i>
+          <i class="fab fa-whatsapp"></i>
         </a>
         <a href="mailto:yourname@example.com" class="text-blue-600 text-2xl hover:text-blue-800 transition">
           <i class="fas fa-envelope"></i>
