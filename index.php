@@ -304,7 +304,7 @@
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-10 mt-20">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm">© 2025 YourAgency. All rights reserved.</p>
+      <p class="text-sm"><a href="">©</a> 2025 YourAgency. All rights reserved.</p>
       <div class="space-x-4 mt-4 md:mt-0">
         <a href="#" class="hover:underline">Privacy Policy</a>
         <a href="#" class="hover:underline">Terms of Service</a>
