@@ -11,58 +11,21 @@
 </head>
 
 <body class="bg-blue-50 text-gray-800">
-  <!-- Main Fixed Header -->
-  <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 md:py-5">
-      <h1 class="text-2xl font-bold text-blue-700 tracking-wide">YourAgency</h1>
 
-      <!-- Desktop Menu -->
-      <nav id="nav-menu" class="hidden md:flex space-x-6 text-sm">
-        <a href="#services" class="hover:text-blue-600 font-medium">Services</a>
-        <a href="#industries" class="hover:text-blue-600 font-medium">Industries</a>
-        <a href="#about" class="hover:text-blue-600 font-medium">About</a>
-        <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
-      </nav>
-
-      <!-- Call to action button (desktop only) -->
-      <a href="#contact" class="hidden md:inline-block bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:shadow-xl transition">Let’s Contact</a>
-
-      <!-- Hamburger Button (mobile only) -->
-      <button id="menu-btn" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu (hidden by default) -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-      <a href="#services" class="block px-6 py-3 border-b border-gray-200 hover:bg-blue-50">Services</a>
-      <a href="#industries" class="block px-6 py-3 border-b border-gray-200 hover:bg-blue-50">Industries</a>
-      <a href="#about" class="block px-6 py-3 border-b border-gray-200 hover:bg-blue-50">About</a>
-      <a href="#contact" class="block px-6 py-3 hover:bg-blue-50">Contact</a>
-      <a href="#contact" class="block mx-6 my-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2 rounded shadow hover:shadow-xl transition">Let’s Talk</a>
-    </nav>
-  </header>
-
-  <!-- Secondary Page Header -->
-  <div class="pt-32 md:pt-36">
-    <a href="home.php">
-      <header class="text-center bg-white shadow">
-        <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mb-4">Annotation Services</h1>
-        <h3 class="text-lg md:text-xl text-gray-600">High Quality Data Annotation Service Providers</h3>
-      </header>
-    </a>
-  </div>
-
-
+  <!-- Header -->
+  <a href="home.php">
+    <header class="text-center py-10 bg-white shadow">
+      <h1 class="text-4xl font-bold text-blue-700 mb-4">Annotation Services</h1>
+      <h3 class="text-lg text-gray-600">High Quality Data Annotation Service Providers </h3>
+    </header>
+  </a>
 
   <!-- Introduction -->
   <section class="py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-blue-600 mb-4">Introduction</h2>
     <p class="text-gray-700 leading-relaxed">
-      Marveit Solution is a leading annotation providing service company that specializes
-      in delivering high-quality data Marveit solutions to businesses and organizations across
+      Annotation Solution is a leading annotation providing service company that specializes
+      in delivering high-quality data annotation solutions to businesses and organizations across
       various industries. With a team of skilled annotators and advanced machine learning technologies,
       we help our clients harness the power
       of annotated data for training, refining, and improving their AI and machine learning models.
@@ -73,7 +36,7 @@
   <section class="py-16 px-6 max-w-6xl mx-auto bg-white rounded-lg shadow" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-blue-600 mb-4">Our Mission</h2>
     <p class="text-gray-700 leading-relaxed">
-      As Marveit Solution, our mission is to empower businesses with accurate and reliable annotated data,
+      As Annotation Solution, our mission is to empower businesses with accurate and reliable annotated data,
       enabling them to build cutting-edge AI applications and make data-driven decisions with confidence.
       We are committed to delivering exceptional annotation services that exceed our clients'
       expectations, providing them with a competitive edge in the ever-evolving technological landscape.
@@ -354,7 +317,7 @@
   <!-- solution section    -->
   <section class="py-20 bg-blue-50" id="why-choose-us">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Why Choose Marveit Solution?</h2>
+      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Why Choose Annotation Solution?</h2>
 
       <div class="grid md:grid-cols-2 gap-6 text-left" data-aos="fade-up" data-aos-delay="100">
 
@@ -441,7 +404,7 @@
 
   <!-- Footer -->
   <footer class="text-center py-6 text-gray-600">
-    &copy; 2025 Marveit Solution. All rights reserved.
+    &copy; 2025 Annotation Solution. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
