@@ -163,7 +163,7 @@
           <h3 class="text-xl font-semibold text-blue-600 mb-3">Data Annotation</h3>
           <p class="text-gray-600">Annotation Solution is a leading annotation providing service company 
             that specializes in delivering high-quality data annotation solutions
-             to businesses and organizations across various industries...... <a href="annotation.html" class="text-blue-600 font-bold">Reed With Details</a></p>
+             to businesses and organizations across various industries...... <a href="annotation.php" class="text-blue-600 font-bold">Reed With Details</a></p>
         </div>
         <div class="p-6 bg-white rounded-lg shadow" data-aos="zoom-in" data-aos-delay="100">
           <h3 class="text-xl font-semibold text-blue-600 mb-3">Web Design & Development</h3>
@@ -175,7 +175,7 @@
             Our expert digital marketing team helps your brand grow with result-driven strategies, 
             including SEO, social media marketing, paid campaigns, and content creation. 
             We connect you with your ideal audience and turn engagement into conversions.
-            <a href="d-marketting.html" class="text-blue-600 font-bold">Read With Details</a>
+            <a href="d-marketting.php" class="text-blue-600 font-bold">Read With Details</a>
           </p>
         </div>
         
