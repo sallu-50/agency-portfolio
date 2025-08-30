@@ -11,9 +11,9 @@
 </head>
 
 <body class="bg-blue-50 text-gray-800">
-  <!-- Navbar -->
+  <!-- Main Fixed Header -->
   <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 md:py-5">
       <h1 class="text-2xl font-bold text-blue-700 tracking-wide">YourAgency</h1>
 
       <!-- Desktop Menu -->
@@ -25,7 +25,7 @@
       </nav>
 
       <!-- Call to action button (desktop only) -->
-      <a href="" id="#contact" class="hidden md:inline bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-xl transition">Let’s Contact</a>
+      <a href="#contact" class="hidden md:inline-block bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:shadow-xl transition">Let’s Contact</a>
 
       <!-- Hamburger Button (mobile only) -->
       <button id="menu-btn" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle menu">
@@ -37,20 +37,22 @@
 
     <!-- Mobile Menu (hidden by default) -->
     <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-      <a href="#services" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Services</a>
-      <a href="#industries" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Industries</a>
-      <a href="#about" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">About</a>
-      <a href="#contact" class="block px-4 py-3 hover:bg-blue-50">Contact</a>
-      <a href="#contact" class="block mt-2 mx-4 mb-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2 rounded shadow hover:shadow-xl transition">Let’s Talk</a>
+      <a href="#services" class="block px-6 py-3 border-b border-gray-200 hover:bg-blue-50">Services</a>
+      <a href="#industries" class="block px-6 py-3 border-b border-gray-200 hover:bg-blue-50">Industries</a>
+      <a href="#about" class="block px-6 py-3 border-b border-gray-200 hover:bg-blue-50">About</a>
+      <a href="#contact" class="block px-6 py-3 hover:bg-blue-50">Contact</a>
+      <a href="#contact" class="block mx-6 my-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2 rounded shadow hover:shadow-xl transition">Let’s Talk</a>
     </nav>
   </header>
-  <!-- Header -->
+
+  <!-- Secondary Page Header -->
   <a href="home.php">
-    <header class="text-center py-10 bg-white shadow">
-      <h1 class="text-4xl font-bold text-blue-700 mb-4">Annotation Services</h1>
-      <h3 class="text-lg text-gray-600">High Quality Data Annotation Service Providers </h3>
+    <header class="text-center py-12 md:py-16 bg-white shadow">
+      <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mb-4">Annotation Services</h1>
+      <h3 class="text-lg md:text-xl text-gray-600">High Quality Data Annotation Service Providers</h3>
     </header>
   </a>
+
 
   <!-- Introduction -->
   <section class="py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
