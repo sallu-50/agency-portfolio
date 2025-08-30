@@ -46,12 +46,15 @@
   </header>
 
   <!-- Secondary Page Header -->
-  <a href="home.php">
-    <header class="text-center py-12 md:py-16 bg-white shadow">
-      <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mb-4">Annotation Services</h1>
-      <h3 class="text-lg md:text-xl text-gray-600">High Quality Data Annotation Service Providers</h3>
-    </header>
-  </a>
+  <div class="pt-32 md:pt-36">
+    <a href="home.php">
+      <header class="text-center bg-white shadow">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mb-4">Annotation Services</h1>
+        <h3 class="text-lg md:text-xl text-gray-600">High Quality Data Annotation Service Providers</h3>
+      </header>
+    </a>
+  </div>
+
 
 
   <!-- Introduction -->
