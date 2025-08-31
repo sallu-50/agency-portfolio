@@ -74,7 +74,7 @@
       </nav>
 
       <!-- Call to action button (desktop only) -->
-      <a href="" id="#contact" class="hidden md:inline bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-xl transition">Let’s Contact</a>
+      <a href="#contact" id="" class="hidden md:inline bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-xl transition">Let’s Contact</a>
 
       <!-- Hamburger Button (mobile only) -->
       <button id="menu-btn" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle menu">
