@@ -1,11 +1,11 @@
-<!-- annotation.php -->
+<!-- Marveit.php -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Annotation Services</title>
+  <title>Marveit Services</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
@@ -15,8 +15,8 @@
   <!-- Header -->
   <a href="home.php">
     <header class="text-center py-10 bg-white shadow">
-      <h1 class="text-4xl font-bold text-blue-700 mb-4">Annotation Services</h1>
-      <h3 class="text-lg text-gray-600">High Quality Data Annotation Service Providers </h3>
+      <h1 class="text-4xl font-bold text-blue-700 mb-4">Marveit Services</h1>
+      <h3 class="text-lg text-gray-600">High Quality Data Marveit Service Providers </h3>
     </header>
   </a>
 
@@ -24,8 +24,8 @@
   <section class="py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-blue-600 mb-4">Introduction</h2>
     <p class="text-gray-700 leading-relaxed">
-      Annotation Solution is a leading annotation providing service company that specializes
-      in delivering high-quality data annotation solutions to businesses and organizations across
+      Marveit Solution is a leading Marveit providing service company that specializes
+      in delivering high-quality data Marveit solutions to businesses and organizations across
       various industries. With a team of skilled annotators and advanced machine learning technologies,
       we help our clients harness the power
       of annotated data for training, refining, and improving their AI and machine learning models.
@@ -36,9 +36,9 @@
   <section class="py-16 px-6 max-w-6xl mx-auto bg-white rounded-lg shadow" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-blue-600 mb-4">Our Mission</h2>
     <p class="text-gray-700 leading-relaxed">
-      As Annotation Solution, our mission is to empower businesses with accurate and reliable annotated data,
+      As Marveit Solution, our mission is to empower businesses with accurate and reliable annotated data,
       enabling them to build cutting-edge AI applications and make data-driven decisions with confidence.
-      We are committed to delivering exceptional annotation services that exceed our clients'
+      We are committed to delivering exceptional Marveit services that exceed our clients'
       expectations, providing them with a competitive edge in the ever-evolving technological landscape.
     </p>
   </section>
@@ -63,7 +63,7 @@
       <div class="bg-white p-4 rounded-lg shadow text-center">
         <img src="image/shahin.png" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4 shadow">
         <h3 class="text-blue-600 font-semibold">Tanvir Hossain</h3>
-        <p class="text-sm text-gray-600">Data Annotation Specialist</p>
+        <p class="text-sm text-gray-600">Data Marveit Specialist</p>
       </div>
     </div>
   </section> -->
@@ -74,16 +74,16 @@
     <div class="grid md:grid-cols-2 gap-6">
 
       <div class="p-4 bg-blue-50 rounded-lg shadow">
-        <h3 class="text-lg font-semibold text-blue-700 mb-2">Image Annotation</h3>
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Image Marveit</h3>
         <div class="text-sm text-blue-800 flex flex-wrap gap-2">
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Bounding Boxes</span>
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Semantic Segmentation</span>
-          <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Landmark Annotation</span>
+          <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Landmark Marveit</span>
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">More</span>
         </div>
       </div>
       <div class="p-4 bg-blue-50 rounded-lg shadow">
-        <h3 class="text-lg font-semibold text-blue-700 mb-2">Text Annotation</h3>
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Text Marveit</h3>
         <div class="text-sm text-blue-800 flex flex-wrap gap-2">
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Named Entity Recognitionv</span>
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Sentiment Analysis</span>
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="p-4 bg-blue-50 rounded-lg shadow">
-        <h3 class="text-lg font-semibold text-blue-700 mb-2">Video Annotation</h3>
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Video Marveit</h3>
         <div class="text-sm text-blue-800 flex flex-wrap gap-2">
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Object Tracking</span>
           <span class="bg-white px-2 py-1 rounded-full shadow text-xs">Activity Recognition</span>
@@ -105,7 +105,7 @@
   <!-- Image Section -->
   <section class="py-20 bg-blue-50" id="gallery">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Image Annotation</h2>
+      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Image Marveit</h2>
       <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
 
         <div class="overflow-hidden rounded-lg shadow-lg">
@@ -124,14 +124,14 @@
     </div>
   </section>
   <!-- Text Section -->
-  <section class="py-20 bg-blue-50" id="text-annotation">
+  <section class="py-20 bg-blue-50" id="text-Marveit">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Text Annotation</h2>
+      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Text Marveit</h2>
       <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
 
         <!-- Card 1 -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:ring-2 hover:ring-blue-300 transition">
-          <img src="images/project1.jpg" alt="NER Annotation" class="w-full h-56 object-cover">
+          <img src="images/project1.jpg" alt="NER Marveit" class="w-full h-56 object-cover">
           <div class="p-4">
             <h3 class="text-lg font-semibold text-blue-600 mb-1">Named Entity Recognition (NER)</h3>
             <p class="text-gray-600 text-sm">Identify entities like names, dates, and organizations within text data.</p>
@@ -160,9 +160,9 @@
     </div>
   </section>
   <!-- Video Section -->
-  <section class="py-20 bg-blue-50" id="video-annotation">
+  <section class="py-20 bg-blue-50" id="video-Marveit">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Video Annotation</h2>
+      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Video Marveit</h2>
 
       <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
 
@@ -279,9 +279,9 @@
           </ul>
         </div>
 
-        <!-- Step 2: Annotation -->
+        <!-- Step 2: Marveit -->
         <div class="bg-white rounded-xl shadow-lg p-6 hover:ring-2 hover:ring-blue-300 transition">
-          <h3 class="text-lg font-semibold text-blue-600 mb-2">Annotation</h3>
+          <h3 class="text-lg font-semibold text-blue-600 mb-2">Marveit</h3>
           <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
             <li>Expert human annotators</li>
             <li>Consistent and accurate labeling</li>
@@ -317,14 +317,14 @@
   <!-- solution section    -->
   <section class="py-20 bg-blue-50" id="why-choose-us">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Why Choose Annotation Solution?</h2>
+      <h2 class="text-3xl font-bold text-blue-700 mb-10" data-aos="fade-up">Why Choose Marveit Solution?</h2>
 
       <div class="grid md:grid-cols-2 gap-6 text-left" data-aos="fade-up" data-aos-delay="100">
 
         <!-- Point 1 -->
         <div class="bg-white rounded-xl shadow-lg p-6 hover:ring-2 hover:ring-blue-300 transition">
           <h3 class="text-lg font-semibold text-blue-600 mb-2">Highly Skilled Annotators</h3>
-          <p class="text-gray-600 text-sm">Our team comprises skilled annotators with expertise in various domains, ensuring accurate and consistent annotations.</p>
+          <p class="text-gray-600 text-sm">Our team comprises skilled annotators with expertise in various domains, ensuring accurate and consistent Marveits.</p>
         </div>
 
         <!-- Point 2 -->
@@ -336,36 +336,36 @@
         <!-- Point 3 -->
         <div class="bg-white rounded-xl shadow-lg p-6 hover:ring-2 hover:ring-blue-300 transition">
           <h3 class="text-lg font-semibold text-blue-600 mb-2">Scalable Solutions</h3>
-          <p class="text-gray-600 text-sm">Whether it's a small project or a large-scale annotation task, we have the resources and infrastructure to handle projects of any size.</p>
+          <p class="text-gray-600 text-sm">Whether it's a small project or a large-scale Marveit task, we have the resources and infrastructure to handle projects of any size.</p>
         </div>
 
         <!-- Point 4 -->
         <div class="bg-white rounded-xl shadow-lg p-6 hover:ring-2 hover:ring-blue-300 transition">
           <h3 class="text-lg font-semibold text-blue-600 mb-2">Quality Assurance</h3>
-          <p class="text-gray-600 text-sm">Our stringent quality control processes guarantee reliable annotations, meeting the highest industry standards.</p>
+          <p class="text-gray-600 text-sm">Our stringent quality control processes guarantee reliable Marveits, meeting the highest industry standards.</p>
         </div>
 
         <!-- Point 5 -->
         <div class="bg-white rounded-xl shadow-lg p-6 hover:ring-2 hover:ring-blue-300 transition">
           <h3 class="text-lg font-semibold text-blue-600 mb-2">Customized Solutions</h3>
-          <p class="text-gray-600 text-sm">We understand that every project is unique, and we tailor our annotation services to suit each client's specific requirements.</p>
+          <p class="text-gray-600 text-sm">We understand that every project is unique, and we tailor our Marveit services to suit each client's specific requirements.</p>
         </div>
 
       </div>
     </div>
   </section>
   <!-- platform section  -->
-  <section class="bg-white py-12 px-6 lg:px-24" id="annotation-platforms">
+  <section class="bg-white py-12 px-6 lg:px-24" id="Marveit-platforms">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">🛠️ Annotation Platforms We Support</h2>
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">🛠️ Marveit Platforms We Support</h2>
       <p class="text-gray-600 mb-10">
-        We utilize a range of industry-standard annotation tools to ensure quality, flexibility, and seamless workflow integration.
+        We utilize a range of industry-standard Marveit tools to ensure quality, flexibility, and seamless workflow integration.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div class="bg-blue-50 rounded-xl p-6 shadow">
           <h3 class="text-xl font-semibold text-gray-800 mb-2">CVAT</h3>
-          <p class="text-gray-600 text-sm">Open-source and customizable. Perfect for video and image annotations.</p>
+          <p class="text-gray-600 text-sm">Open-source and customizable. Perfect for video and image Marveits.</p>
         </div>
 
         <div class="bg-green-50 rounded-xl p-6 shadow">
@@ -375,7 +375,7 @@
 
         <div class="bg-yellow-50 rounded-xl p-6 shadow">
           <h3 class="text-xl font-semibold text-gray-800 mb-2">LabelMe</h3>
-          <p class="text-gray-600 text-sm">Lightweight tool ideal for quick polygonal annotations.</p>
+          <p class="text-gray-600 text-sm">Lightweight tool ideal for quick polygonal Marveits.</p>
         </div>
 
         <div class="bg-purple-50 rounded-xl p-6 shadow">
@@ -386,7 +386,7 @@
 
       <div class="mt-10">
         <p class="text-md text-gray-700 font-medium">
-          🔹 Have a preferred tool? We’re flexible! We also support any annotation platforms provided by our clients.
+          🔹 Have a preferred tool? We’re flexible! We also support any Marveit platforms provided by our clients.
         </p>
       </div>
     </div>
@@ -404,7 +404,7 @@
 
   <!-- Footer -->
   <footer class="text-center py-6 text-gray-600">
-    &copy; 2025 Annotation Solution. All rights reserved.
+    &copy; 2025 Marveit Solution. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
