@@ -94,7 +94,7 @@
     <div class="grid md:grid-cols-3 gap-8">
       <div class="p-6 bg-white rounded-lg shadow" data-aos="zoom-in">
         <h3 class="text-xl font-semibold text-blue-600 mb-3">Data Annotation</h3>
-        <p class="text-gray-600">High-quality data labeling for AI/ML projects. <a href="annotation.html" class="text-blue-600 font-bold">Learn More about Data Annotation</a></p>
+        <p class="text-gray-600">High-quality data labeling for AI/ML projects. <a href="annotation.php" class="text-blue-600 font-bold">Learn More about Data Annotation</a></p>
       </div>
       <div class="p-6 bg-white rounded-lg shadow" data-aos="zoom-in" data-aos-delay="100">
         <h3 class="text-xl font-semibold text-blue-600 mb-3">Web Design & Development</h3>
@@ -102,7 +102,7 @@
       </div>
       <div class="p-6 bg-white rounded-lg shadow" data-aos="zoom-in" data-aos-delay="200">
         <h3 class="text-xl font-semibold text-blue-600 mb-3">Digital Marketing</h3>
-        <p class="text-gray-600">SEO, social media, and content strategies to boost growth. <a href="d-marketting.html" class="text-blue-600 font-bold">Learn More about Digital Marketing</a></p>
+        <p class="text-gray-600">SEO, social media, and content strategies to boost growth. <a href="d-marketting.php" class="text-blue-600 font-bold">Learn More about Digital Marketing</a></p>
       </div>
     </div>
   </div>

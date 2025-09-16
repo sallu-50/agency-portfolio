@@ -13,7 +13,7 @@
 <body class="bg-blue-50 text-gray-800">
 
   <!-- Header -->
-  <a href="index.html">
+  <a href="index.php">
     <header class="text-center py-10 bg-white shadow">
       <h1 class="text-4xl font-bold text-blue-700 mb-4">Marvelous IT <br>Annotation Services</h1>
       <h3 class="text-lg text-gray-600">High Quality Data Marvelous IT Service Providers </h3>
