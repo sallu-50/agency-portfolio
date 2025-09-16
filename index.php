@@ -238,17 +238,30 @@
         </div>
 
         <!-- Team Member 3 -->
-        <div class="bg-blue-50 rounded-xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="200">
-          <img src="image/salman.png" alt="Team Member" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Abdullah Al Salman</h3>
-          <p class="text-blue-600 mb-2">Full-Stack Laravel Developer</p>
-          <p class="text-gray-600 text-sm">
-            I'm a creative and passionate full-stack developer who loves building smart,
-            secure, and scalable web applications. I take pride in writing clean code
-            and delivering high-quality work.
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="200">
+  <img src="image/salman.png" alt="Team Member" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+  <h3 class="text-xl font-semibold text-gray-800">Abdullah Al Salman</h3>
+  <p class="text-blue-600 mb-2">Full-Stack Laravel Developer</p>
+  <p class="text-gray-600 text-sm mb-4">
+    I'm a creative and passionate full-stack developer who loves building smart,
+    secure, and scalable web applications. I take pride in writing clean code
+    and delivering high-quality work.
+  </p>
 
-          </p>
-        </div>
+  <!-- Social Icons -->
+  <div class="flex justify-center space-x-4">
+    <a href="https://facebook.com/" target="_blank" class="text-blue-600 hover:text-blue-800">
+      <i class="fab fa-facebook text-2xl"></i>
+    </a>
+    <a href="https://linkedin.com/" target="_blank" class="text-blue-600 hover:text-blue-800">
+      <i class="fab fa-linkedin text-2xl"></i>
+    </a>
+    <a href="https://github.com/" target="_blank" class="text-gray-800 hover:text-black">
+      <i class="fab fa-github text-2xl"></i>
+    </a>
+  </div>
+</div>
+
 
 
       </div>
