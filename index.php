@@ -185,12 +185,15 @@
 
       <!-- Data Annotation Team -->
       <div class="team-panel grid md:grid-cols-3 gap-10" data-tab-content="annotation">
-        <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
-          <p class="text-blue-600 mb-2">Sales & Marketing, ML</p>
-          <p class="text-gray-600 text-sm">Sales & Marketing, Machine Learning</p>
-        </div>
+       <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
+          <img src="https://randomuser.me/api/portraits/women/45.jpg" 
+              alt="Team Member" 
+              class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+              <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
+              <p class="text-blue-600 mb-2">Sales & Marketing, ML</p>
+              <p class="text-gray-600 text-sm">Sales & Marketing, Machine Learning</p>
+          </div>
+
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
           <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
           <h3 class="text-xl font-semibold text-gray-800">Ebrahim Khalilullah</h3>
