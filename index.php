@@ -187,7 +187,7 @@
       <div class="team-panel grid md:grid-cols-3 gap-10" data-tab-content="annotation">
        <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-center">
   <!-- Women Icon -->
-          <img src="image/nishat.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+          <img src="image/nishat2.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
 
   <!-- Texts -->
           <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
