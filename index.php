@@ -274,7 +274,7 @@
       </div>
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
         <h3 class="text-xl font-semibold text-blue-600 mb-2">Phone</h3>
-        <p class="text-gray-700">+880 1324869686 </p>
+        <p class="text-gray-700">+880 1753499696</p>
         <p class="text-gray-700"> <strong>Whatsapp</strong> </p>
       </div>
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="300">
