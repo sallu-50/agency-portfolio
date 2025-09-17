@@ -185,14 +185,24 @@
 
       <!-- Data Annotation Team -->
       <div class="team-panel grid md:grid-cols-3 gap-10" data-tab-content="annotation">
-       <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="https://randomuser.me/api/portraits/women/45.jpg" 
-              alt="Team Member" 
-              class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-              <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
-              <p class="text-blue-600 mb-2">Sales & Marketing, ML</p>
-              <p class="text-gray-600 text-sm">Sales & Marketing, Machine Learning</p>
+       <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-center">
+  <!-- Women Icon -->
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center shadow">
+            <!-- SVG Women Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                fill="currentColor" 
+                viewBox="0 0 24 24" 
+                class="w-12 h-12 text-pink-600">
+              <path d="M12 2a5 5 0 1 1-4.9 6h-.1a6 6 0 0 0 0 12h1v2a1 1 0 1 0 2 0v-2h2v2a1 1 0 1 0 2 0v-2h1a6 6 0 0 0 0-12h-.1A5 5 0 0 1 12 2z"/>
+            </svg>
           </div>
+
+  <!-- Texts -->
+          <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
+          <p class="text-blue-600 mb-2">Sales & Marketing, ML</p>
+          <p class="text-gray-600 text-sm">Sales & Marketing, Machine Learning</p>
+        </div>
+
 
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
           <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
