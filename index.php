@@ -193,7 +193,7 @@
               <div class="user-container">
                 <!-- User without uploaded avatar: default avatar shown -->
                 <img src="https://via.placeholder.com/80?text=User" alt="Default Avatar" class="avatar">
-                <span class="user-name">Bob</span>
+                
               </div>
           </div>
 
