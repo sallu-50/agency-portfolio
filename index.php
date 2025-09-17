@@ -186,23 +186,24 @@
       <!-- Data Annotation Team -->
       <div class="team-panel grid md:grid-cols-3 gap-10" data-tab-content="annotation">
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+          <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
+          <p class="text-blue-600 mb-2">Sales & Marketing, ML</p>
+          <p class="text-gray-600 text-sm">Sales & Marketing, Machine Learning</p>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
           <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Hasan Mahmud</h3>
-          <p class="text-blue-600 mb-2">Team Lead</p>
-          <p class="text-gray-600 text-sm">Leading AI data annotation team.</p>
+          <h3 class="text-xl font-semibold text-gray-800">Ebrahim Khalilullah</h3>
+          <p class="text-blue-600 mb-2">Project Manager</p>
+          <p class="text-gray-600 text-sm">Project lead & leading AI data annotation team.</p>
         </div>
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
           <img src="image/shahin.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">MD. Shahin Alom</h3>
-          <p class="text-blue-600 mb-2">Annotation Specialist</p>
-          <p class="text-gray-600 text-sm">Expert in labeling and quality control.</p>
+          <h3 class="text-xl font-semibold text-gray-800">Md Abu Elias</h3>
+          <p class="text-blue-600 mb-2">Team Leader</p>
+          <p class="text-gray-600 text-sm">Leading data annotation team.</p>
         </div>
-        <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Jahid Hasan</h3>
-          <p class="text-blue-600 mb-2">Data Analyst</p>
-          <p class="text-gray-600 text-sm">Handles data preprocessing & verification.</p>
-        </div>
+        
       </div>
 
       <!-- Web Development Team -->
