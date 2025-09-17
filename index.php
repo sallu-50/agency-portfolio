@@ -187,15 +187,7 @@
       <div class="team-panel grid md:grid-cols-3 gap-10" data-tab-content="annotation">
        <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-center">
   <!-- Women Icon -->
-          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center shadow">
-            <!-- SVG Women Icon -->
-         
-              <div class="user-container">
-                <!-- User without uploaded avatar: default avatar shown -->
-                <img src="https://via.placeholder.com/80?text=User" alt="Default Avatar" class="avatar">
-                
-              </div>
-          </div>
+          <img src="image/nishat.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
 
   <!-- Texts -->
           <h3 class="text-xl font-semibold text-gray-800">Nishat Tasnim</h3>
