@@ -189,12 +189,12 @@
   <!-- Women Icon -->
           <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center shadow">
             <!-- SVG Women Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                fill="currentColor" 
-                viewBox="0 0 24 24" 
-                class="w-12 h-12 text-pink-600">
-              <path d="M12 2a5 5 0 1 1-4.9 6h-.1a6 6 0 0 0 0 12h1v2a1 1 0 1 0 2 0v-2h2v2a1 1 0 1 0 2 0v-2h1a6 6 0 0 0 0-12h-.1A5 5 0 0 1 12 2z"/>
-            </svg>
+         
+              <div class="user-container">
+                <!-- User without uploaded avatar: default avatar shown -->
+                <img src="https://via.placeholder.com/80?text=User" alt="Default Avatar" class="avatar">
+                <span class="user-name">Bob</span>
+              </div>
           </div>
 
   <!-- Texts -->
@@ -211,7 +211,7 @@
           <p class="text-gray-600 text-sm">Project lead & leading AI data annotation team.</p>
         </div>
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="image/shahin.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+          <img src="image/park.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
           <h3 class="text-xl font-semibold text-gray-800">Md Abu Elias</h3>
           <p class="text-blue-600 mb-2">Team Leader</p>
           <p class="text-gray-600 text-sm">Leading data annotation team.</p>
