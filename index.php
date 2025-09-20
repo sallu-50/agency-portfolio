@@ -27,7 +27,7 @@
 <!-- Navbar -->
 <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur z-50 shadow-sm">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-2xl font-bold text-blue-700 tracking-wide">Marvelous IT</h1>
+    <img src="image/Marveit.png" alt=" Logo" class="h-10 w-auto">
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-sm">
