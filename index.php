@@ -27,7 +27,7 @@
 <!-- Navbar -->
 <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur z-50 shadow-sm">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <img src="image/Marveit 2.svg" alt=" Logo" class="h-10 w-auto">
+    <img src="image/salman.svg" alt=" Logo" class="h-10 w-auto">
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-sm">
