@@ -60,7 +60,7 @@
 </header>
 
 <!-- Hero Section -->
-<section class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1920&auto=format&fit=crop');">
+<section class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1920&h=1080&crop=format&fit=crop');">
   <div class="absolute inset-0 gradient-overlay"></div>
   <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
     <h2 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">Build Data You Can Trust</h2>
