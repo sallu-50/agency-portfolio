@@ -185,7 +185,7 @@
 
       <!-- Data Annotation Team -->
       <div class="team-panel grid md:grid-cols-3 gap-10" data-tab-content="annotation">
-       <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-center">
+        <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-center">
   <!-- Women Icon -->
           <img src="image/nishat2.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
 
@@ -213,33 +213,44 @@
 
       <!-- Web Development Team -->
       <div class="team-panel grid md:grid-cols-3 gap-10 hidden" data-tab-content="web">
+          <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
+            <img src="image/salman.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+            <h3 class="text-xl font-semibold text-gray-800">Abdullah Al Salman</h3>
+            <p class="text-blue-600 mb-2">Full-Stack Laravel Developer</p>
+            <p class="text-gray-600 text-sm">
+              Passionate about crafting scalable, secure, and high-performance web applications. 
+              Experienced in turning ideas into powerful digital solutions with clean code and modern technologies.
+            </p>
+          </div>
+
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="image/salman.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Abdullah Al Salman</h3>
-          <p class="text-blue-600 mb-2">Full-Stack Laravel Developer</p>
-          <p class="text-gray-600 text-sm">Building smart, scalable web apps.</p>
+          <img src="image/ratul.jpeg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+          <h3 class="text-xl font-semibold text-gray-800">Ratul Raihan</h3>
+          <p class="text-blue-600 mb-2">Frontend & UI/UX Developer</p>
+          <p class="text-gray-600 text-sm">
+            Specialized in Next.js & React development with a strong focus on clean design and seamless user experiences. 
+            Skilled in Tailwind CSS, Bootstrap 5, HTML5, and CSS3 to build modern, responsive web applications. 🌐
+          </p>
+
         </div>
-        <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="https://randomuser.me/api/portraits/men/50.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Rashed Khan</h3>
-          <p class="text-blue-600 mb-2">Frontend Developer</p>
-          <p class="text-gray-600 text-sm">Vue.js & React specialist.</p>
-        </div>
-        <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
+        <!-- <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
           <img src="https://randomuser.me/api/portraits/women/55.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
           <h3 class="text-xl font-semibold text-gray-800">Farzana Akter</h3>
           <p class="text-blue-600 mb-2">Backend Developer</p>
           <p class="text-gray-600 text-sm">Laravel & API integration expert.</p>
-        </div>
+        </div> -->
       </div>
 
       <!-- Digital Marketing Team -->
       <div class="team-panel grid md:grid-cols-3 gap-10 hidden" data-tab-content="marketing">
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-          <img src="https://randomuser.me/api/portraits/women/33.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
-          <h3 class="text-xl font-semibold text-gray-800">Nadia Rahman</h3>
-          <p class="text-blue-600 mb-2">SEO Specialist</p>
-          <p class="text-gray-600 text-sm">Optimizes content for search engines.</p>
+          <img src="image/shahin.png" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
+          <h3 class="text-xl font-semibold text-gray-800">MD Shahin Alom</h3>
+          <p class="text-blue-600 mb-2">Digital Marketing Specialist</p>
+          <p class="text-gray-600 text-sm">
+            Expert in SEO, social media, and content strategy—helping brands grow their online presence 
+            and reach the right audience effectively.
+          </p>
         </div>
         <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
           <img src="https://randomuser.me/api/portraits/men/66.jpg" class="w-24 h-24 mx-auto rounded-full mb-4 shadow">
