@@ -25,7 +25,7 @@
 <body class="bg-gray-50 text-gray-800">
 
 <!-- Navbar -->
-<header class="fixed w-full bg-white bg-opacity-90 backdrop-blur z-50 shadow-sm">
+<header class="fixed w-full bg-white bg-opacity-40 backdrop-blur z-50 shadow-md">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
     <img src="image/salman.svg" alt=" Logo" class="h-10 w-auto">
 
@@ -60,7 +60,7 @@
 </header>
 
 <!-- Hero Section -->
-<section class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1920&h=1080&crop=format&fit=crop');">
+<section class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1920&h=400&crop=format&fit=crop');">
   <div class="absolute inset-0 gradient-overlay"></div>
   <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
     <h2 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">Build Data You Can Trust</h2>
