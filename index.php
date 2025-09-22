@@ -27,7 +27,7 @@
 <!-- Navbar -->
 <header class="fixed w-full bg-white bg-opacity-40 backdrop-blur z-50 shadow-md">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <img src="image/salman.svg" alt=" Logo" class="h-10 w-auto">
+    <img src="image/Marveit ABCD (3).svg" alt=" Logo" class="h-10 w-auto">
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-sm">
@@ -299,7 +299,7 @@
 <!-- Footer -->
 <footer class="bg-white py-10 shadow-inner mt-20">
   <div class="max-w-6xl mx-auto px-4 text-center text-gray-600">
-    <p>&copy; 2025 Marvelous IT. All rights reserved.</p>
+    <p>&copy; <?php echo date('Y'); ?> Marvelous IT. All rights reserved.</p>
     <p class="mt-2">
       <a href="#" class="hover:text-blue-600 mx-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="hover:text-blue-600 mx-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
