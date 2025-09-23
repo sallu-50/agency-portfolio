@@ -33,8 +33,10 @@
     <nav class="hidden md:flex space-x-6 text-sm">
       <a href="#services" class="hover:text-blue-600 font-medium">Services</a>
       <a href="#industries" class="hover:text-blue-600 font-medium">Industries</a>
+      <a href="#reviews" class="hover:text-blue-600 font-medium">Reviews</a>
       <a href="#about" class="hover:text-blue-600 font-medium">About</a>
       <a href="#team" class="hover:text-blue-600 font-medium">Team</a>
+      <a href="blog.php" class="hover:text-blue-600 font-medium">Blog</a>
       <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
     </nav>
 
@@ -52,8 +54,10 @@
   <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
     <a href="#services" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Services</a>
     <a href="#industries" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Industries</a>
+    <a href="#reviews" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Reviews</a>
     <a href="#about" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">About</a>
     <a href="#team" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Team</a>
+    <a href="blog.php" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Blog</a>
     <a href="#contact" class="block px-4 py-3 hover:bg-blue-50">Contact</a>
     <a href="#contact" class="block mt-2 mx-4 mb-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2 rounded shadow hover:shadow-xl transition">Let’s Talk</a>
   </nav>
@@ -66,6 +70,48 @@
     <h2 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">Build Data You Can Trust</h2>
     <p class="text-lg md:text-xl mb-6 font-light">We provide ready data services for responsible innovation</p>
     <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded shadow-lg hover:bg-gray-100 transition">Let’s Contact</a>
+  </div>
+</section>
+
+<!-- Customer Review Section -->
+<section id="reviews" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-12">What Our Clients Say</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Review 1 -->
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">Jane Doe</h4>
+            <p class="text-gray-600 text-sm">CEO, Tech Solutions Inc.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Marvelous IT transformed our data annotation process. Their attention to detail and commitment to quality are second to none. We couldn't be happier with the results."</p>
+      </div>
+      <!-- Review 2 -->
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">John Smith</h4>
+            <p class="text-gray-600 text-sm">Marketing Director, Growth Co.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"The new website is fantastic! It's fast, looks great, and has already boosted our engagement. The team was a pleasure to work with."</p>
+      </div>
+      <!-- Review 3 -->
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">Emily Johnson</h4>
+            <p class="text-gray-600 text-sm">Founder, Creative Minds</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Their digital marketing expertise has been a game-changer for us. We've seen a significant increase in leads and our online presence has never been stronger."</p>
+      </div>
+    </div>
   </div>
 </section>
 
