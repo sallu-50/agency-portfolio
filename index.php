@@ -128,9 +128,9 @@
       <a href="https://www.linkedin.com/in/abdullah-al-salman-5177bb214/" target="_blank" class="text-blue-700 hover:text-blue-900 text-xl">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
-        <p>01324869686</p>
-        <i class="fab fa-whatsapp"></i>
+      <a href="#" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
+        01324869686
+        <i class="fab fa-whatsapp"> <strong> 01324869686</strong></i>
       </a>
     </div>
   </div>
