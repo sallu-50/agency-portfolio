@@ -129,8 +129,8 @@
         <i class="fab fa-linkedin"></i>
       </a>
       <a href="#" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
-        01324869686
-        <i class="fab fa-whatsapp"> <strong> 01324869686</strong></i>
+        
+        <i class="fab fa-whatsapp"> 01324869686</i>
       </a>
     </div>
   </div>
