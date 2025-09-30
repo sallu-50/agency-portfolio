@@ -63,6 +63,58 @@
   </nav>
 </header>
 
+<!-- Premade Website Section -->
+<section id="premade-websites" class="py-20 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites</h2>
+    <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
+      Choose from our professionally designed websites. Ready to be deployed for your business.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+        <img src="https://via.placeholder.com/400x300" alt="Project 1" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Business Website</h3>
+          <p class="text-gray-600 mb-4">A professional website for your business. Includes a blog, contact form, and more.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">$499</span>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/400x300" alt="Project 2" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Store</h3>
+          <p class="text-gray-600 mb-4">A complete e-commerce solution to sell your products online.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">$999</span>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/400x300" alt="Project 3" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Portfolio Website</h3>
+          <p class="text-gray-600 mb-4">A stunning portfolio to showcase your work and attract clients.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">$299</span>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Hero Section -->
 <section class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1920&h=400=format&fit=crop');">
   <div class="absolute inset-0 gradient-overlay"></div>
