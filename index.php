@@ -72,48 +72,158 @@
     <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded shadow-lg hover:bg-gray-100 transition">Let’s Contact</a>
   </div>
 </section>
-
-<!-- Customer Review Section -->
-<section id="reviews" class="py-20 bg-white">
+<!-- Premade Website Section -->
+<section id="premade-websites" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-12">What Our Clients Say</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Review 1 -->
-      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up">
-        <div class="flex items-center mb-4">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Jane Doe</h4>
-            <p class="text-gray-600 text-sm">CEO, Tech Solutions Inc.</p>
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites</h2>
+    <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
+      Choose from our professionally designed websites. Ready to be deployed for your business.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+        <img src="https://via.placeholder.com/400x300" alt="Project 1" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Business E-Commerce Website</h3>
+          <p class="text-gray-600 mb-4">A professional website for your business. Includes a blog, contact form, and more.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">$499</span>
+
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
           </div>
         </div>
-        <p class="text-gray-600 text-sm">"Marvelous IT transformed our data annotation process. Their attention to detail and commitment to quality are second to none. We couldn't be happier with the results."</p>
       </div>
-      <!-- Review 2 -->
-      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center mb-4">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">John Smith</h4>
-            <p class="text-gray-600 text-sm">Marketing Director, Growth Co.</p>
+
+      <!-- Project 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/400x300" alt="Project 2" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Store</h3>
+          <p class="text-gray-600 mb-4">A complete e-commerce solution to sell your products online.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">$999</span>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
           </div>
         </div>
-        <p class="text-gray-600 text-sm">"The new website is fantastic! It's fast, looks great, and has already boosted our engagement. The team was a pleasure to work with."</p>
       </div>
-      <!-- Review 3 -->
-      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex items-center mb-4">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Emily Johnson</h4>
-            <p class="text-gray-600 text-sm">Founder, Creative Minds</p>
+
+      <!-- Project 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/400x300" alt="Project 3" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Portfolio Website</h3>
+          <p class="text-gray-600 mb-4">A stunning portfolio to showcase your work and attract clients.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">$299</span>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
           </div>
         </div>
-        <p class="text-gray-600 text-sm">"Their digital marketing expertise has been a game-changer for us. We've seen a significant increase in leads and our online presence has never been stronger."</p>
       </div>
     </div>
   </div>
 </section>
+<!-- Premade Website Section -->
+<section id="premade-websites" class="py-20 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-4">Our Premade Websites</h2>
+    <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
+      Ready-to-use professional websites, designed to grow your business instantly. 🚀
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Project 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition" data-aos="fade-up">
+        <div class="relative">
+          <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Best Seller</span>
+          <img src="https://via.placeholder.com/400x300" alt="Business Website" class="w-full h-56 object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Business E-Commerce Website</h3>
+          <p class="text-gray-600 mb-4">Includes blog, contact form, and product showcase. Perfect for small businesses.</p>
+          
+          <ul class="text-sm text-gray-500 mb-4 space-y-1 text-left">
+            <li>✅ Free 1 Year Hosting</li>
+            <li>✅ SSL Security</li>
+            <li>✅ Mobile Responsive</li>
+          </ul>
+
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">
+              <span class="line-through text-gray-400">$699</span> $499
+            </span>
+            <div class="flex gap-2">
+              <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
+              <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Buy Now</a>
+            </div>
+          </div>
+          <div class="mt-3 text-yellow-400">⭐⭐⭐⭐⭐ (120 Reviews)</div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative">
+          <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">New</span>
+          <img src="https://via.placeholder.com/400x300" alt="E-commerce Store" class="w-full h-56 object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Store</h3>
+          <p class="text-gray-600 mb-4">Complete solution for selling your products online with cart & checkout.</p>
+          <ul class="text-sm text-gray-500 mb-4 text-left">
+            <li>✅ Unlimited Products</li>
+            <li>✅ Payment Gateway</li>
+            <li>✅ Easy Customization</li>
+          </ul>
+
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">
+              <span class="line-through text-gray-400">$1299</span> $999
+            </span>
+            <div class="flex gap-2">
+              <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
+              <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Buy Now</a>
+            </div>
+          </div>
+          <div class="mt-3 text-yellow-400">⭐⭐⭐⭐⭐ (87 Reviews)</div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative">
+          <span class="absolute top-2 left-2 bg-purple-500 text-white text-xs px-2 py-1 rounded">Popular</span>
+          <img src="https://via.placeholder.com/400x300" alt="Portfolio Website" class="w-full h-56 object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Portfolio Website</h3>
+          <p class="text-gray-600 mb-4">Showcase your work, skills & attract new clients with a stunning portfolio.</p>
+          <ul class="text-sm text-gray-500 mb-4 text-left">
+            <li>✅ Modern Design</li>
+            <li>✅ SEO Friendly</li>
+            <li>✅ Contact Form</li>
+          </ul>
+
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-gray-800">
+              <span class="line-through text-gray-400">$499</span> $299
+            </span>
+            <div class="flex gap-2">
+              <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
+              <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Buy Now</a>
+            </div>
+          </div>
+          <div class="mt-3 text-yellow-400">⭐⭐⭐⭐⭐ (60 Reviews)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 <!-- Metrics Section -->
 <section class="bg-white py-20">
@@ -337,6 +447,47 @@
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="300">
         <h3 class="text-xl font-semibold text-blue-600 mb-2">Location</h3>
         <p class="text-gray-700">Mymensingh, vhaluka, Bangladesh</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Customer Review Section -->
+<section id="reviews" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-12">What Our Clients Say</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Review 1 -->
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">Jane Doe</h4>
+            <p class="text-gray-600 text-sm">CEO, Tech Solutions Inc.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Marvelous IT transformed our data annotation process. Their attention to detail and commitment to quality are second to none. We couldn't be happier with the results."</p>
+      </div>
+      <!-- Review 2 -->
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">John Smith</h4>
+            <p class="text-gray-600 text-sm">Marketing Director, Growth Co.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"The new website is fantastic! It's fast, looks great, and has already boosted our engagement. The team was a pleasure to work with."</p>
+      </div>
+      <!-- Review 3 -->
+      <div class="bg-blue-50 rounded-xl p-6 shadow-lg text-left" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">Emily Johnson</h4>
+            <p class="text-gray-600 text-sm">Founder, Creative Minds</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Their digital marketing expertise has been a game-changer for us. We've seen a significant increase in leads and our online presence has never been stronger."</p>
       </div>
     </div>
   </div>
