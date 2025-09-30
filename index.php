@@ -120,11 +120,7 @@
       <a href="#" class="flex items-center bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition">
         <i class="fas fa-dollar-sign mr-2"></i> $200
       </a>
-    
-    
-
-    
-   
+  
   </div>
 </div>
 
