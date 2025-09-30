@@ -130,7 +130,7 @@
       </a>
       <a href="#" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
         
-        <i class="fab fa-whatsapp"> 01324869686</i>
+        <i class="fab fa-whatsapp"> <p>01324869686</p></i>
       </a>
     </div>
   </div>
