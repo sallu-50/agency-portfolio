@@ -27,7 +27,7 @@
 <!-- Navbar -->
 <header class="fixed w-full bg-white bg-opacity-40 backdrop-blur z-50 shadow-md">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <img src="image/Marveit_ABCD_logo_fixed.svg" alt=" Logo" class="h-10 w-auto">
+    <img src="image/Marveit_ABCD_logo_cropped.svg" alt=" Logo" class="h-10 w-auto">
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-sm">
