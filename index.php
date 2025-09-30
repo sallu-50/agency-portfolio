@@ -72,145 +72,54 @@
     <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded shadow-lg hover:bg-gray-100 transition">Let’s Contact</a>
   </div>
 </section>
-<section id="work" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Projects List </h2>
-                <div class="row">
-                    <!-- Project 1 -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div id="projectCarousel1" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="image/couponbd1.png" class="d-block w-100" alt="Project 1 Screenshot 1">
-                                    </div>
-                                   
-                                   
-                                </div>
-                                
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">E-commerce Website with Multivendor Support</h5>
-                                <p class="card-text">A responsive e-commerce website with multivendor support. Users can buy products from different vendors. The website is built using Laravel and Tailwind CSS.</p>
-                                <div class="m-auto">
-                                    <span class="badge bg-primary me-2">Laravel</span>
-                                    <span class="badge bg-success me-2">Tailwind</span>
-                                     <span class="badge bg-info me-2">API</span>
-                                    <span class="badge bg-warning mt-2">Filament</span>
-                                   
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="https://couponbd.com/" class="btn btn-outline-primary"><i class="fas fa-eye me-2"></i>Live Demo</a>
-                                    <a href="https://github.com/amitghoshanto/CouponBD" class="btn btn-outline-dark"><i class="fab fa-github me-2"></i>GitHub</a>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>          
-                    
-                </div>
-            </div>
-        </section>
+
 <!-- Premade Website Section -->
 <section id="premade-websites" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">Our Premade Websites</h2>
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites</h2>
     <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
-      Ready-to-use professional websites, designed to grow your business instantly. 🚀
+      Choose from our professionally designed websites. Ready to be deployed for your business.
     </p>
 
     <div class="grid md:grid-cols-3 gap-8">
       
-      <!-- Project 1 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition" data-aos="fade-up">
-        <div class="relative">
-          <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Best Seller</span>
-          <img src="https://via.placeholder.com/400x300" alt="Business Website" class="w-full h-56 object-cover">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">Business E-Commerce Website</h3>
-          <p class="text-gray-600 mb-4">Includes blog, contact form, and product showcase. Perfect for small businesses.</p>
-          
-          <ul class="text-sm text-gray-500 mb-4 space-y-1 text-left">
-            <li>✅ Free 1 Year Hosting</li>
-            <li>✅ SSL Security</li>
-            <li>✅ Mobile Responsive</li>
-          </ul>
+      <!-- Project Card -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+        
+        <!-- Project Image -->
+        <img src="image/couponbd1.png" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
 
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-gray-800">
-              <span class="line-through text-gray-400">$699</span> $499
-            </span>
-            <div class="flex gap-2">
-              <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
-              <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Buy Now</a>
-            </div>
+        <!-- Card Body -->
+        <div class="p-6 flex flex-col flex-grow text-left">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Website with Multivendor Support</h3>
+          <p class="text-gray-600 mb-4">
+            A responsive e-commerce platform with multivendor support. Customers can buy products from multiple vendors.
+            Built using Laravel & Tailwind CSS.
+          </p>
+
+          <!-- Tech Badges -->
+          <div class="mb-4 space-x-2">
+            <span class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded">Laravel</span>
+            <span class="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded">Tailwind</span>
+            <span class="inline-block bg-sky-500 text-white text-xs px-2 py-1 rounded">API</span>
+            <span class="inline-block bg-yellow-400 text-gray-900 text-xs px-2 py-1 rounded">Filament</span>
           </div>
-          <div class="mt-3 text-yellow-400">⭐⭐⭐⭐⭐ (120 Reviews)</div>
+
+          <!-- Buttons -->
+          <div class="mt-auto flex justify-between">
+            <a href="https://couponbd.com/" target="_blank" class="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <i class="fas fa-eye mr-2"></i> Live Demo
+            </a>
+            <a href="https://github.com/amitghoshanto/CouponBD" target="_blank" class="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">
+              <i class="fab fa-github mr-2"></i> GitHub
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
-        <div class="relative">
-          <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">New</span>
-          <img src="https://via.placeholder.com/400x300" alt="E-commerce Store" class="w-full h-56 object-cover">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Store</h3>
-          <p class="text-gray-600 mb-4">Complete solution for selling your products online with cart & checkout.</p>
-          <ul class="text-sm text-gray-500 mb-4 text-left">
-            <li>✅ Unlimited Products</li>
-            <li>✅ Payment Gateway</li>
-            <li>✅ Easy Customization</li>
-          </ul>
-
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-gray-800">
-              <span class="line-through text-gray-400">$1299</span> $999
-            </span>
-            <div class="flex gap-2">
-              <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
-              <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Buy Now</a>
-            </div>
-          </div>
-          <div class="mt-3 text-yellow-400">⭐⭐⭐⭐⭐ (87 Reviews)</div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative">
-          <span class="absolute top-2 left-2 bg-purple-500 text-white text-xs px-2 py-1 rounded">Popular</span>
-          <img src="https://via.placeholder.com/400x300" alt="Portfolio Website" class="w-full h-56 object-cover">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">Portfolio Website</h3>
-          <p class="text-gray-600 mb-4">Showcase your work, skills & attract new clients with a stunning portfolio.</p>
-          <ul class="text-sm text-gray-500 mb-4 text-left">
-            <li>✅ Modern Design</li>
-            <li>✅ SEO Friendly</li>
-            <li>✅ Contact Form</li>
-          </ul>
-
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-gray-800">
-              <span class="line-through text-gray-400">$499</span> $299
-            </span>
-            <div class="flex gap-2">
-              <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
-              <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Buy Now</a>
-            </div>
-          </div>
-          <div class="mt-3 text-yellow-400">⭐⭐⭐⭐⭐ (60 Reviews)</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-
-
-
 
 <!-- Metrics Section -->
 <section class="bg-white py-20">
