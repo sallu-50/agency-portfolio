@@ -109,6 +109,10 @@
       <a href="https://ecommerce.marveit.com" target="_blank" class="flex items-center bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition">
         <i class="fas fa-eye mr-2"></i> Live Demo
       </a>
+      <a href="">
+        <p>Admin@gmail.com</p>
+        <p>Password: admin</p>
+      </a>
     </div>
 
     <!-- Contact Note -->
@@ -116,19 +120,16 @@
 
     <!-- Social Icons -->
     <div class="flex space-x-4">
-      <a href="https://facebook.com/" target="_blank" class="text-blue-600 hover:text-blue-800 text-xl">
+      <a href="https://www.facebook.com/abdullah.al.salman.892142" target="_blank" class="text-blue-600 hover:text-blue-800 text-xl">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://twitter.com/" target="_blank" class="text-sky-500 hover:text-sky-700 text-xl">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/" target="_blank" class="text-pink-500 hover:text-pink-700 text-xl">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://linkedin.com/" target="_blank" class="text-blue-700 hover:text-blue-900 text-xl">
+    
+     
+      <a href="https://www.linkedin.com/in/abdullah-al-salman-5177bb214/" target="_blank" class="text-blue-700 hover:text-blue-900 text-xl">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
+      <a href="" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
+        <p>01324869686</p>
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
