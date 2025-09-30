@@ -115,24 +115,18 @@
       </a>
     </div>
 
-    <!-- Contact Note -->
-    <p class="text-sm text-gray-500 mb-2">For purchase, contact us:</p>
-
-    <!-- Social Icons -->
-    <div class="flex space-x-4">
-      <a href="https://www.facebook.com/abdullah.al.salman.892142" target="_blank" class="text-blue-600 hover:text-blue-800 text-xl">
-        <i class="fab fa-facebook"></i>
+    <!-- doller price -->
+    <div class="mt-auto flex justify-between mb-4">
+      <a href="#" class="flex items-center bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition">
+        <i class="fas fa-dollar-sign mr-2"></i> $150
+      </a>
+      <a href="#" class="text-blue-600 hover:underline text-sm">
+        More Info
       </a>
     
-     
-      <a href="https://www.linkedin.com/in/abdullah-al-salman-5177bb214/" target="_blank" class="text-blue-700 hover:text-blue-900 text-xl">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="#" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
-        
-        <i class="fab fa-whatsapp"> <p>01324869686</p></i>
-      </a>
-    </div>
+
+    
+   
   </div>
 </div>
 
