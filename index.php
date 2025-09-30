@@ -86,7 +86,7 @@
       <!-- Project Card -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
   <!-- Project Image -->
-  <img src="image/e-commerce.png" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
+  <img src="image/ecommerce.jpg" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
 
   <!-- Card Body -->
   <div class="p-6 flex flex-col flex-grow text-left">
