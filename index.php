@@ -72,58 +72,45 @@
     <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded shadow-lg hover:bg-gray-100 transition">Let’s Contact</a>
   </div>
 </section>
-<!-- Premade Website Section -->
-<section id="premade-websites" class="py-20 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites</h2>
-    <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
-      Choose from our professionally designed websites. Ready to be deployed for your business.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Project 1 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-        <img src="https://via.placeholder.com/400x300" alt="Project 1" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">Business E-Commerce Website</h3>
-          <p class="text-gray-600 mb-4">A professional website for your business. Includes a blog, contact form, and more.</p>
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-gray-800">$499</span>
-
-            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://via.placeholder.com/400x300" alt="Project 2" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Store</h3>
-          <p class="text-gray-600 mb-4">A complete e-commerce solution to sell your products online.
-          </p>
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-gray-800">$999</span>
-            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://via.placeholder.com/400x300" alt="Project 3" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">Portfolio Website</h3>
-          <p class="text-gray-600 mb-4">A stunning portfolio to showcase your work and attract clients.</p>
-          <div class="flex justify-between items-center">
-            <span class="text-2xl font-bold text-gray-800">$299</span>
-            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="work" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Projects List </h2>
+                <div class="row">
+                    <!-- Project 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div id="projectCarousel1" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="image/couponbd1.png" class="d-block w-100" alt="Project 1 Screenshot 1">
+                                    </div>
+                                   
+                                   
+                                </div>
+                                
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">E-commerce Website with Multivendor Support</h5>
+                                <p class="card-text">A responsive e-commerce website with multivendor support. Users can buy products from different vendors. The website is built using Laravel and Tailwind CSS.</p>
+                                <div class="m-auto">
+                                    <span class="badge bg-primary me-2">Laravel</span>
+                                    <span class="badge bg-success me-2">Tailwind</span>
+                                     <span class="badge bg-info me-2">API</span>
+                                    <span class="badge bg-warning mt-2">Filament</span>
+                                   
+                                </div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <a href="https://couponbd.com/" class="btn btn-outline-primary"><i class="fas fa-eye me-2"></i>Live Demo</a>
+                                    <a href="https://github.com/amitghoshanto/CouponBD" class="btn btn-outline-dark"><i class="fab fa-github me-2"></i>GitHub</a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                    
+                </div>
+            </div>
+        </section>
 <!-- Premade Website Section -->
 <section id="premade-websites" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 text-center">
