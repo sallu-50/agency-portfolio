@@ -116,13 +116,11 @@
     </div>
 
     <!-- doller price -->
-    <div class="mt-auto flex justify-between mb-4">
+    <div class="mt-auto flex justify-center mb-4">
       <a href="#" class="flex items-center bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition">
-        <i class="fas fa-dollar-sign mr-2"></i> $150
+        <i class="fas fa-dollar-sign mr-2"></i> $200
       </a>
-      <a href="#" class="text-blue-600 hover:underline text-sm">
-        More Info
-      </a>
+    
     
 
     
