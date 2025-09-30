@@ -76,7 +76,7 @@
 <!-- Premade Website Section -->
 <section id="premade-websites" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites</h2>
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites for Selling</h2>
     <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
       Choose from our professionally designed websites. Ready to be deployed for your business.
     </p>
@@ -84,38 +84,57 @@
     <div class="grid md:grid-cols-3 gap-8">
       
       <!-- Project Card -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-        
-        <!-- Project Image -->
-        <img src="image/couponbd1.png" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+  <!-- Project Image -->
+  <img src="image/e-commerce.png" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
 
-        <!-- Card Body -->
-        <div class="p-6 flex flex-col flex-grow text-left">
-          <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Website with Multivendor Support</h3>
-          <p class="text-gray-600 mb-4">
-            A responsive e-commerce platform with multivendor support. Customers can buy products from multiple vendors.
-            Built using Laravel & Tailwind CSS.
-          </p>
+  <!-- Card Body -->
+  <div class="p-6 flex flex-col flex-grow text-left">
+    <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Website with Responsive</h3>
+    <p class="text-gray-600 mb-4">
+      A responsive e-commerce platform with multivendor support. Customers can buy products from multiple vendors.
+      Built using Laravel & Tailwind CSS.
+    </p>
 
-          <!-- Tech Badges -->
-          <div class="mb-4 space-x-2">
-            <span class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded">Laravel</span>
-            <span class="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded">Tailwind</span>
-            <span class="inline-block bg-sky-500 text-white text-xs px-2 py-1 rounded">API</span>
-            <span class="inline-block bg-yellow-400 text-gray-900 text-xs px-2 py-1 rounded">Filament</span>
-          </div>
+    <!-- Tech Badges -->
+    <div class="mb-4 space-x-2">
+      <span class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded">Laravel</span>
+      <span class="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded">Tailwind</span>
+      <span class="inline-block bg-sky-500 text-white text-xs px-2 py-1 rounded">API</span>
+      <span class="inline-block bg-yellow-400 text-gray-900 text-xs px-2 py-1 rounded">Filament</span>
+    </div>
 
-          <!-- Buttons -->
-          <div class="mt-auto flex justify-between">
-            <a href="https://couponbd.com/" target="_blank" class="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-              <i class="fas fa-eye mr-2"></i> Live Demo
-            </a>
-            <a href="https://github.com/amitghoshanto/CouponBD" target="_blank" class="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">
-              <i class="fab fa-github mr-2"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
+    <!-- Buttons -->
+    <div class="mt-auto flex justify-between mb-4">
+      <a href="https://ecommerce.marveit.com" target="_blank" class="flex items-center bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition">
+        <i class="fas fa-eye mr-2"></i> Live Demo
+      </a>
+    </div>
+
+    <!-- Contact Note -->
+    <p class="text-sm text-gray-500 mb-2">For purchase, contact us:</p>
+
+    <!-- Social Icons -->
+    <div class="flex space-x-4">
+      <a href="https://facebook.com/" target="_blank" class="text-blue-600 hover:text-blue-800 text-xl">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="text-sky-500 hover:text-sky-700 text-xl">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/" target="_blank" class="text-pink-500 hover:text-pink-700 text-xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" class="text-blue-700 hover:text-blue-900 text-xl">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="text-green-600 hover:text-green-800 text-xl">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>
