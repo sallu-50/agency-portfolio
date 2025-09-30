@@ -404,7 +404,14 @@
     <p class="mt-2">
       <!-- <a href="#" class="hover:text-blue-600 mx-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
       <!-- <a href="#" class="hover:text-blue-600 mx-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
-      <a href="https://www.linkedin.com/company/marveit/" class="hover:text-blue-600 mx-2" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+     <a href="https://www.linkedin.com/company/marveit/" 
+   class="hover:text-blue-600 mx-2" 
+   aria-label="LinkedIn" 
+   target="_blank" 
+   rel="noopener noreferrer">
+   <i class="fab fa-linkedin-in"></i>
+</a>
+
       <!-- <a href="#" class="hover:text-blue-600 mx-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
     </p>
   </div>
