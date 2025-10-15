@@ -77,7 +77,6 @@
 <section id="premade-websites" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites for Selling</h2>
-    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites for Selling</h2>
     <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
       Choose from our professionally designed websites. Ready to be deployed for your business.
     </p>
