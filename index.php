@@ -86,7 +86,7 @@
       <!-- Project Card -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
   <!-- Project Image -->
-  <img src="image/ecommerce.jpg" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
+      <img src="image/ecommerce.jpg" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
 
   <!-- Card Body -->
   <div class="p-6 flex flex-col flex-grow text-left">
@@ -123,6 +123,48 @@
   
   </div>
 </div>
+ <!-- Project Card -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+  <!-- Project Image -->
+      <img src="image/ecommerce2.jpg" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
+
+  <!-- Card Body -->
+  <div class="p-6 flex flex-col flex-grow text-left">
+    <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce 2 Website with Responsive</h3>
+    <p class="text-gray-600 mb-4">
+      A responsive anouther e-commerce platform with multivendor support. Customers can buy products from multiple vendors.
+      Built using Laravel & Tailwind CSS.
+    </p>
+
+    <!-- Tech Badges -->
+    <div class="mb-4 space-x-2">
+      <span class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded">Laravel</span>
+        <span class="inline-block bg-yellow-400 text-gray-900 text-xs px-2 py-1 rounded">Filament</span>
+      <span class="inline-block bg-sky-500 text-white text-xs px-2 py-1 rounded">API</span>
+      <span class="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded">Tailwind</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-auto flex justify-between mb-4">
+      <a href="https://ecommerce-bolt.marveit.com" target="_blank" class="flex items-center bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition">
+        <i class="fas fa-eye mr-2"></i> Live Demo
+      </a>
+      <a href="">
+        <p>admin@example.com</p>
+        <p>Password: password</p>
+      </a>
+    </div>
+
+    <!-- doller price -->
+    <div class="mt-auto flex justify-center mb-4">
+      <a href="#" class="flex items-center bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition">
+        <i class="fas fa-dollar-sign mr-2"></i> $200
+      </a>
+  
+  </div>
+</div>
+
+
 
 
     </div>
