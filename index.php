@@ -77,6 +77,7 @@
 <section id="premade-websites" class="py-20 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites for Selling</h2>
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Our Premade Websites for Selling</h2>
     <p class="text-gray-700 text-base max-w-2xl mx-auto mb-12">
       Choose from our professionally designed websites. Ready to be deployed for your business.
     </p>
@@ -85,16 +86,16 @@
       
       <!-- Project Card -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-  <!-- Project Image -->
+      <!-- Project Image -->
       <img src="image/ecommerce.jpg" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
 
-  <!-- Card Body -->
-  <div class="p-6 flex flex-col flex-grow text-left">
-    <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Website with Responsive</h3>
-    <p class="text-gray-600 mb-4">
+       <!-- Card Body -->
+    <div class="p-6 flex flex-col flex-grow text-left">
+      <h3 class="text-xl font-semibold text-blue-600 mb-2">E-commerce Website with Responsive</h3>
+      <p class="text-gray-600 mb-4">
       A responsive e-commerce platform with multivendor support. Customers can buy products from multiple vendors.
       Built using Laravel & Tailwind CSS.
-    </p>
+      </p>
 
     <!-- Tech Badges -->
     <div class="mb-4 space-x-2">
@@ -103,7 +104,6 @@
       <span class="inline-block bg-sky-500 text-white text-xs px-2 py-1 rounded">API</span>
       <span class="inline-block bg-yellow-400 text-gray-900 text-xs px-2 py-1 rounded">Filament</span>
     </div>
-
     <!-- Buttons -->
     <div class="mt-auto flex justify-between mb-4">
       <a href="https://ecommerce.marveit.com" target="_blank" class="flex items-center bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition">
@@ -162,7 +162,7 @@
       </a>
   
   </div>
-</div>
+  </div>
 
 
 
