@@ -160,7 +160,7 @@
 
        <!-- Project Card 3 -->
       <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-        <img src="image/ecommerce2.png" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
+        <img src="image/journymate.webp" alt="E-commerce Website Screenshot" class="w-full h-56 object-cover">
         <div class="p-6 flex flex-col flex-grow text-left">
           <h3 class="text-xl font-semibold text-blue-600 mb-2">Travel Management System with Responsive Design</h3>
             <p class="text-gray-600 mb-4">
