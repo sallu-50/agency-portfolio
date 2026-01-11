@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Annotation Services</title>
+    <title>Data Annotation </title>
     <!-- Tailwind CSS Local -->
     <link href="./dist/output.css" rel="stylesheet">
     <!-- Feather Icons CDN -->
@@ -14,17 +14,17 @@
 <body class="font-sans bg-white text-gray-800">
 
     <!-- Header -->
-    <header class="fixed w-full bg-white bg-opacity-40 backdrop-blur z-50 shadow-md ">
-        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-40 backdrop-blur z-50 shadow-md ">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
             <img src="image/Marveit ABCD.svg" alt=" Logo" class="h-10 w-auto">
 
             <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-6 text-sm">
                 <a href="#services" class="hover:text-blue-600 font-medium">Services</a>
-                <a href="#testimonials" class="hover:text-blue-600 font-medium">Reviews</a>
-                <a href="#about" class="hover:text-blue-600 font-medium">About</a>
-                <a href="#" class="hover:text-blue-600 font-medium">Blog</a>
-                <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
+                <a href="#industries" class="hover:text-blue-600 font-medium">Industries</a>
+                <a href="#about" class="hover:text-blue-600 font-medium">About Us</a>
+                <!-- <a href="#" class="hover:text-blue-600 font-medium">Blog</a>
+                <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a> -->
             </nav>
 
             <a href="#contact"
@@ -54,18 +54,49 @@
     </header>
 
     <!-- Hero Section -->
-    <main class="container mx-auto px-6 py-16 text-center ">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4">
-            High-Quality Data Annotation
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation services
-            for computer vision and NLP.
-        </p>
-        <a href="#contact"
-            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
-            Get Started
-        </a>
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-20 md:py-32 mt-8">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 text-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-6">
+                    High-Quality Data Annotation
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+                    Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation
+                    services
+                    for computer vision and NLP.
+                </p>
+                <a href="#contact"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <span>Get Started</span>
+                    <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+
+            <!-- Video Section -->
+            <div class="w-full md:w-1/2">
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
+                    <!-- Placeholder Image/Background -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 opacity-90"></div>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div
+                            class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg">
+                            <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
+                        </div>
+                    </div>
+
+                    <!-- Caption/Overlay -->
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <p class="text-white font-medium">Watch our workflow</p>
+                        <p class="text-gray-300 text-sm">See how we label data with precision</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Services Section -->
