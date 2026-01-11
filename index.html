@@ -1,138 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Annotation Services</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Local -->
+    <link href="./dist/output.css" rel="stylesheet">
     <!-- Feather Icons CDN -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
-<body class="font-sans" style="background-color: rgb(112, 59, 231);">
+
+<body class="font-sans bg-white text-gray-800">
 
     <!-- Header -->
-    <header class="shadow-sm sticky top-0 z-50" style="background-color: rgb(80, 40, 180);">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-white">
-                <a href="#">DataCorp</a>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="text-gray-200 hover:text-white">Services</a>
-                <a href="#about" class="text-gray-200 hover:text-white">About</a>
-                <a href="contact.html" class="text-gray-200 hover:text-white">Contact</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="text-gray-200 hover:text-white focus:outline-none">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden" style="background-color: rgb(80, 40, 180);">
-            <a href="#services" class="block px-6 py-2 text-gray-200 hover:bg-gray-700">Services</a>
-            <a href="#about" class="block px-6 py-2 text-gray-200 hover:bg-gray-700">About</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-200 hover:bg-gray-700">Contact</a>
+    <header class="fixed w-full bg-white bg-opacity-40 backdrop-blur z-50 shadow-md ">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <img src="image/Marveit ABCD.svg" alt=" Logo" class="h-10 w-auto">
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#services" class="hover:text-blue-600 font-medium">Services</a>
+                <a href="#testimonials" class="hover:text-blue-600 font-medium">Reviews</a>
+                <a href="#about" class="hover:text-blue-600 font-medium">About</a>
+                <a href="#" class="hover:text-blue-600 font-medium">Blog</a>
+                <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+
+            <a href="#contact"
+                class="hidden md:inline bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-xl transition">Let’s
+                Contact</a>
+
+            <!-- Mobile Menu -->
+            <button id="mobile-menu-button" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#services" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Services</a>
+            <a href="#testimonials" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Reviews</a>
+            <a href="#about" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">About</a>
+            <a href="#" class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50">Blog</a>
+            <a href="#contact" class="block px-4 py-3 hover:bg-blue-50">Contact</a>
+            <a href="#contact"
+                class="block mt-2 mx-4 mb-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2 rounded shadow hover:shadow-xl transition">Let’s
+                Talk</a>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <main class="container mx-auto px-6 py-16 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+    <main class="container mx-auto px-6 py-16 text-center ">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4">
             High-Quality Data Annotation
         </h1>
-        <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-            Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation services for computer vision and NLP.
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation services
+            for computer vision and NLP.
         </p>
-        <a href="#contact" class="text-white font-bold py-3 px-8 rounded-full transition duration-300" style="background-color: #FF00FF;" onmouseover="this.style.backgroundColor='#CC00CC'" onmouseout="this.style.backgroundColor='#FF00FF'">
+        <a href="#contact"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
             Get Started
         </a>
     </main>
 
     <!-- Services Section -->
-<section id="services" class="py-20">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-white mb-12">Our Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Service 1: Data Collection -->
-            <div class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col" style="background-color: #6C63FF;">
-                <div class="flex-grow">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-white bg-opacity-20 text-white">
-                        <i data-feather="database"></i>
+                <!-- Service 1: Data Collection -->
+                <div
+                    class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col bg-white">
+                    <div class="flex-grow">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-blue-100 text-blue-500">
+                            <i data-feather="database"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Data Collection</h3>
+                        <p class="text-gray-600">We collect high-quality, diverse datasets tailored to your specific
+                            project needs.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Data Collection</h3>
-                    <p class="text-gray-200">We collect high-quality, diverse datasets tailored to your specific project needs.</p>
+                    <a href="data-collection.html"
+                        class="mt-6 self-start text-blue-500 font-semibold py-2 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-100">
+                        Discover Data Collection
+                    </a>
                 </div>
-                <a href="data-collection.html" class="mt-6 self-start text-white font-semibold py-2 px-4 rounded-full transition duration-300" style="background-color: rgba(255, 255, 255, 0.2);" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.3)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">
-                    Discover Data Collection
-                </a>
-            </div>
 
-            <!-- Service 2: Image Annotation -->
-            <div class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col" style="background-color: #3B82F6;">
-                <div class="flex-grow">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-white bg-opacity-20 text-white">
-                        <i data-feather="image"></i>
+                <!-- Service 2: Image Annotation -->
+                <div
+                    class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col bg-white">
+                    <div class="flex-grow">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-green-100 text-green-500">
+                            <i data-feather="image"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Image Annotation</h3>
+                        <p class="text-gray-600">Precise bounding boxes, polygons, and segmentation for your computer
+                            vision applications.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Image Annotation</h3>
-                    <p class="text-gray-200">Precise bounding boxes, polygons, and segmentation for your computer vision applications.</p>
+                    <a href="computer-vision.html"
+                        class="mt-6 self-start text-green-500 font-semibold py-2 px-4 rounded-full transition duration-300 bg-green-50 hover:bg-green-100">
+                        Explore Computer Vision
+                    </a>
                 </div>
-                <a href="computer-vision.html" class="mt-6 self-start text-white font-semibold py-2 px-4 rounded-full transition duration-300" style="background-color: rgba(255, 255, 255, 0.2);" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.3)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">
-                    Explore Computer Vision
-                </a>
-            </div>
 
-            <!-- Service 3: Text Annotation -->
-            <div class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col" style="background-color: #10B981;">
-                <div class="flex-grow">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-white bg-opacity-20 text-white">
-                        <i data-feather="type"></i>
+                <!-- Service 3: Text Annotation -->
+                <div
+                    class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col bg-white">
+                    <div class="flex-grow">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-purple-100 text-purple-500">
+                            <i data-feather="type"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Text Annotation</h3>
+                        <p class="text-gray-600">NER, sentiment analysis, and text classification to train your NLP
+                            models.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Text Annotation</h3>
-                    <p class="text-gray-200">NER, sentiment analysis, and text classification to train your NLP models.</p>
+                    <a href="nlp.html"
+                        class="mt-6 self-start text-purple-500 font-semibold py-2 px-4 rounded-full transition duration-300 bg-purple-50 hover:bg-purple-100">
+                        Explore NLP
+                    </a>
                 </div>
-                <a href="nlp.html" class="mt-6 self-start text-white font-semibold py-2 px-4 rounded-full transition duration-300" style="background-color: rgba(255, 255, 255, 0.2);" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.3)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">
-                    Explore NLP
-                </a>
-            </div>
 
-            <!-- Service 4: Audio Annotation -->
-            <div class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col" style="background-color: #F59E0B;">
-                <div class="flex-grow">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-white bg-opacity-20 text-white">
-                        <i data-feather="mic"></i>
+                <!-- Service 4: Audio Annotation -->
+                <div
+                    class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col bg-white">
+                    <div class="flex-grow">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-yellow-100 text-yellow-500">
+                            <i data-feather="mic"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Audio Annotation</h3>
+                        <p class="text-gray-600">Transcription, speaker diarization, and sound event detection for audio
+                            data.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Audio Annotation</h3>
-                    <p class="text-gray-200">Transcription, speaker diarization, and sound event detection for audio data.</p>
+                    <a href="audio-annotation.html"
+                        class="mt-6 self-start text-yellow-500 font-semibold py-2 px-4 rounded-full transition duration-300 bg-yellow-50 hover:bg-yellow-100">
+                        Learn More
+                    </a>
                 </div>
-                <a href="audio-annotation.html" class="mt-6 self-start text-white font-semibold py-2 px-4 rounded-full transition duration-300" style="background-color: rgba(255, 255, 255, 0.2);" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.3)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">
-                    Learn More
-                </a>
-            </div>
 
-            <!-- Service 5: Video Annotation -->
-            <div class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col" style="background-color: #EF4444;">
-                 <div class="flex-grow">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-white bg-opacity-20 text-white">
-                        <i data-feather="video"></i>
+                <!-- Service 5: Video Annotation -->
+                <div
+                    class="p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col bg-white">
+                    <div class="flex-grow">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full mb-6 bg-red-100 text-red-500">
+                            <i data-feather="video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Video Annotation</h3>
+                        <p class="text-gray-600">Object tracking and activity recognition in video streams for dynamic
+                            analysis.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Video Annotation</h3>
-                    <p class="text-gray-200">Object tracking and activity recognition in video streams for dynamic analysis.</p>
+                    <a href="video-annotation.html"
+                        class="mt-6 self-start text-red-500 font-semibold py-2 px-4 rounded-full transition duration-300 bg-red-50 hover:bg-red-100">
+                        Learn More
+                    </a>
                 </div>
-                <a href="video-annotation.html" class="mt-6 self-start text-white font-semibold py-2 px-4 rounded-full transition duration-300" style="background-color: rgba(255, 255, 255, 0.2);" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.3)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'">
-                    Learn More
-                </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gray-800">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-white mb-12">Trusted Globally by Innovators</h2>
-            
+
             <div class="relative">
                 <div id="slider-container" class="overflow-hidden">
                     <div id="slider" class="flex transition-transform duration-500 ease-in-out">
@@ -148,9 +187,13 @@
                                         <i data-feather="star" class="fill-current"></i>
                                     </div>
                                 </div>
-                                <p class="text-gray-300 mb-6">"We have been working with them for over 3 years and have relied on their expertise in object detection, segmentation, and keypoint annotation. We have always been impressed with the high quality of their annotations, as well as their speed, precision, and responsiveness."</p>
+                                <p class="text-gray-300 mb-6">"We have been working with them for over 3 years and have
+                                    relied on their expertise in object detection, segmentation, and keypoint
+                                    annotation. We have always been impressed with the high quality of their
+                                    annotations, as well as their speed, precision, and responsiveness."</p>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
                                         <i data-feather="aperture" class="text-white"></i>
                                     </div>
                                     <div>
@@ -172,9 +215,13 @@
                                         <i data-feather="star" class="fill-current"></i>
                                     </div>
                                 </div>
-                                <p class="text-gray-300 mb-6">"The team was instrumental in labeling hundreds of thousands of images of produce to detect subtle defects. Their proactive communication, consistent accuracy, and collaborative approach made them a valuable partner in our project."</p>
+                                <p class="text-gray-300 mb-6">"The team was instrumental in labeling hundreds of
+                                    thousands of images of produce to detect subtle defects. Their proactive
+                                    communication, consistent accuracy, and collaborative approach made them a valuable
+                                    partner in our project."</p>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
                                         <i data-feather="bar-chart-2" class="text-white"></i>
                                     </div>
                                     <div>
@@ -196,9 +243,13 @@
                                         <i data-feather="star" class="fill-current"></i>
                                     </div>
                                 </div>
-                                <p class="text-gray-300 mb-6">"We found the team to be extremely helpful and efficient. Their response times were quick and they were always willing to help with any request we had. We would highly recommend them for their professionalism, work ethic, and flexibility."</p>
+                                <p class="text-gray-300 mb-6">"We found the team to be extremely helpful and efficient.
+                                    Their response times were quick and they were always willing to help with any
+                                    request we had. We would highly recommend them for their professionalism, work
+                                    ethic, and flexibility."</p>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
                                         <i data-feather="tv" class="text-white"></i>
                                     </div>
                                     <div>
@@ -210,10 +261,12 @@
                         </div>
                     </div>
                 </div>
-                <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full">
+                <button id="prev"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full">
                     <i data-feather="chevron-left"></i>
                 </button>
-                <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full">
+                <button id="next"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full">
                     <i data-feather="chevron-right"></i>
                 </button>
             </div>
@@ -223,21 +276,23 @@
     <!-- About Section -->
     <section id="about" class="py-20">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Why Choose Us?</h2>
-            <p class="text-lg text-gray-200 max-w-3xl mx-auto">
-                We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and accuracy, ensuring your AI projects are a success.
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Choose Us?</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and
+                accuracy, ensuring your AI projects are a success.
             </p>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="speak-to-expert" class="py-20" style="background-color: rgba(0,0,0,0.2);">
+    <section id="speak-to-expert" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Start Your Project?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
                 Let's discuss how our data annotation services can help you achieve your AI goals.
             </p>
-            <a href="contact.html" class="text-white font-bold py-3 px-8 rounded-full transition duration-300" style="background-color: #FF00FF;" onmouseover="this.style.backgroundColor='#CC00CC'" onmouseout="this.style.backgroundColor='#FF00FF'">
+            <a href="contact.html"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
                 Speak to an Expert
             </a>
         </div>
@@ -247,7 +302,8 @@
     <footer id="contact" class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 DataCorp. All rights reserved.</p>
-            <p class="mt-2">Contact us at <a href="contact.html" class="text-blue-400 hover:underline">contact@datacorp.com</a></p>
+            <p class="mt-2">Contact us at <a href="contact.html"
+                    class="text-blue-400 hover:underline">contact@datacorp.com</a></p>
         </div>
     </footer>
 
@@ -286,4 +342,5 @@
     </script>
 
 </body>
+
 </html>
