@@ -636,77 +636,87 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 pt-16 pb-12 border-t border-gray-800">
+    <footer class="bg-gray-800 text-gray-300 border-t border-gray-700/60" style="padding-top: 4.5rem; padding-bottom: 3.5rem;">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12" style="margin-bottom: 3rem;">
                 <!-- 1. Brand Section -->
-                <div class="space-y-5">
-                    <a href="index.html" class="inline-block" aria-label="Home">
-                        <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-9 w-auto brightness-0 invert">
-                    </a>
-                    <p class="text-sm leading-relaxed text-gray-400">
+                <div>
+                    <div style="margin-bottom: 1.25rem;">
+                        <a href="index.html" class="inline-block" aria-label="Home">
+                            <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-10 w-auto brightness-0 invert" style="height: 38px; width: auto; max-width: 175px; object-fit: contain; display: block;">
+                        </a>
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-400" style="margin-bottom: 1.5rem; font-size: 0.875rem; line-height: 1.625;">
                         Enterprise human-in-the-loop AI data annotation and training solutions built for precision, speed, and strict security compliance.
                     </p>
-                    <div class="flex items-center gap-3 pt-1">
+                    <!-- Social Media Links -->
+                    <div class="flex items-center gap-3" style="display: flex; gap: 0.75rem;">
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-                            class="w-9 h-9 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                            class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
+                            style="width: 2.5rem; height: 2.5rem; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background-color: rgba(30, 58, 138, 0.4);">
                             <i data-feather="linkedin" class="w-4 h-4"></i>
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                            class="w-9 h-9 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                            class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
+                            style="width: 2.5rem; height: 2.5rem; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background-color: rgba(30, 58, 138, 0.4);">
                             <i data-feather="twitter" class="w-4 h-4"></i>
                         </a>
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                            class="w-9 h-9 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                            class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
+                            style="width: 2.5rem; height: 2.5rem; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background-color: rgba(30, 58, 138, 0.4);">
                             <i data-feather="facebook" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- 2. Services / Solutions -->
-                <div class="space-y-4">
-                    <h4 class="text-white font-semibold text-base tracking-wide">Core Services</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="data-collection.html" class="hover:text-blue-400 transition-colors">Data Collection</a></li>
-                        <li><a href="computer-vision.html" class="hover:text-blue-400 transition-colors">Computer Vision</a></li>
-                        <li><a href="nlp.html" class="hover:text-blue-400 transition-colors">NLP & Text Annotation</a></li>
-                        <li><a href="audio-annotation.html" class="hover:text-blue-400 transition-colors">Audio Transcription</a></li>
-                        <li><a href="video-annotation.html" class="hover:text-blue-400 transition-colors">Video Annotation</a></li>
+                <div>
+                    <h4 class="text-white font-bold text-base tracking-wide" style="color: #ffffff; font-weight: 700; margin-bottom: 1.25rem;">Core Services</h4>
+                    <ul class="space-y-3 text-sm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="data-collection.html" class="text-gray-300 hover:text-blue-400 transition-colors">Data Collection</a></li>
+                        <li><a href="computer-vision.html" class="text-gray-300 hover:text-blue-400 transition-colors">Computer Vision</a></li>
+                        <li><a href="nlp.html" class="text-gray-300 hover:text-blue-400 transition-colors">NLP & Text Annotation</a></li>
+                        <li><a href="audio-annotation.html" class="text-gray-300 hover:text-blue-400 transition-colors">Audio Transcription</a></li>
+                        <li><a href="video-annotation.html" class="text-gray-300 hover:text-blue-400 transition-colors">Video Annotation</a></li>
                     </ul>
                 </div>
 
                 <!-- 3. Company & Navigation -->
-                <div class="space-y-4">
-                    <h4 class="text-white font-semibold text-base tracking-wide">Company</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="index.html#about" class="hover:text-blue-400 transition-colors">About Us</a></li>
-                        <li><a href="team.html" class="text-blue-400 font-semibold flex items-center gap-1.5">
-                            Our Team <span class="text-[10px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded font-medium">Active</span>
-                        </a></li>
-                        <li><a href="index.html#industries" class="hover:text-blue-400 transition-colors">Industries</a></li>
-                        <li><a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                <div>
+                    <h4 class="text-white font-bold text-base tracking-wide" style="color: #ffffff; font-weight: 700; margin-bottom: 1.25rem;">Company</h4>
+                    <ul class="space-y-3 text-sm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li>
+                            <a href="team.html" class="text-gray-300 hover:text-blue-400 transition-colors inline-flex items-center gap-2">
+                                <span>Our Team</span>
+                                <span class="text-xs bg-blue-600/30 text-blue-300 px-2 py-0.5 rounded-full font-semibold" style="margin-left: 0.35rem; font-size: 11px; background-color: rgba(37,99,235,0.25); color: #93c5fd; padding: 0.15rem 0.5rem; border-radius: 9999px;">Active</span>
+                            </a>
+                        </li>
+                        <li><a href="index.html#industries" class="text-gray-300 hover:text-blue-400 transition-colors">Industries</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- 4. Contact & Quick Connect -->
-                <div class="space-y-4">
-                    <h4 class="text-white font-semibold text-base tracking-wide">Get in Touch</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        Ready to accelerate your model development? Contact our technical architects today.
+                <div>
+                    <h4 class="text-white font-bold text-base tracking-wide" style="color: #ffffff; font-weight: 700; margin-bottom: 1.25rem;">Get in Touch</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed" style="margin-bottom: 1rem;">
+                        Ready to accelerate your model development? Connect with our senior technical architects.
                     </p>
-                    <div class="space-y-2.5 text-sm">
-                        <a href="mailto:ebrahim@marveit.com" class="flex items-center gap-2.5 text-gray-300 hover:text-blue-400 transition-colors">
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
+                        <a href="mailto:ebrahim@marveit.com" class="flex items-center gap-2.5 text-gray-300 hover:text-blue-400 transition-colors text-sm" style="display: flex; align-items: center; gap: 0.6rem;">
                             <i data-feather="mail" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
                             <span class="break-all">ebrahim@marveit.com</span>
                         </a>
-                        <div class="flex items-center gap-2.5 text-gray-400 text-xs">
+                        <div class="flex items-center gap-2.5 text-gray-400 text-xs" style="display: flex; align-items: center; gap: 0.6rem;">
                             <i data-feather="globe" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
-                            <span>Worldwide Remote Operations</span>
+                            <span>Global Remote Operations</span>
                         </div>
                     </div>
-                    <div class="pt-2">
+                    <div>
                         <a href="contact.html"
-                            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow hover:shadow-md transition">
+                            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow transition"
+                            style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #0E5EDD; color: #ffffff; padding: 0.65rem 1.25rem; border-radius: 0.5rem; font-weight: 600;">
                             <span>Speak to an Expert</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -715,14 +725,15 @@
             </div>
 
             <!-- Bottom Copyright Bar -->
-            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <div class="pt-8 border-t border-gray-700/60 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400"
+                style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>&copy; 2026 Marveit AI. All rights reserved.</p>
                 <p>
-                    Developed by <a href="https://www.facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors font-medium underline underline-offset-2">Abdullah Al Salman</a>
+                    Developed by <a href="https://www.facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-400 transition-colors font-medium underline underline-offset-2">Abdullah Al Salman</a>
                 </p>
-                <div class="flex gap-6">
-                    <a href="contact.html" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
-                    <a href="contact.html" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+                <div class="flex items-center gap-6" style="display: flex; gap: 1.5rem;">
+                    <a href="contact.html" class="hover:text-white transition-colors" style="margin-right: 1.25rem;">Privacy Policy</a>
+                    <a href="contact.html" class="hover:text-white transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
