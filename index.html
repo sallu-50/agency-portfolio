@@ -537,153 +537,95 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-800 text-gray-300 py-20 border-t border-white/5">
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-12 border-t border-gray-800">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <!-- Brand Section -->
-                <div class="space-y-8">
-                    <div class="flex items-center gap-2">
-                        <a href="index.html" class="inline-block" aria-label="Home">
-                            <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-10 w-auto brightness-0 invert">
-                        </a>
-                    </div>
-                    <p class="text-sm leading-relaxed max-w-xs text-gray-400">
-                        Build smarter, more accurate AI models faster with expert human-powered AI data solutions
-                        developed for accuracy, reliability, and scalability.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+                <!-- 1. Brand Section -->
+                <div class="space-y-5">
+                    <a href="index.html" class="inline-block" aria-label="Home">
+                        <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-9 w-auto brightness-0 invert">
+                    </a>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Enterprise human-in-the-loop AI data annotation and training solutions built for precision, speed, and strict security compliance.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center hover:bg-blue-600 transition-colors group">
-                            <i data-feather="facebook" class="w-5 h-5 group-hover:text-white"></i>
+                    <!-- Social Media Links -->
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                            <i data-feather="linkedin" class="w-4 h-4"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center hover:bg-blue-600 transition-colors group">
-                            <i data-feather="linkedin" class="w-5 h-5 group-hover:text-white"></i>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+                            class="w-9 h-9 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                            <i data-feather="twitter" class="w-4 h-4"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center hover:bg-blue-600 transition-colors group">
-                            <i data-feather="twitter" class="w-5 h-5 group-hover:text-white"></i>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                            class="w-9 h-9 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                            <i data-feather="facebook" class="w-4 h-4"></i>
                         </a>
-                    </div>
-                    <!-- Certifications -->
-                    <div class="flex gap-4 pt-4">
-                        <div
-                            class="border border-gray-700 p-2 rounded flex flex-col items-center justify-center w-16 h-16 grayscale">
-                            <span class="text-[10px] font-bold">GIC</span>
-                            <div
-                                class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center mt-1">
-                                <i data-feather="globe" class="w-4 h-4 text-gray-400"></i>
-                            </div>
-                        </div>
-                        <div
-                            class="border border-gray-700 p-2 rounded flex flex-col items-center justify-center w-16 h-16 grayscale">
-                            <span class="text-[10px] font-bold">GIC</span>
-                            <div
-                                class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center mt-1">
-                                <i data-feather="shield" class="w-4 h-4 text-gray-400"></i>
-                            </div>
-                        </div>
-                        <div
-                            class="border border-gray-700 p-2 rounded flex items-center justify-center w-16 h-16 grayscale relative">
-                            <div class="text-[8px] font-bold flex flex-col items-center leading-tight">
-                                <span class="text-blue-400">GDPR</span>
-                                <span class="text-[6px]">COMPLIANT</span>
-                            </div>
-                            <!-- Simple Stars Circle for GDPR look -->
-                            <div
-                                class="absolute inset-0 flex items-center justify-center border border-dashed border-gray-600 rounded-full m-1 pointer-events-none">
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Solutions -->
-                <div class="space-y-6">
-                    <h4 class="text-white font-bold text-lg">Solutions</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Computer Vision</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">NLP</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">LLM & Gen AI</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Data Collection</a></li>
+                <!-- 2. Services / Solutions -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold text-base tracking-wide">Core Services</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="data-collection.html" class="hover:text-blue-400 transition-colors">Data Collection</a></li>
+                        <li><a href="computer-vision.html" class="hover:text-blue-400 transition-colors">Computer Vision</a></li>
+                        <li><a href="nlp.html" class="hover:text-blue-400 transition-colors">NLP & Text Annotation</a></li>
+                        <li><a href="audio-annotation.html" class="hover:text-blue-400 transition-colors">Audio Transcription</a></li>
+                        <li><a href="video-annotation.html" class="hover:text-blue-400 transition-colors">Video Annotation</a></li>
                     </ul>
                 </div>
 
-                <!-- Industries -->
-                <div class="space-y-6">
-                    <h4 class="text-white font-bold text-lg">Industries</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Retail & Ecommerce</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Autonomous Vehicles</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Agriculture</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Sports & Entertainment</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Industrial Automation</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Consumer & Media</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company -->
-                <div class="space-y-6">
-                    <h4 class="text-white font-bold text-lg">Company</h4>
-                    <ul class="space-y-4">
+                <!-- 3. Company & Navigation -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold text-base tracking-wide">Company</h4>
+                    <ul class="space-y-2.5 text-sm">
                         <li><a href="#about" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li><a href="team.html" class="hover:text-blue-400 transition-colors flex items-center gap-1.5">
+                            Our Team <span class="text-[10px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded font-medium">New</span>
+                        </a></li>
+                        <li><a href="#industries" class="hover:text-blue-400 transition-colors">Industries</a></li>
                         <li><a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Partnerships</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-12 border-t border-white/5">
-                <!-- Spacer for layout -->
-                <div class="hidden lg:block"></div>
-
-                <!-- Resources (Bottom row equivalent) -->
-                <div class="space-y-6">
-                    <h4 class="text-white font-bold text-lg">Resources</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Blogs</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Case Studies</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">White Papers</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
-                <div class="lg:col-span-2 space-y-6">
-                    <h4 class="text-white font-bold text-lg">Contact</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="space-y-2">
-                            <p class="text-xs text-gray-500 uppercase font-bold tracking-widest">Sales</p>
-                            <a href="mailto:ebrahim@marveit.com"
-                                class="text-sm hover:text-blue-400 transition-colors break-all">ebrahim@marveit.com</a>
+                <!-- 4. Contact & Quick Connect -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold text-base tracking-wide">Get in Touch</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Ready to accelerate your model development? Contact our technical architects today.
+                    </p>
+                    <div class="space-y-2.5 text-sm">
+                        <a href="mailto:ebrahim@marveit.com" class="flex items-center gap-2.5 text-gray-300 hover:text-blue-400 transition-colors">
+                            <i data-feather="mail" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                            <span class="break-all">ebrahim@marveit.com</span>
+                        </a>
+                        <div class="flex items-center gap-2.5 text-gray-400 text-xs">
+                            <i data-feather="globe" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                            <span>Worldwide Remote Operations</span>
                         </div>
-                        <div class="space-y-2">
-                            <p class="text-xs text-gray-500 uppercase font-bold tracking-widest">Careers</p>
-                            <a href="mailto:ebrahim@marveit.com"
-                                class="text-sm hover:text-blue-400 transition-colors break-all">ebrahim@marveit.com</a>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-xs text-gray-500 uppercase font-bold tracking-widest">Partners</p>
-                            <a href="mailto:ebrahim@marveit.com"
-                                class="text-sm hover:text-blue-400 transition-colors break-all">ebrahim@marveit.com</a>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-xs text-gray-500 uppercase font-bold tracking-widest">Media</p>
-                            <a href="mailto:ebrahim@marveit.com"
-                                class="text-sm hover:text-blue-400 transition-colors break-all">ebrahim@marveit.com</a>
-                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow hover:shadow-md transition">
+                            <span>Speak to an Expert</span>
+                            <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div
-                class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
                 <p>&copy; 2026 Marveit AI. All rights reserved.</p>
                 <p>
                     Developed by <a href="https://www.facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors font-medium underline underline-offset-2">Abdullah Al Salman</a>
                 </p>
-                <div class="flex gap-8">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <div class="flex gap-6">
+                    <a href="contact.html" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+                    <a href="contact.html" class="hover:text-gray-300 transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
