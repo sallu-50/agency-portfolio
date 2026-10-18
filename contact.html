@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Marveit AI | Direct Communication Channels</title>
+    <title>Contact Us - Marveit AI | Get in Touch</title>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -12,35 +12,23 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#0E5EDD">
+    <meta name="theme-color" content="#0B253A">
     <link href="./dist/output.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
-        .pulse-dot {
-            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-            animation: pulse-green 2s infinite;
-        }
-        @keyframes pulse-green {
-            0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-            }
-            70% {
-                transform: scale(1);
-                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
-            }
-            100% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-            }
+        .contact-circle-card:hover .channel-icon-circle {
+            transform: scale(1.08);
+            background-color: #ffffff;
+            color: #0B253A;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 
-<body class="font-sans bg-gray-50/60 text-gray-800 antialiased pt-24 md:pt-28">
+<body class="font-sans bg-white text-gray-800 antialiased pt-20 md:pt-24">
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
         <div class="container mx-auto flex justify-between items-center px-6 py-4">
             <a href="index.html" class="flex items-center" aria-label="Home">
                 <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-10 w-auto">
@@ -267,204 +255,145 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="py-12 md:py-20">
-        <div class="container mx-auto px-6 max-w-6xl">
+    <!-- Main Content: GET IN TOUCH HERO (Designed exactly like reference image) -->
+    <main>
+        <!-- Hero Section with Deep Navy-Teal Theme -->
+        <section class="bg-[#0B253A] text-white py-24 md:py-32 relative overflow-hidden" style="background: linear-gradient(180deg, #0B253A 0%, #071A29 100%);">
+            
+            <!-- Subtle background decorative elements -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <!-- Hero Section -->
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <!-- Status Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white border border-gray-200/80 shadow-sm text-gray-700 mb-5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-green-500 pulse-dot"></span>
-                    <span>Online & Ready to Consult</span>
-                    <span class="text-gray-300">•</span>
-                    <span class="text-blue-600 font-bold">Fast Direct Connect</span>
+            <div class="container mx-auto px-6 relative z-10 max-w-6xl">
+                
+                <!-- Section Title (Bold, Uppercase, Centered) -->
+                <div class="text-center mb-16 md:mb-20">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wider text-white mb-4">
+                        GET IN TOUCH
+                    </h1>
+                    <p class="text-base md:text-lg text-blue-100/70 max-w-2xl mx-auto font-light">
+                        Direct communication channels to our leadership and senior technical architects.
+                    </p>
                 </div>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
-                    Connect Directly With Our Leadership
-                </h1>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                    No complicated forms or ticket queues. Connect straight with our senior technical architects and founder through your preferred channel below.
-                </p>
-            </div>
+                <!-- 4 Circular Icon Columns: WHATSAPP, GMAIL, LINKEDIN, FACEBOOK -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 text-center items-start">
 
-            <!-- SMART DIRECT CHANNELS (3 Primary Interactive Cards) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-
-                <!-- 1. GMAIL / OFFICIAL EMAIL CARD -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-feather="mail" class="w-7 h-7"></i>
-                    </div>
-
-                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Official Inquiry</span>
-                    <h2 class="text-xl font-extrabold text-gray-900 mb-2">Gmail & Email</h2>
-                    <p class="text-xs text-gray-500 leading-relaxed mb-6">
-                        Best for sending dataset specs, project RFPs, NDAs, taxonomy guidelines, or volume inquiries.
-                    </p>
-
-                    <!-- Email Badge Box with Copy Button -->
-                    <div class="bg-gray-50 rounded-2xl p-3.5 border border-gray-100 mb-6 flex items-center justify-between gap-2">
-                        <div class="truncate text-xs font-mono font-bold text-gray-800" id="email-text">
-                            ebrahim@marveit.com
-                        </div>
-                        <button type="button" onclick="copyEmail()" id="copy-btn" class="px-2.5 py-1 text-[11px] font-semibold bg-white hover:bg-gray-200 text-gray-700 rounded-lg border border-gray-200 shadow-sm transition flex items-center gap-1 flex-shrink-0" title="Copy to clipboard">
-                            <i data-feather="copy" class="w-3 h-3"></i>
-                            <span id="copy-label">Copy</span>
-                        </button>
-                    </div>
-
-                    <div class="mt-auto space-y-2.5">
-                        <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI&body=Hi%20Marveit%20AI%20Team,%0D%0A%0D%0AI%20would%20like%20to%20discuss%20a%20data%20annotation%20project:%0D%0A- Dataset Type (CV/NLP/Audio):%0D%0A- Estimated Volume:%0D%0A- Timeline:%0D%0A%0D%0ABest regards,"
-                            class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2 text-sm">
-                            <i data-feather="send" class="w-4 h-4"></i>
-                            <span>Send Email Directly</span>
+                    <!-- 1. WHATSAPP -->
+                    <div class="contact-circle-card group flex flex-col items-center">
+                        <a href="https://wa.me/8801700000000?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project." 
+                            target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+                            class="channel-icon-circle w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 text-white flex items-center justify-center mb-6 transition-all duration-300">
+                            <i data-feather="message-circle" class="w-10 h-10"></i>
                         </a>
-                        <p class="text-[11px] text-gray-400 text-center">Guaranteed response within 4 hours</p>
-                    </div>
-                </div>
 
-                <!-- 2. WHATSAPP INSTANT CHAT CARD -->
-                <div class="bg-white rounded-3xl p-8 border-2 border-green-500/20 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col relative group ring-4 ring-green-50/50">
-                    <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-green-600 to-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wide flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Most Popular
-                    </div>
+                        <h2 class="text-xl font-bold uppercase tracking-widest text-white mb-3">
+                            WHATSAPP
+                        </h2>
 
-                    <div class="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-feather="message-circle" class="w-7 h-7"></i>
-                    </div>
-
-                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Instant Messaging</span>
-                    <h2 class="text-xl font-extrabold text-gray-900 mb-2">WhatsApp Business</h2>
-                    <p class="text-xs text-gray-500 leading-relaxed mb-6">
-                        Best for instant consultations, urgent pilot requests, audio/voice notes, and fast quote estimates.
-                    </p>
-
-                    <!-- WhatsApp info box -->
-                    <div class="bg-green-50/60 rounded-2xl p-3.5 border border-green-100 mb-6 flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                            <span class="text-xs font-semibold text-green-900">Direct Founder & Tech Hotline</span>
+                        <div class="text-sm text-blue-100/80 leading-relaxed mb-4 space-y-1">
+                            <p class="font-medium">Direct Founder Hotline</p>
+                            <p class="text-green-400 font-bold text-base tracking-wide">+880 1700 000 000</p>
+                            <p class="text-xs text-blue-200/60">Instant Chat & Voice Call</p>
                         </div>
-                        <span class="text-[10px] font-bold bg-green-200/70 text-green-800 px-2 py-0.5 rounded-full">Active</span>
-                    </div>
 
-                    <div class="mt-auto space-y-2.5">
-                        <a href="https://wa.me/8801700000000?text=Hello%20Marveit%20AI%20Team!%20I%20am%20interested%20in%20your%20data%20annotation%20services%20and%20would%20like%20to%20discuss%20our%20project%20requirements."
+                        <a href="https://wa.me/8801700000000?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project." 
                             target="_blank" rel="noopener noreferrer"
-                            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2 text-sm">
-                            <i data-feather="message-circle" class="w-4 h-4"></i>
-                            <span>Chat on WhatsApp</span>
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-300 hover:text-white transition-colors underline underline-offset-4">
+                            <span>Open WhatsApp</span>
+                            <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
-                        <p class="text-[11px] text-gray-400 text-center">Typically replies within 15 minutes</p>
                     </div>
+
+                    <!-- 2. GMAIL -->
+                    <div class="contact-circle-card group flex flex-col items-center">
+                        <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI" 
+                            aria-label="Gmail"
+                            class="channel-icon-circle w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 text-white flex items-center justify-center mb-6 transition-all duration-300">
+                            <i data-feather="mail" class="w-10 h-10"></i>
+                        </a>
+
+                        <h2 class="text-xl font-bold uppercase tracking-widest text-white mb-3">
+                            GMAIL
+                        </h2>
+
+                        <div class="text-sm text-blue-100/80 leading-relaxed mb-4 space-y-1">
+                            <p class="font-medium">RFPs & Dataset Specs</p>
+                            <p class="text-blue-300 font-bold break-all">ebrahim@marveit.com</p>
+                            <p class="text-xs text-blue-200/60">Guaranteed reply &lt; 4 hours</p>
+                        </div>
+
+                        <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI" 
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 hover:text-white transition-colors underline underline-offset-4">
+                            <span>Send Email</span>
+                            <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- 3. LINKEDIN -->
+                    <div class="contact-circle-card group flex flex-col items-center">
+                        <a href="https://linkedin.com" 
+                            target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                            class="channel-icon-circle w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 text-white flex items-center justify-center mb-6 transition-all duration-300">
+                            <i data-feather="linkedin" class="w-10 h-10"></i>
+                        </a>
+
+                        <h2 class="text-xl font-bold uppercase tracking-widest text-white mb-3">
+                            LINKEDIN
+                        </h2>
+
+                        <div class="text-sm text-blue-100/80 leading-relaxed mb-4 space-y-1">
+                            <p class="font-medium">Marveit AI Company</p>
+                            <p class="text-blue-300 font-bold">Leadership & Architects</p>
+                            <p class="text-xs text-blue-200/60">Professional Enterprise Network</p>
+                        </div>
+
+                        <a href="https://linkedin.com" 
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 hover:text-white transition-colors underline underline-offset-4">
+                            <span>Connect on LinkedIn</span>
+                            <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- 4. FACEBOOK -->
+                    <div class="contact-circle-card group flex flex-col items-center">
+                        <a href="https://facebook.com/abdullah.al.salman.892142" 
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                            class="channel-icon-circle w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 text-white flex items-center justify-center mb-6 transition-all duration-300">
+                            <i data-feather="facebook" class="w-10 h-10"></i>
+                        </a>
+
+                        <h2 class="text-xl font-bold uppercase tracking-widest text-white mb-3">
+                            FACEBOOK
+                        </h2>
+
+                        <div class="text-sm text-blue-100/80 leading-relaxed mb-4 space-y-1">
+                            <p class="font-medium">Marveit AI Official</p>
+                            <p class="text-blue-300 font-bold">Direct Messenger</p>
+                            <p class="text-xs text-blue-200/60">Community Updates & Support</p>
+                        </div>
+
+                        <a href="https://facebook.com/abdullah.al.salman.892142" 
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 hover:text-white transition-colors underline underline-offset-4">
+                            <span>Open Facebook</span>
+                            <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
                 </div>
 
-                <!-- 3. LINKEDIN NETWORK & ARCHITECT CARD -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-feather="linkedin" class="w-7 h-7"></i>
-                    </div>
-
-                    <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Professional Network</span>
-                    <h2 class="text-xl font-extrabold text-gray-900 mb-2">LinkedIn Connect</h2>
-                    <p class="text-xs text-gray-500 leading-relaxed mb-6">
-                        Best for enterprise background verification, direct InMail to architects, and strategic partnerships.
+                <!-- Bottom Assurance Strip -->
+                <div class="mt-20 pt-10 border-t border-white/10 text-center max-w-2xl mx-auto">
+                    <p class="text-xs md:text-sm text-blue-100/70 leading-relaxed">
+                        Strict bilateral NDA standard executed prior to receiving proprietary sample datasets. 
+                        Free benchmark pilot turnaround within 24 to 48 hours.
                     </p>
-
-                    <!-- LinkedIn Profile Highlights -->
-                    <div class="bg-blue-50/50 rounded-2xl p-3.5 border border-blue-100 mb-6 flex items-center justify-between text-xs">
-                        <div class="flex items-center gap-2">
-                            <i data-feather="check-circle" class="w-3.5 h-3.5 text-blue-600"></i>
-                            <span class="font-medium text-gray-800">Verified AI Enterprise</span>
-                        </div>
-                        <span class="text-[11px] font-semibold text-blue-600">Global</span>
-                    </div>
-
-                    <div class="mt-auto space-y-2.5">
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2 text-sm">
-                            <i data-feather="external-link" class="w-4 h-4"></i>
-                            <span>Message on LinkedIn</span>
-                        </a>
-                        <p class="text-[11px] text-gray-400 text-center">Founder & Solutions Architect Profiles</p>
-                    </div>
                 </div>
 
             </div>
-
-            <!-- SMART TRUST STRIP (Why Clients Trust Direct Communication) -->
-            <div class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white rounded-3xl p-8 md:p-10 shadow-xl mb-16">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-gray-700">
-                    <div class="pt-4 md:pt-0 md:pr-6">
-                        <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3 mx-auto md:mx-0">
-                            <i data-feather="clock" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-base mb-1">Instant 24-Hour Turnaround</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">
-                            Send us your guidelines and dataset samples; our leads configure a free pilot benchmark within 24 to 48 hours.
-                        </p>
-                    </div>
-
-                    <div class="pt-6 md:pt-0 md:px-6">
-                        <div class="w-10 h-10 rounded-xl bg-green-500/20 text-green-400 flex items-center justify-center mb-3 mx-auto md:mx-0">
-                            <i data-feather="lock" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-base mb-1">Strict Bilateral NDA</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">
-                            Need an NDA first? Just email or message us with your company name, and we'll counter-sign your agreement immediately.
-                        </p>
-                    </div>
-
-                    <div class="pt-6 md:pt-0 md:pl-6">
-                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-3 mx-auto md:mx-0">
-                            <i data-feather="globe" class="w-5 h-5"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-base mb-1">Worldwide Remote Coverage</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">
-                            Operating across US, European, and Asian business hours with real-time Slack/Teams integration if required.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- WHAT TO INCLUDE (Smart Helper for Clients) -->
-            <div class="bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-sm text-center max-w-3xl mx-auto">
-                <span class="text-blue-600 text-xs font-bold uppercase tracking-wider">Quick Checklist</span>
-                <h3 class="text-2xl font-bold text-gray-900 mt-1 mb-4">What to Mention in Your Message?</h3>
-                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                    To get an accurate estimate in our first reply, feel free to include:
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-                    <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100">
-                        <div class="font-bold text-gray-900 text-xs mb-1 flex items-center gap-1.5">
-                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 text-[11px] font-bold flex items-center justify-center">1</span>
-                            Annotation Type
-                        </div>
-                        <p class="text-[11px] text-gray-500">Bounding boxes, segmentation, LiDAR, NLP NER, audio transcription, etc.</p>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100">
-                        <div class="font-bold text-gray-900 text-xs mb-1 flex items-center gap-1.5">
-                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 text-[11px] font-bold flex items-center justify-center">2</span>
-                            Approximate Scale
-                        </div>
-                        <p class="text-[11px] text-gray-500">Number of images, hours of audio, text documents, or ongoing monthly quota.</p>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100">
-                        <div class="font-bold text-gray-900 text-xs mb-1 flex items-center gap-1.5">
-                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 text-[11px] font-bold flex items-center justify-center">3</span>
-                            Preferred Tooling
-                        </div>
-                        <p class="text-[11px] text-gray-500">Labelbox, CVAT, Label Studio, or your own internal proprietary tooling portal.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        </section>
     </main>
 
     <!-- Footer (Standardized & Clean 4-Column Layout) -->
@@ -583,24 +512,6 @@
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Copy Email Functionality
-        function copyEmail() {
-            const email = "ebrahim@marveit.com";
-            navigator.clipboard.writeText(email).then(() => {
-                const label = document.getElementById('copy-label');
-                const btn = document.getElementById('copy-btn');
-                label.innerText = 'Copied!';
-                btn.classList.add('bg-green-100', 'text-green-700', 'border-green-300');
-
-                setTimeout(() => {
-                    label.innerText = 'Copy';
-                    btn.classList.remove('bg-green-100', 'text-green-700', 'border-green-300');
-                }, 2000);
-            }).catch(err => {
-                console.error("Failed to copy:", err);
             });
         }
     </script>
