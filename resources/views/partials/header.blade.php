@@ -200,8 +200,7 @@
                 class="relative group/nav inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 {{ request()->routeIs('portfolio*') ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 ring-2 ring-blue-500/20' : 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5' }}">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover/nav:bg-white animate-pulse"></span>
                 <span>Portfolio</span>
-                <span
-                    class="text-[10px] uppercase tracking-wider px-1.5 py-0.2 rounded-full font-extrabold {{ request()->routeIs('portfolio*') ? 'bg-white/20 text-white' : 'bg-blue-600 text-white group-hover/nav:bg-white group-hover/nav:text-blue-700' }}">NEW</span>
+
             </a>
         </nav>
 
