@@ -1,0 +1,92 @@
+<!-- Footer -->
+<footer id="contact-footer" class="bg-gray-800 text-gray-300 border-t border-gray-700/60 pt-16 pb-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12">
+            <!-- 1. Brand Section -->
+            <div>
+                <div class="mb-5">
+                    <a href="{{ route('home') }}" class="inline-block" aria-label="Marveit AI Home">
+                        <img src="{{ asset('image/Marveit ABCD.svg') }}" alt="Marveit AI Logo" class="h-10 w-auto brightness-0 invert">
+                    </a>
+                </div>
+                <p class="text-sm leading-relaxed text-gray-400 mb-6">
+                    Enterprise human-in-the-loop AI data annotation and training solutions built for precision, speed, and strict security compliance.
+                </p>
+                <!-- Social Media Links -->
+                <div class="flex items-center gap-3">
+                    <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                        class="w-10 h-10 rounded-full bg-blue-900/40 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                        <i data-feather="linkedin" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+                        class="w-10 h-10 rounded-full bg-blue-900/40 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                        <i data-feather="twitter" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                        class="w-10 h-10 rounded-full bg-blue-900/40 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors">
+                        <i data-feather="facebook" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Core Services -->
+            <div>
+                <h4 class="text-white font-bold text-base tracking-wide mb-5">Core Services</h4>
+                <ul class="space-y-3 text-sm flex flex-col">
+                    <li><a href="{{ route('services.show', 'data-collection') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Data Collection</a></li>
+                    <li><a href="{{ route('services.show', 'computer-vision') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Computer Vision</a></li>
+                    <li><a href="{{ route('services.show', 'nlp') }}" class="text-gray-300 hover:text-blue-400 transition-colors">NLP & Text Annotation</a></li>
+                    <li><a href="{{ route('services.show', 'audio-annotation') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Audio Transcription</a></li>
+                    <li><a href="{{ route('services.show', 'video-annotation') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Video Annotation</a></li>
+                </ul>
+            </div>
+
+            <!-- 3. Company & Navigation -->
+            <div>
+                <h4 class="text-white font-bold text-base tracking-wide mb-5">Company</h4>
+                <ul class="space-y-3 text-sm flex flex-col">
+                    <li><a href="{{ route('home') }}#about" class="text-gray-300 hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="{{ route('team') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Our Team</a></li>
+                    <li><a href="{{ route('home') }}#industries" class="text-gray-300 hover:text-blue-400 transition-colors">Industries</a></li>
+                    <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- 4. Contact & Quick Connect -->
+            <div>
+                <h4 class="text-white font-bold text-base tracking-wide mb-5">Get in Touch</h4>
+                <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                    Ready to accelerate your model development? Connect with our senior technical architects.
+                </p>
+                <div class="flex flex-col gap-3 mb-5">
+                    <a href="mailto:ebrahim@marveit.com"
+                        class="flex items-center gap-2.5 text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                        <i data-feather="mail" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                        <span class="break-all">ebrahim@marveit.com</span>
+                    </a>
+                    <div class="flex items-center gap-2.5 text-gray-400 text-xs">
+                        <i data-feather="globe" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                        <span>Global Remote Operations</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow transition">
+                        <i data-feather="message-circle" class="w-3.5 h-3.5"></i>
+                        <span>WhatsApp Chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Copyright Bar -->
+        <div class="pt-8 border-t border-gray-700/60 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+            <p>&copy; {{ date('Y') }} Marveit AI. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,327 @@
+@extends('layouts.app')
+
+@section('title', 'Data Annotation & AI Solutions - Marveit AI')
+@section('meta_description', 'Power your machine learning models with pixel-perfect, human-in-the-loop datasets for Computer Vision, NLP, Audio, and Video.')
+
+@section('content')
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-20 md:py-32 mt-8">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    <span>Enterprise Human-in-the-Loop Data Engine</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
+                    High-Quality <span class="text-blue-600">Data Annotation</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                    Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation services for computer vision and NLP.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="{{ route('contact') }}"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-full transition duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <span>Get Started</span>
+                        <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <a href="#services"
+                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-full transition duration-300 inline-flex items-center">
+                        <span>Explore Services</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Video / Visual Section -->
+            <div class="w-full md:w-1/2">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 via-blue-950 to-gray-900 opacity-95"></div>
+
+                    <!-- Decorative Grid Lines -->
+                    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;"></div>
+
+                    <!-- Center Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20">
+                            <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
+                        </div>
+                    </div>
+
+                    <!-- Overlay Caption -->
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-white font-bold text-base">Watch our workflow</p>
+                                <p class="text-gray-300 text-xs">See how we label data with precision & strict SLAs</p>
+                            </div>
+                            <span class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium">99.8% Precision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Strip -->
+    <section class="border-y border-gray-100 bg-gray-50/50 py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99.8%</div>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Quality Assurance SLA</p>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">10M+</div>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Annotations Delivered</p>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Turnaround Ops</p>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">100%</div>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Bilateral NDA Security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 mb-3">
+                    <i data-feather="cpu" class="w-3.5 h-3.5"></i> Comprehensive Capabilities
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Our Services</h2>
+                <p class="text-base md:text-lg text-gray-600">
+                    High-throughput, human-verified annotation designed to feed modern deep learning architectures.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @forelse ($services as $service)
+                    @php
+                        $colorClasses = match ($service->badge_color) {
+                            'green' => ['bg' => 'bg-green-100', 'text' => 'text-green-600', 'btn_bg' => 'bg-green-50 hover:bg-green-100', 'btn_text' => 'text-green-600'],
+                            'purple' => ['bg' => 'bg-purple-100', 'text' => 'text-purple-600', 'btn_bg' => 'bg-purple-50 hover:bg-purple-100', 'btn_text' => 'text-purple-600'],
+                            'yellow' => ['bg' => 'bg-yellow-100', 'text' => 'text-yellow-600', 'btn_bg' => 'bg-yellow-50 hover:bg-yellow-100', 'btn_text' => 'text-yellow-600'],
+                            'red' => ['bg' => 'bg-red-100', 'text' => 'text-red-600', 'btn_bg' => 'bg-red-50 hover:bg-red-100', 'btn_text' => 'text-red-600'],
+                            default => ['bg' => 'bg-blue-100', 'text' => 'text-blue-600', 'btn_bg' => 'bg-blue-50 hover:bg-blue-100', 'btn_text' => 'text-blue-600'],
+                        };
+                    @endphp
+                    <div class="p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group">
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center justify-center h-14 w-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} transition-transform group-hover:scale-105">
+                                    <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
+                                    {{ $service->category }}
+                                </span>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                {{ $service->title }}
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                {{ $service->short_description ?: Str::limit($service->description, 100) }}
+                            </p>
+
+                            @if (!empty($service->features))
+                                <ul class="space-y-1.5 mb-6 text-xs text-gray-500">
+                                    @foreach (array_slice($service->features, 0, 3) as $feature)
+                                        <li class="flex items-center gap-2">
+                                            <i data-feather="check" class="w-3.5 h-3.5 text-blue-500 flex-shrink-0"></i>
+                                            <span>{{ $feature }}</span>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </div>
+
+                        <a href="{{ route('services.show', $service->slug) }}"
+                            class="mt-4 self-start {{ $colorClasses['btn_text'] }} font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 {{ $colorClasses['btn_bg'] }} inline-flex items-center gap-1.5">
+                            <span>Explore Details</span>
+                            <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                @empty
+                    <div class="col-span-3 text-center py-12 text-gray-500">
+                        No services configured yet.
+                    </div>
+                @endforelse
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="{{ route('services.index') }}"
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-white border border-blue-200 hover:border-blue-300 px-6 py-3 rounded-full shadow-sm hover:shadow transition-all">
+                    <span>View All Services & Tooling</span>
+                    <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Quality Pillars -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
+                    <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Why Choose Marveit AI?</h2>
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                    We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and accuracy, ensuring your AI projects succeed.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Multi-Tier Consensus QA</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Every dataset undergoes two-tier annotator agreement checks, random statistical sampling, and senior QA signoff to guarantee 99.8%+ benchmark compliance.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mb-6">
+                        <i data-feather="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Rapid Elastic Scaling</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Scale your labeling pipeline from hundreds of frames to millions of multi-modal files in days, without sacrificing precision or data cleanliness.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+                        <i data-feather="lock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">SOC 2 & GDPR Compliance</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Encrypted vault transfers, on-premise or cloud VPN gateways, bilateral non-disclosure agreements, and strict PII anonymization procedures.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
+                    <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Industries Served</h2>
+                <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for domain-specific models.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
+                        <i data-feather="truck" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Automotive & ADAS</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">3D point clouds, LiDAR cuboids, lane detection, and pedestrian kinematics for autonomous driving systems.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg bg-green-100 text-green-600 flex items-center justify-center mb-4">
+                        <i data-feather="activity" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Healthcare & Bio</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Medical imaging, CT/MRI segmentation, clinical record text tagging, and privacy-shielded HIPAA protocols.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+                        <i data-feather="shopping-bag" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Retail & E-Commerce</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">SKU attribute tagging, visual search indexing, product categorization, and customer sentiment evaluation.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg bg-yellow-100 text-yellow-600 flex items-center justify-center mb-4">
+                        <i data-feather="sun" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Smart Agriculture</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Aerial drone imagery, multispectral crop health classification, weed identification, and yield forecasting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Spotlight -->
+    <section id="team" class="py-24 bg-gradient-to-b from-white via-gray-50/60 to-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-3">
+                    <i data-feather="users" class="w-3.5 h-3.5"></i> The Minds Behind Marveit
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                    Meet Our Leadership Team
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg">
+                    A multidisciplinary team of AI engineers, domain specialists, and annotation leaders dedicated to powering next-generation machine learning.
+                </p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                @foreach ($teamMembers as $member)
+                    <div class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center">
+                        <div class="relative w-40 h-40 mb-5 overflow-hidden rounded-2xl ring-4 ring-blue-50 group-hover:ring-blue-100 transition-all">
+                            <img src="{{ asset($member->image) }}" alt="{{ $member->name }} - {{ $member->role }}"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                            {{ $member->name }}
+                        </h3>
+                        <p class="text-sm font-semibold text-blue-600 mb-3">{{ $member->role }}</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            {{ $member->bio }}
+                        </p>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Bottom CTA Link -->
+            <div class="text-center mt-12">
+                <a href="{{ route('team') }}"
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-6 py-3 rounded-full transition-all group">
+                    <span>Meet the complete 12+ member annotation team</span>
+                    <i data-feather="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Start CTA -->
+    <section id="speak-to-expert" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Ready to Start Your Project?</h2>
+            <p class="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
+                Let's discuss how our data annotation services can help you achieve your AI goals with speed, security, and precision.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="{{ route('contact') }}"
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    Speak to an Expert
+                </a>
+                <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    <i data-feather="message-circle" class="w-4 h-4"></i>
+                    <span>Quick WhatsApp Chat</span>
+                </a>
+            </div>
+        </div>
+    </section>
+@endsection
