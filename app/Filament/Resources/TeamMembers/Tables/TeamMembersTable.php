@@ -26,7 +26,9 @@ class TeamMembersTable
                     ->searchable(),
                 TextColumn::make('category')
                     ->searchable(),
-                ImageColumn::make('image'),
+                ImageColumn::make('image')
+                    ->disk('public')
+                    ->square(),
                 TextColumn::make('sort_order')
                     ->numeric()
                     ->sortable(),
