@@ -21,6 +21,7 @@ class PortfolioItemsTable
             ->columns([
                 ImageColumn::make('image')
                     ->label('Thumbnail')
+                    ->disk('public')
                     ->square()
                     ->defaultImageUrl(url('/image/computer-vision.png')),
 
