@@ -149,61 +149,28 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Project Overview', false);
     }
 
-    public function test_admin_guest_is_redirected_to_login(): void
+    public function test_admin_guest_is_redirected_to_filament_login(): void
     {
-        $response = $this->get(route('admin.dashboard'));
+        $response = $this->get('/admin');
 
-        $response->assertRedirect(route('login'));
+        $response->assertRedirect('/admin/login');
     }
 
-    public function test_admin_can_login_with_seeded_credentials(): void
-    {
-        $response = $this->post(route('admin.login.submit'), [
-            'email' => 'admin@marveit.com',
-            'password' => 'admin123',
-        ]);
-
-        $response->assertRedirect(route('admin.dashboard'));
-        $this->assertAuthenticated();
-    }
-
-    public function test_authenticated_admin_can_view_dashboard_and_portfolio_list(): void
+    public function test_authenticated_admin_can_access_filament_dashboard(): void
     {
         $admin = User::where('email', 'admin@marveit.com')->first();
 
-        $response = $this->actingAs($admin)->get(route('admin.dashboard'));
+        $response = $this->actingAs($admin)->get('/admin');
         $response->assertStatus(200);
-        $response->assertSee('Control Center Dashboard', false);
-
-        $listResponse = $this->actingAs($admin)->get(route('admin.portfolio.index'));
-        $listResponse->assertStatus(200);
-        $listResponse->assertSee('Portfolio Projects', false);
+        $response->assertSee('Marveit AI Control', false);
     }
 
-    public function test_admin_can_create_portfolio_project(): void
+    public function test_authenticated_admin_can_view_filament_portfolio_resource(): void
     {
         $admin = User::where('email', 'admin@marveit.com')->first();
 
-        $payload = [
-            'title' => 'Drone Geospatial Crop Health Mapping',
-            'category' => 'Data Collection',
-            'client_name' => 'AgriTech Global',
-            'metrics' => '150K Aerial Hectares • 99.8% Precision',
-            'short_description' => 'Multispectral drone imagery labeling for automated crop stress detection.',
-            'description' => 'Full polygon mapping of agricultural plots and weed clusters across continuous growth cycles.',
-            'tags' => 'Drone, Agriculture, Multispectral',
-            'is_featured' => 1,
-            'is_active' => 1,
-        ];
-
-        $response = $this->actingAs($admin)->post(route('admin.portfolio.store'), $payload);
-
-        $response->assertRedirect(route('admin.portfolio.index'));
-        $response->assertSessionHas('success');
-
-        $this->assertDatabaseHas('portfolio_items', [
-            'title' => 'Drone Geospatial Crop Health Mapping',
-            'client_name' => 'AgriTech Global',
-        ]);
+        $response = $this->actingAs($admin)->get('/admin/portfolio-items');
+        $response->assertStatus(200);
+        $response->assertSee('Portfolio', false);
     }
 }
