@@ -46,7 +46,7 @@
                         Email Address
                     </label>
                     <div class="relative">
-                        <input type="email" id="email" name="email" value="{{ old('email', 'admin@marveit.com') }}" required autofocus
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus
                             class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none"
                             placeholder="admin@marveit.com">
                     </div>
@@ -61,13 +61,13 @@
                     </div>
                     <input type="password" id="password" name="password" required
                         class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none"
-                        placeholder="••••••••" value="admin123">
+                        placeholder="••••••••">
                 </div>
 
                 <!-- Remember Me -->
                 <div class="flex items-center justify-between pt-1">
                     <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="checkbox" name="remember" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" checked>
+                        <input type="checkbox" name="remember" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
                         <span class="text-xs text-gray-600 font-medium">Remember me</span>
                     </label>
                 </div>
@@ -79,18 +79,6 @@
                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                 </button>
             </form>
-
-            <!-- Default Credentials Hint -->
-            <div class="mt-6 pt-5 border-t border-gray-100 bg-gray-50 -mx-8 -mb-8 p-6 rounded-b-3xl">
-                <div class="flex items-start gap-2.5">
-                    <i data-feather="info" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                    <div class="text-xs text-gray-600">
-                        <p class="font-bold text-gray-800 mb-0.5">Seeded Admin Credentials:</p>
-                        <p>Email: <code class="text-blue-600 font-mono font-bold bg-blue-50 px-1.5 py-0.5 rounded">admin@marveit.com</code></p>
-                        <p class="mt-1">Password: <code class="text-blue-600 font-mono font-bold bg-blue-50 px-1.5 py-0.5 rounded">admin123</code></p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="text-center mt-6">

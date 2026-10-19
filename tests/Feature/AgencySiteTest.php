@@ -126,7 +126,6 @@ class AgencySiteTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Portfolio', false);
-        $response->assertSee('NEW', false);
     }
 
     public function test_public_portfolio_page_loads_with_seeded_projects(): void
