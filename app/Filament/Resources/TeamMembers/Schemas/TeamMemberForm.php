@@ -27,6 +27,8 @@ class TeamMemberForm
                     ->required(),
                 FileUpload::make('image')
                     ->image()
+                    ->disk('public')
+                    ->directory('team')
                     ->required(),
                 Textarea::make('bio')
                     ->required()

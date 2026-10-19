@@ -119,7 +119,7 @@
                             data-category="{{ $member->category }}">
                             <!-- Image Container -->
                             <div class="relative w-44 h-44 mb-5 overflow-hidden rounded-2xl ring-4 ring-gray-100 group-hover:ring-blue-100 transition-all">
-                                <img src="{{ asset($member->image) }}" alt="{{ $member->name }}"
+                                <img src="{{ $member->image_url }}" alt="{{ $member->name }}"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                     loading="lazy">
                             </div>

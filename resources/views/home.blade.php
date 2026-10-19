@@ -278,7 +278,7 @@
                 @foreach ($teamMembers as $member)
                     <div class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center">
                         <div class="relative w-40 h-40 mb-5 overflow-hidden rounded-2xl ring-4 ring-blue-50 group-hover:ring-blue-100 transition-all">
-                            <img src="{{ asset($member->image) }}" alt="{{ $member->name }} - {{ $member->role }}"
+                            <img src="{{ $member->image_url }}" alt="{{ $member->name }} - {{ $member->role }}"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
