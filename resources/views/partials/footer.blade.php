@@ -47,6 +47,7 @@
                 <ul class="space-y-3 text-sm flex flex-col">
                     <li><a href="{{ route('home') }}#about" class="text-gray-300 hover:text-blue-400 transition-colors">About Us</a></li>
                     <li><a href="{{ route('team') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Our Team</a></li>
+                    <li><a href="{{ route('portfolio') }}" class="text-gray-300 hover:text-blue-400 transition-colors font-medium">Portfolio</a></li>
                     <li><a href="{{ route('home') }}#industries" class="text-gray-300 hover:text-blue-400 transition-colors">Industries</a></li>
                     <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 transition-colors">Contact Us</a></li>
                 </ul>
