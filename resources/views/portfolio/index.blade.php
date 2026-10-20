@@ -86,11 +86,11 @@
                     </div>
 
                     <!-- Comparison Items Container -->
-                    <div class="max-w-3xl mx-auto">
+                    <div class="max-w-4xl mx-auto">
                         @foreach ($comparisons as $index => $item)
-                            <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }} space-y-4"
+                            <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }} space-y-5"
                                  id="comparison-item-{{ $item->id }}">
-                                <div class="bg-gray-900/90 rounded-2xl p-4 md:p-6 border border-gray-800 shadow-2xl backdrop-blur-xl">
+                                <div class="bg-gray-900/90 rounded-3xl p-5 md:p-7 border border-gray-800 shadow-2xl backdrop-blur-xl">
                                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 px-1">
                                         <div>
                                             <span class="text-[11px] font-bold text-blue-400 tracking-wider uppercase mb-1 block">
