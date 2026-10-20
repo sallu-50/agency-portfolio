@@ -115,6 +115,25 @@
             });
         }
 
+        // Fit / Fill toggle button
+        const toggleFitBtn = widget.querySelector('.toggle-fit-btn');
+        if (toggleFitBtn) {
+            toggleFitBtn.addEventListener('click', function () {
+                const imgs = widget.querySelectorAll('.comparison-container img');
+                const textSpan = toggleFitBtn.querySelector('.toggle-fit-text');
+                const isCurrentlyContain = imgs[0] && (imgs[0].style.objectFit === 'contain' || imgs[0].style.objectFit === '');
+                const nextFit = isCurrentlyContain ? 'cover' : 'contain';
+
+                imgs.forEach(img => {
+                    img.style.objectFit = nextFit;
+                });
+
+                if (textSpan) {
+                    textSpan.textContent = nextFit === 'cover' ? 'Fill Frame' : 'Full Image';
+                }
+            });
+        }
+
         // Subtle teaser animation on first viewport entrance
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {

@@ -7,14 +7,15 @@
 @endphp
 
 <div class="before-after-widget w-full select-none" id="{{ $sliderId }}" data-initial="{{ $initialPercent }}">
-    <!-- Main Comparison Viewer Window (Guaranteed rock-solid height & 16:9 ratio in any CSS environment) -->
-    <div class="comparison-container relative w-full rounded-2xl overflow-hidden shadow-2xl touch-none cursor-ew-resize group mx-auto"
-         style="--position: {{ $initialPercent }}%; width: 100%; height: 52vh; min-height: 380px; max-height: 520px; aspect-ratio: 16/9; background-color: #0b0f19; border: 1px solid #1f2937;">
+    <!-- Main Comparison Viewer Window (Displays full image without cropping) -->
+    <div class="comparison-container relative w-full rounded-2xl overflow-hidden shadow-2xl touch-none cursor-ew-resize group mx-auto flex items-center justify-center"
+         style="--position: {{ $initialPercent }}%; width: 100%; height: 46vh; min-height: 280px; max-height: 440px; background-color: #080c14; border: 1px solid #1f2937;">
         
         <!-- Bottom Layer: AFTER (Annotated / Processed) Image -->
-        <div class="absolute inset-0 w-full h-full pointer-events-none">
+        <div class="absolute inset-0 w-full h-full pointer-events-none flex items-center justify-center">
             <img src="{{ $afterImage }}" alt="{{ $alt ?? 'After Comparison Image' }}"
-                 class="w-full h-full object-cover select-none pointer-events-none"
+                 class="w-full h-full object-contain select-none pointer-events-none"
+                 style="object-fit: contain; width: 100%; height: 100%;"
                  loading="lazy">
             
             <!-- After Label Badge -->
@@ -27,10 +28,11 @@
         </div>
 
         <!-- Top Layer: BEFORE (Raw / Original) Image with dynamic clip-path -->
-        <div class="before-layer absolute inset-0 w-full h-full pointer-events-none will-change-[clip-path]"
+        <div class="before-layer absolute inset-0 w-full h-full pointer-events-none will-change-[clip-path] flex items-center justify-center"
              style="clip-path: inset(0 calc(100% - var(--position)) 0 0);">
             <img src="{{ $beforeImage }}" alt="{{ $alt ?? 'Before Comparison Image' }}"
-                 class="w-full h-full object-cover select-none pointer-events-none"
+                 class="w-full h-full object-contain select-none pointer-events-none"
+                 style="object-fit: contain; width: 100%; height: 100%;"
                  loading="lazy">
             
             <!-- Before Label Badge -->
@@ -94,6 +96,11 @@
         </div>
 
         <div class="flex items-center gap-2">
+            <button type="button" class="toggle-fit-btn text-xs font-semibold text-gray-500 hover:text-blue-600 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-blue-300 transition inline-flex items-center gap-1"
+                    title="Toggle between Full Image Fit and Fill Frame">
+                <i data-feather="maximize-2" class="w-3 h-3"></i>
+                <span class="toggle-fit-text">Full Image</span>
+            </button>
             <button type="button" class="reset-slider-btn text-xs font-semibold text-gray-500 hover:text-blue-600 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-blue-300 transition inline-flex items-center gap-1">
                 <i data-feather="rotate-ccw" class="w-3 h-3"></i>
                 <span>Reset</span>
