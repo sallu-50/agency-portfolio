@@ -54,47 +54,74 @@
             </div>
         </section>
 
-        @if ($spotlightComparison && $activeCategory === 'all')
-            <!-- Interactive Before & After Spotlight Showcase -->
-            <section class="py-12 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-white border-b border-gray-800">
-                <div class="container mx-auto px-6">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                        <div class="lg:col-span-5 space-y-4">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30">
-                                <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-400"></i> Interactive Quality Comparison
-                            </span>
-                            <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-                                {{ $spotlightComparison->title }}
-                            </h2>
-                            <p class="text-sm text-gray-300 leading-relaxed">
-                                {{ $spotlightComparison->short_description ?: $spotlightComparison->description }}
-                            </p>
-                            @if ($spotlightComparison->metrics)
-                                <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-blue-200 flex items-center gap-2">
-                                    <i data-feather="check-circle" class="w-4 h-4 text-emerald-400"></i>
-                                    <span>{{ $spotlightComparison->metrics }}</span>
-                                </div>
-                            @endif
-                            <div class="pt-2 flex flex-wrap items-center gap-4">
-                                <a href="{{ route('portfolio.show', $spotlightComparison->slug) }}"
-                                   class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs inline-flex items-center gap-2 shadow-lg transition">
-                                    <span>Open Case Study</span>
-                                    <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
-                                </a>
-                                <span class="text-xs text-gray-400 flex items-center gap-1.5">
-                                    <i data-feather="move" class="w-3.5 h-3.5 text-blue-400"></i> Drag slider to compare
-                                </span>
+        @if (isset($comparisons) && $comparisons->isNotEmpty())
+            <!-- Dedicated Before & After Image Comparison Section -->
+            <section id="comparisons-showcase" class="py-16 md:py-20 bg-gray-950 text-white border-b border-gray-800 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30 mb-3 shadow-xs">
+                            <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-400"></i> Interactive Proof of Precision
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+                            Before & After <span class="text-blue-500">Quality Inspection</span>
+                        </h2>
+                        <p class="text-sm md:text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                            Drag the center slider left and right to inspect the pixel-level transformation between raw source data and our verified annotation output.
+                        </p>
+
+                        @if ($comparisons->count() > 1)
+                            <!-- Comparison Switcher Tabs -->
+                            <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+                                @foreach ($comparisons as $index => $item)
+                                    <button type="button"
+                                            class="comparison-tab-btn px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer {{ $index === 0 ? 'bg-blue-600 text-white border-blue-500 shadow-md shadow-blue-500/30' : 'bg-gray-900 text-gray-400 border-gray-800 hover:text-white hover:border-gray-700' }}"
+                                            data-target="comparison-item-{{ $item->id }}">
+                                        {{ $item->title }}
+                                    </button>
+                                @endforeach
                             </div>
-                        </div>
-                        <div class="lg:col-span-7">
-                            @include('partials.before-after-slider', [
-                                'beforeImage' => $spotlightComparison->before_image_url,
-                                'afterImage' => $spotlightComparison->after_image_url,
-                                'beforeLabel' => $spotlightComparison->before_label ?: 'Raw Frame',
-                                'afterLabel' => $spotlightComparison->after_label ?: 'Annotated',
-                                'alt' => $spotlightComparison->title,
-                            ])
-                        </div>
+                        @endif
+                    </div>
+
+                    <!-- Comparison Items Container -->
+                    <div class="max-w-5xl mx-auto">
+                        @foreach ($comparisons as $index => $item)
+                            <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }} space-y-6"
+                                 id="comparison-item-{{ $item->id }}">
+                                <div class="bg-gray-900/90 rounded-3xl p-5 md:p-8 border border-gray-800 shadow-2xl backdrop-blur-xl">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 px-1">
+                                        <div>
+                                            <span class="text-[11px] font-bold text-blue-400 tracking-wider uppercase mb-1 block">
+                                                {{ $item->category ?: 'Annotation Showcase' }}
+                                            </span>
+                                            <h3 class="text-xl md:text-2xl font-bold text-white">
+                                                {{ $item->title }}
+                                            </h3>
+                                            @if ($item->description)
+                                                <p class="text-xs md:text-sm text-gray-400 mt-1 max-w-2xl leading-relaxed">
+                                                    {{ $item->description }}
+                                                </p>
+                                            @endif
+                                        </div>
+                                        <div class="text-xs text-gray-400 bg-gray-800/80 px-3.5 py-1.5 rounded-full border border-gray-700/60 flex items-center gap-2 self-start md:self-auto flex-shrink-0">
+                                            <i data-feather="move" class="w-3.5 h-3.5 text-blue-400"></i>
+                                            <span>Drag slider to compare</span>
+                                        </div>
+                                    </div>
+
+                                    @include('partials.before-after-slider', [
+                                        'id' => 'slider-comparison-' . $item->id,
+                                        'beforeImage' => $item->before_image_url,
+                                        'afterImage' => $item->after_image_url,
+                                        'beforeLabel' => $item->before_label ?: 'Before',
+                                        'afterLabel' => $item->after_label ?: 'After',
+                                        'alt' => $item->title,
+                                    ])
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </section>
@@ -103,6 +130,10 @@
         <!-- Projects Grid Section -->
         <section class="py-16 md:py-24 bg-gray-50/50">
             <div class="container mx-auto px-6">
+                <div class="max-w-2xl mb-12">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-2">Our Portfolio Case Studies</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Verified Production Datasets</h2>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     @forelse ($projects as $project)
                         @php

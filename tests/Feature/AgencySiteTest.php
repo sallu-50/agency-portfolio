@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\BeforeAfterSlider;
 use App\Models\ContactMessage;
 use App\Models\PortfolioItem;
 use App\Models\User;
@@ -174,37 +175,33 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Portfolio', false);
     }
 
-    public function test_portfolio_detail_page_renders_interactive_comparison_slider(): void
+    public function test_authenticated_admin_can_view_filament_before_after_sliders_resource(): void
     {
-        $project = PortfolioItem::where('slug', 'autonomous-vehicle-3d-lidar')->firstOrFail();
+        $admin = User::where('email', 'admin@marveit.com')->first();
 
-        $this->assertTrue($project->has_before_after);
-
-        $response = $this->get(route('portfolio.show', $project->slug));
+        $response = $this->actingAs($admin)->get('/admin/before-after-sliders');
         $response->assertStatus(200);
-        $response->assertSee('Interactive Data Comparison', false);
-        $response->assertSee('before-after-widget', false);
-        $response->assertSee('before-after-slider.js', false);
-        $response->assertSee(e($project->before_label), false);
-        $response->assertSee(e($project->after_label), false);
+        $response->assertSee('Before &amp; After Sliders', false);
     }
 
-    public function test_portfolio_index_page_displays_comparison_spotlight_and_badges(): void
+    public function test_portfolio_page_displays_dedicated_before_after_showcase_section(): void
     {
         $response = $this->get(route('portfolio'));
 
         $response->assertStatus(200);
-        $response->assertSee('Interactive Quality Comparison', false);
+        $response->assertSee('Quality Inspection', false);
+        $response->assertSee('Interactive Proof of Precision', false);
         $response->assertSee('before-after-widget', false);
-        $response->assertSee('Slider', false);
+        $response->assertSee('before-after-slider.js', false);
+        $response->assertSee('Autonomous Vehicle LiDAR', false);
     }
 
-    public function test_portfolio_model_before_after_accessors(): void
+    public function test_before_after_slider_model_image_accessors(): void
     {
-        $project = PortfolioItem::where('slug', 'autonomous-vehicle-3d-lidar')->firstOrFail();
+        $slider = BeforeAfterSlider::firstOrFail();
 
-        $this->assertNotNull($project->before_image_url);
-        $this->assertNotNull($project->after_image_url);
-        $this->assertTrue($project->has_before_after);
+        $this->assertNotNull($slider->before_image_url);
+        $this->assertNotNull($slider->after_image_url);
+        $this->assertTrue($slider->is_active);
     }
 }

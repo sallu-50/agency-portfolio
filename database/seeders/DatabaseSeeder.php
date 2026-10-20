@@ -246,5 +246,8 @@ class DatabaseSeeder extends Seeder
 
         // 4. Seed Portfolio Projects
         $this->call(PortfolioItemSeeder::class);
+
+        // 5. Seed Before & After Sliders
+        $this->call(BeforeAfterSliderSeeder::class);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BeforeAfterSlider;
 use App\Models\PortfolioItem;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -31,9 +32,13 @@ class PortfolioController extends Controller
         ];
 
         $featuredProjects = $allProjects->where('is_featured', true)->take(3);
-        $spotlightComparison = $allProjects->first(fn ($p) => $p->has_before_after);
 
-        return view('portfolio.index', compact('projects', 'categories', 'activeCategory', 'featuredProjects', 'spotlightComparison'));
+        $comparisons = BeforeAfterSlider::where('is_active', true)
+            ->orderBy('sort_order')
+            ->orderByDesc('id')
+            ->get();
+
+        return view('portfolio.index', compact('projects', 'categories', 'activeCategory', 'featuredProjects', 'comparisons'));
     }
 
     public function show(string $slug): View

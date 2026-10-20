@@ -147,6 +147,35 @@
         document.querySelectorAll('.before-after-widget').forEach(initBeforeAfterSlider);
     }
 
+    // Comparison switcher tabs
+    document.addEventListener('click', function (e) {
+        const btn = e.target.closest('.comparison-tab-btn');
+        if (!btn) return;
+        const targetId = btn.dataset.target;
+        if (!targetId) return;
+
+        // Update active tab buttons style
+        document.querySelectorAll('.comparison-tab-btn').forEach(b => {
+            b.classList.remove('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-md', 'shadow-blue-500/30');
+            b.classList.add('bg-gray-900', 'text-gray-400', 'border-gray-800');
+        });
+        btn.classList.add('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-md', 'shadow-blue-500/30');
+        btn.classList.remove('bg-gray-900', 'text-gray-400', 'border-gray-800');
+
+        // Toggle target comparison display
+        document.querySelectorAll('.comparison-display-item').forEach(item => {
+            item.classList.add('hidden');
+            item.classList.remove('block');
+        });
+
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+            targetEl.classList.remove('hidden');
+            targetEl.classList.add('block');
+            initAllSliders();
+        }
+    });
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initAllSliders);
     } else {
