@@ -31,8 +31,9 @@ class PortfolioController extends Controller
         ];
 
         $featuredProjects = $allProjects->where('is_featured', true)->take(3);
+        $spotlightComparison = $allProjects->first(fn ($p) => $p->has_before_after);
 
-        return view('portfolio.index', compact('projects', 'categories', 'activeCategory', 'featuredProjects'));
+        return view('portfolio.index', compact('projects', 'categories', 'activeCategory', 'featuredProjects', 'spotlightComparison'));
     }
 
     public function show(string $slug): View

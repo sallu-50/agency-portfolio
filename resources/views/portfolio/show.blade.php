@@ -54,27 +54,60 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <!-- Left: Content Body -->
                     <div class="lg:col-span-8 space-y-10">
-                        <!-- Project Visual Banner -->
-                        <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-video bg-gray-950 border border-gray-100 group">
-                            <img src="{{ $project->image_url }}" alt="{{ $project->title }}"
-                                class="w-full h-full object-cover">
-                            
-                            @if ($project->metrics)
-                                <div class="absolute bottom-6 left-6 right-6">
-                                    <div class="p-4 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
+                        <!-- Project Visual Banner (Before/After Slider or Static Image) -->
+                        @if ($project->has_before_after)
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200">
+                                        <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-600"></i> Interactive Data Comparison
+                                    </span>
+                                    <span class="text-xs text-gray-500 hidden sm:inline">Drag the center slider left/right</span>
+                                </div>
+
+                                @include('partials.before-after-slider', [
+                                    'beforeImage' => $project->before_image_url,
+                                    'afterImage' => $project->after_image_url,
+                                    'beforeLabel' => $project->before_label ?: 'Raw Frame',
+                                    'afterLabel' => $project->after_label ?: 'Annotated',
+                                    'alt' => $project->title . ' - Comparison',
+                                ])
+
+                                @if ($project->metrics)
+                                    <div class="p-4 rounded-2xl bg-gray-900 text-white flex items-center justify-between border border-gray-800 shadow-md">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-xl bg-blue-600/40 text-blue-300 flex items-center justify-center flex-shrink-0">
+                                            <div class="w-10 h-10 rounded-xl bg-blue-600/30 text-blue-400 flex items-center justify-center flex-shrink-0">
                                                 <i data-feather="check-circle" class="w-5 h-5"></i>
                                             </div>
                                             <div>
-                                                <div class="text-[11px] uppercase tracking-wider text-blue-200 font-bold">Benchmark Results</div>
-                                                <div class="text-sm font-bold">{{ $project->metrics }}</div>
+                                                <div class="text-[11px] uppercase tracking-wider text-blue-300 font-bold">Benchmark Results</div>
+                                                <div class="text-sm font-bold text-white">{{ $project->metrics }}</div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endif
-                        </div>
+                                @endif
+                            </div>
+                        @else
+                            <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-video bg-gray-950 border border-gray-100 group">
+                                <img src="{{ $project->image_url }}" alt="{{ $project->title }}"
+                                    class="w-full h-full object-cover">
+                                
+                                @if ($project->metrics)
+                                    <div class="absolute bottom-6 left-6 right-6">
+                                        <div class="p-4 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-10 h-10 rounded-xl bg-blue-600/40 text-blue-300 flex items-center justify-center flex-shrink-0">
+                                                    <i data-feather="check-circle" class="w-5 h-5"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="text-[11px] uppercase tracking-wider text-blue-200 font-bold">Benchmark Results</div>
+                                                    <div class="text-sm font-bold">{{ $project->metrics }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+                        @endif
 
                         <!-- Project Case Study Details -->
                         <div class="p-8 rounded-3xl bg-gray-50/70 border border-gray-100">
@@ -183,3 +216,7 @@
         </section>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/before-after-slider.js') }}"></script>
+@endpush

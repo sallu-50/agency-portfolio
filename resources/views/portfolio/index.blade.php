@@ -54,6 +54,52 @@
             </div>
         </section>
 
+        @if ($spotlightComparison && $activeCategory === 'all')
+            <!-- Interactive Before & After Spotlight Showcase -->
+            <section class="py-12 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-white border-b border-gray-800">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <div class="lg:col-span-5 space-y-4">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                                <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-400"></i> Interactive Quality Comparison
+                            </span>
+                            <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                                {{ $spotlightComparison->title }}
+                            </h2>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                {{ $spotlightComparison->short_description ?: $spotlightComparison->description }}
+                            </p>
+                            @if ($spotlightComparison->metrics)
+                                <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-blue-200 flex items-center gap-2">
+                                    <i data-feather="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                                    <span>{{ $spotlightComparison->metrics }}</span>
+                                </div>
+                            @endif
+                            <div class="pt-2 flex flex-wrap items-center gap-4">
+                                <a href="{{ route('portfolio.show', $spotlightComparison->slug) }}"
+                                   class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs inline-flex items-center gap-2 shadow-lg transition">
+                                    <span>Open Case Study</span>
+                                    <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                                <span class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <i data-feather="move" class="w-3.5 h-3.5 text-blue-400"></i> Drag slider to compare
+                                </span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7">
+                            @include('partials.before-after-slider', [
+                                'beforeImage' => $spotlightComparison->before_image_url,
+                                'afterImage' => $spotlightComparison->after_image_url,
+                                'beforeLabel' => $spotlightComparison->before_label ?: 'Raw Frame',
+                                'afterLabel' => $spotlightComparison->after_label ?: 'Annotated',
+                                'alt' => $spotlightComparison->title,
+                            ])
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
+
         <!-- Projects Grid Section -->
         <section class="py-16 md:py-24 bg-gray-50/50">
             <div class="container mx-auto px-6">
@@ -87,6 +133,14 @@
                                     <div class="absolute top-4 right-4">
                                         <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-600 text-white shadow-sm">
                                             <i data-feather="star" class="w-3 h-3 fill-current"></i> Featured
+                                        </span>
+                                    </div>
+                                @endif
+
+                                @if ($project->has_before_after)
+                                    <div class="absolute top-4 {{ $project->is_featured ? 'right-28' : 'right-4' }}">
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-indigo-600/90 text-white shadow-sm border border-indigo-400/30 backdrop-blur-md">
+                                            <i data-feather="sliders" class="w-3 h-3"></i> Slider
                                         </span>
                                     </div>
                                 @endif
@@ -188,3 +242,7 @@
         </section>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/before-after-slider.js') }}"></script>
+@endpush

@@ -173,4 +173,38 @@ class AgencySiteTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Portfolio', false);
     }
+
+    public function test_portfolio_detail_page_renders_interactive_comparison_slider(): void
+    {
+        $project = PortfolioItem::where('slug', 'autonomous-vehicle-3d-lidar')->firstOrFail();
+
+        $this->assertTrue($project->has_before_after);
+
+        $response = $this->get(route('portfolio.show', $project->slug));
+        $response->assertStatus(200);
+        $response->assertSee('Interactive Data Comparison', false);
+        $response->assertSee('before-after-widget', false);
+        $response->assertSee('before-after-slider.js', false);
+        $response->assertSee(e($project->before_label), false);
+        $response->assertSee(e($project->after_label), false);
+    }
+
+    public function test_portfolio_index_page_displays_comparison_spotlight_and_badges(): void
+    {
+        $response = $this->get(route('portfolio'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Interactive Quality Comparison', false);
+        $response->assertSee('before-after-widget', false);
+        $response->assertSee('Slider', false);
+    }
+
+    public function test_portfolio_model_before_after_accessors(): void
+    {
+        $project = PortfolioItem::where('slug', 'autonomous-vehicle-3d-lidar')->firstOrFail();
+
+        $this->assertNotNull($project->before_image_url);
+        $this->assertNotNull($project->after_image_url);
+        $this->assertTrue($project->has_before_after);
+    }
 }

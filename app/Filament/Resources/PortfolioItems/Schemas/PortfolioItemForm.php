@@ -92,6 +92,43 @@ class PortfolioItemForm
                             ->columnSpanFull(),
                     ]),
 
+                Section::make('Before & After Image Comparison (Optional)')
+                    ->description('Upload original and edited/annotated versions of the same image. Clients can drag an interactive comparison slider.')
+                    ->collapsible()
+                    ->schema([
+                        Grid::make(2)->schema([
+                            FileUpload::make('before_image')
+                                ->label('Before / Original Image')
+                                ->helperText('Raw, untouched, or pre-annotation image')
+                                ->image()
+                                ->disk('public')
+                                ->directory('portfolio/before-after')
+                                ->imageEditor(),
+
+                            FileUpload::make('after_image')
+                                ->label('After / Edited Image')
+                                ->helperText('Annotated, retouched, or final image')
+                                ->image()
+                                ->disk('public')
+                                ->directory('portfolio/before-after')
+                                ->imageEditor(),
+                        ]),
+
+                        Grid::make(2)->schema([
+                            TextInput::make('before_label')
+                                ->label('Before Label')
+                                ->default('Before')
+                                ->placeholder('e.g. Raw Image / Before')
+                                ->maxLength(50),
+
+                            TextInput::make('after_label')
+                                ->label('After Label')
+                                ->default('After')
+                                ->placeholder('e.g. Annotated / After')
+                                ->maxLength(50),
+                        ]),
+                    ]),
+
                 Section::make('Publishing Settings')
                     ->schema([
                         Grid::make(3)->schema([

@@ -125,6 +125,76 @@
                 </div>
             </div>
 
+            <!-- 2b. Before & After Image Comparison Slider Card -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200/80 shadow-2xs space-y-6">
+                <div class="border-b border-gray-100 pb-4 flex items-center justify-between">
+                    <div>
+                        <h3 class="text-base font-bold text-gray-900 flex items-center gap-2">
+                            <i data-feather="sliders" class="w-4 h-4 text-blue-600"></i>
+                            Before & After Comparison Slider (Optional)
+                        </h3>
+                        <p class="text-xs text-gray-500">Upload the original raw image and the annotated/edited result. Clients can interactively slide between them.</p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-blue-600 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full">Interactive Feature</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Before Image -->
+                    <div class="space-y-3">
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider">
+                            1. Before Image (Original / Raw)
+                        </label>
+                        <div class="border-2 border-dashed border-gray-200 hover:border-blue-500 rounded-2xl p-5 text-center cursor-pointer transition relative bg-gray-50/50 group"
+                            onclick="document.getElementById('before_image_file').click()">
+                            <i data-feather="image" class="w-6 h-6 text-gray-400 group-hover:text-blue-600 mx-auto mb-1 transition"></i>
+                            <p class="text-xs font-bold text-gray-700">Upload Before Image</p>
+                            <p class="text-[10px] text-gray-400">Raw, unedited dataset frame</p>
+                            <input type="file" id="before_image_file" name="before_image_file" accept="image/*" class="hidden"
+                                onchange="previewComparisonImage(this, 'before_preview', 'before_placeholder')">
+                        </div>
+
+                        <div class="aspect-video w-full rounded-xl overflow-hidden bg-gray-900 border border-gray-200 relative flex items-center justify-center">
+                            <img id="before_preview" src="" alt="Before Preview" class="hidden w-full h-full object-cover">
+                            <span id="before_placeholder" class="text-xs text-gray-500">No before image chosen</span>
+                        </div>
+
+                        <div>
+                            <label for="before_label" class="block text-[11px] font-bold text-gray-600 mb-1">Before Label Badge</label>
+                            <input type="text" id="before_label" name="before_label" value="{{ old('before_label', 'Before') }}"
+                                placeholder="e.g. Before / Raw Frame"
+                                class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:border-blue-600 text-xs outline-none">
+                        </div>
+                    </div>
+
+                    <!-- After Image -->
+                    <div class="space-y-3">
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider">
+                            2. After Image (Edited / Annotated)
+                        </label>
+                        <div class="border-2 border-dashed border-gray-200 hover:border-blue-500 rounded-2xl p-5 text-center cursor-pointer transition relative bg-gray-50/50 group"
+                            onclick="document.getElementById('after_image_file').click()">
+                            <i data-feather="check-circle" class="w-6 h-6 text-gray-400 group-hover:text-blue-600 mx-auto mb-1 transition"></i>
+                            <p class="text-xs font-bold text-gray-700">Upload After Image</p>
+                            <p class="text-[10px] text-gray-400">Edited, labeled or retouched frame</p>
+                            <input type="file" id="after_image_file" name="after_image_file" accept="image/*" class="hidden"
+                                onchange="previewComparisonImage(this, 'after_preview', 'after_placeholder')">
+                        </div>
+
+                        <div class="aspect-video w-full rounded-xl overflow-hidden bg-gray-900 border border-gray-200 relative flex items-center justify-center">
+                            <img id="after_preview" src="" alt="After Preview" class="hidden w-full h-full object-cover">
+                            <span id="after_placeholder" class="text-xs text-gray-500">No after image chosen</span>
+                        </div>
+
+                        <div>
+                            <label for="after_label" class="block text-[11px] font-bold text-gray-600 mb-1">After Label Badge</label>
+                            <input type="text" id="after_label" name="after_label" value="{{ old('after_label', 'After') }}"
+                                placeholder="e.g. After / Annotated"
+                                class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:border-blue-600 text-xs outline-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- 3. Metrics, Content & Details Card -->
             <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200/80 shadow-2xs space-y-6">
                 <div class="border-b border-gray-100 pb-4">
@@ -251,6 +321,24 @@
                 preview.classList.remove('hidden');
                 const placeholder = document.getElementById('preview_placeholder');
                 if (placeholder) placeholder.classList.add('hidden');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function previewComparisonImage(input, previewId, placeholderId) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const preview = document.getElementById(previewId);
+                if (preview) {
+                    preview.src = e.target.result;
+                    preview.classList.remove('hidden');
+                }
+                const placeholder = document.getElementById(placeholderId);
+                if (placeholder) {
+                    placeholder.classList.add('hidden');
+                }
             }
             reader.readAsDataURL(input.files[0]);
         }

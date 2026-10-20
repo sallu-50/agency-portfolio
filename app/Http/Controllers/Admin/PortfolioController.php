@@ -52,6 +52,10 @@ class PortfolioController extends Controller
             'client_name' => 'nullable|string|max:255',
             'image_file' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg|max:10240',
             'image_url' => 'nullable|string|max:500',
+            'before_image_file' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg|max:10240',
+            'after_image_file' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg|max:10240',
+            'before_label' => 'nullable|string|max:50',
+            'after_label' => 'nullable|string|max:50',
             'short_description' => 'nullable|string|max:500',
             'description' => 'nullable|string',
             'metrics' => 'nullable|string|max:255',
@@ -83,6 +87,16 @@ class PortfolioController extends Controller
             $imagePath = 'image/team-2.jpg';
         }
 
+        $beforeImagePath = null;
+        if ($request->hasFile('before_image_file')) {
+            $beforeImagePath = $request->file('before_image_file')->store('portfolio/before-after', 'public');
+        }
+
+        $afterImagePath = null;
+        if ($request->hasFile('after_image_file')) {
+            $afterImagePath = $request->file('after_image_file')->store('portfolio/before-after', 'public');
+        }
+
         $tagsArray = [];
         if (! empty($validated['tags'])) {
             $tagsArray = array_values(array_filter(array_map('trim', explode(',', $validated['tags']))));
@@ -94,6 +108,10 @@ class PortfolioController extends Controller
             'category' => $validated['category'],
             'client_name' => $validated['client_name'] ?? null,
             'image' => $imagePath,
+            'before_image' => $beforeImagePath,
+            'after_image' => $afterImagePath,
+            'before_label' => $validated['before_label'] ?: 'Before',
+            'after_label' => $validated['after_label'] ?: 'After',
             'short_description' => $validated['short_description'] ?? null,
             'description' => $validated['description'] ?? null,
             'metrics' => $validated['metrics'] ?? null,
@@ -124,6 +142,10 @@ class PortfolioController extends Controller
             'client_name' => 'nullable|string|max:255',
             'image_file' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg|max:10240',
             'image_url' => 'nullable|string|max:500',
+            'before_image_file' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg|max:10240',
+            'after_image_file' => 'nullable|image|mimes:jpeg,png,jpg,webp,svg|max:10240',
+            'before_label' => 'nullable|string|max:50',
+            'after_label' => 'nullable|string|max:50',
             'short_description' => 'nullable|string|max:500',
             'description' => 'nullable|string',
             'metrics' => 'nullable|string|max:255',
@@ -149,6 +171,22 @@ class PortfolioController extends Controller
             $imagePath = $validated['image_url'];
         }
 
+        $beforeImagePath = $portfolio->before_image;
+        if ($request->hasFile('before_image_file')) {
+            if ($portfolio->before_image && Storage::disk('public')->exists($portfolio->before_image)) {
+                Storage::disk('public')->delete($portfolio->before_image);
+            }
+            $beforeImagePath = $request->file('before_image_file')->store('portfolio/before-after', 'public');
+        }
+
+        $afterImagePath = $portfolio->after_image;
+        if ($request->hasFile('after_image_file')) {
+            if ($portfolio->after_image && Storage::disk('public')->exists($portfolio->after_image)) {
+                Storage::disk('public')->delete($portfolio->after_image);
+            }
+            $afterImagePath = $request->file('after_image_file')->store('portfolio/before-after', 'public');
+        }
+
         $tagsArray = $portfolio->tags ?? [];
         if (isset($validated['tags'])) {
             $tagsArray = array_values(array_filter(array_map('trim', explode(',', $validated['tags']))));
@@ -160,6 +198,10 @@ class PortfolioController extends Controller
             'category' => $validated['category'],
             'client_name' => $validated['client_name'] ?? null,
             'image' => $imagePath,
+            'before_image' => $beforeImagePath,
+            'after_image' => $afterImagePath,
+            'before_label' => $validated['before_label'] ?: ($portfolio->before_label ?: 'Before'),
+            'after_label' => $validated['after_label'] ?: ($portfolio->after_label ?: 'After'),
             'short_description' => $validated['short_description'] ?? null,
             'description' => $validated['description'] ?? null,
             'metrics' => $validated['metrics'] ?? null,
@@ -178,6 +220,14 @@ class PortfolioController extends Controller
     {
         if ($portfolio->image && Storage::disk('public')->exists($portfolio->image)) {
             Storage::disk('public')->delete($portfolio->image);
+        }
+
+        if ($portfolio->before_image && Storage::disk('public')->exists($portfolio->before_image)) {
+            Storage::disk('public')->delete($portfolio->before_image);
+        }
+
+        if ($portfolio->after_image && Storage::disk('public')->exists($portfolio->after_image)) {
+            Storage::disk('public')->delete($portfolio->after_image);
         }
 
         $portfolio->delete();

@@ -50,6 +50,12 @@ class PortfolioItemsTable
                     ->limit(35)
                     ->toggleable(),
 
+                IconColumn::make('has_before_after')
+                    ->label('Comparison Slider')
+                    ->state(fn ($record) => $record->has_before_after)
+                    ->boolean()
+                    ->toggleable(),
+
                 IconColumn::make('is_featured')
                     ->label('Featured')
                     ->boolean()
