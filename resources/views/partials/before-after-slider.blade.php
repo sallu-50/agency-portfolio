@@ -7,9 +7,9 @@
 @endphp
 
 <div class="before-after-widget w-full select-none" id="{{ $sliderId }}" data-initial="{{ $initialPercent }}">
-    <!-- Main Comparison Viewer Window (Fits in 90vh viewport without scrolling) -->
-    <div class="comparison-container relative w-full h-[52vh] md:h-[60vh] max-h-[500px] min-h-[280px] rounded-2xl overflow-hidden shadow-2xl bg-gray-950 border border-gray-800 touch-none cursor-ew-resize group mx-auto"
-         style="--position: {{ $initialPercent }}%;">
+    <!-- Main Comparison Viewer Window (Guaranteed rock-solid height & 16:9 ratio in any CSS environment) -->
+    <div class="comparison-container relative w-full rounded-2xl overflow-hidden shadow-2xl touch-none cursor-ew-resize group mx-auto"
+         style="--position: {{ $initialPercent }}%; width: 100%; height: 52vh; min-height: 380px; max-height: 520px; aspect-ratio: 16/9; background-color: #0b0f19; border: 1px solid #1f2937;">
         
         <!-- Bottom Layer: AFTER (Annotated / Processed) Image -->
         <div class="absolute inset-0 w-full h-full pointer-events-none">

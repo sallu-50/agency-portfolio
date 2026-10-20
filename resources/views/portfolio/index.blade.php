@@ -4,26 +4,26 @@
 @section('meta_description', 'Explore Marveit AI portfolio of enterprise dataset annotation case studies: Computer Vision, LiDAR 3D, LLM alignment, and speech transcription.')
 
 @section('content')
-    <div class="pt-16 md:pt-20">
+    <div class="pt-20 md:pt-24">
         <!-- Project Line (Clean & Smart Dynamic Project Switcher) -->
-        <section class="sticky top-16 md:top-20 z-30 bg-white/95 backdrop-blur-md border-b border-gray-100 py-2.5 shadow-xs">
+        <section class="bg-white border-b border-gray-200 py-3 shadow-sm">
             <div class="container mx-auto px-6">
                 <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none">
                     @if (isset($comparisons) && $comparisons->isNotEmpty())
                         @foreach ($comparisons as $index => $item)
                             <button type="button"
-                                class="comparison-tab-btn px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold border transition-all flex items-center gap-1.5 flex-shrink-0 cursor-pointer {{ $index === 0 ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/20 active-tab' : 'border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 bg-white' }}"
+                                class="comparison-tab-btn px-4 py-2 rounded-full text-xs md:text-sm font-semibold border transition-all flex items-center gap-2 flex-shrink-0 cursor-pointer {{ $index === 0 ? 'bg-blue-600 text-white border-blue-600 shadow-sm active-tab' : 'border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 bg-white' }}"
                                 data-target="comparison-item-{{ $item->id }}">
                                 <span>{{ $item->title ?: 'Project #' . ($index + 1) }}</span>
                                 @if ($item->category)
-                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full tab-category-pill {{ $index === 0 ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500' }}">
+                                    <span class="text-[10px] px-2 py-0.5 rounded-full tab-category-pill {{ $index === 0 ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600' }}">
                                         {{ $item->category }}
                                     </span>
                                 @endif
                             </button>
                         @endforeach
                     @else
-                        <span class="px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-blue-600 text-white">
+                        <span class="px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-blue-600 text-white">
                             All Projects
                         </span>
                     @endif
@@ -33,8 +33,9 @@
 
         @if (isset($comparisons) && $comparisons->isNotEmpty())
             <!-- Dedicated Before & After Image Comparison Section (Fits within 90vh of the screen) -->
-            <section id="comparisons-showcase" class="py-4 md:py-6 bg-gray-950 text-white border-b border-gray-800 relative overflow-hidden flex flex-col justify-center min-h-[calc(90vh-7rem)]">
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/15 via-transparent to-transparent pointer-events-none"></div>
+            <section id="comparisons-showcase" class="py-6 md:py-8 text-white relative overflow-hidden flex flex-col justify-center"
+                     style="background-color: #0b0f19; min-height: calc(88vh - 120px);">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
 
                 <div class="container mx-auto px-4 md:px-6 relative z-10 w-full">
                     <!-- Comparison Items Container -->
@@ -42,20 +43,23 @@
                         @foreach ($comparisons as $index => $item)
                             <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }}"
                                  id="comparison-item-{{ $item->id }}">
-                                <div class="bg-gray-900/95 rounded-2xl md:rounded-3xl p-3 md:p-5 border border-gray-800/80 shadow-2xl backdrop-blur-xl ring-1 ring-white/10">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 px-1">
-                                        <div class="flex items-center gap-2">
+                                <div class="rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-2xl backdrop-blur-xl"
+                                     style="background-color: #111827; border: 1px solid #1f2937;">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3.5 px-1">
+                                        <div class="flex items-center gap-2.5">
                                             @if ($item->category)
-                                                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                                                <span class="inline-block px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider text-blue-400"
+                                                      style="background-color: rgba(37, 99, 235, 0.18); border: 1px solid rgba(96, 165, 250, 0.35);">
                                                     {{ $item->category }}
                                                 </span>
                                             @endif
-                                            <h3 class="text-sm md:text-base font-bold text-white">
+                                            <h3 class="text-base md:text-lg font-bold text-white">
                                                 {{ $item->title ?: 'Project #' . ($index + 1) }}
                                             </h3>
                                         </div>
-                                        <div class="text-[11px] text-gray-400 bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10 flex items-center gap-1.5 self-start sm:self-auto flex-shrink-0">
-                                            <i data-feather="move" class="w-3 h-3 text-blue-400"></i>
+                                        <div class="text-[11px] text-gray-300 px-3 py-1 rounded-full flex items-center gap-1.5 self-start sm:self-auto flex-shrink-0"
+                                             style="background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);">
+                                            <i data-feather="move" class="w-3.5 h-3.5 text-blue-400"></i>
                                             <span>Drag slider to compare</span>
                                         </div>
                                     </div>
