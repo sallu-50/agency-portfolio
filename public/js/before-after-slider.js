@@ -156,11 +156,21 @@
 
         // Update active tab buttons style
         document.querySelectorAll('.comparison-tab-btn').forEach(b => {
-            b.classList.remove('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-md', 'shadow-blue-500/30');
-            b.classList.add('bg-gray-900', 'text-gray-400', 'border-gray-800');
+            b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600', 'shadow-md', 'shadow-blue-500/20');
+            b.classList.add('border-gray-200', 'text-gray-600', 'bg-white');
+            const pill = b.querySelector('.tab-category-pill');
+            if (pill) {
+                pill.classList.remove('bg-white/20', 'text-white');
+                pill.classList.add('bg-gray-100', 'text-gray-500');
+            }
         });
-        btn.classList.add('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-md', 'shadow-blue-500/30');
-        btn.classList.remove('bg-gray-900', 'text-gray-400', 'border-gray-800');
+        btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600', 'shadow-md', 'shadow-blue-500/20');
+        btn.classList.remove('border-gray-200', 'text-gray-600', 'bg-white');
+        const activePill = btn.querySelector('.tab-category-pill');
+        if (activePill) {
+            activePill.classList.remove('bg-gray-100', 'text-gray-500');
+            activePill.classList.add('bg-white/20', 'text-white');
+        }
 
         // Toggle target comparison display
         document.querySelectorAll('.comparison-display-item').forEach(item => {

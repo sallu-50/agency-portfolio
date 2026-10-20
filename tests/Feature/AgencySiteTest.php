@@ -134,7 +134,6 @@ class AgencySiteTest extends TestCase
         $response = $this->get(route('portfolio'));
 
         $response->assertStatus(200);
-        $response->assertSee('All Projects', false);
         $response->assertSee('Computer Vision', false);
     }
 

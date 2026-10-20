@@ -13,6 +13,11 @@ class BeforeAfterSlider extends Model
         'sort_order' => 'integer',
     ];
 
+    public function getDisplayTitleAttribute(): string
+    {
+        return filled($this->title) ? $this->title : 'Project #'.$this->id;
+    }
+
     public function getBeforeImageUrlAttribute(): string
     {
         if (empty($this->before_image)) {

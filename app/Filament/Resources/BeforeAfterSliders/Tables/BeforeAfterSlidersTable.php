@@ -31,6 +31,7 @@ class BeforeAfterSlidersTable
 
                 TextColumn::make('title')
                     ->label('Comparison Title')
+                    ->default(fn ($record) => 'Project #'.$record->id)
                     ->searchable()
                     ->sortable()
                     ->weight('bold')
@@ -39,6 +40,7 @@ class BeforeAfterSlidersTable
                 TextColumn::make('category')
                     ->badge()
                     ->color('primary')
+                    ->placeholder('General')
                     ->searchable()
                     ->sortable(),
 

@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\BeforeAfterSliders\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -22,23 +21,16 @@ class BeforeAfterSliderForm
                     ->schema([
                         Grid::make(2)->schema([
                             TextInput::make('title')
-                                ->label('Comparison Title')
-                                ->placeholder('e.g. LiDAR 3D Bounding vs Raw Point Cloud')
-                                ->required()
+                                ->label('Comparison Title (Optional)')
+                                ->placeholder('e.g. Photo Retouching / Model Edit (Optional)')
+                                ->nullable()
                                 ->maxLength(255),
 
-                            Select::make('category')
-                                ->label('Category')
-                                ->options([
-                                    'Computer Vision' => 'Computer Vision',
-                                    'Photo Retouching' => 'Photo Retouching',
-                                    'Background Removal' => 'Background Removal',
-                                    'Medical Imaging' => 'Medical Imaging',
-                                    'Autonomous Driving' => 'Autonomous Driving',
-                                    'Object Detection' => 'Object Detection',
-                                ])
-                                ->default('Computer Vision')
-                                ->required(),
+                            TextInput::make('category')
+                                ->label('Category (Optional)')
+                                ->placeholder('e.g. Photo Retouching, E-commerce (Optional)')
+                                ->nullable()
+                                ->maxLength(100),
                         ]),
 
                         Textarea::make('description')
