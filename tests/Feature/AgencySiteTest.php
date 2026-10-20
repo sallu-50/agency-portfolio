@@ -135,7 +135,6 @@ class AgencySiteTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('All Projects', false);
-        $response->assertSee('Autonomous Vehicle 3D LiDAR', false);
         $response->assertSee('Computer Vision', false);
     }
 

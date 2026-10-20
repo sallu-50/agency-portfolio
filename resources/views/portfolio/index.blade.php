@@ -94,7 +94,8 @@
             </section>
         @endif
 
-        <!-- Projects Grid Section -->
+        {{-- 
+        <!-- Projects Grid Section (Temporarily commented out) -->
         <section class="py-16 md:py-24 bg-gray-50/50">
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mb-12">
@@ -217,6 +218,7 @@
                 @endif
             </div>
         </section>
+        --}}
 
         <!-- CTA Section -->
         <section class="py-20 bg-white border-t border-gray-100">
