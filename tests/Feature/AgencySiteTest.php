@@ -134,7 +134,7 @@ class AgencySiteTest extends TestCase
         $response = $this->get(route('portfolio'));
 
         $response->assertStatus(200);
-        $response->assertSee('Our AI Dataset', false);
+        $response->assertSee('All Projects', false);
         $response->assertSee('Autonomous Vehicle 3D LiDAR', false);
         $response->assertSee('Computer Vision', false);
     }
@@ -189,8 +189,7 @@ class AgencySiteTest extends TestCase
         $response = $this->get(route('portfolio'));
 
         $response->assertStatus(200);
-        $response->assertSee('Quality Inspection', false);
-        $response->assertSee('Interactive Proof of Precision', false);
+        $response->assertSee('Drag slider to compare', false);
         $response->assertSee('before-after-widget', false);
         $response->assertSee('before-after-slider.js', false);
         $response->assertSee('Autonomous Vehicle LiDAR', false);

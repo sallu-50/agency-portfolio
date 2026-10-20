@@ -54,19 +54,21 @@ class BeforeAfterSliderForm
                         Grid::make(2)->schema([
                             FileUpload::make('before_image')
                                 ->label('1. Before Image (Original / Raw)')
-                                ->helperText('The original unedited or pre-annotation image')
+                                ->helperText('Recommended 16:9 (e.g. 1920x1080 or 1280x720). Maximum size: 2 MB.')
                                 ->image()
                                 ->disk('public')
                                 ->directory('comparison-sliders')
+                                ->maxSize(2048)
                                 ->imageEditor()
                                 ->required(),
 
                             FileUpload::make('after_image')
                                 ->label('2. After Image (Edited / Annotated)')
-                                ->helperText('The retouched, annotated or final result image')
+                                ->helperText('Must have identical dimensions/ratio as Before Image. Maximum size: 2 MB.')
                                 ->image()
                                 ->disk('public')
                                 ->directory('comparison-sliders')
+                                ->maxSize(2048)
                                 ->imageEditor()
                                 ->required(),
                         ]),
