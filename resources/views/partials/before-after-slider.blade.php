@@ -8,7 +8,7 @@
 
 <div class="before-after-widget w-full select-none" id="{{ $sliderId }}" data-initial="{{ $initialPercent }}">
     <!-- Main Comparison Viewer Window -->
-    <div class="comparison-container relative w-full aspect-video md:aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl bg-gray-950 border border-gray-800 touch-none cursor-ew-resize group"
+    <div class="comparison-container relative w-full aspect-[16/10] sm:aspect-[16/9] max-h-[360px] md:max-h-[400px] rounded-2xl overflow-hidden shadow-xl bg-gray-950 border border-gray-800 touch-none cursor-ew-resize group"
          style="--position: {{ $initialPercent }}%;">
         
         <!-- Bottom Layer: AFTER (Annotated / Processed) Image -->
@@ -18,9 +18,9 @@
                  loading="lazy">
             
             <!-- After Label Badge -->
-            <div class="absolute top-4 right-4 z-10 pointer-events-none">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide text-white bg-blue-600/85 backdrop-blur-md border border-blue-400/40 shadow-lg">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <div class="absolute top-3 right-3 z-10 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide text-white bg-blue-600/85 backdrop-blur-md border border-blue-400/40 shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     {{ $afterLabel }}
                 </span>
             </div>
@@ -34,9 +34,9 @@
                  loading="lazy">
             
             <!-- Before Label Badge -->
-            <div class="absolute top-4 left-4 z-10 pointer-events-none">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide text-white bg-gray-900/85 backdrop-blur-md border border-white/20 shadow-lg">
-                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <div class="absolute top-3 left-3 z-10 pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide text-white bg-gray-900/85 backdrop-blur-md border border-white/20 shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
                     {{ $beforeLabel }}
                 </span>
             </div>
@@ -47,9 +47,9 @@
              style="left: var(--position);">
             
             <!-- Circular Draggable Thumb -->
-            <div class="handle-thumb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white text-gray-900 shadow-2xl flex items-center justify-center border-2 border-blue-500 transition-transform duration-150 group-hover:scale-110 active:scale-95 group-hover:shadow-[0_0_25px_rgba(37,99,235,0.6)]">
+            <div class="handle-thumb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white text-gray-900 shadow-xl flex items-center justify-center border-2 border-blue-500 transition-transform duration-150 group-hover:scale-110 active:scale-95 group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]">
                 <!-- Double arrows icon -->
-                <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3m8-6l4 3-4 3"></path>
                 </svg>
             </div>
