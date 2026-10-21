@@ -40,125 +40,30 @@
             </div>
         </section>
 
-        <!-- Department Filter Tabs -->
-        <section class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-y border-gray-100 py-4 shadow-xs">
-            <div class="container mx-auto px-6">
-                <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="team-filter-container">
-                    <button type="button"
-                        class="team-filter-btn {{ $department === 'all' ? 'active' : '' }} px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 flex-shrink-0"
-                        data-filter="all">
-                        <span>All Team</span>
-                        <span class="text-[11px] px-1.5 py-0.5 rounded-full bg-gray-100 {{ $department === 'all' ? 'bg-white/20 text-white' : 'text-gray-500' }}">
-                            {{ $counts['all'] }}
-                        </span>
-                    </button>
-
-                    <button type="button"
-                        class="team-filter-btn {{ $department === 'leadership' ? 'active' : '' }} px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 flex-shrink-0"
-                        data-filter="leadership">
-                        <span>Leadership</span>
-                        <span class="text-[11px] px-1.5 py-0.5 rounded-full bg-gray-100 {{ $department === 'leadership' ? 'bg-white/20 text-white' : 'text-gray-500' }}">
-                            {{ $counts['leadership'] }}
-                        </span>
-                    </button>
-
-                    <button type="button"
-                        class="team-filter-btn {{ $department === 'cv' ? 'active' : '' }} px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 flex-shrink-0"
-                        data-filter="cv">
-                        <span>Computer Vision</span>
-                        <span class="text-[11px] px-1.5 py-0.5 rounded-full bg-gray-100 {{ $department === 'cv' ? 'bg-white/20 text-white' : 'text-gray-500' }}">
-                            {{ $counts['cv'] }}
-                        </span>
-                    </button>
-
-                    <button type="button"
-                        class="team-filter-btn {{ $department === 'nlp' ? 'active' : '' }} px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 flex-shrink-0"
-                        data-filter="nlp">
-                        <span>NLP & LLMs</span>
-                        <span class="text-[11px] px-1.5 py-0.5 rounded-full bg-gray-100 {{ $department === 'nlp' ? 'bg-white/20 text-white' : 'text-gray-500' }}">
-                            {{ $counts['nlp'] }}
-                        </span>
-                    </button>
-
-                    <button type="button"
-                        class="team-filter-btn {{ $department === 'audio' ? 'active' : '' }} px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 flex-shrink-0"
-                        data-filter="audio">
-                        <span>Audio & Speech</span>
-                        <span class="text-[11px] px-1.5 py-0.5 rounded-full bg-gray-100 {{ $department === 'audio' ? 'bg-white/20 text-white' : 'text-gray-500' }}">
-                            {{ $counts['audio'] }}
-                        </span>
-                    </button>
-
-                    <button type="button"
-                        class="team-filter-btn {{ $department === 'qa' ? 'active' : '' }} px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-1.5 flex-shrink-0"
-                        data-filter="qa">
-                        <span>Quality Assurance</span>
-                        <span class="text-[11px] px-1.5 py-0.5 rounded-full bg-gray-100 {{ $department === 'qa' ? 'bg-white/20 text-white' : 'text-gray-500' }}">
-                            {{ $counts['qa'] }}
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
         <!-- Team Members Grid -->
         <section class="py-16 md:py-24 bg-gray-50/50">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="team-grid">
                     @forelse ($allMembers as $member)
-                        @php
-                            $badgeClass = match ($member->badge_color) {
-                                'green' => 'bg-green-50 text-green-700 border-green-200',
-                                'purple' => 'bg-purple-50 text-purple-700 border-purple-200',
-                                'yellow' => 'bg-yellow-50 text-yellow-700 border-yellow-200',
-                                'red' => 'bg-red-50 text-red-700 border-red-200',
-                                default => 'bg-blue-50 text-blue-700 border-blue-200',
-                            };
-                        @endphp
-                        <div class="team-card group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center"
-                            data-category="{{ $member->category }}">
-                            <!-- Image Container -->
+                        <div class="team-card group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center">
+                            <!-- Photo -->
                             <div class="relative w-44 h-44 mb-5 overflow-hidden rounded-2xl ring-4 ring-gray-100 group-hover:ring-blue-100 transition-all">
                                 <img src="{{ $member->image_url }}" alt="{{ $member->name }}"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                     loading="lazy">
                             </div>
 
-                            <!-- Department Badge -->
-                            <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold border mb-2 {{ $badgeClass }}">
-                                {{ $member->department_badge }}
-                            </span>
-
-                            <!-- Name & Role -->
+                            <!-- Name -->
                             <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
                                 {{ $member->name }}
                             </h3>
-                            <p class="text-xs font-semibold text-blue-600 mb-3">{{ $member->role }}</p>
 
-                            <!-- Bio -->
-                            <p class="text-xs text-gray-500 leading-relaxed mb-5 flex-grow">
-                                {{ $member->bio }}
-                            </p>
-
-                            <!-- Social Links -->
-                            <div class="flex items-center gap-2 pt-3 border-t border-gray-100 w-full justify-center text-gray-400">
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-                                    class="w-8 h-8 rounded-full hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition-colors">
-                                    <i data-feather="linkedin" class="w-4 h-4"></i>
-                                </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                                    class="w-8 h-8 rounded-full hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition-colors">
-                                    <i data-feather="twitter" class="w-4 h-4"></i>
-                                </a>
-                                <a href="mailto:ebrahim@marveit.com" aria-label="Email"
-                                    class="w-8 h-8 rounded-full hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition-colors">
-                                    <i data-feather="mail" class="w-4 h-4"></i>
-                                </a>
-                            </div>
+                            <!-- Designation -->
+                            <p class="text-sm font-semibold text-blue-600">{{ $member->role }}</p>
                         </div>
                     @empty
                         <div class="col-span-full text-center py-16 text-gray-500">
-                            No team members found for this department.
+                            No team members found.
                         </div>
                     @endforelse
                 </div>
@@ -187,45 +92,3 @@
         </section>
     </div>
 @endsection
-
-@push('scripts')
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const filterButtons = document.querySelectorAll('.team-filter-btn');
-        const teamCards = document.querySelectorAll('.team-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active state on buttons
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('active');
-                    const badge = btn.querySelector('span:last-child');
-                    if (badge) {
-                        badge.classList.remove('bg-white/20', 'text-white');
-                        badge.classList.add('bg-gray-100', 'text-gray-500');
-                    }
-                });
-
-                button.classList.add('active');
-                const activeBadge = button.querySelector('span:last-child');
-                if (activeBadge) {
-                    activeBadge.classList.add('bg-white/20', 'text-white');
-                    activeBadge.classList.remove('bg-gray-100', 'text-gray-500');
-                }
-
-                const filter = button.getAttribute('data-filter');
-
-                // Filter cards with smooth fade
-                teamCards.forEach(card => {
-                    const categories = (card.getAttribute('data-category') || '').split(' ');
-                    if (filter === 'all' || categories.includes(filter)) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    });
-</script>
-@endpush

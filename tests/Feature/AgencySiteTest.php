@@ -124,6 +124,19 @@ class AgencySiteTest extends TestCase
         $this->assertTrue($posSr < $posDA, 'Senior Data Annotator should appear before Data Annotator');
     }
 
+    public function test_team_cards_only_display_photo_name_and_designation(): void
+    {
+        $response = $this->get(route('team'));
+        $response->assertStatus(200);
+
+        // Name, designation, and image are present
+        $response->assertSee('Ebrahim Khalil', false);
+        $response->assertSee('CEO', false);
+
+        // Bio is NOT present on the team cards
+        $response->assertDontSee('Over 10 years scaling human-in-the-loop', false);
+    }
+
     public function test_contact_page_loads_successfully(): void
     {
         $response = $this->get(route('contact'));

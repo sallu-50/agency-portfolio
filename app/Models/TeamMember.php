@@ -31,6 +31,18 @@ class TeamMember extends Model
             if (! isset($member->sort_order) || $member->sort_order === 0) {
                 $member->sort_order = $member->designation_rank;
             }
+            if (empty($member->department_badge)) {
+                $member->department_badge = $member->role ?? 'Team';
+            }
+            if (empty($member->badge_color)) {
+                $member->badge_color = 'blue';
+            }
+            if (empty($member->category)) {
+                $member->category = 'general';
+            }
+            if (! isset($member->is_active)) {
+                $member->is_active = true;
+            }
         });
     }
 
