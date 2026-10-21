@@ -3,6 +3,39 @@
 @section('title', 'Our Team - Marveit AI | Expert AI Annotation & Data Solutions')
 @section('meta_description', 'Meet the multidisciplinary team of AI engineers, domain specialists, and annotation leaders at Marveit AI.')
 
+@push('styles')
+    <style>
+        .team-photo-wrapper {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .team-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover .team-photo-wrapper {
+            border-color: #93c5fd;
+            box-shadow: 0 4px 14px rgba(14, 94, 221, 0.12);
+        }
+
+        .team-card:hover .team-photo-wrapper img {
+            transform: scale(1.05);
+        }
+    </style>
+@endpush
+
 @section('content')
     <div class="pt-24 md:pt-28">
         <!-- Team Hero Section -->
@@ -45,21 +78,21 @@
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="team-grid">
                     @forelse ($allMembers as $member)
-                        <div class="team-card group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center">
+                        <div class="team-card group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center h-full">
                             <!-- Photo -->
-                            <div class="relative w-44 h-44 mb-5 overflow-hidden rounded-2xl ring-4 ring-gray-100 group-hover:ring-blue-100 transition-all">
+                            <div class="team-photo-wrapper w-full max-w-[240px] mx-auto mb-5">
                                 <img src="{{ $member->image_url }}" alt="{{ $member->name }}"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                     loading="lazy">
                             </div>
 
-                            <!-- Name -->
-                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                                {{ $member->name }}
-                            </h3>
+                            <!-- Name & Designation -->
+                            <div class="flex flex-col items-center flex-grow justify-center w-full">
+                                <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                                    {{ $member->name }}
+                                </h3>
 
-                            <!-- Designation -->
-                            <p class="text-sm font-semibold text-blue-600">{{ $member->role }}</p>
+                                <p class="text-sm font-semibold text-blue-600">{{ $member->role }}</p>
+                            </div>
                         </div>
                     @empty
                         <div class="col-span-full text-center py-16 text-gray-500">
