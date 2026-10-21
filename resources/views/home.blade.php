@@ -258,50 +258,6 @@
         </div>
     </section>
 
-    <!-- Leadership Team Spotlight -->
-    <section id="team" class="py-24 bg-gradient-to-b from-white via-gray-50/60 to-white relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto text-center mb-16">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-3">
-                    <i data-feather="users" class="w-3.5 h-3.5"></i> The Minds Behind Marveit
-                </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-                    Meet Our Leadership Team
-                </h2>
-                <p class="text-gray-600 text-base md:text-lg">
-                    A multidisciplinary team of AI engineers, domain specialists, and annotation leaders dedicated to powering next-generation machine learning.
-                </p>
-            </div>
-
-            <!-- Team Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                @foreach ($teamMembers as $member)
-                    <div class="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center">
-                        <div class="relative w-40 h-40 mb-5 overflow-hidden rounded-2xl ring-4 ring-blue-50 group-hover:ring-blue-100 transition-all">
-                            <img src="{{ $member->image_url }}" alt="{{ $member->name }} - {{ $member->role }}"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                            {{ $member->name }}
-                        </h3>
-                        <p class="text-sm font-semibold text-blue-600 mb-3">{{ $member->role }}</p>
-                        <p class="text-xs text-gray-500 leading-relaxed">
-                            {{ $member->bio }}
-                        </p>
-                    </div>
-                @endforeach
-            </div>
-
-            <!-- Bottom CTA Link -->
-            <div class="text-center mt-12">
-                <a href="{{ route('team') }}"
-                    class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-6 py-3 rounded-full transition-all group">
-                    <span>Meet the complete 12+ member annotation team</span>
-                    <i data-feather="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Ready to Start CTA -->
     <section id="speak-to-expert" class="py-20 bg-gray-50 border-t border-gray-100">

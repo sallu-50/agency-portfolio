@@ -9,13 +9,13 @@
         <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50/80 via-white to-white relative overflow-hidden">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
-                    <i data-feather="users" class="w-3.5 h-3.5"></i> World-Class Data Engineering Talent
+                    <i data-feather="users" class="w-3.5 h-3.5"></i> The Minds Behind Marveit
                 </span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
-                    Meet The Minds Behind <span class="text-blue-600">Marveit AI</span>
+                    Meet Our <span class="text-blue-600">Leadership Team</span>
                 </h1>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
-                    A specialized collective of AI engineers, domain experts, and annotation leaders shaping the ground truth data for the world's leading machine learning systems.
+                    A multidisciplinary team of AI engineers, domain specialists, and annotation leaders dedicated to powering next-generation machine learning.
                 </p>
 
                 <!-- Stats Summary -->

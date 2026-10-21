@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\BeforeAfterSlider;
 use App\Models\ContactMessage;
 use App\Models\PortfolioItem;
+use App\Models\TeamMember;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -19,14 +20,16 @@ class AgencySiteTest extends TestCase
         $this->seed();
     }
 
-    public function test_home_page_loads_successfully_with_services_and_team(): void
+    public function test_home_page_loads_successfully_without_leadership_team_section(): void
     {
         $response = $this->get(route('home'));
 
+        $response->assertStatus(200);
         $response->assertSee('High-Quality', false);
         $response->assertSee('Data Annotation', false);
         $response->assertSee('Data Collection', false);
-        $response->assertSee('Ebrahim Khalil', false);
+        // Leadership team spotlight must not be present on the home page
+        $response->assertDontSee('Meet Our Leadership Team', false);
     }
 
     public function test_services_index_page_loads_all_services(): void
@@ -52,19 +55,73 @@ class AgencySiteTest extends TestCase
         }
     }
 
-    public function test_team_page_loads_with_members_and_department_filters(): void
+    public function test_team_page_loads_with_leadership_team_and_formation_order(): void
     {
         $response = $this->get(route('team'));
 
-        $response->assertSee('Meet The Minds Behind', false);
-        $response->assertSee('Marveit AI', false);
-        $response->assertSee('Abdullah Al Salman', false);
-        $response->assertSee('Dr. Sarah Chen', false);
+        $response->assertStatus(200);
+        $response->assertSee('Meet Our', false);
+        $response->assertSee('Leadership Team', false);
+        $response->assertSee('Ebrahim Khalil', false);
 
         // Test filtered department
         $filteredResponse = $this->get(route('team', ['dept' => 'cv']));
         $filteredResponse->assertStatus(200);
         $filteredResponse->assertSee('Linnea Zhang', false);
+    }
+
+    public function test_team_members_follow_designation_hierarchy_formation(): void
+    {
+        // Create team members for each rank
+        TeamMember::create([
+            'name' => 'John Data Annotator',
+            'role' => 'Data Annotator',
+            'department_badge' => 'Annotation',
+            'badge_color' => 'blue',
+            'category' => 'cv',
+            'bio' => 'Data annotation professional',
+        ]);
+
+        TeamMember::create([
+            'name' => 'Alice Project Manager',
+            'role' => 'Project Manager',
+            'department_badge' => 'Management',
+            'badge_color' => 'purple',
+            'category' => 'leadership',
+            'bio' => 'Senior project manager',
+        ]);
+
+        TeamMember::create([
+            'name' => 'Bob Senior Annotator',
+            'role' => 'Senior Data Annotator',
+            'department_badge' => 'Annotation',
+            'badge_color' => 'green',
+            'category' => 'cv',
+            'bio' => 'Senior data annotator',
+        ]);
+
+        $orderedMembers = TeamMember::where('is_active', true)->inHierarchyOrder()->get();
+
+        // Verify ranks are ordered: CEO (1) -> PM (2) -> Operation Manager (3) -> Team Lead (4) -> QA Lead (5) -> Senior Annotator (6) -> Data Annotator (7)
+        $previousRank = 0;
+        foreach ($orderedMembers as $member) {
+            $this->assertGreaterThanOrEqual($previousRank, $member->designation_rank);
+            $previousRank = $member->designation_rank;
+        }
+
+        // Verify public team page lists Alice Project Manager before Bob Senior Annotator and John Data Annotator
+        $response = $this->get(route('team'));
+        $content = $response->getContent();
+
+        $posPM = strpos($content, 'Alice Project Manager');
+        $posSr = strpos($content, 'Bob Senior Annotator');
+        $posDA = strpos($content, 'John Data Annotator');
+
+        $this->assertNotFalse($posPM);
+        $this->assertNotFalse($posSr);
+        $this->assertNotFalse($posDA);
+        $this->assertTrue($posPM < $posSr, 'Project Manager should appear before Senior Data Annotator');
+        $this->assertTrue($posSr < $posDA, 'Senior Data Annotator should appear before Data Annotator');
     }
 
     public function test_contact_page_loads_successfully(): void

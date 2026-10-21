@@ -11,14 +11,14 @@ class TeamController extends Controller
     {
         $department = $request->query('dept', 'all');
 
-        $query = TeamMember::where('is_active', true)->orderBy('sort_order');
+        $query = TeamMember::where('is_active', true)->inHierarchyOrder();
 
         if ($department !== 'all') {
             $query->where('category', 'like', "%{$department}%");
         }
 
         $teamMembers = $query->get();
-        $allMembers = TeamMember::where('is_active', true)->orderBy('sort_order')->get();
+        $allMembers = TeamMember::where('is_active', true)->inHierarchyOrder()->get();
 
         $counts = [
             'all' => $allMembers->count(),
