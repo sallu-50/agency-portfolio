@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGradMan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="skinGradMan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="hairGradMan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="suitGradMan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="shirtGradMan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bgGradMan)"/>
+
+  <!-- Subtle glow circle in background -->
+  <circle cx="200" cy="230" r="150" fill="#3b82f6" opacity="0.06"/>
+
+  <!-- Avatar Group -->
+  <g filter="url(#softShadow)">
+    <!-- Shoulders / Suit Body -->
+    <path d="M 90 500 C 90 395 120 340 160 330 L 175 350 L 225 350 L 240 330 C 280 340 310 395 310 500 Z" fill="url(#suitGradMan)"/>
+
+    <!-- Lapels -->
+    <path d="M 160 330 L 190 415 L 200 415 L 180 345 Z" fill="#1d4ed8" opacity="0.5"/>
+    <path d="M 240 330 L 210 415 L 200 415 L 220 345 Z" fill="#1e40af" opacity="0.7"/>
+
+    <!-- Shirt / Collar -->
+    <polygon points="180,345 220,345 200,410" fill="url(#shirtGradMan)"/>
+    <!-- Tie -->
+    <polygon points="196,360 204,360 207,430 200,450 193,430" fill="#2563eb"/>
+    <polygon points="195,355 205,355 203,365 197,365" fill="#1d4ed8"/>
+
+    <!-- Neck -->
+    <rect x="180" y="270" width="40" height="75" rx="10" fill="#f97316" opacity="0.85"/>
+    <rect x="182" y="275" width="36" height="70" rx="8" fill="url(#skinGradMan)"/>
+
+    <!-- Ears -->
+    <circle cx="140" cy="225" r="16" fill="url(#skinGradMan)"/>
+    <circle cx="260" cy="225" r="16" fill="url(#skinGradMan)"/>
+
+    <!-- Head / Face -->
+    <path d="M 148 200 C 148 150 165 130 200 130 C 235 130 252 150 252 200 C 252 250 232 290 200 290 C 168 290 148 250 148 200 Z" fill="url(#skinGradMan)"/>
+
+    <!-- Modern Haircut -->
+    <!-- Base hair back -->
+    <path d="M 144 195 C 142 165 155 120 200 115 C 248 110 258 160 256 195 C 256 180 248 145 200 142 C 158 140 148 180 144 195 Z" fill="url(#hairGradMan)"/>
+    <!-- Top hair volume -->
+    <path d="M 142 180 C 140 140 160 110 205 108 C 245 106 262 135 258 180 C 254 150 242 130 200 130 C 165 130 148 152 142 180 Z" fill="#0f172a"/>
+    <!-- Quiff / hair texture -->
+    <path d="M 147 165 C 158 135 185 120 215 120 C 245 120 255 140 255 160 C 245 142 230 135 210 135 C 178 135 160 148 147 165 Z" fill="#334155"/>
+
+    <!-- Eyebrows -->
+    <path d="M 166 190 Q 178 186 188 190" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M 212 190 Q 222 186 234 190" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Eyes -->
+    <ellipse cx="177" cy="204" rx="4.5" ry="5.5" fill="#0f172a"/>
+    <circle cx="178.5" cy="202.5" r="1.5" fill="#ffffff"/>
+    <ellipse cx="223" cy="204" rx="4.5" ry="5.5" fill="#0f172a"/>
+    <circle cx="224.5" cy="202.5" r="1.5" fill="#ffffff"/>
+
+    <!-- Nose -->
+    <path d="M 200 202 L 197 222 Q 200 226 205 224" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Gentle Smile -->
+    <path d="M 186 248 Q 200 258 214 248" stroke="#9a3412" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Cheerful Cheek Glow -->
+    <ellipse cx="165" cy="225" rx="8" ry="4.5" fill="#ea580c" opacity="0.2"/>
+    <ellipse cx="235" cy="225" rx="8" ry="4.5" fill="#ea580c" opacity="0.2"/>
+  </g>
+</svg>

@@ -48,13 +48,23 @@ class TeamMemberForm
                     ->default(1)
                     ->helperText('Used to arrange members with identical designations'),
 
+                Select::make('gender')
+                    ->label('Default Avatar (ছবি না দিলে অ্যাভাটার)')
+                    ->options([
+                        'man' => 'Man (পুরুষ)',
+                        'women' => 'Women (নারী)',
+                    ])
+                    ->default('man')
+                    ->required()
+                    ->helperText('Select whether to display a Man or Woman avatar if no photo is uploaded'),
+
                 FileUpload::make('image')
                     ->label('Photo')
                     ->image()
                     ->disk('public')
                     ->directory('team')
                     ->nullable()
-                    ->helperText('Upload photo or leave empty for default avatar'),
+                    ->helperText('Upload photo or leave empty for selected default avatar (Man / Women)'),
             ]);
     }
 }

@@ -128,4 +128,75 @@ class DesignationManagementTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Designations');
     }
+
+    public function test_member_without_image_gets_man_avatar_when_selected(): void
+    {
+        $member = TeamMember::create([
+            'name' => 'Male Candidate',
+            'role' => 'Data Annotator',
+            'gender' => 'man',
+            'image' => null,
+            'category' => 'general',
+            'is_active' => true,
+        ]);
+
+        $this->assertStringContainsString('avatar-man.svg', $member->image_url);
+    }
+
+    public function test_member_without_image_gets_woman_avatar_when_selected(): void
+    {
+        $member = TeamMember::create([
+            'name' => 'Female Candidate',
+            'role' => 'QA Lead',
+            'gender' => 'women',
+            'image' => null,
+            'category' => 'general',
+            'is_active' => true,
+        ]);
+
+        $this->assertStringContainsString('avatar-women.svg', $member->image_url);
+    }
+
+    public function test_member_with_uploaded_image_uses_custom_image_instead_of_avatar(): void
+    {
+        $member = TeamMember::create([
+            'name' => 'Custom Photo Member',
+            'role' => 'CEO',
+            'gender' => 'women',
+            'image' => 'team/custom-photo.jpg',
+            'category' => 'general',
+            'is_active' => true,
+        ]);
+
+        $this->assertStringContainsString('team/custom-photo.jpg', $member->image_url);
+        $this->assertStringNotContainsString('avatar-women.svg', $member->image_url);
+    }
+
+    public function test_team_page_renders_man_and_woman_avatars(): void
+    {
+        TeamMember::query()->delete();
+
+        TeamMember::create([
+            'name' => 'John Without Image',
+            'role' => 'Team Lead',
+            'gender' => 'man',
+            'image' => null,
+            'category' => 'general',
+            'is_active' => true,
+        ]);
+
+        TeamMember::create([
+            'name' => 'Jane Without Image',
+            'role' => 'QA Lead',
+            'gender' => 'women',
+            'image' => null,
+            'category' => 'general',
+            'is_active' => true,
+        ]);
+
+        $response = $this->get(route('team'));
+        $response->assertStatus(200);
+        $response->assertSee('avatar-man.svg');
+        $response->assertSee('avatar-women.svg');
+    }
 }

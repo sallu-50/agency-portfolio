@@ -114,6 +114,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Ebrahim Khalil',
                 'role' => 'CEO',
+                'gender' => 'man',
                 'department_badge' => 'Executive',
                 'badge_color' => 'blue',
                 'category' => 'leadership',
@@ -124,6 +125,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Abdullah Al Salman',
                 'role' => 'Project Manager',
+                'gender' => 'man',
                 'department_badge' => 'Management',
                 'badge_color' => 'purple',
                 'category' => 'leadership',
@@ -134,6 +136,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'David Wong',
                 'role' => 'Operation Manager',
+                'gender' => 'man',
                 'department_badge' => 'Operations',
                 'badge_color' => 'yellow',
                 'category' => 'leadership',
@@ -144,6 +147,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Marcus Vance',
                 'role' => 'Team Lead',
+                'gender' => 'man',
                 'department_badge' => 'Team Lead',
                 'badge_color' => 'green',
                 'category' => 'leadership cv',
@@ -154,6 +158,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Dr. Sarah Chen',
                 'role' => 'QA Lead',
+                'gender' => 'women',
                 'department_badge' => 'Quality Assurance',
                 'badge_color' => 'purple',
                 'category' => 'leadership qa',
@@ -164,6 +169,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Farhan Kabir',
                 'role' => 'Senior Data Annotator',
+                'gender' => 'man',
                 'department_badge' => 'Data Annotation',
                 'badge_color' => 'green',
                 'category' => 'cv',
@@ -174,6 +180,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Amina Begum',
                 'role' => 'Data Annotator',
+                'gender' => 'women',
                 'department_badge' => 'Data Annotation',
                 'badge_color' => 'blue',
                 'category' => 'nlp cv',
@@ -184,6 +191,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Linnea Zhang',
                 'role' => 'Team Lead',
+                'gender' => 'women',
                 'department_badge' => 'Computer Vision',
                 'badge_color' => 'green',
                 'category' => 'cv',
@@ -194,6 +202,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Elena Rostova',
                 'role' => 'Team Lead',
+                'gender' => 'women',
                 'department_badge' => 'Audio & Speech',
                 'badge_color' => 'yellow',
                 'category' => 'audio',
@@ -204,6 +213,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Rajesh Patel',
                 'role' => 'QA Lead',
+                'gender' => 'man',
                 'department_badge' => 'Compliance & QA',
                 'badge_color' => 'blue',
                 'category' => 'qa',
@@ -214,6 +224,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Tasnim Ahmed',
                 'role' => 'QA Lead',
+                'gender' => 'women',
                 'department_badge' => 'Quality Assurance',
                 'badge_color' => 'blue',
                 'category' => 'qa',
@@ -224,6 +235,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Michael Scott',
                 'role' => 'Data Annotator',
+                'gender' => 'man',
                 'department_badge' => 'Audio & Speech',
                 'badge_color' => 'yellow',
                 'category' => 'audio',

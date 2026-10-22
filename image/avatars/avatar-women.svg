@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGradWoman" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="skinGradWoman" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+    <linearGradient id="hairGradWoman" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331832"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="suitGradWoman" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#3730a3"/>
+    </linearGradient>
+    <linearGradient id="innerGradWoman" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="softShadowWoman" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bgGradWoman)"/>
+
+  <!-- Subtle glow circle in background -->
+  <circle cx="200" cy="230" r="150" fill="#a855f7" opacity="0.06"/>
+
+  <!-- Avatar Group -->
+  <g filter="url(#softShadowWoman)">
+    <!-- Back Hair Flowing Down -->
+    <path d="M 130 180 C 115 250 115 340 145 370 C 155 350 155 300 150 250 Z" fill="url(#hairGradWoman)"/>
+    <path d="M 270 180 C 285 250 285 340 255 370 C 245 350 245 300 250 250 Z" fill="url(#hairGradWoman)"/>
+
+    <!-- Shoulders / Blazer Body -->
+    <path d="M 95 500 C 95 400 125 345 165 335 L 180 355 L 220 355 L 235 335 C 275 345 305 400 305 500 Z" fill="url(#suitGradWoman)"/>
+
+    <!-- Inner Top / Blouse -->
+    <path d="M 175 345 Q 200 395 225 345 Z" fill="url(#innerGradWoman)"/>
+
+    <!-- Lapels -->
+    <path d="M 165 335 L 188 410 L 200 410 L 175 345 Z" fill="#6366f1" opacity="0.6"/>
+    <path d="M 235 335 L 212 410 L 200 410 L 225 345 Z" fill="#4338ca" opacity="0.8"/>
+
+    <!-- Necklace accent -->
+    <path d="M 188 335 Q 200 350 212 335" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+    <circle cx="200" cy="343" r="3" fill="#f59e0b"/>
+
+    <!-- Neck -->
+    <rect x="183" y="270" width="34" height="70" rx="10" fill="#fb923c" opacity="0.85"/>
+    <rect x="185" y="275" width="30" height="65" rx="8" fill="url(#skinGradWoman)"/>
+
+    <!-- Ears & Pearl Earrings -->
+    <circle cx="145" cy="225" r="14" fill="url(#skinGradWoman)"/>
+    <circle cx="145" cy="235" r="4.5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <circle cx="255" cy="225" r="14" fill="url(#skinGradWoman)"/>
+    <circle cx="255" cy="235" r="4.5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Head / Face -->
+    <path d="M 152 200 C 152 152 168 132 200 132 C 232 132 248 152 248 200 C 248 248 228 285 200 285 C 172 285 152 248 152 200 Z" fill="url(#skinGradWoman)"/>
+
+    <!-- Women's Elegant Hair -->
+    <!-- Base hair crown -->
+    <path d="M 142 195 C 138 140 162 108 200 108 C 240 108 262 140 258 195 C 255 160 240 138 200 136 C 160 138 145 160 142 195 Z" fill="url(#hairGradWoman)"/>
+    <!-- Side bangs -->
+    <path d="M 140 185 C 140 140 165 118 200 118 C 215 118 240 125 255 145 C 235 138 205 138 175 155 C 155 168 145 185 140 205 Z" fill="#1e1b4b"/>
+    <path d="M 260 190 C 260 150 240 125 210 120 C 230 126 250 140 255 165 C 258 178 259 195 260 215 Z" fill="#312e81"/>
+
+    <!-- Eyebrows -->
+    <path d="M 168 190 Q 180 184 190 188" stroke="#1e1b4b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <path d="M 210 188 Q 220 184 232 190" stroke="#1e1b4b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Eyes with subtle lashes -->
+    <ellipse cx="178" cy="204" rx="4.5" ry="5.5" fill="#1e1b4b"/>
+    <circle cx="179.5" cy="202.5" r="1.5" fill="#ffffff"/>
+    <path d="M 173 199 Q 179 196 185 200" stroke="#1e1b4b" stroke-width="2" fill="none"/>
+
+    <ellipse cx="222" cy="204" rx="4.5" ry="5.5" fill="#1e1b4b"/>
+    <circle cx="223.5" cy="202.5" r="1.5" fill="#ffffff"/>
+    <path d="M 215 200 Q 221 196 227 199" stroke="#1e1b4b" stroke-width="2" fill="none"/>
+
+    <!-- Nose -->
+    <path d="M 200 204 L 198 222 Q 200 225 204 223" stroke="#ea580c" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Rosy Lips / Gentle Smile -->
+    <path d="M 188 248 Q 200 258 212 248" stroke="#e11d48" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Rosy Cheek Glow -->
+    <ellipse cx="166" cy="225" rx="8" ry="5" fill="#f43f5e" opacity="0.25"/>
+    <ellipse cx="234" cy="225" rx="8" ry="5" fill="#f43f5e" opacity="0.25"/>
+  </g>
+</svg>

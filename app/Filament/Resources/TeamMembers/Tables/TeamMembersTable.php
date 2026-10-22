@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\TeamMembers\Tables;
 
+use App\Models\TeamMember;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -19,7 +20,8 @@ class TeamMembersTable
                 ImageColumn::make('image')
                     ->label('Photo')
                     ->disk('public')
-                    ->circular(),
+                    ->circular()
+                    ->defaultImageUrl(fn (TeamMember $record): string => $record->image_url),
                 TextColumn::make('name')
                     ->label('Name')
                     ->searchable()
@@ -40,6 +42,18 @@ class TeamMembersTable
                         default => 'gray',
                     })
                     ->sortable(),
+                TextColumn::make('gender')
+                    ->label('Default Avatar')
+                    ->badge()
+                    ->formatStateUsing(fn (?string $state): string => match (strtolower($state ?? 'man')) {
+                        'women', 'woman', 'female' => 'Woman',
+                        default => 'Man',
+                    })
+                    ->color(fn (?string $state): string => match (strtolower($state ?? 'man')) {
+                        'women', 'woman', 'female' => 'danger',
+                        default => 'info',
+                    })
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

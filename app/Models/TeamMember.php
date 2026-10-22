@@ -65,6 +65,9 @@ class TeamMember extends Model
             if (! isset($member->is_active)) {
                 $member->is_active = true;
             }
+            if (empty($member->gender)) {
+                $member->gender = 'man';
+            }
         });
     }
 
@@ -146,18 +149,23 @@ class TeamMember extends Model
 
     public function getImageUrlAttribute(): string
     {
-        if (empty($this->image)) {
-            return asset('image/team/salman.png');
+        if (! empty($this->image)) {
+            if (str_starts_with($this->image, 'http://') || str_starts_with($this->image, 'https://')) {
+                return $this->image;
+            }
+
+            if (str_starts_with($this->image, 'image/') || str_starts_with($this->image, '/image/')) {
+                return asset($this->image);
+            }
+
+            return asset('storage/'.$this->image);
         }
 
-        if (str_starts_with($this->image, 'http://') || str_starts_with($this->image, 'https://')) {
-            return $this->image;
+        $gender = strtolower($this->gender ?? 'man');
+        if (in_array($gender, ['women', 'woman', 'female'])) {
+            return asset('image/avatars/avatar-women.svg');
         }
 
-        if (str_starts_with($this->image, 'image/') || str_starts_with($this->image, '/image/')) {
-            return asset($this->image);
-        }
-
-        return asset('storage/'.$this->image);
+        return asset('image/avatars/avatar-man.svg');
     }
 }
