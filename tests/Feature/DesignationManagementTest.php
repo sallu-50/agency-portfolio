@@ -140,7 +140,7 @@ class DesignationManagementTest extends TestCase
             'is_active' => true,
         ]);
 
-        $this->assertStringContainsString('avatar-man.svg', $member->image_url);
+        $this->assertStringContainsString('avatar-man', $member->image_url);
     }
 
     public function test_member_without_image_gets_woman_avatar_when_selected(): void
@@ -154,7 +154,7 @@ class DesignationManagementTest extends TestCase
             'is_active' => true,
         ]);
 
-        $this->assertStringContainsString('avatar-women.svg', $member->image_url);
+        $this->assertStringContainsString('avatar-women', $member->image_url);
     }
 
     public function test_member_with_uploaded_image_uses_custom_image_instead_of_avatar(): void
@@ -169,7 +169,7 @@ class DesignationManagementTest extends TestCase
         ]);
 
         $this->assertStringContainsString('team/custom-photo.jpg', $member->image_url);
-        $this->assertStringNotContainsString('avatar-women.svg', $member->image_url);
+        $this->assertStringNotContainsString('avatar-women', $member->image_url);
     }
 
     public function test_team_page_renders_man_and_woman_avatars(): void
@@ -196,7 +196,7 @@ class DesignationManagementTest extends TestCase
 
         $response = $this->get(route('team'));
         $response->assertStatus(200);
-        $response->assertSee('avatar-man.svg');
-        $response->assertSee('avatar-women.svg');
+        $response->assertSee('avatar-man');
+        $response->assertSee('avatar-women');
     }
 }

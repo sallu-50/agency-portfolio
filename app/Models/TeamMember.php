@@ -163,9 +163,13 @@ class TeamMember extends Model
 
         $gender = strtolower($this->gender ?? 'man');
         if (in_array($gender, ['women', 'woman', 'female'])) {
-            return asset('image/avatars/avatar-women.svg');
+            return file_exists(public_path('image/avatars/avatar-women.jpg'))
+                ? asset('image/avatars/avatar-women.jpg')
+                : asset('image/avatars/avatar-women.svg');
         }
 
-        return asset('image/avatars/avatar-man.svg');
+        return file_exists(public_path('image/avatars/avatar-man.jpg'))
+            ? asset('image/avatars/avatar-man.jpg')
+            : asset('image/avatars/avatar-man.svg');
     }
 }
