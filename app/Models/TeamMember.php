@@ -24,10 +24,32 @@ class TeamMember extends Model
         'Data Annotator' => 7,
     ];
 
+    public function designation()
+    {
+        return $this->belongsTo(Designation::class);
+    }
+
     protected static function booted(): void
     {
         static::saving(function (TeamMember $member) {
-            $member->designation_rank = static::getDesignationRank($member->role);
+            if ($member->designation_id) {
+                $designation = Designation::find($member->designation_id);
+                if ($designation) {
+                    $member->role = $designation->name;
+                    $member->designation_rank = $designation->rank;
+                }
+            } elseif (! empty($member->role)) {
+                $designation = Designation::where('name', $member->role)->first();
+                if ($designation) {
+                    $member->designation_id = $designation->id;
+                    $member->designation_rank = $designation->rank;
+                } else {
+                    $member->designation_rank = static::getDesignationRank($member->role);
+                }
+            } else {
+                $member->designation_rank = 99;
+            }
+
             if (! isset($member->sort_order) || $member->sort_order === 0) {
                 $member->sort_order = $member->designation_rank;
             }
@@ -53,6 +75,13 @@ class TeamMember extends Model
         }
 
         $trimmed = trim($role);
+
+        // Check if a Designation with this name exists in the database first
+        $dbDesignation = Designation::where('name', $trimmed)->first();
+        if ($dbDesignation) {
+            return $dbDesignation->rank;
+        }
+
         $lower = strtolower($trimmed);
 
         // Exact matches

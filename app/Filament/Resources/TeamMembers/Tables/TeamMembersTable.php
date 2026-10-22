@@ -26,28 +26,17 @@ class TeamMembersTable
                     ->weight('bold'),
                 TextColumn::make('role')
                     ->label('Designation')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('designation_rank')
-                    ->label('Formation Order')
+                    ->label('Position / Order #')
                     ->badge()
-                    ->formatStateUsing(fn (int $state): string => match ($state) {
-                        1 => '1. CEO',
-                        2 => '2. Project Manager',
-                        3 => '3. Operation Manager',
-                        4 => '4. Team Lead',
-                        5 => '5. QA Lead',
-                        6 => '6. Senior Data Annotator',
-                        7 => '7. Data Annotator',
-                        default => "{$state}. Other",
-                    })
-                    ->color(fn (int $state): string => match ($state) {
-                        1 => 'danger',
-                        2 => 'warning',
-                        3 => 'warning',
-                        4 => 'info',
-                        5 => 'primary',
-                        6 => 'success',
-                        7 => 'gray',
+                    ->formatStateUsing(fn ($record, int $state): string => "#{$state} ".($record->role ?? ''))
+                    ->color(fn (int $state): string => match (true) {
+                        $state === 1 => 'danger',
+                        $state <= 3 => 'warning',
+                        $state <= 5 => 'info',
+                        $state <= 7 => 'success',
                         default => 'gray',
                     })
                     ->sortable(),

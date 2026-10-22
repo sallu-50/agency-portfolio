@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\TeamMembers\Schemas;
 
-use App\Models\TeamMember;
+use App\Models\Designation;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -19,31 +19,34 @@ class TeamMemberForm
                     ->placeholder('e.g. John Doe')
                     ->required(),
 
-                Select::make('role')
+                Select::make('designation_id')
                     ->label('Designation')
-                    ->options(function () {
-                        $preset = [
-                            'CEO' => 'CEO',
-                            'Project Manager' => 'Project Manager',
-                            'Operation Manager' => 'Operation Manager',
-                            'Team Lead' => 'Team Lead',
-                            'QA Lead' => 'QA Lead',
-                            'Senior Data Annotator' => 'Senior Data Annotator',
-                            'Data Annotator' => 'Data Annotator',
-                        ];
-
-                        $existing = TeamMember::distinct()->pluck('role', 'role')->toArray();
-                        foreach ($existing as $val) {
-                            if (! isset($preset[$val])) {
-                                $preset[$val] = $val;
-                            }
-                        }
-
-                        return $preset;
-                    })
+                    ->relationship('designation', 'name', modifyQueryUsing: fn ($query) => $query->orderBy('rank', 'asc'))
                     ->searchable()
-                    ->createOptionUsing(fn (string $value) => $value)
-                    ->required(),
+                    ->preload()
+                    ->required()
+                    ->createOptionForm([
+                        TextInput::make('name')
+                            ->label('Designation Title')
+                            ->placeholder('e.g. Chief Technology Officer (CTO)')
+                            ->required()
+                            ->unique(table: 'designations', column: 'name'),
+                        TextInput::make('rank')
+                            ->label('Order / Position Number (কত নম্বরে থাকবে)')
+                            ->numeric()
+                            ->minValue(1)
+                            ->default(fn () => (Designation::max('rank') ?? 0) + 1)
+                            ->helperText('Lower number appears first (e.g. 1 = Top/First, 2 = Second)')
+                            ->required(),
+                    ])
+                    ->helperText('Select a designation or click + to create a new designation with its order number'),
+
+                TextInput::make('sort_order')
+                    ->label('Order within Same Designation')
+                    ->numeric()
+                    ->minValue(1)
+                    ->default(1)
+                    ->helperText('Used to arrange members with identical designations'),
 
                 FileUpload::make('image')
                     ->label('Photo')

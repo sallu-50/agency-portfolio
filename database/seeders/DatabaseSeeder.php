@@ -106,7 +106,10 @@ class DatabaseSeeder extends Seeder
             Service::updateOrCreate(['slug' => $service['slug']], $service);
         }
 
-        // 2. Seed Team Members
+        // 2. Seed Designations
+        $this->call(DesignationSeeder::class);
+
+        // 3. Seed Team Members
         $team = [
             [
                 'name' => 'Ebrahim Khalil',
