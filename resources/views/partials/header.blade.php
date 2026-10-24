@@ -197,18 +197,24 @@
 
             <!-- Highlighted Portfolio Link -->
             <a href="{{ route('portfolio') }}"
-                class="relative group/nav inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 {{ request()->routeIs('portfolio*') ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 ring-2 ring-blue-500/20' : 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5' }}">
+                class="relative group/nav inline-flex items-center gap-1.5 rounded-full text-xs font-bold transition-all duration-300 {{ request()->routeIs('portfolio*') ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 ring-2 ring-blue-500/20' : 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5' }}"
+                style="padding: 2px 10px;">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover/nav:bg-white animate-pulse"></span>
                 <span>Portfolio</span>
-
             </a>
         </nav>
 
-        <a href="{{ route('contact') }}"
-            class="hidden md:inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-2.5 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all font-medium text-sm">
-            <span>Let's Contact</span>
-            <i data-feather="arrow-right" class="w-4 h-4"></i>
-        </a>
+        <div class="hidden md:flex items-center gap-3">
+            <a href="{{ route('contact') }}"
+                class="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">
+                Let's Contact
+            </a>
+            <a href="{{ route('contact') }}"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all font-semibold text-sm">
+                <span>Free Trial</span>
+                <i data-feather="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
 
         <!-- Mobile Menu Toggle Button -->
         <button id="mobile-menu-button"
@@ -247,11 +253,14 @@
                 <i data-feather="briefcase" class="w-4 h-4 text-blue-600"></i>
                 <span>Portfolio</span>
             </div>
-
         </a>
-        <div class="px-6 py-4">
+        <div class="px-6 py-4 space-y-2">
             <a href="{{ route('contact') }}"
-                class="block w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-3 rounded-lg shadow-md hover:shadow-lg transition font-medium">
+                class="block w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2.5 rounded-lg shadow-md hover:shadow-lg transition font-semibold">
+                Free Trial
+            </a>
+            <a href="{{ route('contact') }}"
+                class="block w-full bg-gray-50 text-gray-700 text-center py-2 rounded-lg border border-gray-200 hover:bg-gray-100 transition font-medium text-sm">
                 Let's Contact
             </a>
         </div>
