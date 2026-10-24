@@ -10,9 +10,9 @@
             style="background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);">
             <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
                 <!-- <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 shadow-xs mb-4">
-                                                        <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
-                                                        <span>Zero-Risk Production Pilot</span>
-                                                    </span> -->
+                                                            <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
+                                                            <span>Zero-Risk Production Pilot</span>
+                                                        </span> -->
 
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
                     Start Your <span class="text-blue-600">Free Trial</span> Pilot
@@ -70,13 +70,13 @@
                                     class="w-full px-4 py-2.5  rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
                             </div>
                             <!-- 2. Email -->
-                            <div>
+                            <div class="mb-3">
                                 <label for="email"
                                     class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    2. Business Email <span class="text-red-500">*</span>
+                                    2. Email <span class="text-red-500">*</span>
                                 </label>
                                 <input type="email" id="email" name="email" value="{{ old('email') }}" required
-                                    placeholder="you@company.com"
+                                    placeholder="Enter your email"
                                     class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('email') border-red-400 @enderror">
                             </div>
                         </div>
@@ -84,30 +84,30 @@
                         <!-- 3. Country & 4. Phone Number -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- 3. Country -->
-                            <div>
+                            <div class="mb-3">
                                 <label for="country"
                                     class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     3. Country <span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" id="country" name="country" value="{{ old('country') }}" required
-                                    placeholder="e.g. United States, Germany, Bangladesh"
+                                    placeholder="Enter your country"
                                     class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('country') border-red-400 @enderror">
                             </div>
 
                             <!-- 4. Phone Number -->
-                            <div>
+                            <div class="mb-3">
                                 <label for="phone"
                                     class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     4. Phone Number <span class="text-gray-400 font-normal">(WhatsApp preferred)</span>
                                 </label>
                                 <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                    placeholder="+1 (555) 000-0000"
+                                    placeholder="Enter your phone number"
                                     class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none">
                             </div>
                         </div>
 
                         <!-- Optional Service Domain -->
-                        <div>
+                        <div class="mb-3">
                             <label for="service"
                                 class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                 Primary Data Domain / Service
@@ -126,20 +126,19 @@
                         </div>
 
                         <!-- 5. Message -->
-                        <div>
+                        <div class="mb-3">
                             <label for="message"
                                 class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                 5. Message / Pilot Scope & Instructions <span class="text-red-500">*</span>
                             </label>
-                            <textarea id="message" name="message" rows="3" required
-                                placeholder="Briefly describe your dataset, labeling taxonomy, edge cases, or estimated volume..."
+                            <textarea id="message" name="message" rows="3" required placeholder="Enter your message"
                                 class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
                         </div>
 
                         <!-- 6. Project Guideline & 7. Sample Data (File Uploads) -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                             <!-- 6. Project Guideline (PDF or Word) -->
-                            <div>
+                            <div class="mb-3">
                                 <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     6. Project Guideline
                                     <span class="block text-[11px] font-normal text-gray-500 normal-case">PDF or Word file
@@ -168,7 +167,7 @@
                             </div>
 
                             <!-- 7. Sample Data (Img, Video or Zip) -->
-                            <div>
+                            <div class="mb-3">
                                 <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     7. Sample Data
                                     <span class="block text-[11px] font-normal text-gray-500 normal-case">Image, Video or
