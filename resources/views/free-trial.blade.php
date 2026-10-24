@@ -10,9 +10,9 @@
             style="background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);">
             <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
                 <!-- <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 shadow-xs mb-4">
-                        <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
-                        <span>Zero-Risk Production Pilot</span>
-                    </span> -->
+                                            <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
+                                            <span>Zero-Risk Production Pilot</span>
+                                        </span> -->
 
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
                     Start Your <span class="text-blue-600">Free Trial</span> Pilot
@@ -54,66 +54,66 @@
                     @endif
 
                     <form action="{{ route('free-trial.store') }}" method="POST" enctype="multipart/form-data"
-                        class="space-y-6 md:space-y-7">
+                        class="space-y-5">
                         @csrf
 
                         <!-- 1. Full Name & 2. Email -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- 1. Full Name -->
                             <div>
                                 <label for="name"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     1. Full Name <span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" id="name" name="name" value="{{ old('name') }}" required
                                     placeholder="e.g. Abdullah Al Salman"
-                                    class="w-full px-4.5 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
                             </div>
                             <!-- 2. Email -->
                             <div>
                                 <label for="email"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     2. Business Email <span class="text-red-500">*</span>
                                 </label>
                                 <input type="email" id="email" name="email" value="{{ old('email') }}" required
                                     placeholder="you@company.com"
-                                    class="w-full px-4.5 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('email') border-red-400 @enderror">
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('email') border-red-400 @enderror">
                             </div>
                         </div>
 
                         <!-- 3. Country & 4. Phone Number -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- 3. Country -->
                             <div>
                                 <label for="country"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     3. Country <span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" id="country" name="country" value="{{ old('country') }}" required
                                     placeholder="e.g. United States, Germany, Bangladesh"
-                                    class="w-full px-4.5 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('country') border-red-400 @enderror">
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('country') border-red-400 @enderror">
                             </div>
 
                             <!-- 4. Phone Number -->
                             <div>
                                 <label for="phone"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     4. Phone Number <span class="text-gray-400 font-normal">(WhatsApp preferred)</span>
                                 </label>
                                 <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
                                     placeholder="+1 (555) 000-0000"
-                                    class="w-full px-4.5 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none">
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none">
                             </div>
                         </div>
 
                         <!-- Optional Service Domain -->
                         <div>
                             <label for="service"
-                                class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                 Primary Data Domain / Service
                             </label>
                             <select id="service" name="service"
-                                class="w-full px-4.5 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none bg-white">
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none bg-white">
                                 <option value="">Select Domain (Optional)</option>
                                 <option value="Computer Vision" {{ old('service') === 'Computer Vision' ? 'selected' : '' }}>
                                     Computer Vision (2D/3D Bounding Boxes, Segmentation, Keypoints)</option>
@@ -128,78 +128,78 @@
                         <!-- 5. Message -->
                         <div>
                             <label for="message"
-                                class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                 5. Message / Pilot Scope & Instructions <span class="text-red-500">*</span>
                             </label>
-                            <textarea id="message" name="message" rows="4" required
+                            <textarea id="message" name="message" rows="3" required
                                 placeholder="Briefly describe your dataset, labeling taxonomy, edge cases, or estimated volume..."
-                                class="w-full px-4.5 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
                         </div>
 
                         <!-- 6. Project Guideline & 7. Sample Data (File Uploads) -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 pt-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                             <!-- 6. Project Guideline (PDF or Word) -->
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     6. Project Guideline
                                     <span class="block text-[11px] font-normal text-gray-500 normal-case">PDF or Word file
                                         (.pdf, .doc, .docx)</span>
                                 </label>
-                                <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-5 md:p-6 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
+                                <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-4 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
                                     onclick="document.getElementById('project_guideline').click()">
                                     <input type="file" id="project_guideline" name="project_guideline"
                                         accept=".pdf,.doc,.docx,.txt,.odt" class="hidden"
                                         onchange="updateFileName(this, 'guideline_name')">
                                     <div class="flex flex-col items-center justify-center pointer-events-none">
                                         <div
-                                            class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
+                                            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
                                             <i data-feather="file-text" class="w-5 h-5"></i>
                                         </div>
                                         <div id="guideline_name"
                                             class="text-xs font-semibold text-gray-700 truncate max-w-[200px]">
                                             Click to upload guideline
                                         </div>
-                                        <span class="text-[10px] text-gray-400 mt-1">PDF, DOC, DOCX up to 50MB</span>
+                                        <span class="text-[10px] text-gray-400 mt-0.5">PDF, DOC, DOCX up to 50MB</span>
                                     </div>
                                 </div>
                                 @error('project_guideline')
-                                    <p class="text-xs text-red-500 mt-1.5">{{ $message }}</p>
+                                    <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <!-- 7. Sample Data (Img, Video or Zip) -->
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2.5">
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     7. Sample Data
                                     <span class="block text-[11px] font-normal text-gray-500 normal-case">Image, Video or
                                         Zip archive</span>
                                 </label>
-                                <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-5 md:p-6 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
+                                <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-4 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
                                     onclick="document.getElementById('sample_data').click()">
                                     <input type="file" id="sample_data" name="sample_data"
                                         accept="image/*,video/*,.zip,.rar,.tar,.gz,.7z" class="hidden"
                                         onchange="updateFileName(this, 'sample_name')">
                                     <div class="flex flex-col items-center justify-center pointer-events-none">
                                         <div
-                                            class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
+                                            class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
                                             <i data-feather="archive" class="w-5 h-5"></i>
                                         </div>
                                         <div id="sample_name"
                                             class="text-xs font-semibold text-gray-700 truncate max-w-[200px]">
                                             Click to upload raw data
                                         </div>
-                                        <span class="text-[10px] text-gray-400 mt-1">ZIP, IMG, MP4 up to 100MB</span>
+                                        <span class="text-[10px] text-gray-400 mt-0.5">ZIP, IMG, MP4 up to 100MB</span>
                                     </div>
                                 </div>
                                 @error('sample_data')
-                                    <p class="text-xs text-red-500 mt-1.5">{{ $message }}</p>
+                                    <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>
 
                         <!-- Security Notice & Submit Button -->
                         <div
-                            class="pt-6 mt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <i data-feather="lock" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                                 <span>Confidential & protected by mutual NDA</span>
