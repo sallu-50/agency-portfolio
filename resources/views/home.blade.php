@@ -12,7 +12,7 @@
                 <div
                     class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
                     <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                    <span>Enterprise Human-in-the-Loop Data Engine</span>
+
                 </div>
                 <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
                     High-Quality <span class="text-blue-600">Data Annotation</span>
