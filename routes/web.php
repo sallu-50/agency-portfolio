@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FreeTrialController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
@@ -24,6 +25,10 @@ Route::get('/portfolio/{slug}', [PortfolioController::class, 'show'])->name('por
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// Free Trial Pilot
+Route::get('/free-trial', [FreeTrialController::class, 'index'])->name('free-trial');
+Route::post('/free-trial', [FreeTrialController::class, 'store'])->name('free-trial.store');
 
 // Authentication & Admin Redirects to Filament Panel
 Route::get('/login', fn () => redirect()->to('/admin/login'))->name('login');

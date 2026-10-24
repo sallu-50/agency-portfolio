@@ -8,6 +8,8 @@ use App\Models\PortfolioItem;
 use App\Models\TeamMember;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class AgencySiteTest extends TestCase
@@ -252,6 +254,15 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Before &amp; After Sliders', false);
     }
 
+    public function test_authenticated_admin_can_view_filament_contact_messages_resource(): void
+    {
+        $admin = User::where('email', 'admin@marveit.com')->first();
+
+        $response = $this->actingAs($admin)->get('/admin/contact-messages');
+        $response->assertStatus(200);
+        $response->assertSee('Contact Messages', false);
+    }
+
     public function test_portfolio_page_displays_dedicated_before_after_showcase_section(): void
     {
         $response = $this->get(route('portfolio'));
@@ -270,5 +281,60 @@ class AgencySiteTest extends TestCase
         $this->assertNotNull($slider->before_image_url);
         $this->assertNotNull($slider->after_image_url);
         $this->assertTrue($slider->is_active);
+    }
+
+    public function test_free_trial_page_loads_with_required_fields(): void
+    {
+        $response = $this->get(route('free-trial'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Start Your Free Trial Pilot', false);
+        $response->assertSee('Full Name', false);
+        $response->assertSee('Business Email', false);
+        $response->assertSee('Country', false);
+        $response->assertSee('Phone Number', false);
+        $response->assertSee('Project Guideline', false);
+        $response->assertSee('Sample Data', false);
+    }
+
+    public function test_user_can_submit_free_trial_with_guideline_and_sample_files(): void
+    {
+        Storage::fake('public');
+
+        $guideline = UploadedFile::fake()->create('annotation_guidelines.pdf', 500, 'application/pdf');
+        $sampleData = UploadedFile::fake()->create('sample_frames.zip', 1200, 'application/zip');
+
+        $response = $this->post(route('free-trial.store'), [
+            'name' => 'Dr. Alex Vance',
+            'email' => 'alex@robotics-ai.io',
+            'country' => 'United States',
+            'phone' => '+1 415 555 2671',
+            'service' => 'Computer Vision',
+            'message' => 'Need 2D bounding boxes on 15,000 traffic surveillance frames.',
+            'project_guideline' => $guideline,
+            'sample_data' => $sampleData,
+        ]);
+
+        $response->assertRedirect(route('free-trial'));
+        $response->assertSessionHas('success');
+
+        $message = ContactMessage::where('email', 'alex@robotics-ai.io')->first();
+        $this->assertNotNull($message);
+        $this->assertEquals('Dr. Alex Vance', $message->name);
+        $this->assertEquals('United States', $message->country);
+        $this->assertEquals('free_trial', $message->type);
+        $this->assertTrue($message->is_free_trial);
+        $this->assertNotNull($message->guideline_file);
+        $this->assertNotNull($message->sample_file);
+
+        Storage::disk('public')->assertExists($message->guideline_file);
+        Storage::disk('public')->assertExists($message->sample_file);
+    }
+
+    public function test_free_trial_requires_mandatory_fields(): void
+    {
+        $response = $this->post(route('free-trial.store'), []);
+
+        $response->assertSessionHasErrors(['name', 'email', 'country', 'message']);
     }
 }

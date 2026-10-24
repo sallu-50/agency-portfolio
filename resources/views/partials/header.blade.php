@@ -209,8 +209,8 @@
                 class="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">
                 Let's Contact
             </a>
-            <a href="{{ route('contact') }}"
-                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all font-semibold text-sm">
+            <a href="{{ route('free-trial') }}"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all font-semibold text-sm {{ request()->routeIs('free-trial*') ? 'ring-2 ring-blue-400' : '' }}">
                 <span>Free Trial</span>
                 <i data-feather="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -255,7 +255,7 @@
             </div>
         </a>
         <div class="px-6 py-4 space-y-2">
-            <a href="{{ route('contact') }}"
+            <a href="{{ route('free-trial') }}"
                 class="block w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2.5 rounded-lg shadow-md hover:shadow-lg transition font-semibold">
                 Free Trial
             </a>
