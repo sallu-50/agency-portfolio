@@ -10,9 +10,9 @@
             style="background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);">
             <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
                 <!-- <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 shadow-xs mb-4">
-                                                    <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
-                                                    <span>Zero-Risk Production Pilot</span>
-                                                </span> -->
+                                                        <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
+                                                        <span>Zero-Risk Production Pilot</span>
+                                                    </span> -->
 
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
                     Start Your <span class="text-blue-600">Free Trial</span> Pilot
@@ -60,14 +60,14 @@
                         <!-- 1. Full Name & 2. Email -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- 1. Full Name -->
-                            <div>
+                            <div class="mb-3">
                                 <label for="name"
                                     class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                     1. Full Name <span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" id="name" name="name" value="{{ old('name') }}" required
                                     placeholder="Enter your full name"
-                                    class="w-full px-4 py-2.5 my-2 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
+                                    class="w-full px-4 py-2.5  rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
                             </div>
                             <!-- 2. Email -->
                             <div>
