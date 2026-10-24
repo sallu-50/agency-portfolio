@@ -9,7 +9,8 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
             <!-- Text Content -->
             <div class="w-full md:w-1/2 text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
                     <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                     <span>Enterprise Human-in-the-Loop Data Engine</span>
                 </div>
@@ -17,7 +18,8 @@
                     High-Quality <span class="text-blue-600">Data Annotation</span>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                    Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation services for computer vision and NLP.
+                    Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation
+                    services for computer vision and NLP.
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="{{ route('contact') }}"
@@ -34,28 +36,35 @@
 
             <!-- Video / Visual Section -->
             <div class="w-full md:w-1/2">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
                     <!-- Background Gradient -->
                     <div class="absolute inset-0 bg-gradient-to-br from-gray-800 via-blue-950 to-gray-900 opacity-95"></div>
 
                     <!-- Decorative Grid Lines -->
-                    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;"></div>
+                    <div class="absolute inset-0 opacity-15"
+                        style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;">
+                    </div>
 
                     <!-- Center Play Button -->
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20">
+                        <div
+                            class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20">
                             <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
                         </div>
                     </div>
 
                     <!-- Overlay Caption -->
-                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-white font-bold text-base">Watch our workflow</p>
                                 <p class="text-gray-300 text-xs">See how we label data with precision & strict SLAs</p>
                             </div>
-                            <span class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium">99.8% Precision</span>
+                            <span
+                                class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium">99.8%
+                                Precision</span>
                         </div>
                     </div>
                 </div>
@@ -91,7 +100,8 @@
     <section id="services" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 mb-3">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 mb-3">
                     <i data-feather="cpu" class="w-3.5 h-3.5"></i> Comprehensive Capabilities
                 </span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Our Services</h2>
@@ -111,10 +121,12 @@
                             default => ['bg' => 'bg-blue-100', 'text' => 'text-blue-600', 'btn_bg' => 'bg-blue-50 hover:bg-blue-100', 'btn_text' => 'text-blue-600'],
                         };
                     @endphp
-                    <div class="p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group">
+                    <div
+                        class="p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-6">
-                                <div class="flex items-center justify-center h-14 w-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} transition-transform group-hover:scale-105">
+                                <div
+                                    class="flex items-center justify-center h-14 w-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} transition-transform group-hover:scale-105">
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                 </div>
                                 <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
@@ -168,12 +180,15 @@
     <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
                     <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
                 </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Why Choose Marveit AI?</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Why Choose Marveit AI?
+                </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and accuracy, ensuring your AI projects succeed.
+                    We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and
+                    accuracy, ensuring your AI projects succeed.
                 </p>
             </div>
 
@@ -184,7 +199,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Multi-Tier Consensus QA</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Every dataset undergoes two-tier annotator agreement checks, random statistical sampling, and senior QA signoff to guarantee 99.8%+ benchmark compliance.
+                        Every dataset undergoes two-tier annotator agreement checks, random statistical sampling, and senior
+                        QA signoff to guarantee 99.8%+ benchmark compliance.
                     </p>
                 </div>
 
@@ -194,7 +210,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Rapid Elastic Scaling</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Scale your labeling pipeline from hundreds of frames to millions of multi-modal files in days, without sacrificing precision or data cleanliness.
+                        Scale your labeling pipeline from hundreds of frames to millions of multi-modal files in days,
+                        without sacrificing precision or data cleanliness.
                     </p>
                 </div>
 
@@ -204,7 +221,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">SOC 2 & GDPR Compliance</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Encrypted vault transfers, on-premise or cloud VPN gateways, bilateral non-disclosure agreements, and strict PII anonymization procedures.
+                        Encrypted vault transfers, on-premise or cloud VPN gateways, bilateral non-disclosure agreements,
+                        and strict PII anonymization procedures.
                     </p>
                 </div>
             </div>
@@ -215,11 +233,13 @@
     <section id="industries" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
                     <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
                 </span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Industries Served</h2>
-                <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for domain-specific models.</p>
+                <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for
+                    domain-specific models.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -228,7 +248,8 @@
                         <i data-feather="truck" class="w-5 h-5"></i>
                     </div>
                     <h3 class="font-bold text-gray-900 mb-2">Automotive & ADAS</h3>
-                    <p class="text-xs text-gray-500 leading-relaxed">3D point clouds, LiDAR cuboids, lane detection, and pedestrian kinematics for autonomous driving systems.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">3D point clouds, LiDAR cuboids, lane detection, and
+                        pedestrian kinematics for autonomous driving systems.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
@@ -236,7 +257,8 @@
                         <i data-feather="activity" class="w-5 h-5"></i>
                     </div>
                     <h3 class="font-bold text-gray-900 mb-2">Healthcare & Bio</h3>
-                    <p class="text-xs text-gray-500 leading-relaxed">Medical imaging, CT/MRI segmentation, clinical record text tagging, and privacy-shielded HIPAA protocols.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Medical imaging, CT/MRI segmentation, clinical record
+                        text tagging, and privacy-shielded HIPAA protocols.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
@@ -244,7 +266,8 @@
                         <i data-feather="shopping-bag" class="w-5 h-5"></i>
                     </div>
                     <h3 class="font-bold text-gray-900 mb-2">Retail & E-Commerce</h3>
-                    <p class="text-xs text-gray-500 leading-relaxed">SKU attribute tagging, visual search indexing, product categorization, and customer sentiment evaluation.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">SKU attribute tagging, visual search indexing, product
+                        categorization, and customer sentiment evaluation.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
@@ -252,7 +275,8 @@
                         <i data-feather="sun" class="w-5 h-5"></i>
                     </div>
                     <h3 class="font-bold text-gray-900 mb-2">Smart Agriculture</h3>
-                    <p class="text-xs text-gray-500 leading-relaxed">Aerial drone imagery, multispectral crop health classification, weed identification, and yield forecasting.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Aerial drone imagery, multispectral crop health
+                        classification, weed identification, and yield forecasting.</p>
                 </div>
             </div>
         </div>
@@ -264,7 +288,8 @@
         <div class="container mx-auto px-6 text-center max-w-3xl">
             <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Ready to Start Your Project?</h2>
             <p class="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
-                Let's discuss how our data annotation services can help you achieve your AI goals with speed, security, and precision.
+                Let's discuss how our data annotation services can help you achieve your AI goals with speed, security, and
+                precision.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="{{ route('contact') }}"
