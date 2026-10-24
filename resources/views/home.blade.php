@@ -100,10 +100,7 @@
     <section id="services" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
-                <span
-                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 mb-3">
-                    <i data-feather="cpu" class="w-3.5 h-3.5"></i> Comprehensive Capabilities
-                </span>
+
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Our Services</h2>
                 <p class="text-base md:text-lg text-gray-600">
                     High-throughput, human-verified annotation designed to feed modern deep learning architectures.
