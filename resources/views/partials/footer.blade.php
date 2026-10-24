@@ -1,6 +1,16 @@
 <!-- Footer -->
-<footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-800 pt-12 md:pt-16 pb-10 md:pb-12">
+<footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-700/60 pt-20 md:pt-24 pb-16">
     <style>
+        #contact-footer {
+            padding-top: 5rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            #contact-footer {
+                padding-top: 6rem;
+                padding-bottom: 4.5rem;
+            }
+        }
         @media (max-width: 767px) {
             .footer-mobile-nav {
                 display: grid;
@@ -15,32 +25,32 @@
         }
     </style>
 
-    <div class="container mx-auto px-5 sm:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12">
             <!-- 1. Brand Section -->
-            <div class="space-y-4">
-                <div>
+            <div>
+                <div class="mb-5">
                     <a href="{{ route('home') }}" class="inline-block" aria-label="Marveit AI Home">
-                        <img src="{{ asset('image/marveit-white.svg') }}" alt="Marveit AI Logo" class="h-9 md:h-10 w-auto">
+                        <img src="{{ asset('image/Marveit ABCD.svg') }}" alt="Marveit AI Logo" class="h-10 w-auto brightness-0 invert" style="height: 40px; width: auto; display: block;">
                     </a>
                 </div>
-                <p class="text-xs sm:text-sm leading-relaxed text-gray-400 max-w-sm">
+                <p class="text-sm leading-relaxed text-gray-400 mb-6 max-w-sm">
                     Enterprise human-in-the-loop AI data annotation and training solutions built for precision, speed, and strict security compliance.
                 </p>
                 <!-- Social Media Links -->
-                <div class="flex items-center gap-2.5 pt-1">
+                <div class="flex items-center gap-3">
                     <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-                        class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
+                        class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="linkedin" class="w-4 h-4"></i>
                     </a>
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                        class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
+                        class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="twitter" class="w-4 h-4"></i>
                     </a>
                     <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                        class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
+                        class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="facebook" class="w-4 h-4"></i>
                     </a>
