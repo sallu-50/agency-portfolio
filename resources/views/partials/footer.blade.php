@@ -80,6 +80,8 @@
                         <li><a href="{{ route('portfolio') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors font-medium">Portfolio</a></li>
                         <li><a href="{{ route('home') }}#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Industries</a></li>
                         <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact Us</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Privacy Policy</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -114,12 +116,8 @@
         </div>
 
         <!-- Bottom Copyright Bar -->
-        <div class="pt-6 md:pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-400 text-center sm:text-left">
+        <div class="pt-6 md:pt-8 border-t border-gray-800 text-center text-xs text-gray-400">
             <p>&copy; {{ date('Y') }} Marveit AI. All rights reserved.</p>
-            <div class="flex items-center justify-center gap-6">
-                <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Terms of Service</a>
-            </div>
         </div>
     </div>
 </footer>
