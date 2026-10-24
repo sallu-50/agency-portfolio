@@ -8,8 +8,8 @@
 
 <div class="before-after-widget w-full select-none" id="{{ $sliderId }}" data-initial="{{ $initialPercent }}">
     <!-- Main Comparison Viewer Window (Displays full image without cropping) -->
-    <div class="comparison-container relative w-full rounded-2xl overflow-hidden shadow-2xl touch-none cursor-ew-resize group mx-auto flex items-center justify-center"
-         style="--position: {{ $initialPercent }}%; width: 100%; height: 46vh; min-height: 280px; max-height: 440px; background-color: #080c14; border: 1px solid #1f2937;">
+    <div class="comparison-container relative w-full rounded-2xl overflow-hidden touch-none cursor-ew-resize group mx-auto flex items-center justify-center"
+         style="--position: {{ $initialPercent }}%; width: 100%; height: 50vh; min-height: 320px; max-height: 580px; background-color: #f8fafc; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
         
         <!-- Bottom Layer: AFTER (Annotated / Processed) Image -->
         <div class="absolute inset-0 w-full h-full pointer-events-none flex items-center justify-center">
@@ -20,7 +20,7 @@
             
             <!-- After Label Badge -->
             <div class="absolute top-4 right-4 z-10 pointer-events-none">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide text-white bg-blue-600/85 backdrop-blur-md border border-blue-400/40 shadow-lg">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide text-white bg-blue-600/90 backdrop-blur-md border border-blue-400/40 shadow-lg">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     {{ $afterLabel }}
                 </span>
@@ -45,13 +45,13 @@
         </div>
 
         <!-- Center Divider Line & Glowing Drag Handle -->
-        <div class="divider-line absolute top-0 bottom-0 w-[2px] bg-white pointer-events-none z-20 shadow-[0_0_15px_rgba(255,255,255,0.8)] will-change-[left]"
-             style="left: var(--position);">
+        <div class="divider-line absolute top-0 bottom-0 pointer-events-none z-20 will-change-[left]"
+             style="left: var(--position); width: 2px; background-color: #2563eb; box-shadow: 0 0 12px rgba(37, 99, 235, 0.45);">
             
             <!-- Circular Draggable Thumb -->
-            <div class="handle-thumb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 md:w-11 md:h-11 rounded-full bg-white text-gray-900 shadow-2xl flex items-center justify-center border-2 border-blue-500 transition-transform duration-150 group-hover:scale-110 active:scale-95 group-hover:shadow-[0_0_22px_rgba(37,99,235,0.6)]">
+            <div class="handle-thumb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 md:w-11 md:h-11 rounded-full bg-white text-gray-900 shadow-xl flex items-center justify-center border-2 border-blue-600 transition-transform duration-150 group-hover:scale-110 active:scale-95 group-hover:shadow-[0_0_20px_rgba(37,99,235,0.4)]">
                 <!-- Double arrows icon -->
-                <svg class="w-4.5 h-4.5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-4.5 h-4.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3m8-6l4 3-4 3"></path>
                 </svg>
             </div>
@@ -59,8 +59,8 @@
 
         <!-- Interactive Drag Hint overlay (fades out on interaction) -->
         <div class="interaction-hint absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-20 transition-opacity duration-500 opacity-90 group-hover:opacity-100">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-medium text-white/90 bg-black/60 backdrop-blur-md border border-white/10 shadow-md">
-                <svg class="w-3.5 h-3.5 text-blue-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-medium text-gray-700 bg-white/95 backdrop-blur-md border border-gray-200 shadow-md">
+                <svg class="w-3.5 h-3.5 text-blue-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8M8 12h8M8 17h8"></path>
                 </svg>
                 <span>Drag or click anywhere to compare</span>

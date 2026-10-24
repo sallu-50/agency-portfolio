@@ -33,9 +33,9 @@
 
         @if (isset($comparisons) && $comparisons->isNotEmpty())
             <!-- Dedicated Before & After Image Comparison Section (Fits within 90vh of the screen) -->
-            <section id="comparisons-showcase" class="py-6 md:py-8 text-white relative overflow-hidden flex flex-col justify-center"
-                     style="background-color: #0b0f19; min-height: calc(88vh - 120px);">
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+            <section id="comparisons-showcase" class="py-6 md:py-10 relative overflow-hidden flex flex-col justify-center"
+                     style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50/70 via-transparent to-transparent pointer-events-none"></div>
 
                 <div class="container mx-auto px-4 md:px-6 relative z-10 w-full">
                     <!-- Comparison Items Container -->
@@ -43,23 +43,21 @@
                         @foreach ($comparisons as $index => $item)
                             <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }}"
                                  id="comparison-item-{{ $item->id }}">
-                                <div class="rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-2xl backdrop-blur-xl"
-                                     style="background-color: #111827; border: 1px solid #1f2937;">
+                                <div class="rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-sm border border-gray-200"
+                                     style="background-color: #ffffff; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.07);">
                                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3.5 px-1">
                                         <div class="flex items-center gap-2.5">
                                             @if ($item->category)
-                                                <span class="inline-block px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider text-blue-400"
-                                                      style="background-color: rgba(37, 99, 235, 0.18); border: 1px solid rgba(96, 165, 250, 0.35);">
+                                                <span class="inline-block px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-200">
                                                     {{ $item->category }}
                                                 </span>
                                             @endif
-                                            <h3 class="text-base md:text-lg font-bold text-white">
+                                            <h3 class="text-base md:text-lg font-bold text-gray-900">
                                                 {{ $item->title ?: 'Project #' . ($index + 1) }}
                                             </h3>
                                         </div>
-                                        <div class="text-[11px] text-gray-300 px-3 py-1 rounded-full flex items-center gap-1.5 self-start sm:self-auto flex-shrink-0"
-                                             style="background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);">
-                                            <i data-feather="move" class="w-3.5 h-3.5 text-blue-400"></i>
+                                        <div class="text-[11px] font-medium text-gray-600 px-3 py-1 rounded-full flex items-center gap-1.5 self-start sm:self-auto flex-shrink-0 bg-gray-100 border border-gray-200">
+                                            <i data-feather="move" class="w-3.5 h-3.5 text-blue-600"></i>
                                             <span>Drag slider to compare</span>
                                         </div>
                                     </div>
