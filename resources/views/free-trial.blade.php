@@ -4,91 +4,98 @@
 @section('meta_description', 'Request a risk-free sample annotation pilot for your computer vision, NLP, or audio project. 24-48 hour turnaround with 99.8% precision SLA.')
 
 @section('content')
-    <div class="pt-24 md:pt-28 bg-gray-50 min-h-screen">
-        <!-- Hero Header -->
-        <section class="bg-gradient-to-b from-[#0B253A] to-[#071A29] text-white py-16 md:py-20 relative overflow-hidden">
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="container mx-auto px-6 relative z-10 max-w-5xl text-center">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-blue-200 border border-white/15 mb-4">
-                    <i data-feather="zap" class="w-3.5 h-3.5 text-yellow-400"></i> Zero-Risk Production Pilot
+    <div class="pt-24 md:pt-28 bg-gray-50/60 min-h-screen">
+        <!-- Hero Header (Crisp, High-Contrast Light Theme) -->
+        <section class="py-14 md:py-20 border-b border-gray-200 relative overflow-hidden"
+                 style="background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);">
+            <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 shadow-xs mb-4">
+                    <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
+                    <span>Zero-Risk Production Pilot</span>
                 </span>
-                <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
-                    Start Your Free Trial Pilot
+                
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                    Start Your <span class="text-blue-600">Free Trial</span> Pilot
                 </h1>
-                <p class="text-base md:text-lg text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
-                    Test our labeling speed and benchmark accuracy with zero financial commitment. Submit your guidelines and raw sample data for a quick 24-hour pilot turnaround.
+                
+                <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
+                    Test our labeling speed and benchmark accuracy with zero financial commitment. Submit your guidelines and raw sample data for a fast 24-hour turnaround.
                 </p>
             </div>
         </section>
 
         <!-- Main Form & Benefit Details Section -->
-        <section class="py-12 md:py-16 -mt-8 relative z-20">
-            <div class="container mx-auto px-4 md:px-6 max-w-5xl">
-                <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+        <section class="py-10 md:py-16 relative z-20">
+            <div class="container mx-auto px-4 sm:px-6 max-w-5xl">
+                <div class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
                     <div class="grid grid-cols-1 lg:grid-cols-12">
                         
-                        <!-- Left Column: Pilot Benefits & Assurance -->
-                        <div class="lg:col-span-5 bg-gradient-to-br from-blue-900 via-indigo-950 to-gray-900 p-8 md:p-10 text-white flex flex-col justify-between">
+                        <!-- Left Column: Pilot Benefits & Assurance (Deep Navy with 100% Guaranteed Contrast) -->
+                        <div class="lg:col-span-5 p-8 md:p-10 text-white flex flex-col justify-between"
+                             style="background: linear-gradient(145deg, #0B253A 0%, #071A29 100%);">
                             <div>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30 mb-6">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider text-blue-300 border border-blue-400/40 mb-6"
+                                      style="background-color: rgba(37, 99, 235, 0.25);">
                                     Enterprise Free Pilot SLA
                                 </span>
                                 
-                                <h2 class="text-2xl font-bold mb-4 leading-snug">
+                                <h2 class="text-2xl font-bold mb-4 leading-snug text-white">
                                     Why Leading AI Teams Test Us First
                                 </h2>
                                 
-                                <p class="text-xs md:text-sm text-blue-100/80 leading-relaxed mb-8">
-                                    We believe the best way to prove our labeling quality is through actual output on your proprietary data.
+                                <p class="text-xs md:text-sm text-blue-100/85 leading-relaxed mb-8">
+                                    We believe the best way to prove our labeling quality is through actual output on your proprietary dataset before scaling.
                                 </p>
 
                                 <div class="space-y-4 text-xs md:text-sm text-blue-100/90 mb-8">
                                     <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div class="w-6 h-6 rounded-lg text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                             style="background-color: rgba(37, 99, 235, 0.3);">
                                             <i data-feather="check" class="w-3.5 h-3.5 text-blue-400"></i>
                                         </div>
                                         <div>
                                             <span class="font-bold text-white block">Free 50–200 Sample Units</span>
-                                            <span class="text-blue-200/70 text-xs">Full multi-tier labeled batch delivered with QA report.</span>
+                                            <span class="text-blue-200/70 text-xs">Full multi-tier labeled batch delivered with QA accuracy report.</span>
                                         </div>
                                     </div>
 
                                     <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div class="w-6 h-6 rounded-lg text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                             style="background-color: rgba(37, 99, 235, 0.3);">
                                             <i data-feather="clock" class="w-3.5 h-3.5 text-blue-400"></i>
                                         </div>
                                         <div>
                                             <span class="font-bold text-white block">24–48h Turnaround</span>
-                                            <span class="text-blue-200/70 text-xs">Rapid sprint execution with edge-case clarification.</span>
+                                            <span class="text-blue-200/70 text-xs">Rapid sprint execution with live edge-case resolution.</span>
                                         </div>
                                     </div>
 
                                     <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div class="w-6 h-6 rounded-lg text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                             style="background-color: rgba(37, 99, 235, 0.3);">
                                             <i data-feather="shield" class="w-3.5 h-3.5 text-blue-400"></i>
                                         </div>
                                         <div>
                                             <span class="font-bold text-white block">Strict Bilateral NDA</span>
-                                            <span class="text-blue-200/70 text-xs">Your proprietary guidelines and data remain 100% confidential.</span>
+                                            <span class="text-blue-200/70 text-xs">Your proprietary guidelines and training data remain 100% confidential.</span>
                                         </div>
                                     </div>
 
                                     <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div class="w-6 h-6 rounded-lg text-blue-300 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                             style="background-color: rgba(37, 99, 235, 0.3);">
                                             <i data-feather="award" class="w-3.5 h-3.5 text-blue-400"></i>
                                         </div>
                                         <div>
                                             <span class="font-bold text-white block">99.8% Precision Target</span>
-                                            <span class="text-blue-200/70 text-xs">Double-pass QA consensus validation on every frame.</span>
+                                            <span class="text-blue-200/70 text-xs">Double-pass QA consensus validation on every single frame.</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="pt-6 border-t border-white/10">
-                                <div class="text-xs text-blue-200/80 mb-2 font-medium">Need immediate assistance?</div>
+                            <div class="pt-6 border-t border-white/15">
+                                <div class="text-xs text-blue-200/80 mb-2 font-medium">Need immediate pilot coordination?</div>
                                 <div class="flex flex-col gap-2">
                                     <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20free%20trial%20pilot."
                                        target="_blank" rel="noopener noreferrer"
@@ -106,7 +113,7 @@
                         </div>
 
                         <!-- Right Column: The Free Trial Form with File Uploads -->
-                        <div class="lg:col-span-7 p-6 sm:p-8 md:p-10">
+                        <div class="lg:col-span-7 p-6 sm:p-8 md:p-10 bg-white">
                             <!-- Success Notification -->
                             @if (session('success'))
                                 <div class="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
@@ -134,7 +141,7 @@
                                 @csrf
 
                                 <!-- 1. Full Name & 2. Email -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <!-- 1. Full Name -->
                                     <div>
                                         <label for="name" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
@@ -142,7 +149,7 @@
                                         </label>
                                         <input type="text" id="name" name="name" value="{{ old('name') }}" required
                                             placeholder="e.g. Abdullah Al Salman"
-                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
+                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
                                     </div>
 
                                     <!-- 2. Email -->
@@ -152,12 +159,12 @@
                                         </label>
                                         <input type="email" id="email" name="email" value="{{ old('email') }}" required
                                             placeholder="you@company.com"
-                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('email') border-red-400 @enderror">
+                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('email') border-red-400 @enderror">
                                     </div>
                                 </div>
 
                                 <!-- 3. Country & 4. Phone Number -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <!-- 3. Country -->
                                     <div>
                                         <label for="country" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
@@ -165,7 +172,7 @@
                                         </label>
                                         <input type="text" id="country" name="country" value="{{ old('country') }}" required
                                             placeholder="e.g. United States, Germany, Bangladesh"
-                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('country') border-red-400 @enderror">
+                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('country') border-red-400 @enderror">
                                     </div>
 
                                     <!-- 4. Phone Number -->
@@ -175,17 +182,17 @@
                                         </label>
                                         <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
                                             placeholder="+1 (555) 000-0000"
-                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none">
+                                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none">
                                     </div>
                                 </div>
 
-                                <!-- Optional Service of Interest -->
+                                <!-- Optional Service Domain -->
                                 <div>
                                     <label for="service" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                         Primary Data Domain / Service
                                     </label>
                                     <select id="service" name="service"
-                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none bg-white">
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none bg-white">
                                         <option value="">Select Domain (Optional)</option>
                                         <option value="Computer Vision" {{ old('service') === 'Computer Vision' ? 'selected' : '' }}>Computer Vision (2D/3D Bounding Boxes, Segmentation, Keypoints)</option>
                                         <option value="LiDAR & 3D Point Cloud" {{ old('service') === 'LiDAR & 3D Point Cloud' ? 'selected' : '' }}>LiDAR & 3D Point Cloud Tracking</option>
@@ -199,22 +206,22 @@
                                 <!-- 5. Message -->
                                 <div>
                                     <label for="message" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                        5. Message / Pilot Scope & Requirements <span class="text-red-500">*</span>
+                                        5. Message / Pilot Scope & Instructions <span class="text-red-500">*</span>
                                     </label>
                                     <textarea id="message" name="message" rows="3" required
                                         placeholder="Briefly describe your dataset, labeling taxonomy, edge cases, or estimated volume..."
-                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
                                 </div>
 
                                 <!-- 6. Project Guideline & 7. Sample Data (File Uploads) -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-1">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                                     <!-- 6. Project Guideline (PDF or Word) -->
                                     <div>
                                         <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
                                             6. Project Guideline
                                             <span class="block text-[11px] font-normal text-gray-500 normal-case">PDF or Word file (.pdf, .doc, .docx)</span>
                                         </label>
-                                        <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-500 rounded-2xl p-4 text-center transition-colors bg-gray-50/60 hover:bg-blue-50/30 cursor-pointer group"
+                                        <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-4 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
                                              onclick="document.getElementById('project_guideline').click()">
                                             <input type="file" id="project_guideline" name="project_guideline"
                                                    accept=".pdf,.doc,.docx,.txt,.odt"
@@ -241,7 +248,7 @@
                                             7. Sample Data
                                             <span class="block text-[11px] font-normal text-gray-500 normal-case">Image, Video or Zip archive</span>
                                         </label>
-                                        <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-500 rounded-2xl p-4 text-center transition-colors bg-gray-50/60 hover:bg-blue-50/30 cursor-pointer group"
+                                        <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-4 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
                                              onclick="document.getElementById('sample_data').click()">
                                             <input type="file" id="sample_data" name="sample_data"
                                                    accept="image/*,video/*,.zip,.rar,.tar,.gz,.7z"
@@ -271,7 +278,8 @@
                                     </div>
 
                                     <button type="submit"
-                                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm cursor-pointer">
+                                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm cursor-pointer"
+                                        style="background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);">
                                         <span>Submit Free Trial Request</span>
                                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                                     </button>
