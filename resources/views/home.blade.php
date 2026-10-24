@@ -271,12 +271,6 @@
                     class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
                     Speak to an Expert
                 </a>
-                <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
-                    target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
-                    <i data-feather="message-circle" class="w-4 h-4"></i>
-                    <span>Quick WhatsApp Chat</span>
-                </a>
             </div>
         </div>
     </section>
