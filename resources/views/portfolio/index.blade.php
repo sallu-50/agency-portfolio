@@ -39,7 +39,7 @@
 
                 <div class="container mx-auto px-4 md:px-6 relative z-10 w-full">
                     <!-- Comparison Items Container -->
-                    <div class="max-w-4xl mx-auto">
+                    <div class="max-w-5xl mx-auto">
                         @foreach ($comparisons as $index => $item)
                             <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }}"
                                  id="comparison-item-{{ $item->id }}">

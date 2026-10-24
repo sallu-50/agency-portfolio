@@ -4,12 +4,13 @@
     $initialPercent = $initialPercent ?? 50;
     $beforeLabel = $beforeLabel ?? 'Before';
     $afterLabel = $afterLabel ?? 'After';
+    $sliderHeight = $height ?? '100vh';
 @endphp
 
 <div class="before-after-widget w-full select-none" id="{{ $sliderId }}" data-initial="{{ $initialPercent }}">
     <!-- Main Comparison Viewer Window (Displays full image without cropping) -->
     <div class="comparison-container relative w-full rounded-2xl overflow-hidden touch-none cursor-ew-resize group mx-auto flex items-center justify-center"
-         style="--position: {{ $initialPercent }}%; width: 100%; height: 50vh; min-height: 320px; max-height: 580px; background-color: #f8fafc; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
+         style="--position: {{ $initialPercent }}%; width: 100%; height: {{ $sliderHeight }}; min-height: 480px; background-color: #f8fafc; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
         
         <!-- Bottom Layer: AFTER (Annotated / Processed) Image -->
         <div class="absolute inset-0 w-full h-full pointer-events-none flex items-center justify-center">
