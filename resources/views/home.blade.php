@@ -127,8 +127,8 @@
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                 </div>
                                 <!-- <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
-                                            {{ $service->category }}
-                                        </span> -->
+                                                            {{ $service->category }}
+                                                        </span> -->
                             </div>
 
                             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -177,10 +177,10 @@
     <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span
-                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
-                    <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
-                </span>
+                <!-- <span
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
+                            <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
+                        </span> -->
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Why Choose Marveit AI?
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -230,10 +230,10 @@
     <section id="industries" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
-                <span
-                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
-                    <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
-                </span>
+                <!-- <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
+                        <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
+                    </span> -->
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Industries Served</h2>
                 <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for
                     domain-specific models.</p>
