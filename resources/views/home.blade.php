@@ -124,11 +124,11 @@
                             <div class="flex items-center justify-between mb-6">
                                 <div
                                     class="flex items-center justify-center h-14 w-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} transition-transform group-hover:scale-105">
-                                    <!-- <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i> -->
+                                    <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                 </div>
-                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
-                                    {{ $service->category }}
-                                </span>
+                                <!-- <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
+                                            {{ $service->category }}
+                                        </span> -->
                             </div>
 
                             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
