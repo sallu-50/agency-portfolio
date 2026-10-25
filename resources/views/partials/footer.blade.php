@@ -1,16 +1,18 @@
 <!-- Footer -->
-<footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-700/60 pt-20 md:pt-24 pb-16">
+<footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-700/60 pt-5 md:pt-5 pb-8">
     <style>
         #contact-footer {
             padding-top: 5rem;
             padding-bottom: 4rem;
         }
+
         @media (min-width: 768px) {
             #contact-footer {
                 padding-top: 6rem;
                 padding-bottom: 4.5rem;
             }
         }
+
         @media (max-width: 767px) {
             .footer-mobile-nav {
                 display: grid;
@@ -18,6 +20,7 @@
                 gap: 1.5rem;
             }
         }
+
         @media (min-width: 768px) {
             .footer-mobile-nav {
                 display: contents;
@@ -31,15 +34,18 @@
             <div>
                 <div class="mb-5">
                     <a href="{{ route('home') }}" class="inline-block" aria-label="Marveit AI Home">
-                        <img src="{{ asset('image/Marveit ABCD.svg') }}" alt="Marveit AI Logo" class="h-10 w-auto brightness-0 invert" style="height: 40px; width: auto; display: block;">
+                        <img src="{{ asset('image/Marveit ABCD.svg') }}" alt="Marveit AI Logo"
+                            class="h-10 w-auto brightness-0 invert" style="height: 40px; width: auto; display: block;">
                     </a>
                 </div>
                 <p class="text-sm leading-relaxed text-gray-400 mb-6 max-w-sm">
-                    Enterprise human-in-the-loop AI data annotation and training solutions built for precision, speed, and strict security compliance.
+                    Enterprise human-in-the-loop AI data annotation and training solutions built for precision, speed,
+                    and strict security compliance.
                 </p>
                 <!-- Social Media Links -->
                 <div class="flex items-center gap-3">
-                    <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"
                         class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="linkedin" class="w-4 h-4"></i>
@@ -49,7 +55,8 @@
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="twitter" class="w-4 h-4"></i>
                     </a>
-                    <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                    <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"
                         class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="facebook" class="w-4 h-4"></i>
@@ -63,11 +70,21 @@
                 <div>
                     <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Core Services</h4>
                     <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
-                        <li><a href="{{ route('services.show', 'data-collection') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data Collection</a></li>
-                        <li><a href="{{ route('services.show', 'computer-vision') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Computer Vision</a></li>
-                        <li><a href="{{ route('services.show', 'nlp') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">NLP & Text</a></li>
-                        <li><a href="{{ route('services.show', 'audio-annotation') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio Transcription</a></li>
-                        <li><a href="{{ route('services.show', 'video-annotation') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video Annotation</a></li>
+                        <li><a href="{{ route('services.show', 'data-collection') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data
+                                Collection</a></li>
+                        <li><a href="{{ route('services.show', 'computer-vision') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Computer
+                                Vision</a></li>
+                        <li><a href="{{ route('services.show', 'nlp') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">NLP &
+                                Text</a></li>
+                        <li><a href="{{ route('services.show', 'audio-annotation') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio
+                                Transcription</a></li>
+                        <li><a href="{{ route('services.show', 'video-annotation') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video
+                                Annotation</a></li>
                     </ul>
                 </div>
 
@@ -75,13 +92,27 @@
                 <div>
                     <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Company</h4>
                     <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
-                        <li><a href="{{ route('home') }}#about" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">About Us</a></li>
-                        <li><a href="{{ route('team') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Our Team</a></li>
-                        <li><a href="{{ route('portfolio') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors font-medium">Portfolio</a></li>
-                        <li><a href="{{ route('home') }}#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Industries</a></li>
-                        <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact Us</a></li>
-                        <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Privacy Policy</a></li>
-                        <li><a href="{{ route('contact') }}" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Terms of Service</a></li>
+                        <li><a href="{{ route('home') }}#about"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">About
+                                Us</a></li>
+                        <li><a href="{{ route('team') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Our
+                                Team</a></li>
+                        <li><a href="{{ route('portfolio') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors font-medium">Portfolio</a>
+                        </li>
+                        <li><a href="{{ route('home') }}#industries"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Industries</a>
+                        </li>
+                        <li><a href="{{ route('contact') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="{{ route('contact') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="{{ route('contact') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Terms of
+                                Service</a></li>
                     </ul>
                 </div>
             </div>
