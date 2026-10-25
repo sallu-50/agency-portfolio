@@ -16,21 +16,25 @@
                     gap: 48px;
                     width: 100%;
                 }
+
                 .comparison-split-left {
                     width: 50%;
                     flex: 0 0 50%;
                     max-width: 50%;
                 }
+
                 .comparison-split-right {
                     width: 50%;
                     flex: 0 0 50%;
                     max-width: 50%;
                 }
+
                 @media (max-width: 991px) {
                     .comparison-split-wrapper {
                         flex-direction: column;
                         gap: 32px;
                     }
+
                     .comparison-split-left,
                     .comparison-split-right {
                         width: 100%;
@@ -40,14 +44,15 @@
                 }
             </style>
 
-            <section id="comparisons-showcase" class="py-12 md:py-20 relative overflow-hidden bg-white border-b border-gray-100">
+            <section id="comparisons-showcase"
+                class="py-12 md:py-20 relative overflow-hidden bg-white border-b border-gray-100">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <!-- Comparison Items Container -->
                     <div>
                         @foreach ($comparisons as $index => $item)
                             <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }}"
                                 id="comparison-item-{{ $item->id }}">
-                                
+
                                 <div class="comparison-split-wrapper">
                                     <!-- Left Column: Image Drag Comparison Slider -->
                                     <div class="comparison-split-left">
@@ -68,14 +73,15 @@
                                     <!-- Right Column: Content & Description (Styled exactly like reference screenshot) -->
                                     <div class="comparison-split-right text-left space-y-6">
                                         <!-- Subtitle Eyebrow in Blue -->
-                                        <div>
-                                            <span class="text-sm sm:text-base font-semibold text-blue-600 tracking-wide inline-block">
-                                                See More With Marveit AI
-                                            </span>
-                                        </div>
+                                        <!-- <div>
+                                                        <span class="text-sm sm:text-base font-semibold text-blue-600 tracking-wide inline-block">
+                                                            See More With Marveit AI
+                                                        </span>
+                                                    </div> -->
 
                                         <!-- Big Bold Title -->
-                                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.18]">
+                                        <h2
+                                            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.18]">
                                             {{ $item->title ?: 'Make Data-Driven Decisions for Your Facilities' }}
                                         </h2>
 

@@ -7,53 +7,65 @@
     <!-- Hero Section -->
     <section class="container mx-auto px-6 py-20 md:py-32 mt-8">
         <div class="flex flex-col md:flex-row items-center gap-12">
-            <!-- Left: Interactive Visual Section (Before / After Comparison Slider) -->
-            <div class="w-full md:w-1/2">
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between px-1">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200">
-                            <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-600"></i> Interactive AI Annotation
-                        </span>
-                        <span class="text-xs text-gray-500 font-medium hidden sm:inline">Drag center slider to inspect</span>
-                    </div>
-
-                    @include('partials.before-after-slider', [
-                        'id' => 'hero-comparison-slider',
-                        'beforeImage' => asset('image/crack-defect-raw.jpg'),
-                        'afterImage' => asset('image/crack-defect-annotated.jpg'),
-                        'beforeLabel' => 'Raw Surface',
-                        'afterLabel' => 'AI Segmentation',
-                        'alt' => 'Pavement crack defect detection comparison',
-                        'height' => '460px',
-                    ])
-                </div>
-            </div>
-
-            <!-- Right: Text Content -->
             <div class="w-full md:w-1/2 text-left">
                 <div
                     class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
                     <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                    <span>See More With Marveit AI</span>
+                    <span>High-Quality Data Annotation</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
-                    High-Quality <span class="text-blue-600">Data Annotation</span> & Defect Detection
+                    Powering Next-Gen <span class="text-blue-600">AI Models</span> with Precision Data
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                    Power your AI models with accurately labeled datasets. We provide scalable, pixel-perfect annotation
-                    services for computer vision, defect detection, and NLP.
+                    We deliver human-in-the-loop data labeling and workforce solutions tailored for machine learning, computer
+                    vision, and NLP.
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="{{ route('free-trial') }}"
-                        class="text-white font-bold py-3.5 px-8 rounded-full transition duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
-                        style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.45);">
-                        <span>How It Works</span>
-                        <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 inline-flex items-center">
+                        <span>Start Free Trial</span>
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </a>
-                    <a href="{{ route('portfolio') }}"
-                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-full transition duration-300 inline-flex items-center">
-                        <span>Explore Portfolio</span>
+                    <a href="{{ route('services.index') }}"
+                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                        <span>Explore Services</span>
                     </a>
+                </div>
+            </div>
+
+            <!-- Video / Visual Section -->
+            <div class="w-full md:w-1/2">
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 via-blue-950 to-gray-900 opacity-95"></div>
+
+                    <!-- Decorative Grid Lines -->
+                    <div class="absolute inset-0 opacity-15"
+                        style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;">
+                    </div>
+
+                    <!-- Center Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div
+                            class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20">
+                            <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
+                        </div>
+                    </div>
+
+                    <!-- Overlay Caption -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-white font-bold text-base">Watch our workflow</p>
+                                <p class="text-gray-300 text-xs">See how we label data with precision & strict SLAs</p>
+                            </div>
+                            <span
+                                class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium">99.8%
+                                Precision</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -284,7 +296,3 @@
         </div>
     </section>
 @endsection
-
-@push('scripts')
-    <script src="{{ asset('js/before-after-slider.js') }}"></script>
-@endpush
