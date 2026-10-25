@@ -8,6 +8,7 @@
         .ft-page-bg {
             background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
         }
+
         .ft-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -16,12 +17,14 @@
             padding: 36px 40px;
             transition: all 0.3s ease;
         }
+
         @media (max-width: 640px) {
             .ft-card {
                 padding: 24px 20px;
                 border-radius: 16px;
             }
         }
+
         .ft-label {
             display: block;
             font-size: 13px;
@@ -29,17 +32,21 @@
             color: #334155;
             margin-bottom: 6px;
         }
+
         .ft-label .required {
             color: #ef4444;
             margin-left: 2px;
         }
+
         .ft-label .hint {
             font-size: 11.5px;
             font-weight: 400;
             color: #94a3b8;
             margin-left: 4px;
         }
-        .ft-input, .ft-select {
+
+        .ft-input,
+        .ft-select {
             width: 100%;
             height: 44px;
             padding: 0 14px;
@@ -53,18 +60,27 @@
             display: block;
             box-sizing: border-box;
         }
-        .ft-input::placeholder, .ft-textarea::placeholder {
+
+        .ft-input::placeholder,
+        .ft-textarea::placeholder {
             color: #94a3b8;
         }
-        .ft-input:hover, .ft-select:hover, .ft-textarea:hover {
+
+        .ft-input:hover,
+        .ft-select:hover,
+        .ft-textarea:hover {
             background-color: #ffffff;
             border-color: #94a3b8;
         }
-        .ft-input:focus, .ft-select:focus, .ft-textarea:focus {
+
+        .ft-input:focus,
+        .ft-select:focus,
+        .ft-textarea:focus {
             background-color: #ffffff;
             border-color: #0e5edd;
             box-shadow: 0 0 0 3px rgba(14, 94, 221, 0.12);
         }
+
         .ft-textarea {
             width: 100%;
             padding: 12px 14px;
@@ -80,6 +96,7 @@
             display: block;
             box-sizing: border-box;
         }
+
         .ft-upload-card {
             display: flex;
             align-items: center;
@@ -92,10 +109,12 @@
             transition: all 0.2s ease;
             box-sizing: border-box;
         }
+
         .ft-upload-card:hover {
             background: #f0f7ff;
             border-color: #0e5edd;
         }
+
         .ft-upload-icon {
             width: 38px;
             height: 38px;
@@ -108,11 +127,13 @@
             flex-shrink: 0;
             transition: transform 0.2s ease;
         }
+
         .ft-upload-card:hover .ft-upload-icon {
             transform: scale(1.05);
             background: #0e5edd;
             color: #ffffff;
         }
+
         .ft-submit-btn {
             display: inline-flex;
             align-items: center;
@@ -130,6 +151,7 @@
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px rgba(14, 94, 221, 0.25);
         }
+
         .ft-submit-btn:hover {
             box-shadow: 0 6px 18px rgba(14, 94, 221, 0.35);
             transform: translateY(-1px);
@@ -140,17 +162,18 @@
         <!-- Hero Header -->
         <section class="py-12 md:py-16 border-b border-gray-200/80 relative overflow-hidden bg-white">
             <div class="container mx-auto px-6 relative z-10 max-w-3xl text-center">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/70 mb-3.5">
-                    <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
-                    <span>Zero-Risk Production Pilot</span>
-                </span>
+                <!-- <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/70 mb-3.5">
+                        <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
+                        <span>Zero-Risk Production Pilot</span>
+                    </span> -->
 
                 <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">
                     Start Your <span class="text-blue-600">Free Trial</span> Pilot
                 </h1>
 
                 <p class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
-                    Test our labeling quality and benchmark turnaround with zero financial commitment. Send guidelines & sample data for a fast 24-hour turnaround.
+                    Test our labeling quality and benchmark turnaround with zero financial commitment. Send guidelines &
+                    sample data for a fast 24-hour turnaround.
                 </p>
             </div>
         </section>
@@ -161,7 +184,8 @@
                 <div class="ft-card">
                     <!-- Success Notification -->
                     @if (session('success'))
-                        <div class="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
+                        <div
+                            class="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
                             <i data-feather="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                             <div>
                                 <h4 class="font-bold text-sm">Request Submitted Successfully!</h4>
@@ -182,7 +206,8 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('free-trial.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+                    <form action="{{ route('free-trial.store') }}" method="POST" enctype="multipart/form-data"
+                        class="space-y-4">
                         @csrf
 
                         <!-- Full Name & Business Email -->
@@ -192,8 +217,7 @@
                                     Full Name <span class="required">*</span>
                                 </label>
                                 <input type="text" id="name" name="name" value="{{ old('name') }}" required
-                                    placeholder="Alex Morgan"
-                                    class="ft-input @error('name') border-red-400 @enderror">
+                                    placeholder="Alex Morgan" class="ft-input @error('name') border-red-400 @enderror">
                             </div>
 
                             <div>
@@ -213,8 +237,7 @@
                                     Country <span class="required">*</span>
                                 </label>
                                 <input type="text" id="country" name="country" value="{{ old('country') }}" required
-                                    placeholder="United States"
-                                    class="ft-input @error('country') border-red-400 @enderror">
+                                    placeholder="United States" class="ft-input @error('country') border-red-400 @enderror">
                             </div>
 
                             <div>
@@ -222,8 +245,7 @@
                                     Phone Number <span class="hint">(WhatsApp preferred)</span>
                                 </label>
                                 <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                    placeholder="+1 (555) 000-0000"
-                                    class="ft-input">
+                                    placeholder="+1 (555) 000-0000" class="ft-input">
                             </div>
                         </div>
 
@@ -274,7 +296,8 @@
                                         <i data-feather="file-text" class="w-4 h-4"></i>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <div id="guideline_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
+                                        <div id="guideline_name"
+                                            class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
                                             Upload Guideline
                                         </div>
                                         <span class="text-[11px] text-gray-400 block mt-0.5">PDF or DOC up to 50MB</span>
@@ -298,7 +321,8 @@
                                         <i data-feather="upload-cloud" class="w-4 h-4"></i>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <div id="sample_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
+                                        <div id="sample_name"
+                                            class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
                                             Upload Raw Data
                                         </div>
                                         <span class="text-[11px] text-gray-400 block mt-0.5">ZIP, IMG up to 100MB</span>
@@ -311,10 +335,13 @@
                         </div>
 
                         <!-- Bottom Actions & Security Bar -->
-                        <div class="pt-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div
+                            class="pt-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
-                                <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
                                 <span>Confidential & protected by mutual NDA</span>
                             </div>
