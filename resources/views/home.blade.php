@@ -51,6 +51,7 @@
                         'beforeLabel' => 'Raw Surface',
                         'afterLabel' => 'AI Segmentation',
                         'alt' => 'Pavement crack defect detection comparison',
+                        'height' => '440px',
                     ])
                 </div>
             </div>
