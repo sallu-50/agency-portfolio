@@ -5,34 +5,6 @@
 
 @section('content')
     <div class="pt-20 md:pt-24">
-        <!-- Project Line (Clean & Smart Dynamic Project Switcher) -->
-        <section class="bg-white border-b border-gray-200 py-3 shadow-sm">
-            <div class="container mx-auto px-6">
-                <div
-                    class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none">
-                    @if (isset($comparisons) && $comparisons->isNotEmpty())
-                        @foreach ($comparisons as $index => $item)
-                            <button type="button"
-                                class="comparison-tab-btn px-4 py-2 rounded-full text-xs md:text-sm font-semibold border transition-all flex items-center gap-2 flex-shrink-0 cursor-pointer {{ $index === 0 ? 'bg-blue-600 text-white border-blue-600 shadow-sm active-tab' : 'border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 bg-white' }}"
-                                data-target="comparison-item-{{ $item->id }}">
-                                <span>{{ $item->title ?: 'Project #' . ($index + 1) }}</span>
-                                @if ($item->category)
-                                    <span
-                                        class="text-[10px] px-2 py-0.5 rounded-full tab-category-pill {{ $index === 0 ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600' }}">
-                                        {{ $item->category }}
-                                    </span>
-                                @endif
-                            </button>
-                        @endforeach
-                    @else
-                        <span class="px-4 py-2 rounded-full text-xs md:text-sm font-semibold bg-blue-600 text-white">
-                            All Projects
-                        </span>
-                    @endif
-                </div>
-            </div>
-        </section>
-
         @if (isset($comparisons) && $comparisons->isNotEmpty())
             <!-- Dedicated Before & After Image Comparison Section (Left: Image Slider, Right: Content) -->
             <style>
@@ -79,14 +51,7 @@
                                 <div class="comparison-split-wrapper">
                                     <!-- Left Column: Image Drag Comparison Slider -->
                                     <div class="comparison-split-left">
-                                        <div class="flex items-center justify-between mb-3 px-1">
-                                            <div class="text-[11px] font-medium text-gray-600 px-3 py-1 rounded-full flex items-center gap-1.5 bg-gray-100 border border-gray-200">
-                                                <i data-feather="move" class="w-3.5 h-3.5 text-blue-600"></i>
-                                                <span>Drag slider to compare</span>
-                                            </div>
-                                            <span class="text-xs text-gray-400 font-normal hidden sm:inline">Split 50/50 View</span>
-                                        </div>
-
+                                        <span class="sr-only">Drag slider to compare</span>
                                         <div class="w-full">
                                             @include('partials.before-after-slider', [
                                                 'id' => 'slider-comparison-' . $item->id,
@@ -100,12 +65,12 @@
                                         </div>
                                     </div>
 
-                                    <!-- Right Column: Content & Description (Styled like reference screenshot) -->
+                                    <!-- Right Column: Content & Description (Styled exactly like reference screenshot) -->
                                     <div class="comparison-split-right text-left space-y-6">
                                         <!-- Subtitle Eyebrow in Blue -->
                                         <div>
                                             <span class="text-sm sm:text-base font-semibold text-blue-600 tracking-wide inline-block">
-                                                See More With {{ $item->category ?: 'Marveit AI' }}
+                                                See More With Marveit AI
                                             </span>
                                         </div>
 
@@ -119,34 +84,12 @@
                                             {{ $item->description ?: 'Prevent further deterioration. Save money. Improve efficiency, and extend the lifespan of your assets. You need objective and consistent data on your facilities to make better resource allocation decisions and avoid costly last-minute repairs.' }}
                                         </p>
 
-                                        <!-- Trust & Quality Badges -->
-                                        <div class="flex flex-wrap items-center gap-3 pt-1">
-                                            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
-                                                <i data-feather="check-circle" class="w-3.5 h-3.5 text-blue-600"></i>
-                                                <span>99.8% Precision SLA</span>
-                                            </span>
-                                            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                                                <i data-feather="zap" class="w-3.5 h-3.5 text-emerald-600"></i>
-                                                <span>24-Hour Turnaround</span>
-                                            </span>
-                                            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-100 text-gray-700 border border-gray-200">
-                                                <i data-feather="shield" class="w-3.5 h-3.5 text-gray-600"></i>
-                                                <span>Mutual NDA Protected</span>
-                                            </span>
-                                        </div>
-
-                                        <!-- Call to Action Buttons (Green pill button like screenshot) -->
-                                        <div class="pt-3 flex flex-wrap items-center gap-4">
+                                        <!-- Call to Action Button (Green pill button like screenshot) -->
+                                        <div class="pt-2">
                                             <a href="{{ route('free-trial') }}"
                                                 class="inline-flex items-center justify-center font-bold px-8 py-3.5 rounded-full text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-base cursor-pointer"
                                                 style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.45);">
                                                 <span>How It Works</span>
-                                            </a>
-
-                                            <a href="{{ route('contact', ['service' => $item->category]) }}"
-                                                class="inline-flex items-center justify-center font-semibold px-6 py-3.5 rounded-full text-gray-800 bg-gray-100 hover:bg-gray-200 transition text-sm">
-                                                <span>Request Similar Dataset</span>
-                                                <i data-feather="arrow-right" class="w-4 h-4 ml-1.5 text-gray-500"></i>
                                             </a>
                                         </div>
                                     </div>
