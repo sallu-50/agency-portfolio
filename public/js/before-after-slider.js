@@ -66,6 +66,7 @@
         // Pointer Events (Mouse, Touch, Pen unified)
         container.addEventListener('pointerdown', function (e) {
             isDragging = true;
+            container.classList.add('is-dragging');
             try {
                 container.setPointerCapture(e.pointerId);
             } catch (err) {
@@ -82,6 +83,7 @@
         function endDrag(e) {
             if (isDragging) {
                 isDragging = false;
+                container.classList.remove('is-dragging');
                 try {
                     container.releasePointerCapture(e.pointerId);
                 } catch (err) {
@@ -92,6 +94,19 @@
 
         container.addEventListener('pointerup', endDrag);
         container.addEventListener('pointercancel', endDrag);
+
+        // Keyboard navigation (ArrowLeft & ArrowRight)
+        container.setAttribute('tabindex', '0');
+        container.addEventListener('keydown', function (e) {
+            const current = parseFloat(rangeInput ? rangeInput.value : (widget.dataset.initial || '50'));
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                setPosition(current - 3, true);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                setPosition(current + 3, true);
+            }
+        });
 
         // Range input keyboard fallback
         if (rangeInput) {
@@ -121,15 +136,17 @@
             toggleFitBtn.addEventListener('click', function () {
                 const imgs = widget.querySelectorAll('.comparison-container img');
                 const textSpan = toggleFitBtn.querySelector('.toggle-fit-text');
-                const isCurrentlyContain = imgs[0] && (imgs[0].style.objectFit === 'contain' || imgs[0].style.objectFit === '');
-                const nextFit = isCurrentlyContain ? 'cover' : 'contain';
+                const isCurrentlyCover = imgs[0] && (imgs[0].classList.contains('object-cover') || imgs[0].style.objectFit === 'cover');
+                const nextFit = isCurrentlyCover ? 'contain' : 'cover';
 
                 imgs.forEach(img => {
+                    img.classList.remove('object-cover', 'object-contain');
+                    img.classList.add(nextFit === 'cover' ? 'object-cover' : 'object-contain');
                     img.style.objectFit = nextFit;
                 });
 
                 if (textSpan) {
-                    textSpan.textContent = nextFit === 'cover' ? 'Fill Frame' : 'Full Image';
+                    textSpan.textContent = nextFit === 'cover' ? 'Fill Frame' : 'Fit Entire Image';
                 }
             });
         }

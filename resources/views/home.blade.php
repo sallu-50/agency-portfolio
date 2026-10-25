@@ -34,39 +34,24 @@
                 </div>
             </div>
 
-            <!-- Video / Visual Section -->
+            <!-- Interactive Visual Section (Before / After Comparison Slider) -->
             <div class="w-full md:w-1/2">
-                <div
-                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
-                    <!-- Background Gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 via-blue-950 to-gray-900 opacity-95"></div>
-
-                    <!-- Decorative Grid Lines -->
-                    <div class="absolute inset-0 opacity-15"
-                        style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between px-1">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200">
+                            <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-600"></i> Interactive AI Annotation
+                        </span>
+                        <span class="text-xs text-gray-500 font-medium hidden sm:inline">Drag center slider to inspect</span>
                     </div>
 
-                    <!-- Center Play Button -->
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div
-                            class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20">
-                            <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
-                        </div>
-                    </div>
-
-                    <!-- Overlay Caption -->
-                    <div
-                        class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-white font-bold text-base">Watch our workflow</p>
-                                <p class="text-gray-300 text-xs">See how we label data with precision & strict SLAs</p>
-                            </div>
-                            <span
-                                class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium">99.8%
-                                Precision</span>
-                        </div>
-                    </div>
+                    @include('partials.before-after-slider', [
+                        'id' => 'hero-comparison-slider',
+                        'beforeImage' => asset('image/crack-defect-raw.jpg'),
+                        'afterImage' => asset('image/crack-defect-annotated.jpg'),
+                        'beforeLabel' => 'Raw Surface',
+                        'afterLabel' => 'AI Segmentation',
+                        'alt' => 'Pavement crack defect detection comparison',
+                    ])
                 </div>
             </div>
         </div>
@@ -297,3 +282,7 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/before-after-slider.js') }}"></script>
+@endpush
