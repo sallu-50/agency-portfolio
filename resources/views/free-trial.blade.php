@@ -158,7 +158,7 @@
         }
     </style>
 
-    <div class="pt-12 md:pt-128 ft-page-bg min-h-screen">
+    <div class="pt-24 md:pt-28 ft-page-bg min-h-screen">
         <!-- Hero Header -->
         <section class="py-6 border-b border-gray-200 relative overflow-hidden bg-white">
             <div class="container mx-auto px-6 relative z-10 max-w-3xl text-center">
@@ -218,6 +218,9 @@
                                 </label>
                                 <input type="text" id="name" name="name" value="{{ old('name') }}" required
                                     placeholder="Alex Morgan" class="ft-input @error('name') border-red-400 @enderror">
+                                @error('name')
+                                    <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <div>
@@ -227,6 +230,9 @@
                                 <input type="email" id="email" name="email" value="{{ old('email') }}" required
                                     placeholder="alex@company.com"
                                     class="ft-input @error('email') border-red-400 @enderror">
+                                @error('email')
+                                    <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
 
@@ -238,6 +244,9 @@
                                 </label>
                                 <input type="text" id="country" name="country" value="{{ old('country') }}" required
                                     placeholder="United States" class="ft-input @error('country') border-red-400 @enderror">
+                                @error('country')
+                                    <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <div>
@@ -245,7 +254,10 @@
                                     Phone Number <span class="hint">(WhatsApp preferred)</span>
                                 </label>
                                 <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                    placeholder="+1 (555) 000-0000" class="ft-input">
+                                    placeholder="+1 (555) 000-0000" class="ft-input @error('phone') border-red-400 @enderror">
+                                @error('phone')
+                                    <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
 
@@ -254,21 +266,41 @@
                             <label for="service" class="ft-label">
                                 Primary Data Domain / Service <span class="hint">(Optional)</span>
                             </label>
-                            <select id="service" name="service" class="ft-select">
+                            <select id="service" name="service" class="ft-select @error('service') border-red-400 @enderror">
                                 <option value="">Select Domain</option>
-                                <option value="Computer Vision" {{ old('service') === 'Computer Vision' ? 'selected' : '' }}>
-                                    Computer Vision (2D/3D Bounding Boxes, Segmentation, Keypoints)</option>
-                                <option value="LiDAR & 3D Point Cloud" {{ old('service') === 'LiDAR & 3D Point Cloud' ? 'selected' : '' }}>
-                                    LiDAR & 3D Point Cloud Tracking</option>
-                                <option value="NLP & Text / LLM Alignment" {{ old('service') === 'NLP & Text / LLM Alignment' ? 'selected' : '' }}>
-                                    NLP & LLM Alignment (RLHF, NER, Classification)</option>
-                                <option value="Audio & Speech Transcription" {{ old('service') === 'Audio & Speech Transcription' ? 'selected' : '' }}>
-                                    Audio & Speech Transcription</option>
-                                <option value="Video Annotation" {{ old('service') === 'Video Annotation' ? 'selected' : '' }}>
-                                    Video Object Tracking & Action Recognition</option>
-                                <option value="Custom Dataset Collection" {{ old('service') === 'Custom Dataset Collection' ? 'selected' : '' }}>
-                                    Custom Dataset Collection</option>
+                                @if (isset($services) && $services->isNotEmpty())
+                                    @foreach ($services as $srv)
+                                        <option value="{{ $srv->title }}"
+                                            {{ (old('service') == $srv->title || old('service') == $srv->slug || request('service') == $srv->title || request('service') == $srv->slug) ? 'selected' : '' }}>
+                                            {{ $srv->title }} ({{ $srv->category }})
+                                        </option>
+                                    @endforeach
+                                    <option value="LiDAR & 3D Point Cloud"
+                                        {{ (old('service') === 'LiDAR & 3D Point Cloud' || request('service') === 'LiDAR & 3D Point Cloud') ? 'selected' : '' }}>
+                                        LiDAR & 3D Point Cloud Tracking
+                                    </option>
+                                    <option value="Custom Dataset Collection"
+                                        {{ (old('service') === 'Custom Dataset Collection' || request('service') === 'Custom Dataset Collection') ? 'selected' : '' }}>
+                                        Custom Dataset Collection / Other
+                                    </option>
+                                @else
+                                    <option value="Computer Vision" {{ (old('service') === 'Computer Vision' || request('service') === 'Computer Vision') ? 'selected' : '' }}>
+                                        Computer Vision (2D/3D Bounding Boxes, Segmentation, Keypoints)</option>
+                                    <option value="LiDAR & 3D Point Cloud" {{ (old('service') === 'LiDAR & 3D Point Cloud' || request('service') === 'LiDAR & 3D Point Cloud') ? 'selected' : '' }}>
+                                        LiDAR & 3D Point Cloud Tracking</option>
+                                    <option value="NLP & Text / LLM Alignment" {{ (old('service') === 'NLP & Text / LLM Alignment' || request('service') === 'NLP & Text / LLM Alignment') ? 'selected' : '' }}>
+                                        NLP & LLM Alignment (RLHF, NER, Classification)</option>
+                                    <option value="Audio & Speech Transcription" {{ (old('service') === 'Audio & Speech Transcription' || request('service') === 'Audio & Speech Transcription') ? 'selected' : '' }}>
+                                        Audio & Speech Transcription</option>
+                                    <option value="Video Annotation" {{ (old('service') === 'Video Annotation' || request('service') === 'Video Annotation') ? 'selected' : '' }}>
+                                        Video Object Tracking & Action Recognition</option>
+                                    <option value="Custom Dataset Collection" {{ (old('service') === 'Custom Dataset Collection' || request('service') === 'Custom Dataset Collection') ? 'selected' : '' }}>
+                                        Custom Dataset Collection</option>
+                                @endif
                             </select>
+                            @error('service')
+                                <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Message -->
@@ -279,16 +311,19 @@
                             <textarea id="message" name="message" rows="3" required
                                 placeholder="Describe your dataset format, labels needed, volume, or specific guidelines..."
                                 class="ft-textarea @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
+                            @error('message')
+                                <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Project Guideline & Sample Data (Upload Cards) -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                             <!-- Project Guideline -->
                             <div>
-                                <label class="ft-label">
+                                <label class="ft-label" for="project_guideline">
                                     Project Guideline <span class="hint">(PDF, DOCX)</span>
                                 </label>
-                                <div class="ft-upload-card" onclick="document.getElementById('project_guideline').click()">
+                                <label for="project_guideline" class="ft-upload-card cursor-pointer">
                                     <input type="file" id="project_guideline" name="project_guideline"
                                         accept=".pdf,.doc,.docx,.txt,.odt" class="hidden"
                                         onchange="updateFileName(this, 'guideline_name')">
@@ -302,7 +337,7 @@
                                         </div>
                                         <span class="text-[11px] text-gray-400 block mt-0.5">PDF or DOC up to 50MB</span>
                                     </div>
-                                </div>
+                                </label>
                                 @error('project_guideline')
                                     <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
                                 @enderror
@@ -310,10 +345,10 @@
 
                             <!-- Sample Data -->
                             <div>
-                                <label class="ft-label">
+                                <label class="ft-label" for="sample_data">
                                     Sample Data <span class="hint">(Images, Video, ZIP)</span>
                                 </label>
-                                <div class="ft-upload-card" onclick="document.getElementById('sample_data').click()">
+                                <label for="sample_data" class="ft-upload-card cursor-pointer">
                                     <input type="file" id="sample_data" name="sample_data"
                                         accept="image/*,video/*,.zip,.rar,.tar,.gz,.7z" class="hidden"
                                         onchange="updateFileName(this, 'sample_name')">
@@ -327,7 +362,7 @@
                                         </div>
                                         <span class="text-[11px] text-gray-400 block mt-0.5">ZIP, IMG up to 100MB</span>
                                     </div>
-                                </div>
+                                </label>
                                 @error('sample_data')
                                     <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
                                 @enderror
