@@ -2,14 +2,14 @@
 <footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-700/60 pt-5 md:pt-5 pb-8">
     <style>
         #contact-footer {
-            padding-top: 5rem;
-            padding-bottom: 4rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
 
         @media (min-width: 768px) {
             #contact-footer {
-                padding-top: 6rem;
-                padding-bottom: 4.5rem;
+                padding-top: 3rem;
+                padding-bottom: 2rem;
             }
         }
 
