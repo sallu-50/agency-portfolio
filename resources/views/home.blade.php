@@ -7,34 +7,7 @@
     <!-- Hero Section -->
     <section class="container mx-auto px-6 py-20 md:py-32 mt-8">
         <div class="flex flex-col md:flex-row items-center gap-12">
-            <!-- Text Content -->
-            <div class="w-full md:w-1/2 text-left">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
-                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-
-                </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
-                    High-Quality <span class="text-blue-600">Data Annotation</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                    Power your AI models with accurately labeled datasets. We provide scalable and reliable annotation
-                    services for computer vision and NLP.
-                </p>
-                <div class="flex flex-wrap items-center gap-4">
-                    <a href="{{ route('contact') }}"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-full transition duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        <span>Get Started</span>
-                        <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
-                    </a>
-                    <a href="#services"
-                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-full transition duration-300 inline-flex items-center">
-                        <span>Explore Services</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Interactive Visual Section (Before / After Comparison Slider) -->
+            <!-- Left: Interactive Visual Section (Before / After Comparison Slider) -->
             <div class="w-full md:w-1/2">
                 <div class="space-y-3">
                     <div class="flex items-center justify-between px-1">
@@ -51,8 +24,36 @@
                         'beforeLabel' => 'Raw Surface',
                         'afterLabel' => 'AI Segmentation',
                         'alt' => 'Pavement crack defect detection comparison',
-                        'height' => '440px',
+                        'height' => '460px',
                     ])
+                </div>
+            </div>
+
+            <!-- Right: Text Content -->
+            <div class="w-full md:w-1/2 text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    <span>See More With Marveit AI</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
+                    High-Quality <span class="text-blue-600">Data Annotation</span> & Defect Detection
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                    Power your AI models with accurately labeled datasets. We provide scalable, pixel-perfect annotation
+                    services for computer vision, defect detection, and NLP.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="{{ route('free-trial') }}"
+                        class="text-white font-bold py-3.5 px-8 rounded-full transition duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
+                        style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.45);">
+                        <span>How It Works</span>
+                        <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <a href="{{ route('portfolio') }}"
+                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-full transition duration-300 inline-flex items-center">
+                        <span>Explore Portfolio</span>
+                    </a>
                 </div>
             </div>
         </div>
