@@ -158,9 +158,9 @@
         }
     </style>
 
-    <div class="pt-24 md:pt-28 ft-page-bg min-h-screen">
+    <div class="pt-12 md:pt-128 ft-page-bg min-h-screen">
         <!-- Hero Header -->
-        <section class="py-12 md:py-16 border-b border-gray-200/80 relative overflow-hidden bg-white">
+        <section class="py-6 border-b border-gray-200 relative overflow-hidden bg-white">
             <div class="container mx-auto px-6 relative z-10 max-w-3xl text-center">
                 <!-- <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/70 mb-3.5">
                         <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
