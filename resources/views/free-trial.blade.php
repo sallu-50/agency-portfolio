@@ -54,111 +54,135 @@
                     @endif
 
                     <form action="{{ route('free-trial.store') }}" method="POST" enctype="multipart/form-data"
-                        class="space-y-5">
+                        class="space-y-4 sm:space-y-5">
                         @csrf
 
-                        <!-- 1. Full Name & 2. Email -->
+                        <!-- Full Name & Business Email -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- 1. Full Name -->
-                            <div class="mb-3">
+                            <div>
                                 <label for="name"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    1. Full Name <span class="text-red-500">*</span>
+                                    class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                    Full Name <span class="text-red-500">*</span>
                                 </label>
-                                <input type="text" id="name" name="name" value="{{ old('name') }}" required
-                                    placeholder="Enter your full name"
-                                    class="w-full px-4 py-2.5  rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('name') border-red-400 @enderror">
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                                        <i data-feather="user" class="w-4 h-4"></i>
+                                    </span>
+                                    <input type="text" id="name" name="name" value="{{ old('name') }}" required
+                                        placeholder="Alex Morgan"
+                                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50/40 hover:bg-white focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 text-sm transition outline-none @error('name') border-red-400 @enderror">
+                                </div>
                             </div>
-                            <!-- 2. Email -->
-                            <div class="mb-3">
+
+                            <div>
                                 <label for="email"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    2. Business Email <span class="text-red-500">*</span>
+                                    class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                    Business Email <span class="text-red-500">*</span>
                                 </label>
-                                <input type="email" id="email" name="email" value="{{ old('email') }}" required
-                                    placeholder="Enter your business email"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('email') border-red-400 @enderror">
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                                        <i data-feather="mail" class="w-4 h-4"></i>
+                                    </span>
+                                    <input type="email" id="email" name="email" value="{{ old('email') }}" required
+                                        placeholder="alex@company.com"
+                                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50/40 hover:bg-white focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 text-sm transition outline-none @error('email') border-red-400 @enderror">
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 3. Country & 4. Phone Number -->
+                        <!-- Country & Phone Number -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- 3. Country -->
-                            <div class="mb-3">
+                            <div>
                                 <label for="country"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    3. Country <span class="text-red-500">*</span>
+                                    class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                    Country <span class="text-red-500">*</span>
                                 </label>
-                                <input type="text" id="country" name="country" value="{{ old('country') }}" required
-                                    placeholder="Enter your country"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('country') border-red-400 @enderror">
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                                        <i data-feather="globe" class="w-4 h-4"></i>
+                                    </span>
+                                    <input type="text" id="country" name="country" value="{{ old('country') }}" required
+                                        placeholder="United States"
+                                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50/40 hover:bg-white focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 text-sm transition outline-none @error('country') border-red-400 @enderror">
+                                </div>
                             </div>
 
-                            <!-- 4. Phone Number -->
-                            <div class="mb-3">
+                            <div>
                                 <label for="phone"
-                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    4. Phone Number <span class="text-gray-400 font-normal">(WhatsApp preferred)</span>
+                                    class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                    Phone Number <span class="text-gray-400 font-normal lowercase">(whatsapp preferred)</span>
                                 </label>
-                                <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                    placeholder="Enter your phone number"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none">
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                                        <i data-feather="phone" class="w-4 h-4"></i>
+                                    </span>
+                                    <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
+                                        placeholder="+1 (555) 000-0000"
+                                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50/40 hover:bg-white focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 text-sm transition outline-none">
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Optional Service Domain -->
-                        <div class="mb-3">
+                        <!-- Primary Service Domain -->
+                        <div>
                             <label for="service"
-                                class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
+                                class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
                                 Primary Data Domain / Service
                             </label>
-                            <select id="service" name="service"
-                                class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none bg-white">
-                                <option value="">Select Domain (Optional)</option>
-                                <option value="Computer Vision" {{ old('service') === 'Computer Vision' ? 'selected' : '' }}>
-                                    Computer Vision (2D/3D Bounding Boxes, Segmentation, Keypoints)</option>
-                                <option value="LiDAR & 3D Point Cloud" {{ old('service') === 'LiDAR & 3D Point Cloud' ? 'selected' : '' }}>LiDAR & 3D Point Cloud Tracking</option>
-                                <option value="NLP & Text / LLM Alignment" {{ old('service') === 'NLP & Text / LLM Alignment' ? 'selected' : '' }}>NLP & LLM Alignment (RLHF, NER, Classification)</option>
-                                <option value="Audio & Speech Transcription" {{ old('service') === 'Audio & Speech Transcription' ? 'selected' : '' }}>Audio & Speech Transcription</option>
-                                <option value="Video Annotation" {{ old('service') === 'Video Annotation' ? 'selected' : '' }}>Video Object Tracking & Action Recognition</option>
-                                <option value="Custom Dataset Collection" {{ old('service') === 'Custom Dataset Collection' ? 'selected' : '' }}>Custom Dataset Collection</option>
-                            </select>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                                    <i data-feather="layers" class="w-4 h-4"></i>
+                                </span>
+                                <select id="service" name="service"
+                                    class="w-full pl-10 pr-8 py-2.5 rounded-xl border border-gray-200 bg-gray-50/40 hover:bg-white focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 text-sm transition outline-none">
+                                    <option value="">Select Domain (Optional)</option>
+                                    <option value="Computer Vision" {{ old('service') === 'Computer Vision' ? 'selected' : '' }}>
+                                        Computer Vision (2D/3D Bounding Boxes, Segmentation, Keypoints)</option>
+                                    <option value="LiDAR & 3D Point Cloud" {{ old('service') === 'LiDAR & 3D Point Cloud' ? 'selected' : '' }}>LiDAR & 3D Point Cloud Tracking</option>
+                                    <option value="NLP & Text / LLM Alignment" {{ old('service') === 'NLP & Text / LLM Alignment' ? 'selected' : '' }}>NLP & LLM Alignment (RLHF, NER, Classification)</option>
+                                    <option value="Audio & Speech Transcription" {{ old('service') === 'Audio & Speech Transcription' ? 'selected' : '' }}>Audio & Speech Transcription</option>
+                                    <option value="Video Annotation" {{ old('service') === 'Video Annotation' ? 'selected' : '' }}>Video Object Tracking & Action Recognition</option>
+                                    <option value="Custom Dataset Collection" {{ old('service') === 'Custom Dataset Collection' ? 'selected' : '' }}>Custom Dataset Collection</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <!-- 5. Message -->
-                        <div class="mb-3">
+                        <!-- Message -->
+                        <div>
                             <label for="message"
-                                class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                5. Message / Pilot Scope & Instructions <span class="text-red-500">*</span>
+                                class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                Message / Pilot Scope & Instructions <span class="text-red-500">*</span>
                             </label>
-                            <textarea id="message" name="message" rows="3" required placeholder="Enter your message"
-                                class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
+                            <textarea id="message" name="message" rows="3" required
+                                placeholder="Describe your dataset format, classes to label, volume, or specific guidelines..."
+                                class="w-full p-3.5 rounded-xl border border-gray-200 bg-gray-50/40 hover:bg-white focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-500/10 text-sm transition outline-none @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
                         </div>
 
-                        <!-- 6. Project Guideline & 7. Sample Data (File Uploads) -->
+                        <!-- Project Guideline & Sample Data (File Uploads) -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-                            <!-- 6. Project Guideline (PDF or Word) -->
-                            <div class="mb-3">
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    6. Project Guideline
-                                    <span class="block text-[11px] font-normal text-gray-500 normal-case">PDF or Word file
-                                        (.pdf, .doc, .docx)</span>
+                            <!-- Project Guideline -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                    Project Guideline
+                                    <span class="text-gray-400 font-normal lowercase">(pdf, doc, docx)</span>
                                 </label>
-                                <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-4 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
+                                <div class="relative border border-dashed border-gray-300 hover:border-blue-500 rounded-xl p-3 text-center transition-all bg-gray-50/60 hover:bg-blue-50/40 cursor-pointer group"
                                     onclick="document.getElementById('project_guideline').click()">
                                     <input type="file" id="project_guideline" name="project_guideline"
                                         accept=".pdf,.doc,.docx,.txt,.odt" class="hidden"
                                         onchange="updateFileName(this, 'guideline_name')">
-                                    <div class="flex flex-col items-center justify-center pointer-events-none">
+                                    <div class="flex items-center justify-center gap-3 pointer-events-none">
                                         <div
-                                            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
-                                            <i data-feather="file-text" class="w-5 h-5"></i>
+                                            class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                                            <i data-feather="file-text" class="w-4 h-4"></i>
                                         </div>
-                                        <div id="guideline_name"
-                                            class="text-xs font-semibold text-gray-700 truncate max-w-[200px]">
-                                            Click to upload guideline
+                                        <div class="text-left overflow-hidden">
+                                            <div id="guideline_name"
+                                                class="text-xs font-semibold text-gray-700 truncate max-w-[170px]">
+                                                Click to upload
+                                            </div>
+                                            <span class="text-[10px] text-gray-400 block">PDF, DOC up to 50MB</span>
                                         </div>
-                                        <span class="text-[10px] text-gray-400 mt-0.5">PDF, DOC, DOCX up to 50MB</span>
                                     </div>
                                 </div>
                                 @error('project_guideline')
@@ -166,28 +190,29 @@
                                 @enderror
                             </div>
 
-                            <!-- 7. Sample Data (Img, Video or Zip) -->
-                            <div class="mb-3">
-                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                                    7. Sample Data
-                                    <span class="block text-[11px] font-normal text-gray-500 normal-case">Image, Video or
-                                        Zip archive</span>
+                            <!-- Sample Data -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1.5">
+                                    Sample Data
+                                    <span class="text-gray-400 font-normal lowercase">(images, video, zip)</span>
                                 </label>
-                                <div class="relative border-2 border-dashed border-gray-300 hover:border-blue-600 rounded-2xl p-4 text-center transition-colors bg-gray-50/80 hover:bg-blue-50/40 cursor-pointer group"
+                                <div class="relative border border-dashed border-gray-300 hover:border-blue-500 rounded-xl p-3 text-center transition-all bg-gray-50/60 hover:bg-blue-50/40 cursor-pointer group"
                                     onclick="document.getElementById('sample_data').click()">
                                     <input type="file" id="sample_data" name="sample_data"
                                         accept="image/*,video/*,.zip,.rar,.tar,.gz,.7z" class="hidden"
                                         onchange="updateFileName(this, 'sample_name')">
-                                    <div class="flex flex-col items-center justify-center pointer-events-none">
+                                    <div class="flex items-center justify-center gap-3 pointer-events-none">
                                         <div
-                                            class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
-                                            <i data-feather="archive" class="w-5 h-5"></i>
+                                            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                                            <i data-feather="upload-cloud" class="w-4 h-4"></i>
                                         </div>
-                                        <div id="sample_name"
-                                            class="text-xs font-semibold text-gray-700 truncate max-w-[200px]">
-                                            Click to upload raw data
+                                        <div class="text-left overflow-hidden">
+                                            <div id="sample_name"
+                                                class="text-xs font-semibold text-gray-700 truncate max-w-[170px]">
+                                                Click to upload
+                                            </div>
+                                            <span class="text-[10px] text-gray-400 block">ZIP, IMG up to 100MB</span>
                                         </div>
-                                        <span class="text-[10px] text-gray-400 mt-0.5">ZIP, IMG, MP4 up to 100MB</span>
                                     </div>
                                 </div>
                                 @error('sample_data')
@@ -196,19 +221,18 @@
                             </div>
                         </div>
 
-                        <!-- Security Notice & Submit Button -->
+                        <!-- Security Notice & Compact Submit Button -->
                         <div
-                            class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <div class="flex items-center gap-2 text-xs text-gray-500">
-                                <i data-feather="lock" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                            class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                                <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
                                 <span>Confidential & protected by mutual NDA</span>
                             </div>
 
                             <button type="submit"
-                                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm cursor-pointer"
-                                style="background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);">
-                                <span>Submit Free Trial Request</span>
-                                <i data-feather="arrow-right" class="w-4 h-4"></i>
+                                class="inline-flex items-center justify-center gap-1.5 text-white font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-xs sm:text-sm cursor-pointer bg-blue-600 hover:bg-blue-700">
+                                <span>Submit Request</span>
+                                <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                             </button>
                         </div>
                     </form>
