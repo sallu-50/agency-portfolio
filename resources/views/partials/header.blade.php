@@ -194,21 +194,11 @@
             <a href="{{ route('team') }}"
                 class="{{ request()->routeIs('team') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Our
                 Team</a>
-
-            <!-- Highlighted Portfolio Link -->
             <a href="{{ route('portfolio') }}"
-                class="relative group/nav inline-flex items-center gap-1.5 rounded-full text-xs font-bold transition-all duration-300 {{ request()->routeIs('portfolio*') ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 ring-2 ring-blue-500/20' : 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5' }}"
-                style="padding: 2px 10px;">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover/nav:bg-white animate-pulse"></span>
-                <span>Portfolio</span>
-            </a>
+                class="{{ request()->routeIs('portfolio*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Portfolio</a>
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
-            <a href="{{ route('contact') }}"
-                class="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors">
-                Let's Contact
-            </a>
             <a href="{{ route('free-trial') }}"
                 class="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all font-semibold text-sm {{ request()->routeIs('free-trial*') ? 'ring-2 ring-blue-400' : '' }}">
                 <span>Free Trial</span>
@@ -248,20 +238,13 @@
         </a>
         <!-- Mobile Portfolio Link -->
         <a href="{{ route('portfolio') }}"
-            class="flex items-center justify-between px-6 py-4 border-b border-gray-100 hover:bg-blue-50 font-bold transition-colors {{ request()->routeIs('portfolio*') ? 'bg-blue-50/90 text-blue-700' : 'text-blue-600 bg-blue-50/40' }}">
-            <div class="flex items-center gap-2">
-                <i data-feather="briefcase" class="w-4 h-4 text-blue-600"></i>
-                <span>Portfolio</span>
-            </div>
+            class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('portfolio*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
+            Portfolio
         </a>
-        <div class="px-6 py-4 space-y-2">
+        <div class="px-6 py-4">
             <a href="{{ route('free-trial') }}"
                 class="block w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2.5 rounded-lg shadow-md hover:shadow-lg transition font-semibold">
                 Free Trial
-            </a>
-            <a href="{{ route('contact') }}"
-                class="block w-full bg-gray-50 text-gray-700 text-center py-2 rounded-lg border border-gray-200 hover:bg-gray-100 transition font-medium text-sm">
-                Let's Contact
             </a>
         </div>
     </nav>
