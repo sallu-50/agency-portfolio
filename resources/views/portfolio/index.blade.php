@@ -35,6 +35,39 @@
 
         @if (isset($comparisons) && $comparisons->isNotEmpty())
             <!-- Dedicated Before & After Image Comparison Section (Left: Image Slider, Right: Content) -->
+            <style>
+                .comparison-split-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 48px;
+                    width: 100%;
+                }
+                .comparison-split-left {
+                    width: 50%;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+                .comparison-split-right {
+                    width: 50%;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+                @media (max-width: 991px) {
+                    .comparison-split-wrapper {
+                        flex-direction: column;
+                        gap: 32px;
+                    }
+                    .comparison-split-left,
+                    .comparison-split-right {
+                        width: 100%;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            </style>
+
             <section id="comparisons-showcase" class="py-12 md:py-20 relative overflow-hidden bg-white border-b border-gray-100">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <!-- Comparison Items Container -->
@@ -43,9 +76,9 @@
                             <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }}"
                                 id="comparison-item-{{ $item->id }}">
                                 
-                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                                <div class="comparison-split-wrapper">
                                     <!-- Left Column: Image Drag Comparison Slider -->
-                                    <div class="lg:col-span-6 w-full">
+                                    <div class="comparison-split-left">
                                         <div class="flex items-center justify-between mb-3 px-1">
                                             <div class="text-[11px] font-medium text-gray-600 px-3 py-1 rounded-full flex items-center gap-1.5 bg-gray-100 border border-gray-200">
                                                 <i data-feather="move" class="w-3.5 h-3.5 text-blue-600"></i>
@@ -62,13 +95,13 @@
                                                 'beforeLabel' => $item->before_label ?: 'Raw Surface',
                                                 'afterLabel' => $item->after_label ?: 'AI Segmented',
                                                 'alt' => $item->title ?: 'Before and After Image Comparison',
-                                                'height' => '500px',
+                                                'height' => '480px',
                                             ])
                                         </div>
                                     </div>
 
                                     <!-- Right Column: Content & Description (Styled like reference screenshot) -->
-                                    <div class="lg:col-span-6 w-full text-left space-y-6">
+                                    <div class="comparison-split-right text-left space-y-6">
                                         <!-- Subtitle Eyebrow in Blue -->
                                         <div>
                                             <span class="text-sm sm:text-base font-semibold text-blue-600 tracking-wide inline-block">

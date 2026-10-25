@@ -41,9 +41,9 @@
                  loading="lazy">
             
             <!-- After Label Badge -->
-            <div class="comparison-badge absolute top-4 right-4 z-10 pointer-events-none transition-opacity duration-200">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide text-white bg-black/65 backdrop-blur-md border border-white/20 shadow-lg">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <div class="comparison-badge absolute top-3 right-3 z-10 pointer-events-none transition-opacity duration-200">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide text-white bg-black/60 backdrop-blur-md border border-white/20 shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                     {{ $afterLabel }}
                 </span>
             </div>
@@ -58,9 +58,9 @@
                  loading="lazy">
             
             <!-- Before Label Badge -->
-            <div class="comparison-badge absolute top-4 left-4 z-10 pointer-events-none transition-opacity duration-200">
-                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide text-white bg-black/65 backdrop-blur-md border border-white/20 shadow-lg">
-                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <div class="comparison-badge absolute top-3 left-3 z-10 pointer-events-none transition-opacity duration-200">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide text-white bg-black/60 backdrop-blur-md border border-white/20 shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
                     {{ $beforeLabel }}
                 </span>
             </div>
@@ -80,16 +80,6 @@
                     <span style="display: block; width: 2.5px; height: 15px; background-color: #94a3b8; border-radius: 9999px;"></span>
                 </div>
             </div>
-        </div>
-
-        <!-- Interactive Drag Hint overlay (fades out on interaction) -->
-        <div class="interaction-hint absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-20 transition-opacity duration-500 opacity-90 group-hover:opacity-100">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-medium text-gray-800 bg-white/95 backdrop-blur-md border border-white/40 shadow-lg">
-                <svg class="w-3.5 h-3.5 text-blue-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8M8 12h8M8 17h8"></path>
-                </svg>
-                <span>Drag slider left or right</span>
-            </span>
         </div>
 
         <!-- Accessible Range Slider for Screen Readers & Keyboard -->
