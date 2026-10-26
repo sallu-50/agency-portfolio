@@ -168,12 +168,9 @@
 
                 <!-- Left Column: Pilot Intro & Value Props -->
                 <div class="lg:col-span-5 text-left">
-                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/80 mb-3.5">
-                        <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600 fill-current"></i>
-                        <span>Zero-Risk Production Pilot</span>
-                    </div>
 
-                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight">
+                    <h1
+                        class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight">
                         Start Your <span class="text-blue-600">Free Trial</span> Pilot
                     </h1>
 
@@ -185,22 +182,27 @@
                     <!-- Trust & SLA Highlights -->
                     <div class="space-y-3 hidden sm:block pt-1">
                         <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
                                 <i data-feather="check" class="w-4 h-4"></i>
                             </div>
                             <span class="text-xs sm:text-sm font-medium text-gray-700">24-48 Hour Turnaround SLA</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
                                 <i data-feather="shield" class="w-4 h-4"></i>
                             </div>
-                            <span class="text-xs sm:text-sm font-medium text-gray-700">Strict Mutual NDA & Enterprise Security</span>
+                            <span class="text-xs sm:text-sm font-medium text-gray-700">Strict Mutual NDA & Enterprise
+                                Security</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
                                 <i data-feather="award" class="w-4 h-4"></i>
                             </div>
-                            <span class="text-xs sm:text-sm font-medium text-gray-700">99.8% Precision Benchmark Quality</span>
+                            <span class="text-xs sm:text-sm font-medium text-gray-700">99.8% Precision Benchmark
+                                Quality</span>
                         </div>
                     </div>
                 </div>
@@ -263,7 +265,8 @@
                                         Country <span class="required">(Required)</span>
                                     </label>
                                     <input type="text" id="country" name="country" value="{{ old('country') }}" required
-                                        placeholder="United States" class="ft-input @error('country') border-red-400 @enderror">
+                                        placeholder="United States"
+                                        class="ft-input @error('country') border-red-400 @enderror">
                                 </div>
 
                                 <div>
@@ -312,7 +315,8 @@
                                     <label class="ft-label">
                                         Project Guideline <span class="hint">(PDF, DOCX)</span>
                                     </label>
-                                    <div class="ft-upload-card" onclick="document.getElementById('project_guideline').click()">
+                                    <div class="ft-upload-card"
+                                        onclick="document.getElementById('project_guideline').click()">
                                         <input type="file" id="project_guideline" name="project_guideline"
                                             accept=".pdf,.doc,.docx,.txt,.odt" class="hidden"
                                             onchange="updateFileName(this, 'guideline_name')">
@@ -324,7 +328,8 @@
                                                 class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
                                                 Upload Guideline
                                             </div>
-                                            <span class="text-[10px] text-gray-400 block mt-0.5">PDF / DOC (up to 50MB)</span>
+                                            <span class="text-[10px] text-gray-400 block mt-0.5">PDF / DOC (up to
+                                                50MB)</span>
                                         </div>
                                     </div>
                                     @error('project_guideline')
@@ -349,7 +354,8 @@
                                                 class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
                                                 Upload Raw Data
                                             </div>
-                                            <span class="text-[10px] text-gray-400 block mt-0.5">ZIP / IMG (up to 100MB)</span>
+                                            <span class="text-[10px] text-gray-400 block mt-0.5">ZIP / IMG (up to
+                                                100MB)</span>
                                         </div>
                                     </div>
                                     @error('sample_data')
