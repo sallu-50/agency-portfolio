@@ -7,10 +7,32 @@
     <div class="pt-20 md:pt-24">
         @if (isset($comparisons) && $comparisons->isNotEmpty())
             <!-- Dedicated Before & After Image Comparison Section (Distinct Section with 5px Body Margin, Left-aligned Header, 3 Sliders) -->
+            <style>
+                .comparison-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 24px;
+                    align-items: start;
+                    width: 100%;
+                }
+                @media (min-width: 640px) {
+                    .comparison-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 24px;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .comparison-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 28px;
+                    }
+                }
+            </style>
+
             <section id="comparisons-showcase"
-                class="py-8 md:py-10 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs"
+                class="py-8 md:py-10 px-4 sm:px-6 md:px-8 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs"
                 style="margin: 5px;">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <div class="container mx-auto max-w-7xl">
                     <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
                     <div class="text-left max-w-4xl mb-6 md:mb-8">
                         <h2
@@ -23,10 +45,10 @@
                         </p>
                     </div>
 
-                    <!-- Drag Images Side-by-Side in 3-Column Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-start">
+                    <!-- Drag Images Side-by-Side in 3-Column Grid with 28px Spacing -->
+                    <div class="comparison-grid">
                         @foreach ($comparisons as $item)
-                            <div class="w-full">
+                            <div class="w-full overflow-hidden rounded-[18px]">
                                 @include('partials.before-after-slider', [
                                     'id' => 'slider-comparison-' . $item->id,
                                     'beforeImage' => $item->before_image_url,
