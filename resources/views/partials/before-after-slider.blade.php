@@ -87,39 +87,4 @@
                aria-label="Image comparison slider"
                class="sr-only comparison-range-input">
     </div>
-
-    <!-- Quick Preset Controls Bar -->
-    <div class="mt-3.5 flex flex-wrap items-center justify-between gap-3 px-2">
-        <div class="flex items-center gap-2">
-            <span class="text-xs font-semibold text-gray-500 flex items-center gap-1.5">
-                <i data-feather="sliders" class="w-3.5 h-3.5 text-blue-600"></i> View:
-            </span>
-            <div class="inline-flex rounded-xl bg-gray-100 p-1 border border-gray-200 text-xs font-medium">
-                <button type="button" class="preset-btn px-3 py-1 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-white transition"
-                        data-target-percent="0">
-                    {{ $beforeLabel }} (100%)
-                </button>
-                <button type="button" class="preset-btn px-3 py-1 rounded-lg text-blue-600 bg-white shadow-xs font-bold transition"
-                        data-target-percent="50">
-                    50 / 50
-                </button>
-                <button type="button" class="preset-btn px-3 py-1 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-white transition"
-                        data-target-percent="100">
-                    {{ $afterLabel }} (100%)
-                </button>
-            </div>
-        </div>
-
-        <div class="flex items-center gap-2">
-            <button type="button" class="toggle-fit-btn text-xs font-semibold text-gray-500 hover:text-blue-600 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-blue-300 transition inline-flex items-center gap-1"
-                    title="Toggle between Fill Frame and Fit Entire Image">
-                <i data-feather="maximize-2" class="w-3 h-3"></i>
-                <span class="toggle-fit-text">Fill Frame</span>
-            </button>
-            <button type="button" class="reset-slider-btn text-xs font-semibold text-gray-500 hover:text-blue-600 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-blue-300 transition inline-flex items-center gap-1">
-                <i data-feather="rotate-ccw" class="w-3 h-3"></i>
-                <span>Reset</span>
-            </button>
-        </div>
-    </div>
 </div>

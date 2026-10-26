@@ -268,7 +268,7 @@ class AgencySiteTest extends TestCase
         $response = $this->get(route('portfolio'));
 
         $response->assertStatus(200);
-        $response->assertSee('Drag slider to compare', false);
+        $response->assertSee('comparison-split-left', false);
         $response->assertSee('before-after-widget', false);
         $response->assertSee('before-after-slider.js', false);
         $response->assertSee('Autonomous Vehicle LiDAR', false);

@@ -56,7 +56,6 @@
                                 <div class="comparison-split-wrapper">
                                     <!-- Left Column: Image Drag Comparison Slider -->
                                     <div class="comparison-split-left">
-                                        <span class="sr-only">Drag slider to compare</span>
                                         <div class="w-full">
                                             @include('partials.before-after-slider', [
                                                 'id' => 'slider-comparison-' . $item->id,
