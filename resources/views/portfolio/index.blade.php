@@ -6,100 +6,43 @@
 @section('content')
     <div class="pt-20 md:pt-24">
         @if (isset($comparisons) && $comparisons->isNotEmpty())
-            <!-- Dedicated Before & After Image Comparison Section (Left: Image Slider, Right: Content) -->
-            <style>
-                .comparison-split-wrapper {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 48px;
-                    width: 100%;
-                }
-
-                .comparison-split-left {
-                    width: 50%;
-                    flex: 0 0 50%;
-                    max-width: 50%;
-                }
-
-                .comparison-split-right {
-                    width: 50%;
-                    flex: 0 0 50%;
-                    max-width: 50%;
-                }
-
-                @media (max-width: 991px) {
-                    .comparison-split-wrapper {
-                        flex-direction: column;
-                        gap: 32px;
-                    }
-
-                    .comparison-split-left,
-                    .comparison-split-right {
-                        width: 100%;
-                        flex: 0 0 100%;
-                        max-width: 100%;
-                    }
-                }
-            </style>
-
+            <!-- Dedicated Before & After Image Comparison Section (Top: Admin Title & Description, Bottom: 3 Drag Image Sliders) -->
             <section id="comparisons-showcase"
                 class="py-12 md:py-20 relative overflow-hidden bg-white border-b border-gray-100">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-                    <!-- Comparison Items Container -->
-                    <div>
-                        @foreach ($comparisons as $index => $item)
-                            <div class="comparison-display-item {{ $index === 0 ? 'block' : 'hidden' }}"
-                                id="comparison-item-{{ $item->id }}">
+                    <!-- Top Header: Title & Description Uploaded by Admin -->
+                    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                        <h2
+                            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.18] mb-4">
+                            {{ $comparisons->first()->title ?: 'Make Data-Driven Decisions for Your Facilities' }}
+                        </h2>
 
-                                <div class="comparison-split-wrapper">
-                                    <!-- Left Column: Image Drag Comparison Slider -->
-                                    <div class="comparison-split-left">
-                                        <div class="w-full">
-                                            @include('partials.before-after-slider', [
-                                                'id' => 'slider-comparison-' . $item->id,
-                                                'beforeImage' => $item->before_image_url,
-                                                'afterImage' => $item->after_image_url,
-                                                'beforeLabel' => $item->before_label ?: 'Raw Surface',
-                                                'afterLabel' => $item->after_label ?: 'AI Segmented',
-                                                'alt' => $item->title ?: 'Before and After Image Comparison',
-                                                'height' => '480px',
-                                            ])
-                                        </div>
-                                    </div>
+                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-6">
+                            {{ $comparisons->first()->description ?: 'Prevent further deterioration. Save money. Improve efficiency, and extend the lifespan of your assets. You need objective and consistent data on your facilities to make better resource allocation decisions and avoid costly last-minute repairs.' }}
+                        </p>
 
-                                    <!-- Right Column: Content & Description (Styled exactly like reference screenshot) -->
-                                    <div class="comparison-split-right text-left space-y-6">
-                                        <!-- Subtitle Eyebrow in Blue -->
-                                        <!-- <div>
-                                                        <span class="text-sm sm:text-base font-semibold text-blue-600 tracking-wide inline-block">
-                                                            See More With Marveit AI
-                                                        </span>
-                                                    </div> -->
+                        <div>
+                            <a href="{{ route('free-trial') }}"
+                                class="inline-flex items-center justify-center font-bold px-8 py-3.5 rounded-full text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-base cursor-pointer"
+                                style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.45);">
+                                <span>How It Works</span>
+                            </a>
+                        </div>
+                    </div>
 
-                                        <!-- Big Bold Title -->
-                                        <h2
-                                            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.18]">
-                                            {{ $item->title ?: 'Make Data-Driven Decisions for Your Facilities' }}
-                                        </h2>
-
-                                        <!-- Description Paragraph -->
-                                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
-                                            {{ $item->description ?: 'Prevent further deterioration. Save money. Improve efficiency, and extend the lifespan of your assets. You need objective and consistent data on your facilities to make better resource allocation decisions and avoid costly last-minute repairs.' }}
-                                        </p>
-
-                                        <!-- Call to Action Button (Green pill button like screenshot) -->
-                                        <div class="pt-2">
-                                            <a href="{{ route('free-trial') }}"
-                                                class="inline-flex items-center justify-center font-bold px-8 py-3.5 rounded-full text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-base cursor-pointer"
-                                                style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.45);">
-                                                <span>How It Works</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
+                    <!-- 3 Drag Images Side-by-Side in 3-Column Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+                        @foreach ($comparisons->take(3) as $item)
+                            <div class="w-full">
+                                @include('partials.before-after-slider', [
+                                    'id' => 'slider-comparison-' . $item->id,
+                                    'beforeImage' => $item->before_image_url,
+                                    'afterImage' => $item->after_image_url,
+                                    'beforeLabel' => $item->before_label ?: 'Raw Surface',
+                                    'afterLabel' => $item->after_label ?: 'AI Segmented',
+                                    'alt' => $item->title ?: 'Before and After Image Comparison',
+                                    'height' => '360px',
+                                ])
                             </div>
                         @endforeach
                     </div>
