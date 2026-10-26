@@ -1,6 +1,7 @@
 <!-- Header Navigation -->
 <header
-    class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+    class="fixed top-0 left-0 w-full bg-white z-50 border-b border-gray-100 shadow-xs transition-all duration-300"
+    style="background-color: #ffffff;">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
         <a href="{{ route('home') }}" class="flex items-center transition-transform hover:opacity-90"
             aria-label="Marveit AI Home">

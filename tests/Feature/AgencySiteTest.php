@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\BeforeAfterSlider;
 use App\Models\ContactMessage;
+use App\Models\HeroVideo;
 use App\Models\PortfolioItem;
 use App\Models\TeamMember;
 use App\Models\User;
@@ -364,5 +365,34 @@ class AgencySiteTest extends TestCase
         $response = $this->post(route('free-trial.store'), []);
 
         $response->assertSessionHasErrors(['name', 'email', 'country', 'message']);
+    }
+
+    public function test_home_page_displays_uploaded_hero_video_when_present(): void
+    {
+        $video = HeroVideo::create([
+            'title' => 'Watch our specialized workflow',
+            'sub_caption' => 'High-throughput annotation demo',
+            'badge_text' => '99.9% QA',
+            'video_path' => 'hero-videos/sample-workflow.mp4',
+            'poster_image' => 'hero-videos/posters/poster.jpg',
+            'is_active' => true,
+        ]);
+
+        $response = $this->get(route('home'));
+        $response->assertStatus(200);
+        $response->assertSee('Watch our specialized workflow', false);
+        $response->assertSee('High-throughput annotation demo', false);
+        $response->assertSee('99.9% QA', false);
+        $response->assertSee('hero-videos/sample-workflow.mp4', false);
+
+        $video->delete();
+    }
+
+    public function test_home_page_renders_default_placeholder_when_no_hero_video_active(): void
+    {
+        $response = $this->get(route('home'));
+        $response->assertStatus(200);
+        $response->assertSee('Watch our workflow', false);
+        $response->assertSee('See how we label data with precision &amp; strict SLAs', false);
     }
 }

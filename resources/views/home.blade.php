@@ -36,35 +36,64 @@
 
             <!-- Video / Visual Section -->
             <div class="w-full md:w-1/2">
-                <div
-                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
-                    <!-- Background Gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-gray-800 via-blue-950 to-gray-900 opacity-95"></div>
+                <div id="hero-video-wrapper"
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-950 aspect-video group cursor-pointer hover:shadow-3xl transition duration-300">
 
-                    <!-- Decorative Grid Lines -->
-                    <div class="absolute inset-0 opacity-15"
-                        style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;">
-                    </div>
+                    @if ($heroVideo && $heroVideo->video_url)
+                        <!-- Native HTML5 Video Element -->
+                        <video id="hero-native-video"
+                            class="w-full h-full object-cover select-none"
+                            @if ($heroVideo->poster_url) poster="{{ $heroVideo->poster_url }}" @endif
+                            preload="metadata"
+                            playsinline>
+                            <source src="{{ $heroVideo->video_url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    @endif
 
-                    <!-- Center Play Button -->
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div
-                            class="w-20 h-20 bg-blue-600/90 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20">
-                            <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
-                        </div>
-                    </div>
-
-                    <!-- Overlay Caption -->
-                    <div
-                        class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-white font-bold text-base">Watch our workflow</p>
-                                <p class="text-gray-300 text-xs">See how we label data with precision & strict SLAs</p>
+                    <!-- Cover Overlay: Fades out smoothly when video plays -->
+                    <div id="hero-video-overlay"
+                        class="absolute inset-0 z-10 flex flex-col justify-between transition-opacity duration-500">
+                        <!-- Background Gradient & Poster Layer -->
+                        @if ($heroVideo && $heroVideo->poster_url)
+                            <div class="absolute inset-0 bg-cover bg-center -z-10"
+                                style="background-image: url('{{ $heroVideo->poster_url }}');"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30 -z-10"></div>
+                        @else
+                            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 opacity-95 -z-10"></div>
+                            <div class="absolute inset-0 opacity-15 -z-10"
+                                style="background-image: radial-gradient(circle at 1px 1px, #3b82f6 1px, transparent 0); background-size: 24px 24px;">
                             </div>
-                            <span
-                                class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium">99.8%
-                                Precision</span>
+                        @endif
+
+                        <div class="p-6"></div>
+
+                        <!-- Center Play Button -->
+                        <div class="flex items-center justify-center my-auto">
+                            <button type="button" aria-label="Play video"
+                                class="w-20 h-20 bg-blue-600/90 hover:bg-blue-600 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-xl ring-8 ring-blue-500/20 focus:outline-none cursor-pointer">
+                                <i data-feather="play" class="text-white fill-current ml-1 w-8 h-8"></i>
+                            </button>
+                        </div>
+
+                        <!-- Overlay Caption -->
+                        <div class="p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-white font-bold text-base">
+                                        {{ $heroVideo->title ?? 'Watch our workflow' }}
+                                    </p>
+                                    <p class="text-gray-300 text-xs">
+                                        {{ $heroVideo->sub_caption ?? 'See how we label data with precision & strict SLAs' }}
+                                    </p>
+                                </div>
+                                @if (filled($heroVideo->badge_text ?? '99.8% Precision'))
+                                    <span
+                                        class="text-xs bg-blue-500/30 text-blue-200 px-2.5 py-1 rounded-md border border-blue-400/30 font-medium shrink-0">
+                                        {{ $heroVideo->badge_text ?? '99.8% Precision' }}
+                                    </span>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -297,3 +326,44 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoWrapper = document.getElementById('hero-video-wrapper');
+            const video = document.getElementById('hero-native-video');
+            const overlay = document.getElementById('hero-video-overlay');
+
+            if (videoWrapper && video && overlay) {
+                const playVideo = function () {
+                    overlay.style.opacity = '0';
+                    overlay.style.pointerEvents = 'none';
+                    video.setAttribute('controls', 'controls');
+                    video.play().catch(function (err) {
+                        console.log('Video playback error:', err);
+                    });
+                };
+
+                videoWrapper.addEventListener('click', function (e) {
+                    if (video.paused) {
+                        playVideo();
+                    }
+                });
+
+                video.addEventListener('pause', function () {
+                    if (video.currentTime === 0 || video.ended) {
+                        overlay.style.opacity = '1';
+                        overlay.style.pointerEvents = 'auto';
+                        video.removeAttribute('controls');
+                    }
+                });
+
+                video.addEventListener('ended', function () {
+                    overlay.style.opacity = '1';
+                    overlay.style.pointerEvents = 'auto';
+                    video.removeAttribute('controls');
+                });
+            }
+        });
+    </script>
+@endpush
