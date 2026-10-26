@@ -8,6 +8,12 @@
         @if (isset($comparisons) && $comparisons->isNotEmpty())
             <!-- Dedicated Before & After Image Comparison Sections (Each section has its own Title, Description, and up to 3 Drag Sliders) -->
             <style>
+                .comparison-section-item {
+                    margin: 0 5px 36px 5px;
+                }
+                .comparison-section-item:last-child {
+                    margin-bottom: 24px;
+                }
                 .comparison-grid {
                     display: grid;
                     grid-template-columns: 1fr;
@@ -29,10 +35,11 @@
                 }
             </style>
 
-            <div id="comparisons-showcase" class="space-y-6 md:space-y-8" style="margin: 5px;">
+            <div id="comparisons-showcase" class="w-full">
                 @foreach ($comparisons as $section)
                     <section id="comparison-section-{{ $section->id }}"
-                        class="py-8 md:py-10 px-4 sm:px-6 md:px-8 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs">
+                        class="comparison-section-item py-8 md:py-10 px-4 sm:px-6 md:px-8 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs"
+                        style="margin: 0 5px 36px 5px;">
                         <div class="container mx-auto max-w-7xl">
                             <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
                             <div class="text-left max-w-4xl mb-6 md:mb-8">
