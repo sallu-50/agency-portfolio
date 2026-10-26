@@ -6,34 +6,26 @@
 @section('content')
     <div class="pt-20 md:pt-24">
         @if (isset($comparisons) && $comparisons->isNotEmpty())
-            <!-- Dedicated Before & After Image Comparison Section (Top: Admin Title & Description, Bottom: 3 Drag Image Sliders) -->
+            <!-- Dedicated Before & After Image Comparison Section (Distinct Section, Left-aligned Header, 3 Sliders, Compact Padding) -->
             <section id="comparisons-showcase"
-                class="py-12 md:py-20 relative overflow-hidden bg-white border-b border-gray-100">
+                class="py-8 md:py-12 relative overflow-hidden bg-slate-50/90 border-b border-gray-200">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-                    <!-- Top Header: Title & Description Uploaded by Admin -->
-                    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
+                    <div class="text-left max-w-4xl mb-6 md:mb-8">
                         <h2
-                            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.18] mb-4">
+                            class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-2.5">
                             {{ $comparisons->first()->title ?: 'Make Data-Driven Decisions for Your Facilities' }}
                         </h2>
 
-                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-normal mb-6">
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                             {{ $comparisons->first()->description ?: 'Prevent further deterioration. Save money. Improve efficiency, and extend the lifespan of your assets. You need objective and consistent data on your facilities to make better resource allocation decisions and avoid costly last-minute repairs.' }}
                         </p>
-
-                        <div>
-                            <a href="{{ route('free-trial') }}"
-                                class="inline-flex items-center justify-center font-bold px-8 py-3.5 rounded-full text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-base cursor-pointer"
-                                style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.45);">
-                                <span>How It Works</span>
-                            </a>
-                        </div>
                     </div>
 
                     <!-- 3 Drag Images Side-by-Side in 3-Column Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-start">
                         @foreach ($comparisons->take(3) as $item)
-                            <div class="w-full">
+                            <div class="w-full bg-white rounded-[22px] p-2 sm:p-2.5 shadow-sm border border-gray-200/80 hover:shadow-md transition-shadow">
                                 @include('partials.before-after-slider', [
                                     'id' => 'slider-comparison-' . $item->id,
                                     'beforeImage' => $item->before_image_url,
@@ -41,7 +33,7 @@
                                     'beforeLabel' => $item->before_label ?: 'Raw Surface',
                                     'afterLabel' => $item->after_label ?: 'AI Segmented',
                                     'alt' => $item->title ?: 'Before and After Image Comparison',
-                                    'height' => '360px',
+                                    'height' => '300px',
                                 ])
                             </div>
                         @endforeach
