@@ -64,22 +64,6 @@ class BeforeAfterSliderForm
                                 ->imageEditor()
                                 ->required(),
                         ]),
-
-                        Grid::make(2)->schema([
-                            TextInput::make('before_label')
-                                ->label('Before Label Badge')
-                                ->placeholder('e.g. Raw Image / Original')
-                                ->default('Before')
-                                ->required()
-                                ->maxLength(50),
-
-                            TextInput::make('after_label')
-                                ->label('After Label Badge')
-                                ->placeholder('e.g. Annotated / Edited')
-                                ->default('After')
-                                ->required()
-                                ->maxLength(50),
-                        ]),
                     ]),
 
                 Section::make('Display Settings')

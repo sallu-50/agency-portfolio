@@ -38,14 +38,6 @@
                  class="w-full h-full select-none pointer-events-none comparison-img"
                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"
                  loading="lazy">
-            
-            <!-- After Label Badge -->
-            <div class="comparison-badge absolute top-3 right-3 z-10 pointer-events-none transition-opacity duration-200">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide text-white bg-black/60 backdrop-blur-md border border-white/20 shadow-md">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    {{ $afterLabel }}
-                </span>
-            </div>
         </div>
 
         <!-- Top Layer: BEFORE (Raw / Original) Image with dynamic clip-path -->
@@ -55,14 +47,6 @@
                  class="w-full h-full select-none pointer-events-none comparison-img"
                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"
                  loading="lazy">
-            
-            <!-- Before Label Badge -->
-            <div class="comparison-badge absolute top-3 left-3 z-10 pointer-events-none transition-opacity duration-200">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide text-white bg-black/60 backdrop-blur-md border border-white/20 shadow-md">
-                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                    {{ $beforeLabel }}
-                </span>
-            </div>
         </div>
 
         <!-- Center Divider Line & Drag Handle (Clean White Line with ||| circular thumb) -->

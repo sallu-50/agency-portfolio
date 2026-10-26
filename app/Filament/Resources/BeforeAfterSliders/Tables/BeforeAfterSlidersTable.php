@@ -34,8 +34,7 @@ class BeforeAfterSlidersTable
                     ->default(fn ($record) => 'Project #'.$record->id)
                     ->searchable()
                     ->sortable()
-                    ->weight('bold')
-                    ->description(fn ($record) => $record->before_label.' ➔ '.$record->after_label),
+                    ->weight('bold'),
 
                 TextColumn::make('category')
                     ->badge()
