@@ -50,12 +50,7 @@
                         style="background-color: rgba(255, 255, 255, 0.08);">
                         <i data-feather="linkedin" class="w-4 h-4"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                        class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
-                        style="background-color: rgba(255, 255, 255, 0.08);">
-                        <i data-feather="twitter" class="w-4 h-4"></i>
-                    </a>
-                    <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
                         aria-label="Facebook"
                         class="w-10 h-10 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-750"
                         style="background-color: rgba(255, 255, 255, 0.08);">

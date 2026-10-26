@@ -101,7 +101,7 @@
 
                     <!-- 4. FACEBOOK -->
                     <div class="contact-circle-card group flex flex-col items-center">
-                        <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
                             aria-label="Facebook"
                             class="channel-icon-circle w-24 h-24 rounded-full bg-white/10 hover:bg-blue-700 border-2 border-white/20 text-white flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-105 shadow-lg">
                             <i data-feather="facebook" class="w-10 h-10"></i>
@@ -115,7 +115,7 @@
                             <p class="text-blue-300 font-bold">Marveit Operations</p>
                         </div>
 
-                        <a href="https://facebook.com/abdullah.al.salman.892142" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 hover:text-white transition-colors underline underline-offset-4">
                             <span>Open Facebook</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
