@@ -23,9 +23,9 @@
                         </p>
                     </div>
 
-                    <!-- 3 Drag Images Side-by-Side in 3-Column Grid -->
+                    <!-- Drag Images Side-by-Side in 3-Column Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-start">
-                        @foreach ($comparisons->take(3) as $item)
+                        @foreach ($comparisons as $item)
                             <div class="w-full">
                                 @include('partials.before-after-slider', [
                                     'id' => 'slider-comparison-' . $item->id,
