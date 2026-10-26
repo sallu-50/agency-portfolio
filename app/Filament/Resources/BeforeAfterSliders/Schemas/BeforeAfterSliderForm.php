@@ -40,8 +40,8 @@ class BeforeAfterSliderForm
                             ->columnSpanFull(),
                     ]),
 
-                Section::make('Comparison Images')
-                    ->description('Upload the original (before) image and the edited/annotated (after) image')
+                Section::make('Comparison Image 1 (Required)')
+                    ->description('Primary comparison slider for this section')
                     ->schema([
                         Grid::make(2)->schema([
                             FileUpload::make('before_image')
@@ -55,7 +55,7 @@ class BeforeAfterSliderForm
                                 ->required(),
 
                             FileUpload::make('after_image')
-                                ->label('2. After Image (Edited / Annotated)')
+                                ->label('1. After Image (Edited / Annotated)')
                                 ->helperText('Must have identical dimensions/ratio as Before Image. Maximum size: 2 MB.')
                                 ->image()
                                 ->disk('public')
@@ -63,6 +63,60 @@ class BeforeAfterSliderForm
                                 ->maxSize(2048)
                                 ->imageEditor()
                                 ->required(),
+                        ]),
+                    ]),
+
+                Section::make('Comparison Image 2 (Optional)')
+                    ->description('Second comparison slider in this section')
+                    ->collapsible()
+                    ->schema([
+                        Grid::make(2)->schema([
+                            FileUpload::make('before_image_2')
+                                ->label('2. Before Image (Original / Raw)')
+                                ->helperText('Recommended 16:9. Maximum size: 2 MB.')
+                                ->image()
+                                ->disk('public')
+                                ->directory('comparison-sliders')
+                                ->maxSize(2048)
+                                ->imageEditor()
+                                ->nullable(),
+
+                            FileUpload::make('after_image_2')
+                                ->label('2. After Image (Edited / Annotated)')
+                                ->helperText('Must have identical dimensions/ratio as Before Image. Maximum size: 2 MB.')
+                                ->image()
+                                ->disk('public')
+                                ->directory('comparison-sliders')
+                                ->maxSize(2048)
+                                ->imageEditor()
+                                ->nullable(),
+                        ]),
+                    ]),
+
+                Section::make('Comparison Image 3 (Optional)')
+                    ->description('Third comparison slider in this section')
+                    ->collapsible()
+                    ->schema([
+                        Grid::make(2)->schema([
+                            FileUpload::make('before_image_3')
+                                ->label('3. Before Image (Original / Raw)')
+                                ->helperText('Recommended 16:9. Maximum size: 2 MB.')
+                                ->image()
+                                ->disk('public')
+                                ->directory('comparison-sliders')
+                                ->maxSize(2048)
+                                ->imageEditor()
+                                ->nullable(),
+
+                            FileUpload::make('after_image_3')
+                                ->label('3. After Image (Edited / Annotated)')
+                                ->helperText('Must have identical dimensions/ratio as Before Image. Maximum size: 2 MB.')
+                                ->image()
+                                ->disk('public')
+                                ->directory('comparison-sliders')
+                                ->maxSize(2048)
+                                ->imageEditor()
+                                ->nullable(),
                         ]),
                     ]),
 

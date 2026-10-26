@@ -27,7 +27,7 @@ class BeforeAfterSliderResource extends Resource
 
     protected static ?string $navigationLabel = 'Before & After Sliders';
 
-    protected static ?string $modelLabel = 'Before & After Comparison';
+    protected static ?string $modelLabel = 'Comparison Section';
 
     protected static ?string $pluralModelLabel = 'Before & After Sliders';
 

@@ -283,6 +283,33 @@ class AgencySiteTest extends TestCase
         $this->assertTrue($slider->is_active);
     }
 
+    public function test_portfolio_page_displays_multiple_independent_comparison_sections(): void
+    {
+        $section2 = BeforeAfterSlider::create([
+            'title' => 'Structural Crack & Thermal Leak Analysis',
+            'description' => 'Real-time thermal imaging and high-resolution optical drone inspection for commercial roofs.',
+            'category' => 'Thermal Inspection',
+            'before_image' => 'image/team-2.jpg',
+            'after_image' => 'image/team-3.jpg',
+            'before_image_2' => 'image/team-4.jpg',
+            'after_image_2' => 'image/team-5.jpg',
+            'sort_order' => 10,
+            'is_active' => true,
+        ]);
+
+        $response = $this->get(route('portfolio'));
+
+        $response->assertStatus(200);
+        $response->assertSee('comparison-section-1', false);
+        $response->assertSee('comparison-section-'.$section2->id, false);
+        $response->assertSee('Structural Crack &amp; Thermal Leak Analysis', false);
+        $response->assertSee('Real-time thermal imaging and high-resolution optical drone inspection', false);
+        $response->assertSee('slider-'.$section2->id.'-1', false);
+        $response->assertSee('slider-'.$section2->id.'-2', false);
+
+        $section2->delete();
+    }
+
     public function test_free_trial_page_loads_with_required_fields(): void
     {
         $response = $this->get(route('free-trial'));

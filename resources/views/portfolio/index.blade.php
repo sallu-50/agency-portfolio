@@ -6,7 +6,7 @@
 @section('content')
     <div class="pt-20 md:pt-24">
         @if (isset($comparisons) && $comparisons->isNotEmpty())
-            <!-- Dedicated Before & After Image Comparison Section (Distinct Section with 5px Body Margin, Left-aligned Header, 3 Sliders) -->
+            <!-- Dedicated Before & After Image Comparison Sections (Each section has its own Title, Description, and up to 3 Drag Sliders) -->
             <style>
                 .comparison-grid {
                     display: grid;
@@ -29,40 +29,53 @@
                 }
             </style>
 
-            <section id="comparisons-showcase"
-                class="py-8 md:py-10 px-4 sm:px-6 md:px-8 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs"
-                style="margin: 5px;">
-                <div class="container mx-auto max-w-7xl">
-                    <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
-                    <div class="text-left max-w-4xl mb-6 md:mb-8">
-                        <h2
-                            class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-2.5">
-                            {{ $comparisons->first()->title ?: 'Make Data-Driven Decisions for Your Facilities' }}
-                        </h2>
+            <div id="comparisons-showcase" class="space-y-6 md:space-y-8" style="margin: 5px;">
+                @foreach ($comparisons as $section)
+                    <section id="comparison-section-{{ $section->id }}"
+                        class="py-8 md:py-10 px-4 sm:px-6 md:px-8 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs">
+                        <div class="container mx-auto max-w-7xl">
+                            <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
+                            <div class="text-left max-w-4xl mb-6 md:mb-8">
+                                @if (filled($section->title))
+                                    <h2
+                                        class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-2.5">
+                                        {{ $section->title }}
+                                    </h2>
+                                @endif
 
-                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                            {{ $comparisons->first()->description ?: 'Prevent further deterioration. Save money. Improve efficiency, and extend the lifespan of your assets. You need objective and consistent data on your facilities to make better resource allocation decisions and avoid costly last-minute repairs.' }}
-                        </p>
-                    </div>
-
-                    <!-- Drag Images Side-by-Side in 3-Column Grid with 28px Spacing -->
-                    <div class="comparison-grid">
-                        @foreach ($comparisons as $item)
-                            <div class="w-full overflow-hidden rounded-[18px]">
-                                @include('partials.before-after-slider', [
-                                    'id' => 'slider-comparison-' . $item->id,
-                                    'beforeImage' => $item->before_image_url,
-                                    'afterImage' => $item->after_image_url,
-                                    'beforeLabel' => $item->before_label ?: 'Raw Surface',
-                                    'afterLabel' => $item->after_label ?: 'AI Segmented',
-                                    'alt' => $item->title ?: 'Before and After Image Comparison',
-                                    'height' => '300px',
-                                ])
+                                @if (filled($section->description))
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                                        {{ $section->description }}
+                                    </p>
+                                @endif
                             </div>
-                        @endforeach
-                    </div>
-                </div>
-            </section>
+
+                            <!-- Drag Images Side-by-Side in 3-Column Grid with 28px Spacing -->
+                            @php
+                                $sliderItems = $section->getSliderItems();
+                            @endphp
+
+                            @if (!empty($sliderItems))
+                                <div class="comparison-grid">
+                                    @foreach ($sliderItems as $item)
+                                        <div class="w-full overflow-hidden rounded-[18px]">
+                                            @include('partials.before-after-slider', [
+                                                'id' => $item['id'],
+                                                'beforeImage' => $item['before'],
+                                                'afterImage' => $item['after'],
+                                                'beforeLabel' => '',
+                                                'afterLabel' => '',
+                                                'alt' => $item['alt'],
+                                                'height' => '300px',
+                                            ])
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
+                        </div>
+                    </section>
+                @endforeach
+            </div>
         @endif
 
         {{--
