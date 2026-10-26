@@ -6,9 +6,10 @@
 @section('content')
     <div class="pt-20 md:pt-24">
         @if (isset($comparisons) && $comparisons->isNotEmpty())
-            <!-- Dedicated Before & After Image Comparison Section (Distinct Section, Left-aligned Header, 3 Sliders, Compact Padding) -->
+            <!-- Dedicated Before & After Image Comparison Section (Distinct Section with 5px Body Margin, Left-aligned Header, 3 Sliders) -->
             <section id="comparisons-showcase"
-                class="py-8 md:py-12 relative overflow-hidden bg-slate-50/90 border-b border-gray-200">
+                class="py-8 md:py-10 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs"
+                style="margin: 5px;">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                     <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
                     <div class="text-left max-w-4xl mb-6 md:mb-8">
@@ -25,7 +26,7 @@
                     <!-- 3 Drag Images Side-by-Side in 3-Column Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-start">
                         @foreach ($comparisons->take(3) as $item)
-                            <div class="w-full bg-white rounded-[22px] p-2 sm:p-2.5 shadow-sm border border-gray-200/80 hover:shadow-md transition-shadow">
+                            <div class="w-full">
                                 @include('partials.before-after-slider', [
                                     'id' => 'slider-comparison-' . $item->id,
                                     'beforeImage' => $item->before_image_url,
@@ -180,7 +181,8 @@
         </section>
         --}}
 
-        <!-- CTA Section -->
+        {{--
+        <!-- CTA Section (Temporarily disabled) -->
         <section class="py-20 bg-white border-t border-gray-100">
             <div class="container mx-auto px-6 text-center max-w-3xl">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
@@ -198,6 +200,7 @@
                 </div>
             </div>
         </section>
+        --}}
     </div>
 @endsection
 

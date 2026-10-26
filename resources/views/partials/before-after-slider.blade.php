@@ -14,23 +14,22 @@
         height: 540px;
         min-height: 400px;
         max-height: 75vh;
-        border-radius: 28px;
+        border-radius: 20px;
         overflow: hidden;
-        background-color: #0f172a;
-        box-shadow: 0 14px 40px -8px rgba(0, 0, 0, 0.16);
+        background-color: #f1f5f9;
     }
     @media (max-width: 768px) {
         #{{ $sliderId }} .comparison-container {
             height: 380px;
             min-height: 300px;
-            border-radius: 20px;
+            border-radius: 16px;
         }
     }
 </style>
 
 <div class="before-after-widget w-full select-none" id="{{ $sliderId }}" data-initial="{{ $initialPercent }}">
     <!-- Main Comparison Viewer Window -->
-    <div class="comparison-container relative w-full overflow-hidden touch-none cursor-ew-resize group mx-auto flex items-center justify-center border border-black/10"
+    <div class="comparison-container relative w-full overflow-hidden touch-none cursor-ew-resize group mx-auto flex items-center justify-center"
          style="--position: {{ $initialPercent }}%; {{ $customHeight ? 'height: ' . $customHeight . ' !important; min-height: unset;' : '' }}">
         
         <!-- Bottom Layer: AFTER (Annotated / Processed) Image -->
