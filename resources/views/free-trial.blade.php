@@ -159,22 +159,36 @@
             box-shadow: 0 6px 18px rgba(14, 94, 221, 0.35);
             transform: translateY(-1px);
         }
+
+        .ft-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .ft-layout-grid {
+                grid-template-columns: 3fr 7fr;
+                gap: 2.75rem;
+                align-items: center;
+            }
+        }
     </style>
 
     <!-- Combined One-Screen Section -->
     <div class="ft-page-bg min-h-[calc(100vh-80px)] flex flex-col justify-center pt-24 pb-8 md:pt-28 md:pb-10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+            <div class="ft-layout-grid">
 
-                <!-- Left Column: Pilot Intro & Value Props -->
-                <div class="lg:col-span-5 text-left">
-
+                <!-- Left Column (30% Width): Pilot Intro & Value Props -->
+                <div class="text-left">
                     <h1
-                        class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight">
+                        class="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight">
                         Start Your <span class="text-blue-600">Free Trial</span> Pilot
                     </h1>
 
-                    <p class="text-sm sm:text-base text-gray-600 max-w-xl leading-relaxed mb-6">
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
                         Test our labeling quality and benchmark turnaround with zero financial commitment. Send guidelines &
                         sample data for a fast 24-hour turnaround.
                     </p>
@@ -207,8 +221,8 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Form Card -->
-                <div class="lg:col-span-7">
+                <!-- Right Column (70% Width): Form Card -->
+                <div>
                     <div class="ft-card">
                         <!-- Success Notification -->
                         @if (session('success'))

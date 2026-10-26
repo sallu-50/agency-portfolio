@@ -289,7 +289,7 @@ class AgencySiteTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Free Trial', false);
-        $response->assertSee('Zero-Risk Production Pilot', false);
+        $response->assertSee('Start Your', false);
         $response->assertSee('Full Name', false);
         $response->assertSee('Business Email', false);
         $response->assertSee('Country', false);
