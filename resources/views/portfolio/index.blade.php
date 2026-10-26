@@ -4,15 +4,40 @@
 @section('meta_description', 'Explore Marveit AI portfolio of enterprise dataset annotation case studies: Computer Vision, LiDAR 3D, LLM alignment, and speech transcription.')
 
 @section('content')
-    <div class="pt-20 md:pt-24">
+    <div class="portfolio-showcase-wrapper pt-20 md:pt-24 pb-16 md:pb-24">
         @if (isset($comparisons) && $comparisons->isNotEmpty())
-            <!-- Dedicated Before & After Image Comparison Sections (Each section has its own Title, Description, and up to 3 Drag Sliders) -->
+            <!-- Dedicated Before & After Image Comparison Sections (Each section styled as an elevated card with rich shadow and spacious padding) -->
             <style>
+                .portfolio-showcase-wrapper {
+                    background-color: #f8fafc;
+                }
                 .comparison-section-item {
-                    margin: 0 5px 36px 5px;
+                    margin: 0 8px 44px 8px;
+                    padding-top: 36px;
+                    padding-bottom: 56px;
+                    background-color: #ffffff;
+                    border: none !important;
+                    outline: none !important;
+                    border-radius: 24px;
+                    box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 20px 40px -12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.03);
+                    transition: box-shadow 0.3s ease;
                 }
                 .comparison-section-item:last-child {
                     margin-bottom: 24px;
+                }
+                @media (min-width: 640px) {
+                    .comparison-section-item {
+                        margin: 0 16px 52px 16px;
+                        padding-top: 40px;
+                        padding-bottom: 64px;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .comparison-section-item {
+                        margin: 0 24px 60px 24px;
+                        padding-top: 48px;
+                        padding-bottom: 72px;
+                    }
                 }
                 .comparison-grid {
                     display: grid;
@@ -38,8 +63,7 @@
             <div id="comparisons-showcase" class="w-full">
                 @foreach ($comparisons as $section)
                     <section id="comparison-section-{{ $section->id }}"
-                        class="comparison-section-item py-8 md:py-10 px-4 sm:px-6 md:px-8 relative overflow-hidden bg-slate-50/90 border border-gray-200/90 rounded-2xl shadow-xs"
-                        style="margin: 0 5px 36px 5px;">
+                        class="comparison-section-item px-4 sm:px-6 md:px-8 relative overflow-hidden">
                         <div class="container mx-auto max-w-7xl">
                             <!-- Left-Aligned Header: Title & Description Uploaded by Admin -->
                             <div class="text-left max-w-4xl mb-6 md:mb-8">
