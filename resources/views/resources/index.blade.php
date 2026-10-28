@@ -18,42 +18,19 @@
                 <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
                     In-depth technical guides, dataset curation standards, and enterprise AI benchmarks from our data annotation specialists.
                 </p>
-
-                <!-- Search Input Form -->
-                <form action="{{ route('resources.index') }}" method="GET" class="mt-8 max-w-xl mx-auto">
-                    @if ($activeCategory !== 'all')
-                        <input type="hidden" name="category" value="{{ $activeCategory }}">
-                    @endif
-                    <div class="relative flex items-center">
-                        <i data-feather="search" class="w-5 h-5 text-gray-400 absolute left-4 pointer-events-none"></i>
-                        <input type="text" name="q" value="{{ $search }}"
-                            placeholder="Search articles by topic, keyword, or technology..."
-                            class="w-full pl-12 pr-28 py-3.5 bg-white rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm">
-                        <button type="submit"
-                            class="absolute right-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-sm">
-                            Search
-                        </button>
-                    </div>
-                    @if ($search !== '')
-                        <div class="mt-3 text-xs text-gray-500 text-left flex items-center justify-between px-2">
-                            <span>Showing results for "<strong>{{ $search }}</strong>"</span>
-                            <a href="{{ route('resources.index', ['category' => $activeCategory]) }}" class="text-blue-600 hover:underline">Clear search</a>
-                        </div>
-                    @endif
-                </form>
             </div>
         </section>
 
         <!-- Category Filter Pills -->
         <section class="container mx-auto px-6 mb-12">
             <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-                <a href="{{ route('resources.index', array_filter(['q' => $search])) }}"
+                <a href="{{ route('resources.index') }}"
                     class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 {{ $activeCategory === 'all' ? 'bg-blue-600 text-white shadow-md' : 'bg-white text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 border border-gray-200' }}">
                     All Articles ({{ $categories['all'] ?? 0 }})
                 </a>
                 @foreach ($categories as $catName => $count)
                     @if ($catName !== 'all')
-                        <a href="{{ route('resources.index', array_filter(['category' => $catName, 'q' => $search])) }}"
+                        <a href="{{ route('resources.index', ['category' => $catName]) }}"
                             class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 {{ $activeCategory === $catName ? 'bg-blue-600 text-white shadow-md' : 'bg-white text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 border border-gray-200' }}">
                             {{ $catName }} ({{ $count }})
                         </a>
@@ -62,8 +39,8 @@
             </div>
         </section>
 
-        <!-- Featured Hero Article (Shown on first page when not filtering by search) -->
-        @if ($activeCategory === 'all' && empty($search) && $featuredArticle && $articles->currentPage() === 1)
+        <!-- Featured Hero Article (Shown on first page) -->
+        @if ($activeCategory === 'all' && $featuredArticle && $articles->currentPage() === 1)
             <section class="container mx-auto px-6 mb-16 max-w-6xl">
                 <div class="bg-white rounded-3xl border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
                     <div class="grid grid-cols-1 lg:grid-cols-12">
