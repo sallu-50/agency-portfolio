@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FreeTrialController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,11 @@ Route::get('/team', [TeamController::class, 'index'])->name('team');
 // Portfolio (Public)
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/portfolio/{slug}', [PortfolioController::class, 'show'])->name('portfolio.show');
+
+// Resources & Articles
+Route::get('/resources', [ResourceController::class, 'index'])->name('resources.index');
+Route::get('/resources/{slug}', [ResourceController::class, 'show'])->name('resources.show');
+Route::redirect('/articles', '/resources');
 
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

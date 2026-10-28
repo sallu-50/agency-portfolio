@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Article;
 use App\Models\BeforeAfterSlider;
 use App\Models\ContactMessage;
 use App\Models\HeroVideo;
@@ -202,7 +203,6 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Case Studies', false);
         $response->assertSee('Team', false);
         $response->assertSee('Resources', false);
-        $response->assertSee('Article', false);
         $response->assertSee('Contact', false);
     }
 
@@ -398,5 +398,35 @@ class AgencySiteTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Watch our workflow', false);
         $response->assertSee('See how we label data with precision &amp; strict SLAs', false);
+    }
+
+    public function test_public_resources_index_page_loads_with_seeded_articles(): void
+    {
+        $response = $this->get(route('resources.index'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Resources', false);
+        $response->assertSee('Articles', false);
+        $response->assertSee('Computer Vision', false);
+    }
+
+    public function test_public_article_detail_page_loads(): void
+    {
+        $article = Article::first();
+
+        $response = $this->get(route('resources.show', $article->slug));
+
+        $response->assertStatus(200);
+        $response->assertSee(e($article->title), false);
+    }
+
+    public function test_authenticated_admin_can_view_filament_articles_resource(): void
+    {
+        $admin = User::where('email', 'admin@marveit.com')->first();
+
+        $response = $this->actingAs($admin)->get('/admin/articles');
+
+        $response->assertStatus(200);
+        $response->assertSee('Articles &amp; Resources', false);
     }
 }

@@ -2,6 +2,34 @@
 <header
     class="fixed top-0 left-0 w-full bg-white z-50 border-b border-gray-100 shadow-xs transition-all duration-300"
     style="background-color: #ffffff;">
+    <style>
+        @media (min-width: 768px) {
+            #desktop-nav {
+                display: flex !important;
+                align-items: center !important;
+                gap: 1.5rem !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            #desktop-nav {
+                gap: 1.75rem !important;
+            }
+        }
+        @media (min-width: 1280px) {
+            #desktop-nav {
+                gap: 2rem !important;
+            }
+        }
+        .nav-item-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+    </style>
+
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
         <a href="{{ route('home') }}" class="flex items-center transition-transform hover:opacity-90"
             aria-label="Marveit AI Home">
@@ -9,12 +37,13 @@
         </a>
 
         <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-5 lg:space-x-8 text-sm items-center relative z-50">
-            <!-- Services Dropdown Group -->
+        <nav id="desktop-nav" class="hidden md:flex text-sm items-center relative z-50">
+            <!-- 1. Services Dropdown Group -->
             <div class="group relative h-10 flex items-center">
                 <a href="{{ route('services.index') }}"
-                    class="font-medium flex items-center gap-1 py-3 px-2 rounded-lg transition-colors hover:bg-gray-50/50 {{ request()->routeIs('services.*') ? 'text-blue-600 font-bold' : 'text-gray-700 hover:text-blue-600' }}">
-                    Services <i data-feather="chevron-down"
+                    class="nav-item-link gap-1 {{ request()->routeIs('services.*') ? 'text-blue-600 font-bold' : 'text-gray-700 hover:text-blue-600' }}">
+                    <span>Services</span>
+                    <i data-feather="chevron-down"
                         class="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180"></i>
                 </a>
 
@@ -132,11 +161,12 @@
                 </div>
             </div>
 
-            <!-- Industries Dropdown Group -->
+            <!-- 2. Industries Dropdown Group -->
             <div class="group relative h-10 flex items-center">
                 <a href="{{ route('home') }}#industries"
-                    class="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1 py-3 px-2 rounded-lg transition-colors hover:bg-gray-50/50">
-                    Industries <i data-feather="chevron-down"
+                    class="nav-item-link gap-1 text-gray-700 hover:text-blue-600">
+                    <span>Industries</span>
+                    <i data-feather="chevron-down"
                         class="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180"></i>
                 </a>
 
@@ -190,50 +220,25 @@
                 </div>
             </div>
 
-            <!-- Case Studies (formerly Portfolio) -->
+            <!-- 3. Case Studies (formerly Portfolio) -->
             <a href="{{ route('portfolio') }}"
-                class="{{ request()->routeIs('portfolio*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Case Studies</a>
+                class="nav-item-link {{ request()->routeIs('portfolio*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">Case Studies</a>
 
-            <!-- About Us -->
+            <!-- 4. About Us -->
             <a href="{{ route('home') }}#about"
-                class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
+                class="nav-item-link text-gray-700 hover:text-blue-600">About Us</a>
 
-            <!-- Team (formerly Our Team) -->
+            <!-- 5. Team -->
             <a href="{{ route('team') }}"
-                class="{{ request()->routeIs('team') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Team</a>
+                class="nav-item-link {{ request()->routeIs('team') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">Team</a>
 
-            <!-- Resources Dropdown Group (with Article) -->
-            <div class="group relative h-10 flex items-center">
-                <a href="javascript:void(0)"
-                    class="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1 py-3 px-2 rounded-lg transition-colors hover:bg-gray-50/50">
-                    Resources <i data-feather="chevron-down"
-                        class="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180"></i>
-                </a>
+            <!-- 6. Resources (Direct Link to Resources Page, No Dropdown) -->
+            <a href="{{ route('resources.index') }}"
+                class="nav-item-link {{ request()->routeIs('resources*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">Resources</a>
 
-                <div
-                    class="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-4 hidden group-hover:block z-[100]">
-                    <div
-                        class="bg-white rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] border border-gray-100 p-3 ring-1 ring-black/5">
-                        <a href="javascript:void(0)"
-                            class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all duration-200 group/item border border-transparent hover:border-blue-100">
-                            <div
-                                class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex flex-shrink-0 items-center justify-center transition-transform group-hover/item:scale-110">
-                                <i data-feather="file-text" class="w-4 h-4"></i>
-                            </div>
-                            <div>
-                                <div
-                                    class="font-bold text-gray-800 text-sm group-hover/item:text-blue-600 transition-colors">
-                                    Article</div>
-                                <p class="text-xs text-gray-500">Guides, insights & news</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact (links to Contact Us page) -->
+            <!-- 7. Contact (links to Contact Us page) -->
             <a href="{{ route('contact') }}"
-                class="{{ request()->routeIs('contact') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Contact</a>
+                class="nav-item-link {{ request()->routeIs('contact') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">Contact</a>
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
@@ -266,7 +271,6 @@
             class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
             Industries
         </a>
-        <!-- Mobile Case Studies Link -->
         <a href="{{ route('portfolio') }}"
             class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('portfolio*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Case Studies
@@ -279,22 +283,10 @@
             class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('team') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Team
         </a>
-        <!-- Mobile Resources with Article dropdown -->
-        <div class="border-b border-gray-100">
-            <button type="button"
-                id="mobile-resources-toggle"
-                class="w-full flex items-center justify-between px-6 py-3.5 hover:bg-blue-50 text-gray-700 font-medium transition-colors focus:outline-none">
-                <span>Resources</span>
-                <i data-feather="chevron-down" id="mobile-res-arrow" class="w-4 h-4 transition-transform duration-200"></i>
-            </button>
-            <div id="mobile-resources-sub" class="hidden bg-gray-50/80 px-8 py-2 border-t border-gray-100">
-                <a href="javascript:void(0)" class="flex items-center gap-3 py-2 text-sm text-gray-700 hover:text-blue-600 transition-colors">
-                    <i data-feather="file-text" class="w-4 h-4 text-blue-600"></i>
-                    <span class="font-medium">Article</span>
-                </a>
-            </div>
-        </div>
-        <!-- Mobile Contact Link -->
+        <a href="{{ route('resources.index') }}"
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('resources*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
+            Resources
+        </a>
         <a href="{{ route('contact') }}"
             class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('contact') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Contact
@@ -306,20 +298,4 @@
             </a>
         </div>
     </nav>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const resToggle = document.getElementById('mobile-resources-toggle');
-            const resSub = document.getElementById('mobile-resources-sub');
-            const resArrow = document.getElementById('mobile-res-arrow');
-            if (resToggle && resSub) {
-                resToggle.addEventListener('click', function () {
-                    resSub.classList.toggle('hidden');
-                    if (resArrow) {
-                        resArrow.classList.toggle('-rotate-180');
-                    }
-                });
-            }
-        });
-    </script>
 </header>

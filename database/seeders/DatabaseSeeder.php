@@ -264,5 +264,8 @@ class DatabaseSeeder extends Seeder
 
         // 5. Seed Before & After Sliders
         $this->call(BeforeAfterSliderSeeder::class);
+
+        // 6. Seed Articles & Resources
+        $this->call(ArticleSeeder::class);
     }
 }
