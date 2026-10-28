@@ -14,12 +14,10 @@
                         <span>High-Quality Data Annotation</span>
                     </div> -->
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
-                    Powering Next-Gen <span class="text-blue-600">AI Models</span> with Precision Data
+                    Data Annotation Services <span class="text-blue-600">for AI</span> Machine Learning Teams
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                    We deliver human-in-the-loop data labeling and workforce solutions tailored for machine learning,
-                    computer
-                    vision, and NLP.
+                   Marveit AI delivers human-verified image, text, audio, video and LiDAR annotation for computer vision and NLP teams. Every dataset passes multi-step quality checks and is handled under NDA.
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="{{ route('free-trial') }}"
@@ -106,20 +104,20 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99.8%</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">Quality Assurance SLA</p>
+                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99%</div>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Target Accuracy</p>
                 </div>
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">10M+</div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">100k+</div>
                     <p class="text-xs md:text-sm text-gray-500 font-medium">Annotations Delivered</p>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">Turnaround Ops</p>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">Fast Turnaround</p>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">100%</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">Bilateral NDA Security</p>
+                    <p class="text-xs md:text-sm text-gray-500 font-medium">NDA-Protected</p>
                 </div>
             </div>
         </div>
@@ -130,9 +128,9 @@
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
 
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Our Services</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Data Annotation Services for AI Teams</h2>
                 <p class="text-base md:text-lg text-gray-600">
-                    High-throughput, human-verified annotation designed to feed modern deep learning architectures.
+                   Human-verified annotation across image, video, text, audio and LiDAR data, built to train and evaluate production AI models.
                 </p>
             </div>
 
@@ -195,7 +193,7 @@
             <div class="text-center mt-12">
                 <a href="{{ route('services.index') }}"
                     class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-white border border-blue-200 hover:border-blue-300 px-6 py-3 rounded-full shadow-sm hover:shadow transition-all">
-                    <span>View All Services & Tooling</span>
+                    <span>View All Data Annotation Services</span>
                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
