@@ -132,7 +132,7 @@
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
 
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Data Annotation Services
+                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4" style="font-size: 24px; line-height: 1.33;">Data Annotation Services
                     for AI Teams</h2>
                 <p class="text-base md:text-lg text-gray-600">
                     Human-verified annotation across image, video, text, audio and LiDAR data, built to train and evaluate
@@ -214,7 +214,7 @@
                                                         class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
                                                         <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
                                                     </span> -->
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Why Choose Marveit AI?
+                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4" style="font-size: 24px; line-height: 1.33;">Why Choose Marveit AI?
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
                     We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and
@@ -267,7 +267,7 @@
                                                     class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
                                                     <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
                                                 </span> -->
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Industries Served</h2>
+                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4" style="font-size: 24px; line-height: 1.33;">Industries Served</h2>
                 <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for
                     domain-specific models.</p>
             </div>
@@ -316,7 +316,7 @@
     <!-- Ready to Start CTA -->
     <section id="speak-to-expert" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6 text-center max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Ready to Start Your Project?</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4" style="font-size: 24px; line-height: 1.33;">Ready to Start Your Project?</h2>
             <p class="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
                 Let's discuss how our data annotation services can help you achieve your AI goals with speed, security, and
                 precision.
