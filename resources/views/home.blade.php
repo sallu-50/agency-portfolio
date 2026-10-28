@@ -13,7 +13,7 @@
                         <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                         <span>High-Quality Data Annotation</span>
                     </div> -->
-                <h1 class="font-bold text-gray-900 leading-tight mb-6 tracking-tight">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
                     Data Annotation Services <span class="text-blue-600">for AI</span> Machine Learning Teams
                 </h1>
 
