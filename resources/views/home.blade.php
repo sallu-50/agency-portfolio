@@ -13,9 +13,9 @@
                         <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                         <span>High-Quality Data Annotation</span>
                     </div> -->
-               <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
-    Data Annotation Services <span class="text-blue-600">for AI</span> Machine Learning Teams
-</h1>
+                <h1 class="font-bold text-gray-900 leading-tight mb-6 tracking-tight">
+                    Data Annotation Services <span class="text-blue-600">for AI</span> Machine Learning Teams
+                </h1>
 
                 <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
                    Marveit AI delivers human-verified image, text, audio, video and LiDAR annotation for computer vision and NLP teams. Every dataset passes multi-step quality checks and is handled under NDA.
