@@ -9,13 +9,14 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
-                                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
-                                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                                    <span>High-Quality Data Annotation</span>
-                                </div> -->
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
+                                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                                        <span>High-Quality Data Annotation</span>
+                                    </div> -->
+                <h1 class="text-[32px] font-bold text-gray-900 leading-tight mb-6 tracking-tight">
                     Data Annotation Services for<span class="text-blue-600"> AI Machine Learning</span> Teams
                 </h1>
+
 
 
                 <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
@@ -29,9 +30,9 @@
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </a>
                     <!-- <a href="{{ route('services.index') }}"
-                                            class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                                            <span>Explore Services</span>
-                                        </a> -->
+                                                class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                                                <span>Explore Services</span>
+                                            </a> -->
                 </div>
             </div>
 
@@ -158,8 +159,8 @@
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                 </div>
                                 <!-- <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
-                                                                                                    {{ $service->category }}
-                                                                                                </span> -->
+                                                                                                            {{ $service->category }}
+                                                                                                        </span> -->
                             </div>
 
                             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -209,9 +210,9 @@
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <!-- <span
-                                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
-                                                <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
-                                            </span> -->
+                                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
+                                                    <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
+                                                </span> -->
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Why Choose Marveit AI?
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -262,9 +263,9 @@
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
                 <!-- <span
-                                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
-                                            <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
-                                        </span> -->
+                                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
+                                                <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
+                                            </span> -->
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Industries Served</h2>
                 <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for
                     domain-specific models.</p>
