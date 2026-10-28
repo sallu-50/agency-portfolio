@@ -9,7 +9,7 @@
         </a>
 
         <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-8 text-sm items-center relative z-50">
+        <nav class="hidden md:flex space-x-5 lg:space-x-8 text-sm items-center relative z-50">
             <!-- Services Dropdown Group -->
             <div class="group relative h-10 flex items-center">
                 <a href="{{ route('services.index') }}"
@@ -190,13 +190,50 @@
                 </div>
             </div>
 
+            <!-- Case Studies (formerly Portfolio) -->
+            <a href="{{ route('portfolio') }}"
+                class="{{ request()->routeIs('portfolio*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Case Studies</a>
+
+            <!-- About Us -->
             <a href="{{ route('home') }}#about"
                 class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
+
+            <!-- Team (formerly Our Team) -->
             <a href="{{ route('team') }}"
-                class="{{ request()->routeIs('team') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Our
-                Team</a>
-            <a href="{{ route('portfolio') }}"
-                class="{{ request()->routeIs('portfolio*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Portfolio</a>
+                class="{{ request()->routeIs('team') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Team</a>
+
+            <!-- Resources Dropdown Group (with Article) -->
+            <div class="group relative h-10 flex items-center">
+                <a href="javascript:void(0)"
+                    class="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1 py-3 px-2 rounded-lg transition-colors hover:bg-gray-50/50">
+                    Resources <i data-feather="chevron-down"
+                        class="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180"></i>
+                </a>
+
+                <div
+                    class="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-4 hidden group-hover:block z-[100]">
+                    <div
+                        class="bg-white rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] border border-gray-100 p-3 ring-1 ring-black/5">
+                        <a href="javascript:void(0)"
+                            class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all duration-200 group/item border border-transparent hover:border-blue-100">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex flex-shrink-0 items-center justify-center transition-transform group-hover/item:scale-110">
+                                <i data-feather="file-text" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-bold text-gray-800 text-sm group-hover/item:text-blue-600 transition-colors">
+                                    Article</div>
+                                <p class="text-xs text-gray-500">Guides, insights & news</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact (links to Contact Us page) -->
+            <a href="{{ route('contact') }}"
+                class="{{ request()->routeIs('contact') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-1' : 'text-gray-700 hover:text-blue-600 font-medium' }} transition-colors">Contact</a>
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
@@ -220,27 +257,47 @@
 
     <!-- Mobile Menu Drawer -->
     <nav id="mobile-menu"
-        class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full z-40 border-t border-gray-100">
+        class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full z-40 border-t border-gray-100 max-h-[calc(100vh-80px)] overflow-y-auto">
         <a href="{{ route('services.index') }}"
-            class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('services.*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('services.*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Services
         </a>
         <a href="{{ route('home') }}#industries"
-            class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
             Industries
         </a>
+        <!-- Mobile Case Studies Link -->
+        <a href="{{ route('portfolio') }}"
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('portfolio*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
+            Case Studies
+        </a>
         <a href="{{ route('home') }}#about"
-            class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
             About Us
         </a>
         <a href="{{ route('team') }}"
-            class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('team') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
-            Our Team
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('team') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
+            Team
         </a>
-        <!-- Mobile Portfolio Link -->
-        <a href="{{ route('portfolio') }}"
-            class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('portfolio*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
-            Portfolio
+        <!-- Mobile Resources with Article dropdown -->
+        <div class="border-b border-gray-100">
+            <button type="button"
+                id="mobile-resources-toggle"
+                class="w-full flex items-center justify-between px-6 py-3.5 hover:bg-blue-50 text-gray-700 font-medium transition-colors focus:outline-none">
+                <span>Resources</span>
+                <i data-feather="chevron-down" id="mobile-res-arrow" class="w-4 h-4 transition-transform duration-200"></i>
+            </button>
+            <div id="mobile-resources-sub" class="hidden bg-gray-50/80 px-8 py-2 border-t border-gray-100">
+                <a href="javascript:void(0)" class="flex items-center gap-3 py-2 text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                    <i data-feather="file-text" class="w-4 h-4 text-blue-600"></i>
+                    <span class="font-medium">Article</span>
+                </a>
+            </div>
+        </div>
+        <!-- Mobile Contact Link -->
+        <a href="{{ route('contact') }}"
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('contact') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
+            Contact
         </a>
         <div class="px-6 py-4">
             <a href="{{ route('free-trial') }}"
@@ -249,4 +306,20 @@
             </a>
         </div>
     </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const resToggle = document.getElementById('mobile-resources-toggle');
+            const resSub = document.getElementById('mobile-resources-sub');
+            const resArrow = document.getElementById('mobile-res-arrow');
+            if (resToggle && resSub) {
+                resToggle.addEventListener('click', function () {
+                    resSub.classList.toggle('hidden');
+                    if (resArrow) {
+                        resArrow.classList.toggle('-rotate-180');
+                    }
+                });
+            }
+        });
+    </script>
 </header>
