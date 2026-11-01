@@ -142,29 +142,17 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @forelse ($services as $service)
-                    @php
-                        $colorClasses = match ($service->badge_color) {
-                            'green' => ['bg' => 'bg-green-100', 'text' => 'text-green-600', 'btn_bg' => 'bg-green-50 hover:bg-green-100', 'btn_text' => 'text-green-600'],
-                            'purple' => ['bg' => 'bg-purple-100', 'text' => 'text-purple-600', 'btn_bg' => 'bg-purple-50 hover:bg-purple-100', 'btn_text' => 'text-purple-600'],
-                            'yellow' => ['bg' => 'bg-yellow-100', 'text' => 'text-yellow-600', 'btn_bg' => 'bg-yellow-50 hover:bg-yellow-100', 'btn_text' => 'text-yellow-600'],
-                            'red' => ['bg' => 'bg-red-100', 'text' => 'text-red-600', 'btn_bg' => 'bg-red-50 hover:bg-red-100', 'btn_text' => 'text-red-600'],
-                            default => ['bg' => 'bg-blue-100', 'text' => 'text-blue-600', 'btn_bg' => 'bg-blue-50 hover:bg-blue-100', 'btn_text' => 'text-blue-600'],
-                        };
-                    @endphp
                     <div
                         class="p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-6">
                                 <div
-                                    class="flex items-center justify-center h-14 w-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} transition-transform group-hover:scale-105">
+                                    class="flex items-center justify-center h-14 w-14 rounded-xl bg-blue-100 text-blue-600 transition-transform group-hover:scale-105">
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                 </div>
-                                <!-- <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
-                                                                                                                    {{ $service->category }}
-                                                                                                                </span> -->
                             </div>
 
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                            <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
                                 {{ $service->title }}
                             </h3>
                             <p class="text-gray-600 text-sm leading-relaxed mb-4">
@@ -184,7 +172,7 @@
                         </div>
 
                         <a href="{{ route('services.show', $service->slug) }}"
-                            class="mt-4 self-start {{ $colorClasses['btn_text'] }} font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 {{ $colorClasses['btn_bg'] }} inline-flex items-center gap-1.5">
+                            class="mt-4 self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5">
                             <span>Explore Details</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>

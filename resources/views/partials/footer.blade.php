@@ -80,6 +80,9 @@
                         <li><a href="{{ route('services.show', 'video-annotation') }}"
                                 class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video
                                 Annotation</a></li>
+                        <li><a href="{{ route('services.show', 'lidar-3d') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LiDAR &
+                                3D Point Cloud</a></li>
                     </ul>
                 </div>
 

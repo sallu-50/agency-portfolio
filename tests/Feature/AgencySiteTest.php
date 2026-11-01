@@ -50,7 +50,7 @@ class AgencySiteTest extends TestCase
 
     public function test_service_detail_pages_load_successfully(): void
     {
-        $services = ['data-collection', 'computer-vision', 'nlp', 'audio-annotation', 'video-annotation'];
+        $services = ['data-collection', 'computer-vision', 'nlp', 'audio-annotation', 'video-annotation', 'lidar-3d'];
 
         foreach ($services as $slug) {
             $response = $this->get(route('services.show', $slug));

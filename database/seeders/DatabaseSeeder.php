@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'Image & Computer Vision',
                 'category' => 'Core',
                 'icon' => 'image',
-                'badge_color' => 'green',
+                'badge_color' => 'blue',
                 'short_description' => 'Bounding boxes, segmentation & 3D LiDAR.',
                 'description' => 'We provide a wide range of computer vision annotation services to power your machine learning models, from autonomous driving to retail and medical imaging.',
                 'features' => [
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'NLP & Text Annotation',
                 'category' => 'Core',
                 'icon' => 'type',
-                'badge_color' => 'purple',
+                'badge_color' => 'blue',
                 'short_description' => 'NER, sentiment analysis & LLM RLHF.',
                 'description' => 'High-quality NLP annotation services to train and validate your language models. Our expertise covers named entity recognition, sentiment analysis, and conversational AI alignment.',
                 'features' => [
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'Audio Transcription',
                 'category' => 'Specialized',
                 'icon' => 'mic',
-                'badge_color' => 'yellow',
+                'badge_color' => 'blue',
                 'short_description' => 'Speech-to-text & acoustic event tagging.',
                 'description' => 'Our audio annotation services help you build robust voice and sound recognition models with extreme phonetic precision and multi-speaker separation.',
                 'features' => [
@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'Video Analysis',
                 'category' => 'Specialized',
                 'icon' => 'video',
-                'badge_color' => 'red',
+                'badge_color' => 'blue',
                 'short_description' => 'Object tracking across frames & activities.',
                 'description' => 'Our video annotation services are designed to help you understand motion, kinematics, and human behavior across high frame-rate video streams.',
                 'features' => [
@@ -99,6 +99,23 @@ class DatabaseSeeder extends Seeder
                     'Kinematic Pose Estimation & Trajectory Analysis',
                 ],
                 'sort_order' => 5,
+            ],
+            [
+                'slug' => 'lidar-3d',
+                'title' => 'LiDAR & 3D Point Cloud',
+                'category' => 'Specialized',
+                'icon' => 'box',
+                'badge_color' => 'blue',
+                'short_description' => 'Point clouds, 3D cuboids & sensor fusion.',
+                'description' => 'High-precision 3D point cloud and LiDAR annotation services for autonomous systems, robotics, and spatial AI. We support multi-sensor fusion, continuous 3D cuboids, and point-level segmentation.',
+                'features' => [
+                    '3D Bounding Cuboids & Multi-Sensor Fusion',
+                    'Dense Point Cloud Semantic Segmentation',
+                    'LiDAR Tracking & Kinematic Trajectory Mapping',
+                    'Sub-Centimeter Spatial Alignment & Edge Case QA',
+                    'Multi-Frame Sensor Synchronization (LiDAR + Camera)',
+                ],
+                'sort_order' => 6,
             ],
         ];
 

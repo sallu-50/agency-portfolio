@@ -134,7 +134,7 @@
                                     </div>
                                 </a>
 
-                                <a href="{{ route('services.show', 'computer-vision') }}"
+                                <a href="{{ route('services.show', 'lidar-3d') }}"
                                     class="flex items-start gap-4 p-2 -mx-2 rounded-xl hover:bg-gray-50 transition-all duration-200 group/item">
                                     <div
                                         class="mt-1 w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex flex-shrink-0 items-center justify-center">
