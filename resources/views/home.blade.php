@@ -112,7 +112,7 @@
                     <p class="text-xs md:text-sm text-gray-500 font-medium">Target Accuracy</p>
                 </div>
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">100k+</div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100k+</div>
                     <p class="text-xs md:text-sm text-gray-500 font-medium">Annotations Delivered</p>
                 </div>
                 <div>
@@ -120,7 +120,7 @@
                     <p class="text-xs md:text-sm text-gray-500 font-medium">Fast Turnaround</p>
                 </div>
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">100%</div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100%</div>
                     <p class="text-xs md:text-sm text-gray-500 font-medium">NDA-Protected</p>
                 </div>
             </div>
@@ -198,10 +198,6 @@
     <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <!-- <span
-                                                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-3">
-                                                        <i data-feather="award" class="w-3.5 h-3.5"></i> Enterprise Quality
-                                                    </span> -->
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4" style="font-size: 24px; line-height: 1.33;">Why Choose Marveit AI?
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -215,7 +211,7 @@
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="shield-check" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Multi-Tier Consensus QA</h3>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">Multi-Tier Consensus QA</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         Every dataset undergoes two-tier annotator agreement checks, random statistical sampling, and senior
                         QA signoff to guarantee 99.8%+ benchmark compliance.
@@ -223,10 +219,10 @@
                 </div>
 
                 <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start">
-                    <div class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="zap" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Rapid Elastic Scaling</h3>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">Rapid Elastic Scaling</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         Scale your labeling pipeline from hundreds of frames to millions of multi-modal files in days,
                         without sacrificing precision or data cleanliness.
@@ -234,10 +230,10 @@
                 </div>
 
                 <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start">
-                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="lock" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">SOC 2 & GDPR Compliance</h3>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">SOC 2 & GDPR Compliance</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         Encrypted vault transfers, on-premise or cloud VPN gateways, bilateral non-disclosure agreements,
                         and strict PII anonymization procedures.
@@ -251,10 +247,6 @@
     <section id="industries" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
-                <!-- <span
-                                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 mb-3">
-                                                    <i data-feather="briefcase" class="w-3.5 h-3.5"></i> Sectors We Empower
-                                                </span> -->
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4" style="font-size: 24px; line-height: 1.33;">Industries Served</h2>
                 <p class="text-base text-gray-600">Tailored data collection and annotation pipelines built for
                     domain-specific models.</p>
@@ -265,34 +257,34 @@
                     <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
                         <i data-feather="truck" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-gray-900 mb-2">Automotive & ADAS</h3>
+                    <h3 class="font-bold text-blue-600 mb-2 hover:text-blue-700 transition-colors">Automotive & ADAS</h3>
                     <p class="text-xs text-gray-500 leading-relaxed">3D point clouds, LiDAR cuboids, lane detection, and
                         pedestrian kinematics for autonomous driving systems.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-10 h-10 rounded-lg bg-green-100 text-green-600 flex items-center justify-center mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
                         <i data-feather="activity" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-gray-900 mb-2">Healthcare & Bio</h3>
+                    <h3 class="font-bold text-blue-600 mb-2 hover:text-blue-700 transition-colors">Healthcare & Bio</h3>
                     <p class="text-xs text-gray-500 leading-relaxed">Medical imaging, CT/MRI segmentation, clinical record
                         text tagging, and privacy-shielded HIPAA protocols.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
                         <i data-feather="shopping-bag" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-gray-900 mb-2">Retail & E-Commerce</h3>
+                    <h3 class="font-bold text-blue-600 mb-2 hover:text-blue-700 transition-colors">Retail & E-Commerce</h3>
                     <p class="text-xs text-gray-500 leading-relaxed">SKU attribute tagging, visual search indexing, product
                         categorization, and customer sentiment evaluation.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-10 h-10 rounded-lg bg-yellow-100 text-yellow-600 flex items-center justify-center mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
                         <i data-feather="sun" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-gray-900 mb-2">Smart Agriculture</h3>
+                    <h3 class="font-bold text-blue-600 mb-2 hover:text-blue-700 transition-colors">Smart Agriculture</h3>
                     <p class="text-xs text-gray-500 leading-relaxed">Aerial drone imagery, multispectral crop health
                         classification, weed identification, and yield forecasting.</p>
                 </div>
