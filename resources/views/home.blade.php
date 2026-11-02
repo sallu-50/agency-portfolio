@@ -104,7 +104,7 @@
     </section>
 
     <!-- Metrics Strip -->
-    <section class="border-y border-gray-100 bg-white py-10 shadow-sm relative z-10">
+    <section class="border-t border-gray-100 bg-white py-10 shadow-sm relative z-10">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -140,8 +140,8 @@
                 </p>
             </div>
 
-            <!-- Single White Rounded Card - 100% Borderless with Soft Shadow (Matching Reference Screenshot) -->
-            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-md px-6 py-8 md:px-10 md:py-10 border border-gray-100/60">
+            <!-- Single White Rounded Card - 100% Borderless with Rich Drop Shadow -->
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl px-6 py-8 md:px-10 md:py-10">
                 <div class="flex flex-col gap-y-7 md:gap-y-9">
                     <!-- Row 1: 6 Platforms -->
                     <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-5">
@@ -260,7 +260,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-white border-y border-gray-100 shadow-sm relative z-10">
+    <section id="services" class="py-24 bg-white border-b border-gray-100 shadow-sm relative z-10">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
 
