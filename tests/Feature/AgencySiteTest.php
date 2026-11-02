@@ -102,6 +102,39 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Custom / Client', false);
     }
 
+    public function test_home_page_displays_why_ai_teams_choose_marveit_section(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Why AI Teams Choose Marveit for Data Annotation', false);
+        $response->assertSee('Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.', false);
+
+        // Verify 6 pillars
+        $response->assertSee('Multi-Stage Quality Control', false);
+        $response->assertSee('Every batch goes through annotator work, peer review and senior QA sign-off', false);
+
+        $response->assertSee('Pilot First, Then Scale', false);
+        $response->assertSee('We start with a small pilot on your own data', false);
+
+        $response->assertSee('Teams That Scale With Your Roadmap', false);
+        $response->assertSee('Go from a few hundred files to millions without losing consistency', false);
+
+        $response->assertSee('Secure Data Handling', false);
+        $response->assertSee('NDA signed before any data is shared', false);
+
+        $response->assertSee('Works in Your Tools', false);
+        $response->assertSee('We label in CVAT, Label Studio, Labelbox, V7, SuperAnnotate', false);
+
+        $response->assertSee('Clear Communication', false);
+        $response->assertSee('A dedicated project manager, regular progress reports and a fast feedback loop', false);
+
+        // Verify bottom CTA sub-block
+        $response->assertSee('See our quality process on your own data.', false);
+        $response->assertSee('Start Free Trial', false);
+        $response->assertSee('Talk to an Expert', false);
+    }
+
     public function test_service_detail_pages_load_successfully(): void
     {
         $services = ['data-collection', 'computer-vision', 'nlp', 'audio-annotation', 'video-annotation', 'lidar-3d'];

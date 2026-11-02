@@ -645,14 +645,115 @@
 
 
 
-    <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Choose Us?</h2>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                We combine advanced tools with a dedicated workforce to deliver pixel-perfect annotations with speed and
-                accuracy, ensuring your AI projects are a success.
-            </p>
+    <!-- Why Choose Us / Quality Pillars -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
+                    style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
+                </h2>
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                    Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Multi-Stage Quality Control -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="check-circle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                        Multi-Stage Quality Control
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Every batch goes through annotator work, peer review and senior QA sign-off. We audit random samples against your guidelines and send an accuracy report with each delivery.
+                    </p>
+                </div>
+
+                <!-- 2. Pilot First, Then Scale -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                        Pilot First, Then Scale
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We start with a small pilot on your own data. We refine the guidelines with you and calibrate annotators on gold-standard samples before scaling to full production.
+                    </p>
+                </div>
+
+                <!-- 3. Teams That Scale With Your Roadmap -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                        Teams That Scale With Your Roadmap
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Go from a few hundred files to millions without losing consistency. Trained annotator teams ramp up in 3 days, with the same QA process at every volume.
+                    </p>
+                </div>
+
+                <!-- 4. Secure Data Handling -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                        Secure Data Handling
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        NDA signed before any data is shared. Encrypted transfers, role-based access and PII anonymization where required. We can also work inside your VPN or environment.
+                    </p>
+                </div>
+
+                <!-- 5. Works in Your Tools -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="sliders" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                        Works in Your Tools
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We label in CVAT, Label Studio, Labelbox, V7, SuperAnnotate, Scale AI, Supervisely, Audacity, Praat, Prodigy, Doccano or in your own platform, so your pipeline and formats stay unchanged.
+                    </p>
+                </div>
+
+                <!-- 6. Clear Communication -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-feather="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                        Clear Communication
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        A dedicated project manager, regular progress reports and a fast feedback loop. If a batch misses your accuracy target, we correct it at no extra cost.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom CTA Sub-block -->
+            <div class="mt-16 text-center max-w-xl mx-auto">
+                <p class="text-base md:text-lg font-semibold text-gray-800 mb-6">
+                    See our quality process on your own data.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="free-trial.html"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
+                        <span>Start Free Trial</span>
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="contact.html"
+                        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-200">
+                        Talk to an Expert
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
