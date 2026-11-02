@@ -79,6 +79,29 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Image, audio, video and text collection', false);
     }
 
+    public function test_home_page_displays_annotation_tools_and_platforms_section(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Annotation Tools and Platforms We Work With', false);
+        $response->assertSee('We work inside industry-standard annotation platforms, or on your own, so your data stays in your existing workflow.', false);
+
+        // Verify platforms
+        $response->assertSee('CVAT', false);
+        $response->assertSee('Label Studio', false);
+        $response->assertSee('Labelbox', false);
+        $response->assertSee('V7', false);
+        $response->assertSee('SuperAnnotate', false);
+        $response->assertSee('Scale AI', false);
+        $response->assertSee('Supervisely', false);
+        $response->assertSee('Audacity', false);
+        $response->assertSee('Praat', false);
+        $response->assertSee('Prodigy', false);
+        $response->assertSee('Doccano', false);
+        $response->assertSee('Custom / Client', false);
+    }
+
     public function test_service_detail_pages_load_successfully(): void
     {
         $services = ['data-collection', 'computer-vision', 'nlp', 'audio-annotation', 'video-annotation', 'lidar-3d'];
