@@ -525,15 +525,15 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 pt-4">
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">LiDAR
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">LiDAR
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Video
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Video
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Annotation</span>
                     </div>
                 </div>
@@ -561,15 +561,15 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 pt-4">
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Segmentation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Text
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Text
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Data
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Data
                             Collection</span>
                     </div>
                 </div>
@@ -596,15 +596,15 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 pt-4">
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">NLP
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">NLP
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Data
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Data
                             Collection</span>
                     </div>
                 </div>
@@ -632,15 +632,15 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 pt-4">
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Segmentation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Polygon
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Polygon
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Video
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Video
                             Annotation</span>
                     </div>
                 </div>
@@ -668,12 +668,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 pt-4">
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Audio
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Audio
                             Transcription</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">NLP
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">NLP
                             Annotation</span>
                     </div>
                 </div>
@@ -701,14 +701,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 pt-4">
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">RLHF</span>
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">RLHF</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Text
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Text
                             Annotation</span>
                         <span
-                            class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Data
+                            class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Data
                             Collection</span>
                     </div>
                 </div>
