@@ -9,10 +9,10 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
-                                                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
-                                                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                                                    <span>High-Quality Data Annotation</span>
-                                                </div> -->
+                                                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                                                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                                                        <span>High-Quality Data Annotation</span>
+                                                    </div> -->
                 <h1 class="font-bold text-gray-900 leading-tight mb-6 tracking-tight"
                     style="font-size: 32px; line-height: 1.25;">
                     Data Annotation Services for<span class="text-blue-600"> Computer Vision and Machine Learning</span>
@@ -31,9 +31,9 @@
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </a>
                     <!-- <a href="{{ route('services.index') }}"
-                                                            class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                                                            <span>Explore Services</span>
-                                                        </a> -->
+                                                                class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                                                                <span>Explore Services</span>
+                                                            </a> -->
                 </div>
             </div>
 
@@ -136,7 +136,8 @@
                     Annotation Tools and Platforms We Work With
                 </h2>
                 <p class="text-xs md:text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                    We work inside industry-standard annotation platforms, or on your own, so your data stays in your existing workflow.
+                    We work inside industry-standard annotation platforms, or on your own, so your data stays in your
+                    existing workflow.
                 </p>
             </div>
 
@@ -374,7 +375,8 @@
                     style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.
+                    Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not
+                    just promises.
                 </p>
             </div>
 
@@ -497,7 +499,8 @@
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                     style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and your industry’s formats.
+                    From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and
+                    your industry’s formats.
                 </p>
             </div>
 
@@ -737,14 +740,15 @@
 
     <!-- Sample Data CTA -->
     <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 py-6">
             <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight"
                     style="font-size: 24px; line-height: 1.33;">
                     Let’s Label a Sample of Your Data
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.
+                    Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign
+                    an NDA first, and share an accuracy report with every delivery.
                 </p>
                 <div class="inline-flex items-center justify-center">
                     <a href="{{ route('free-trial') }}"
