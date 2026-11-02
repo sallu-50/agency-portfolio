@@ -168,6 +168,17 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Don’t see your industry? We write custom annotation guidelines for any domain.', false);
     }
 
+    public function test_home_page_displays_sample_data_cta_section(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Let’s Label a Sample of Your Data', false);
+        $response->assertSee('Send us a small sample and see our annotation quality before you commit.', false);
+        $response->assertSee('We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.', false);
+        $response->assertSee('Start Free Trial', false);
+    }
+
     public function test_service_detail_pages_load_successfully(): void
     {
         $services = ['data-collection', 'computer-vision', 'nlp', 'audio-annotation', 'video-annotation', 'lidar-3d'];
