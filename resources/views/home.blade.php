@@ -128,7 +128,7 @@
     </section>
 
     <!-- Annotation Tools and Platforms Section -->
-    <section class="py-12 md:py-16 bg-gray-50/70 border-b border-gray-100">
+    <section class="py-12 md:py-16 bg-gray-50/70">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-8">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-2"
@@ -140,8 +140,8 @@
                 </p>
             </div>
 
-            <!-- Single White Rounded Card with Generous 2-Line Spacing (Matching Reference Screenshot) -->
-            <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-gray-200/80 shadow-sm px-6 py-8 md:px-10 md:py-10">
+            <!-- Single White Rounded Card - 100% Borderless with Soft Shadow (Matching Reference Screenshot) -->
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-sm px-6 py-8 md:px-10 md:py-10">
                 <div class="flex flex-col gap-y-7 md:gap-y-9">
                     <!-- Row 1: 6 Platforms -->
                     <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-5">
@@ -249,7 +249,7 @@
                         </div>
 
                         <!-- 12. Custom / Client Platforms -->
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200 text-blue-700 text-xs font-semibold tracking-tight shadow-xs hover:bg-blue-100 transition-all cursor-default">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold tracking-tight hover:bg-blue-100 transition-all cursor-default">
                             <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                             <span>Custom / Client Platforms</span>
                         </div>
