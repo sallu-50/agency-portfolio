@@ -104,7 +104,7 @@
     </section>
 
     <!-- Metrics Strip -->
-    <section class="border-y border-gray-100 bg-gray-50/50 py-10">
+    <section class="border-y border-gray-100 bg-white py-10 shadow-sm relative z-10">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -141,7 +141,7 @@
             </div>
 
             <!-- Single White Rounded Card - 100% Borderless with Soft Shadow (Matching Reference Screenshot) -->
-            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-sm px-6 py-8 md:px-10 md:py-10">
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-md px-6 py-8 md:px-10 md:py-10 border border-gray-100/60">
                 <div class="flex flex-col gap-y-7 md:gap-y-9">
                     <!-- Row 1: 6 Platforms -->
                     <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-5">
@@ -260,7 +260,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-gray-50">
+    <section id="services" class="py-24 bg-white border-y border-gray-100 shadow-sm relative z-10">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center mb-16">
 
@@ -276,7 +276,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @forelse ($services as $service)
                     <div
-                        class="p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group">
+                        class="p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-6">
                                 <div
@@ -328,7 +328,7 @@
     </section>
 
     <!-- Why Choose Us / Quality Pillars -->
-    <section id="about" class="py-24 bg-white">
+    <section id="about" class="py-24 bg-gray-50/60 border-b border-gray-100 relative">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
@@ -341,7 +341,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. Multi-Stage Quality Control -->
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="check-circle" class="w-6 h-6"></i>
                     </div>
@@ -354,7 +354,7 @@
                 </div>
 
                 <!-- 2. Pilot First, Then Scale -->
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="trending-up" class="w-6 h-6"></i>
                     </div>
@@ -367,7 +367,7 @@
                 </div>
 
                 <!-- 3. Teams That Scale With Your Roadmap -->
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="users" class="w-6 h-6"></i>
                     </div>
@@ -380,7 +380,7 @@
                 </div>
 
                 <!-- 4. Secure Data Handling -->
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="shield" class="w-6 h-6"></i>
                     </div>
@@ -393,7 +393,7 @@
                 </div>
 
                 <!-- 5. Works in Your Tools -->
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="sliders" class="w-6 h-6"></i>
                     </div>
@@ -406,7 +406,7 @@
                 </div>
 
                 <!-- 6. Clear Communication -->
-                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
+                <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="message-square" class="w-6 h-6"></i>
                     </div>
@@ -440,7 +440,7 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="industries" class="py-24 bg-gray-50 border-t border-gray-100">
+    <section id="industries" class="py-24 bg-white border-y border-gray-100 shadow-sm relative z-10">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
@@ -452,7 +452,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Automotive & Autonomous Driving -->
-                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="truck" class="w-6 h-6"></i>
@@ -478,7 +478,7 @@
                 </div>
 
                 <!-- Card 2: Healthcare & Medical AI -->
-                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="activity" class="w-6 h-6"></i>
@@ -504,7 +504,7 @@
                 </div>
 
                 <!-- Card 3: Retail & E-Commerce -->
-                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="shopping-bag" class="w-6 h-6"></i>
@@ -530,7 +530,7 @@
                 </div>
 
                 <!-- Card 4: Agriculture & Drone Imagery -->
-                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="sun" class="w-6 h-6"></i>
@@ -556,7 +556,7 @@
                 </div>
 
                 <!-- Card 5: Voice AI & Conversational Systems -->
-                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="mic" class="w-6 h-6"></i>
@@ -581,7 +581,7 @@
                 </div>
 
                 <!-- Card 6: LLM & Generative AI -->
-                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="cpu" class="w-6 h-6"></i>
@@ -629,20 +629,22 @@
 
 
     <!-- Sample Data CTA -->
-    <section id="sample-data-cta" class="py-24 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-6 text-center max-w-3xl">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight" style="font-size: 24px; line-height: 1.33;">
-                Let’s Label a Sample of Your Data
-            </h2>
-            <p class="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
-                Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.
-            </p>
-            <div class="inline-flex items-center justify-center">
-                <a href="{{ route('free-trial') }}"
-                    class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
-                    <span>Start Free Trial</span>
-                    <i data-feather="arrow-right" class="w-4 h-4"></i>
-                </a>
+    <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight" style="font-size: 24px; line-height: 1.33;">
+                    Let’s Label a Sample of Your Data
+                </h2>
+                <p class="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.
+                </p>
+                <div class="inline-flex items-center justify-center">
+                    <a href="{{ route('free-trial') }}"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
+                        <span>Start Free Trial</span>
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
