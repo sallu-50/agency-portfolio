@@ -9,10 +9,10 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
-                                                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
-                                                            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                                                            <span>High-Quality Data Annotation</span>
-                                                        </div> -->
+                                                                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                                                                <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                                                                <span>High-Quality Data Annotation</span>
+                                                            </div> -->
                 <h1 class="font-bold text-gray-900 leading-tight mb-6 tracking-tight"
                     style="font-size: 32px; line-height: 1.25;">
                     Data Annotation Services for<span class="text-blue-600"> Computer Vision and Machine Learning</span>
@@ -31,9 +31,9 @@
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </a>
                     <!-- <a href="{{ route('services.index') }}"
-                                                                    class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                                                                    <span>Explore Services</span>
-                                                                </a> -->
+                                                                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                                                                        <span>Explore Services</span>
+                                                                    </a> -->
                 </div>
             </div>
 
@@ -741,7 +741,8 @@
     <!-- Sample Data CTA -->
     <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
         <div class="container mx-auto px-6 py-10">
-            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center">
+            <div
+                class="max-w-4xl mx-auto bg-white rounded-3xl p-10 py-6 md:p-14 border border-gray-100 shadow-md text-center">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight"
                     style="font-size: 24px; line-height: 1.33;">
                     Let’s Label a Sample of Your Data
