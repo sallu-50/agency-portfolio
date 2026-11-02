@@ -63,26 +63,26 @@
             <div class="footer-mobile-nav">
                 <!-- 2. Core Services -->
                 <div>
-                    <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Core Services</h4>
+                    <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Our Services</h4>
                     <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
-                        <li><a href="{{ route('services.show', 'data-collection') }}"
-                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data
-                                Collection</a></li>
                         <li><a href="{{ route('services.show', 'computer-vision') }}"
-                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Computer
-                                Vision</a></li>
-                        <li><a href="{{ route('services.show', 'nlp') }}"
-                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">NLP &
-                                Text</a></li>
-                        <li><a href="{{ route('services.show', 'audio-annotation') }}"
-                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio
-                                Transcription</a></li>
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Image
+                                Annotation</a></li>
                         <li><a href="{{ route('services.show', 'video-annotation') }}"
                                 class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video
                                 Annotation</a></li>
                         <li><a href="{{ route('services.show', 'lidar-3d') }}"
                                 class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LiDAR &
-                                3D Point Cloud</a></li>
+                                3D Annotation</a></li>
+                        <li><a href="{{ route('services.show', 'nlp') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Text &
+                                NLP Annotation</a></li>
+                        <li><a href="{{ route('services.show', 'audio-annotation') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio
+                                Annotation & Transcription</a></li>
+                        <li><a href="{{ route('services.show', 'data-collection') }}"
+                                class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data
+                                Collection</a></li>
                     </ul>
                 </div>
 

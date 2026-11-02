@@ -44,8 +44,39 @@ class AgencySiteTest extends TestCase
         $response->assertSee('AI Annotation', false);
         $response->assertSee('Services', false);
         $response->assertSee('Data Collection', false);
-        $response->assertSee('Image &amp; Computer Vision', false);
-        $response->assertSee('NLP &amp; Text Annotation', false);
+        $response->assertSee('Image Annotation', false);
+        $response->assertSee('Text &amp; NLP Annotation', false);
+    }
+
+    public function test_home_page_displays_services_with_requested_specification_and_buttons(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+
+        // Verify titles
+        $response->assertSee('Image Annotation', false);
+        $response->assertSee('Video Annotation', false);
+        $response->assertSee('LiDAR &amp; 3D Annotation', false);
+        $response->assertSee('Text &amp; NLP Annotation', false);
+        $response->assertSee('Audio Annotation &amp; Transcription', false);
+        $response->assertSee('Data Collection', false);
+
+        // Verify button labels
+        $response->assertSee('Explore image annotation', false);
+        $response->assertSee('Explore video annotation', false);
+        $response->assertSee('Explore LiDAR annotation', false);
+        $response->assertSee('Explore NLP annotation', false);
+        $response->assertSee('Explore audio annotation', false);
+        $response->assertSee('Explore data collection', false);
+
+        // Verify key features
+        $response->assertSee('2D bounding boxes, polygons and keypoints', false);
+        $response->assertSee('Multi-object tracking across frames', false);
+        $response->assertSee('3D cuboid labeling', false);
+        $response->assertSee('Named entity recognition and entity linking', false);
+        $response->assertSee('Timestamped multi-language transcription', false);
+        $response->assertSee('Image, audio, video and text collection', false);
     }
 
     public function test_service_detail_pages_load_successfully(): void

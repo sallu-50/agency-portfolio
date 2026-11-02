@@ -173,7 +173,7 @@
 
                         <a href="{{ route('services.show', $service->slug) }}"
                             class="mt-4 self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5">
-                            <span>Explore Details</span>
+                            <span>{{ $service->button_text }}</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>

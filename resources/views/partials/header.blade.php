@@ -81,7 +81,7 @@
                                     <div>
                                         <div
                                             class="text-gray-800 font-bold mb-0.5 text-sm group-hover/item:text-green-600 transition-colors">
-                                            Image & Vision</div>
+                                            Image Annotation</div>
                                         <p class="text-xs text-gray-500">Bounding boxes & segmentation.</p>
                                     </div>
                                 </a>
@@ -95,7 +95,7 @@
                                     <div>
                                         <div
                                             class="text-gray-800 font-bold mb-0.5 text-sm group-hover/item:text-purple-600 transition-colors">
-                                            NLP & Text</div>
+                                            Text & NLP Annotation</div>
                                         <p class="text-xs text-gray-500">NER, sentiment & RLHF.</p>
                                     </div>
                                 </a>
@@ -115,7 +115,7 @@
                                     <div>
                                         <div
                                             class="text-gray-800 font-bold mb-0.5 text-sm group-hover/item:text-yellow-600 transition-colors">
-                                            Audio Transcription</div>
+                                            Audio Annotation</div>
                                         <p class="text-xs text-gray-500">Speech-to-text & acoustic tags.</p>
                                     </div>
                                 </a>
@@ -129,7 +129,7 @@
                                     <div>
                                         <div
                                             class="text-gray-800 font-bold mb-0.5 text-sm group-hover/item:text-red-600 transition-colors">
-                                            Video Analysis</div>
+                                            Video Annotation</div>
                                         <p class="text-xs text-gray-500">Object tracking & activities.</p>
                                     </div>
                                 </a>
@@ -143,7 +143,7 @@
                                     <div>
                                         <div
                                             class="text-gray-800 font-bold mb-0.5 text-sm group-hover/item:text-indigo-600 transition-colors">
-                                            LiDAR & 3D</div>
+                                            LiDAR & 3D Annotation</div>
                                         <p class="text-xs text-gray-500">Point clouds for autonomy.</p>
                                     </div>
                                 </a>

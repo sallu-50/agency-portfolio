@@ -27,6 +27,8 @@ class ServiceForm
                     ->required()
                     ->default('blue'),
                 TextInput::make('short_description'),
+                TextInput::make('button_text')
+                    ->placeholder('e.g., Explore image annotation'),
                 Textarea::make('description')
                     ->columnSpanFull(),
                 Textarea::make('features')
