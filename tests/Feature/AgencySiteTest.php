@@ -135,6 +135,39 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Talk to an Expert', false);
     }
 
+    public function test_home_page_displays_industries_served_section(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Data Annotation Services for Every AI Industry', false);
+        $response->assertSee('From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and your industry’s formats.', false);
+
+        // Verify 6 cards
+        $response->assertSee('Automotive &amp; Autonomous Driving', false);
+        $response->assertSee('Training data for perception and driver-assistance models.', false);
+        $response->assertSee('LiDAR 3D cuboids, lane and road markings', false);
+
+        $response->assertSee('Healthcare &amp; Medical AI', false);
+        $response->assertSee('Careful labeling for diagnostic and clinical models.', false);
+        $response->assertSee('CT and MRI segmentation, medical image classification', false);
+
+        $response->assertSee('Retail &amp; E-Commerce', false);
+        $response->assertSee('Cleaner catalogs and smarter product search.', false);
+
+        $response->assertSee('Agriculture &amp; Drone Imagery', false);
+        $response->assertSee('Aerial and field data for crop-monitoring models.', false);
+
+        $response->assertSee('Voice AI &amp; Conversational Systems', false);
+        $response->assertSee('Speech and language data for assistants and chatbots.', false);
+
+        $response->assertSee('LLM &amp; Generative AI', false);
+        $response->assertSee('Human feedback data for model training and evaluation.', false);
+
+        // Verify bottom CTA sub-block
+        $response->assertSee('Don’t see your industry? We write custom annotation guidelines for any domain.', false);
+    }
+
     public function test_service_detail_pages_load_successfully(): void
     {
         $services = ['data-collection', 'computer-vision', 'nlp', 'audio-annotation', 'video-annotation', 'lidar-3d'];
