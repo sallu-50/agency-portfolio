@@ -128,9 +128,9 @@
     </section>
 
     <!-- Annotation Tools and Platforms Section -->
-    <section class="py-10 md:py-14 bg-gray-50/60 border-b border-gray-100">
+    <section class="py-12 md:py-16 bg-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-6">
+            <div class="max-w-3xl mx-auto text-center mb-8 md:mb-10">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-2"
                     style="font-size: 22px; line-height: 1.33;">
                     Annotation Tools and Platforms We Work With
@@ -140,11 +140,11 @@
                 </p>
             </div>
 
-            <!-- Single White Rounded Card (matching reference screenshot) -->
-            <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-gray-200/90 shadow-sm px-6 py-6 md:px-10 md:py-6">
-                <div class="flex flex-wrap items-center justify-center gap-x-8 md:gap-x-10 lg:gap-x-12 gap-y-5">
+            <!-- Borderless Partner Logo Bar with Generous Spacing -->
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-7 md:gap-y-9">
                     <!-- 1. CVAT -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="3" width="18" height="18" rx="3" stroke="#0284c7" stroke-width="2.2" stroke-dasharray="3 3"/>
                             <circle cx="12" cy="12" r="3" fill="#0284c7"/>
@@ -153,7 +153,7 @@
                     </div>
 
                     <!-- 2. Label Studio -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                             <rect x="3" y="3" width="12" height="12" rx="2.5" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="2"/>
                             <rect x="9" y="9" width="12" height="12" rx="2.5" fill="#f97316" fill-opacity="0.9" stroke="#ea580c" stroke-width="1.5"/>
@@ -162,7 +162,7 @@
                     </div>
 
                     <!-- 3. Labelbox -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
@@ -170,7 +170,7 @@
                     </div>
 
                     <!-- 4. V7 -->
-                    <div class="inline-flex items-center gap-1.5 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-emerald-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                             <path d="M4 4l6 14 3-7 7-7" stroke="#059669" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -178,7 +178,7 @@
                     </div>
 
                     <!-- 5. SuperAnnotate -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                             <path d="M18 7c0-2-1.8-3.5-4-3.5H9C6.8 3.5 5 5.3 5 7.5S6.8 11.5 9 11.5h6c2.2 0 4 1.8 4 4s-1.8 4-4 4H8" stroke="#9333ea" stroke-width="2.5" stroke-linecap="round"/>
                             <circle cx="18" cy="7" r="2" fill="#c026d3"/>
@@ -188,7 +188,7 @@
                     </div>
 
                     <!-- 6. Scale AI -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                             <rect x="3" y="14" width="7" height="7" rx="1.5"/>
                             <rect x="14" y="14" width="7" height="7" rx="1.5"/>
@@ -198,7 +198,7 @@
                     </div>
 
                     <!-- 7. Supervisely -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-teal-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                             <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke="#0d9488" stroke-width="2"/>
                             <circle cx="12" cy="12" r="3" fill="#0d9488"/>
@@ -207,7 +207,7 @@
                     </div>
 
                     <!-- 8. Audacity -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-amber-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
                             <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
@@ -217,7 +217,7 @@
                     </div>
 
                     <!-- 9. Praat -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-rose-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M2 10v4m4-8v12m4-10v8m4-12v16m4-10v4m4-2v0" stroke="#e11d48" stroke-width="2.5"/>
                         </svg>
@@ -225,7 +225,7 @@
                     </div>
 
                     <!-- 10. Prodigy -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-violet-700 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                             <polygon points="12 2 20 8 16 20 8 20 4 8" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="2"/>
                             <path d="M12 7v10M8 12h8" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"/>
@@ -234,7 +234,7 @@
                     </div>
 
                     <!-- 11. Doccano -->
-                    <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                    <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                         <svg class="h-6 w-6 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                             <polyline points="14 2 14 8 20 8"/>
@@ -244,7 +244,7 @@
                     </div>
 
                     <!-- 12. Custom / Client Platforms -->
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200 text-blue-700 text-xs font-semibold tracking-tight shadow-xs hover:bg-blue-100 transition-all cursor-default">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold tracking-tight hover:bg-blue-100 transition-all cursor-default">
                         <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                         <span>Custom / Client Platforms</span>
                     </div>
