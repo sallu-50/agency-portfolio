@@ -504,7 +504,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Automotive & Autonomous Driving -->
                 <div id="automotive"
-                    class="scroll-mt-28 bg-white px-8 py-11 md:px-9 md:py-12 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -516,7 +516,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             Training data for perception and driver-assistance models.
                         </p>
-                        <div class="pt-6 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
                             <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -525,7 +525,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">LiDAR
                             Annotation</span>
@@ -540,7 +540,7 @@
 
                 <!-- Card 2: Healthcare & Medical AI -->
                 <div id="healthcare"
-                    class="scroll-mt-28 bg-white px-8 py-11 md:px-9 md:py-12 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -552,7 +552,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             Careful labeling for diagnostic and clinical models.
                         </p>
-                        <div class="pt-6 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
                             <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -561,7 +561,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Segmentation</span>
@@ -576,7 +576,7 @@
 
                 <!-- Card 3: Retail & E-Commerce -->
                 <div id="retail"
-                    class="scroll-mt-28 bg-white px-8 py-11 md:px-9 md:py-12 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -588,7 +588,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             Cleaner catalogs and smarter product search.
                         </p>
-                        <div class="pt-6 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
                             <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -596,7 +596,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Annotation</span>
@@ -611,7 +611,7 @@
 
                 <!-- Card 4: Agriculture & Drone Imagery -->
                 <div id="agriculture"
-                    class="scroll-mt-28 bg-white px-8 py-11 md:px-9 md:py-12 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -623,7 +623,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             Aerial and field data for crop-monitoring models.
                         </p>
-                        <div class="pt-6 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
                             <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -632,7 +632,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Segmentation</span>
@@ -647,7 +647,7 @@
 
                 <!-- Card 5: Voice AI & Conversational Systems -->
                 <div id="voice-ai"
-                    class="scroll-mt-28 bg-white px-8 py-11 md:px-9 md:py-12 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -659,7 +659,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             Speech and language data for assistants and chatbots.
                         </p>
-                        <div class="pt-6 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
                             <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -668,7 +668,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Audio
                             Transcription</span>
@@ -680,7 +680,7 @@
 
                 <!-- Card 6: LLM & Generative AI -->
                 <div id="llm"
-                    class="scroll-mt-28 bg-white px-8 py-11 md:px-9 md:py-12 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -692,7 +692,7 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             Human feedback data for model training and evaluation.
                         </p>
-                        <div class="pt-6 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
                             <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -701,7 +701,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">RLHF</span>
                         <span
