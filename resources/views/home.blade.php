@@ -136,8 +136,7 @@
                     Annotation Tools and Platforms We Work With
                 </h2>
                 <p class="text-xs md:text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                    We work inside industry-standard annotation platforms, or on your own, so your data stays in your
-                    existing workflow.
+                    We work inside industry-standard annotation platforms, or on your own, so your data stays in your existing workflow.
                 </p>
             </div>
 
@@ -375,8 +374,7 @@
                     style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not
-                    just promises.
+                    Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.
                 </p>
             </div>
 
@@ -499,15 +497,14 @@
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                     style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
                 <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and
-                    your industry’s formats.
+                    From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and your industry’s formats.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Automotive & Autonomous Driving -->
-                <div
-                    class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                <div id="automotive"
+                    class="scroll-mt-28 bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -542,8 +539,8 @@
                 </div>
 
                 <!-- Card 2: Healthcare & Medical AI -->
-                <div
-                    class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                <div id="healthcare"
+                    class="scroll-mt-28 bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -578,8 +575,8 @@
                 </div>
 
                 <!-- Card 3: Retail & E-Commerce -->
-                <div
-                    class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                <div id="retail"
+                    class="scroll-mt-28 bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -613,8 +610,8 @@
                 </div>
 
                 <!-- Card 4: Agriculture & Drone Imagery -->
-                <div
-                    class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                <div id="agriculture"
+                    class="scroll-mt-28 bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -649,8 +646,8 @@
                 </div>
 
                 <!-- Card 5: Voice AI & Conversational Systems -->
-                <div
-                    class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                <div id="voice-ai"
+                    class="scroll-mt-28 bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -682,8 +679,8 @@
                 </div>
 
                 <!-- Card 6: LLM & Generative AI -->
-                <div
-                    class="bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                <div id="llm"
+                    class="scroll-mt-28 bg-white p-8 md:p-9 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div>
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -747,8 +744,7 @@
                     Let’s Label a Sample of Your Data
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign
-                    an NDA first, and share an accuracy report with every delivery.
+                    Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.
                 </p>
                 <div class="inline-flex items-center justify-center">
                     <a href="{{ route('free-trial') }}"

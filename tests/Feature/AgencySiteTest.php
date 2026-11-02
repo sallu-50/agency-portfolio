@@ -560,4 +560,55 @@ class AgencySiteTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Articles &amp; Resources', false);
     }
+
+    public function test_footer_displays_five_column_structure_and_all_specified_content(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+
+        // Column 1: Logo & Text & Social
+        $response->assertSee('Human-in-the-loop data annotation for computer vision, NLP, audio and video AI.', false);
+        $response->assertSee('Accurate labels, secure data handling and clear delivery, built around your guidelines.', false);
+        $response->assertSee('https://www.linkedin.com/company/marveit', false);
+        $response->assertSee('https://www.facebook.com/marveit', false);
+
+        // Column 2: Services
+        $response->assertSee('Services</h4>', false);
+        $response->assertSee('Data Collection</a>', false);
+        $response->assertSee('Image Annotation</a>', false);
+        $response->assertSee('Video Annotation</a>', false);
+        $response->assertSee('LiDAR & 3D Annotation</a>', false);
+        $response->assertSee('NLP & Text Annotation</a>', false);
+        $response->assertSee('Audio Annotation & Transcription</a>', false);
+
+        // Column 3: Industries
+        $response->assertSee('Industries</h4>', false);
+        $response->assertSee('/#automotive', false);
+        $response->assertSee('/#healthcare', false);
+        $response->assertSee('/#retail', false);
+        $response->assertSee('/#agriculture', false);
+        $response->assertSee('/#voice-ai', false);
+        $response->assertSee('/#llm', false);
+
+        // Column 4: Company
+        $response->assertSee('Company</h4>', false);
+        $response->assertSee('About Us</a>', false);
+        $response->assertSee('Team</a>', false);
+        $response->assertSee('Case Studies</a>', false);
+        $response->assertSee('Resources</a>', false);
+        $response->assertSee('Contact Us</a>', false);
+
+        // Column 5: Get in Touch
+        $response->assertSee('Get in Touch</h4>', false);
+        $response->assertSee('Tell us about your dataset and model goals. A technical lead will reply within 24 hours.', false);
+        $response->assertSee('ebrahim@marveit.com', false);
+        $response->assertSee('Mymensingh, Bangladesh | Serving clients worldwide', false);
+        $response->assertSee('WhatsApp Chat', false);
+
+        // Bottom Bar
+        $response->assertSee('&copy; 2026 Marveit AI. All rights reserved.', false);
+        $response->assertSee('Privacy Policy</a>', false);
+        $response->assertSee('Terms of Service</a>', false);
+    }
 }
