@@ -420,18 +420,18 @@
             </div>
 
             <!-- Bottom CTA Sub-block -->
-            <div class="mt-16 text-center max-w-xl mx-auto">
-                <p class="text-base md:text-lg font-semibold text-gray-800 mb-6">
+            <div class="mt-12 text-center max-w-xl mx-auto">
+                <p class="text-sm md:text-base font-semibold text-gray-800 mb-4">
                     See our quality process on your own data.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div class="inline-flex flex-wrap items-center justify-center gap-3">
                     <a href="{{ route('free-trial') }}"
-                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow transition-all duration-200">
                         <span>Start Free Trial</span>
-                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-200">
+                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-200">
                         Talk to an Expert
                     </a>
                 </div>
