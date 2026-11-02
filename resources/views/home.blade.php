@@ -723,15 +723,17 @@
     <!-- Sample Data CTA -->
     <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight"
-                    style="font-size: 24px; line-height: 1.33;">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center"
+                 style="padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 48px);">
+                <h2 class="text-2xl font-bold text-gray-900 tracking-tight"
+                    style="font-size: 24px; line-height: 1.33; margin-bottom: 20px;">
                     Let’s Label a Sample of Your Data
                 </h2>
-                <p class="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
+                <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
+                   style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
                 <div class="inline-flex items-center justify-center">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>

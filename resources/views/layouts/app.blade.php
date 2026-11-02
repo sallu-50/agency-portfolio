@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link href="{{ asset('dist/output.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/output.css') }}?v={{ filemtime(public_path('dist/output.css')) }}" rel="stylesheet">
 
     <!-- Feather Icons CDN -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
