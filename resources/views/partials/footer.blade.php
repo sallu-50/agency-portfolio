@@ -1,10 +1,24 @@
 <!-- Footer -->
-<footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-800 pt-12 md:pt-14 pb-8">
+<footer id="contact-footer" class="bg-gray-900 text-gray-300 border-t border-gray-800"
+    style="padding-top: 4.5rem; padding-bottom: 3.5rem;">
     <style>
+        #contact-footer {
+            padding-top: 4.5rem !important;
+            padding-bottom: 3.5rem !important;
+        }
+
+        @media (min-width: 768px) {
+            #contact-footer {
+                padding-top: 5rem !important;
+                padding-bottom: 4rem !important;
+            }
+        }
+
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2.25rem;
+            margin-bottom: 3.5rem;
         }
 
         @media (min-width: 640px) {
@@ -26,10 +40,15 @@
                 gap: 2.5rem;
             }
         }
+
+        .footer-bottom-bar {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
 
-    <div class="container mx-auto px-6 py-6">
-        <div class="footer-grid mb-12">
+    <div class="container mx-auto px-6">
+        <div class="footer-grid">
             <!-- 1. Brand Section -->
             <div class="space-y-4">
                 <a href="{{ route('home') }}" class="inline-block" aria-label="Marveit AI Home">
@@ -37,8 +56,7 @@
                         class="h-10 w-auto brightness-0 invert" style="height: 40px; width: auto; display: block;">
                 </a>
                 <p class="text-xs sm:text-sm leading-relaxed text-gray-400 max-w-sm">
-                    Human-in-the-loop data annotation for computer vision, NLP, audio and video AI. Accurate labels,
-                    secure data handling and clear delivery, built around your guidelines.
+                    Human-in-the-loop data annotation for computer vision, NLP, audio and video AI. Accurate labels, secure data handling and clear delivery, built around your guidelines.
                 </p>
                 <!-- Social Links: LinkedIn · Facebook -->
                 <div class="pt-2 flex items-center gap-3">
@@ -62,23 +80,17 @@
                 <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Services</h4>
                 <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
                     <li><a href="{{ route('services.show', 'data-collection') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data
-                            Collection</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data Collection</a></li>
                     <li><a href="{{ route('services.show', 'computer-vision') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Image
-                            Annotation</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Image Annotation</a></li>
                     <li><a href="{{ route('services.show', 'video-annotation') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video
-                            Annotation</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video Annotation</a></li>
                     <li><a href="{{ route('services.show', 'lidar-3d') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LiDAR & 3D
-                            Annotation</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LiDAR & 3D Annotation</a></li>
                     <li><a href="{{ route('services.show', 'nlp') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">NLP & Text
-                            Annotation</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">NLP & Text Annotation</a></li>
                     <li><a href="{{ route('services.show', 'audio-annotation') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio
-                            Annotation & Transcription</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio Annotation & Transcription</a></li>
                 </ul>
             </div>
 
@@ -87,23 +99,17 @@
                 <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Industries</h4>
                 <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
                     <li><a href="{{ url('/#automotive') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Automotive</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Automotive</a></li>
                     <li><a href="{{ url('/#healthcare') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Healthcare</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Healthcare</a></li>
                     <li><a href="{{ url('/#retail') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Retail &
-                            E-Commerce</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Retail & E-Commerce</a></li>
                     <li><a href="{{ url('/#agriculture') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Agriculture</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Agriculture</a></li>
                     <li><a href="{{ url('/#voice-ai') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Voice AI</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Voice AI</a></li>
                     <li><a href="{{ url('/#llm') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LLM &
-                            Generative AI</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LLM & Generative AI</a></li>
                 </ul>
             </div>
 
@@ -112,20 +118,15 @@
                 <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Company</h4>
                 <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
                     <li><a href="{{ route('home') }}#about"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">About Us</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">About Us</a></li>
                     <li><a href="{{ route('team') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Team</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Team</a></li>
                     <li><a href="{{ route('portfolio') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Case
-                            Studies</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Case Studies</a></li>
                     <li><a href="{{ route('resources.index') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Resources</a>
-                    </li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Resources</a></li>
                     <li><a href="{{ route('contact') }}"
-                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact
-                            Us</a></li>
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -159,8 +160,8 @@
         </div>
 
         <!-- Bottom Copyright Bar -->
-        <div
-            class="pt-6 md:pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
+        <div class="footer-bottom-bar flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left"
+            style="padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
             <p>&copy; 2026 Marveit AI. All rights reserved.</p>
             <div class="flex items-center gap-3 text-gray-400">
                 <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Privacy Policy</a>
