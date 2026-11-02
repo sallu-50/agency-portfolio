@@ -81,6 +81,8 @@ class AgencySiteTest extends TestCase
 
     public function test_home_page_displays_annotation_tools_and_platforms_section(): void
     {
+        $this->markTestSkipped('Annotation tools and platforms section is temporarily commented out.');
+
         $response = $this->get(route('home'));
 
         $response->assertStatus(200);

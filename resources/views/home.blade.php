@@ -9,10 +9,10 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
-                                                                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
-                                                                <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                                                                <span>High-Quality Data Annotation</span>
-                                                            </div> -->
+                                                                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                                                                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                                                                    <span>High-Quality Data Annotation</span>
+                                                                </div> -->
                 <h1 class="font-bold text-gray-900 leading-tight mb-6 tracking-tight"
                     style="font-size: 32px; line-height: 1.25;">
                     Data Annotation Services for<span class="text-blue-600"> Computer Vision and Machine Learning</span>
@@ -31,9 +31,9 @@
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </a>
                     <!-- <a href="{{ route('services.index') }}"
-                                                                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                                                                        <span>Explore Services</span>
-                                                                    </a> -->
+                                                                            class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                                                                            <span>Explore Services</span>
+                                                                        </a> -->
                 </div>
             </div>
 
@@ -127,7 +127,7 @@
         </div>
     </section>
 
-    <!-- Annotation Tools and Platforms Section -->
+    {{-- Annotation Tools and Platforms Section (Temporarily commented out)
     <section class="py-16 md:py-24 bg-gray-50/70 mt-16">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-10 md:mb-14">
@@ -136,8 +136,7 @@
                     Annotation Tools and Platforms We Work With
                 </h2>
                 <p class="text-xs md:text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                    We work inside industry-standard annotation platforms, or on your own, so your data stays in your
-                    existing workflow.
+                    We work inside industry-standard annotation platforms, or on your own, so your data stays in your existing workflow.
                 </p>
             </div>
 
@@ -148,10 +147,9 @@
                     <!-- Row 1: 6 Platforms -->
                     <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-5">
                         <!-- 1. CVAT -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
-                            <svg class="h-6 w-6 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                            <svg class="h-6 w-6 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="3" width="18" height="18" rx="3" stroke="#0284c7" stroke-width="2.2"
                                     stroke-dasharray="3 3" />
                                 <circle cx="12" cy="12" r="3" fill="#0284c7" />
@@ -161,13 +159,12 @@
                         </div>
 
                         <!-- 2. Label Studio -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-6 w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="3" width="12" height="12" rx="2.5" fill="#0284c7" fill-opacity="0.2"
-                                    stroke="#0284c7" stroke-width="2" />
-                                <rect x="9" y="9" width="12" height="12" rx="2.5" fill="#f97316" fill-opacity="0.9"
-                                    stroke="#ea580c" stroke-width="1.5" />
+                                <rect x="3" y="3" width="12" height="12" rx="2.5" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7"
+                                    stroke-width="2" />
+                                <rect x="9" y="9" width="12" height="12" rx="2.5" fill="#f97316" fill-opacity="0.9" stroke="#ea580c"
+                                    stroke-width="1.5" />
                             </svg>
                             <span
                                 class="font-bold text-sm md:text-base tracking-tight text-gray-800 group-hover:text-blue-600 transition-colors">Label
@@ -175,8 +172,7 @@
                         </div>
 
                         <!-- 3. Labelbox -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-6 w-6 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                             </svg>
@@ -185,8 +181,7 @@
                         </div>
 
                         <!-- 4. V7 -->
-                        <div
-                            class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-6 w-6 text-emerald-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                                 <path d="M4 4l6 14 3-7 7-7" stroke="#059669" stroke-width="2.8" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -196,8 +191,7 @@
                         </div>
 
                         <!-- 5. SuperAnnotate -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-6 w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                                 <path
                                     d="M18 7c0-2-1.8-3.5-4-3.5H9C6.8 3.5 5 5.3 5 7.5S6.8 11.5 9 11.5h6c2.2 0 4 1.8 4 4s-1.8 4-4 4H8"
@@ -210,8 +204,7 @@
                         </div>
 
                         <!-- 6. Scale AI -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                                 <rect x="3" y="14" width="7" height="7" rx="1.5" />
                                 <rect x="14" y="14" width="7" height="7" rx="1.5" />
@@ -226,11 +219,9 @@
                     <!-- Row 2: 6 Platforms -->
                     <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-5">
                         <!-- 7. Supervisely -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-6 w-6 text-teal-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke="#0d9488"
-                                    stroke-width="2" />
+                                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke="#0d9488" stroke-width="2" />
                                 <circle cx="12" cy="12" r="3" fill="#0d9488" />
                             </svg>
                             <span
@@ -238,10 +229,9 @@
                         </div>
 
                         <!-- 8. Audacity -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
-                            <svg class="h-6 w-6 text-amber-600 flex-shrink-0" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                            <svg class="h-6 w-6 text-amber-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
                                 <path
                                     d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
@@ -252,10 +242,9 @@
                         </div>
 
                         <!-- 9. Praat -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
-                            <svg class="h-6 w-6 text-rose-600 flex-shrink-0" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                            <svg class="h-6 w-6 text-rose-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M2 10v4m4-8v12m4-10v8m4-12v16m4-10v4m4-2v0" stroke="#e11d48" stroke-width="2.5" />
                             </svg>
                             <span
@@ -263,11 +252,10 @@
                         </div>
 
                         <!-- 10. Prodigy -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
                             <svg class="h-6 w-6 text-violet-700 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                <polygon points="12 2 20 8 16 20 8 20 4 8" fill="#7c3aed" fill-opacity="0.15"
-                                    stroke="#7c3aed" stroke-width="2" />
+                                <polygon points="12 2 20 8 16 20 8 20 4 8" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed"
+                                    stroke-width="2" />
                                 <path d="M12 7v10M8 12h8" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" />
                             </svg>
                             <span
@@ -275,10 +263,9 @@
                         </div>
 
                         <!-- 11. Doccano -->
-                        <div
-                            class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
-                            <svg class="h-6 w-6 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="inline-flex items-center gap-2.5 group cursor-default transition-transform hover:scale-105">
+                            <svg class="h-6 w-6 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                                 <polyline points="14 2 14 8 20 8" />
                                 <line x1="8" y1="13" x2="16" y2="13" stroke="#2563eb" stroke-width="2" />
@@ -298,6 +285,7 @@
             </div>
         </div>
     </section>
+    --}}
 
     <!-- Services Section -->
     <section id="services" class="py-24 bg-white border-b border-gray-100 shadow-sm relative z-10">
@@ -374,10 +362,7 @@
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                     style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
                 </h2>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not
-                    just promises.
-                </p>
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed">Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -498,10 +483,7 @@
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                     style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                    From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and
-                    your industry’s formats.
-                </p>
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed">From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and your industry’s formats.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -740,17 +722,13 @@
 
     <!-- Sample Data CTA -->
     <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
-        <div class="container mx-auto px-6 py-10">
-            <div
-                class="max-w-4xl mx-auto bg-white rounded-3xl p-10 py-6 md:p-14 border border-gray-100 shadow-md text-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight"
                     style="font-size: 24px; line-height: 1.33;">
                     Let’s Label a Sample of Your Data
                 </h2>
-                <p class="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign
-                    an NDA first, and share an accuracy report with every delivery.
-                </p>
+                <p class="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
                 <div class="inline-flex items-center justify-center">
                     <a href="{{ route('free-trial') }}"
                         class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
