@@ -128,20 +128,20 @@
     </section>
 
     <!-- Annotation Tools and Platforms Section -->
-    <section class="py-12 md:py-16 bg-gray-50/70">
+    <section class="py-16 md:py-24 bg-gray-50/70">
         <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-8">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-2"
+            <div class="max-w-3xl mx-auto text-center mb-10 md:mb-14">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-3 md:mb-4"
                     style="font-size: 22px; line-height: 1.33;">
                     Annotation Tools and Platforms We Work With
                 </h2>
-                <p class="text-xs md:text-sm text-gray-500 max-w-2xl mx-auto">
+                <p class="text-xs md:text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
                     We work inside industry-standard annotation platforms, or on your own, so your data stays in your existing workflow.
                 </p>
             </div>
 
-            <!-- Single White Rounded Card - 100% Borderless with Rich Drop Shadow -->
-            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl px-6 py-8 md:px-10 md:py-10">
+            <!-- Single White Rounded Card - 100% Borderless with All-around (Top, Bottom, Left, Right) Soft Shadow -->
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-[0_0_35px_rgba(0,0,0,0.08),0_4px_16px_rgba(0,0,0,0.04)] px-6 py-9 md:px-12 md:py-12">
                 <div class="flex flex-col gap-y-7 md:gap-y-9">
                     <!-- Row 1: 6 Platforms -->
                     <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-5">
