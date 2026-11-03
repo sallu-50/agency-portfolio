@@ -304,8 +304,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @forelse ($services as $service)
                     <div
-                        class="p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col bg-white border border-gray-100 group text-left">
-                        <div class="flex-grow">
+                        class="p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between bg-white border border-gray-100 group text-left h-full">
+                        <div class="flex-grow flex flex-col">
                             <div class="flex items-center justify-between mb-6">
                                 <div
                                     class="flex items-center justify-center h-14 w-14 p-3.5 rounded-xl bg-blue-100 text-blue-600 transition-transform group-hover:scale-105">
@@ -313,15 +313,16 @@
                                 </div>
                             </div>
 
-                            <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                            <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                                style="min-height: 56px;">
                                 {{ $service->title }}
                             </h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4" style="min-height: 48px;">
                                 {{ $service->short_description ?: Str::limit($service->description, 100) }}
                             </p>
 
                             @if (!empty($service->features))
-                                <ul class="space-y-1.5 mb-6 text-xs text-gray-500">
+                                <ul class="space-y-1.5 mb-6 text-xs text-gray-500" style="min-height: 76px;">
                                     @foreach (array_slice($service->features, 0, 3) as $feature)
                                         <li class="flex items-start gap-2">
                                             <i data-feather="check" class="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5"></i>
@@ -333,7 +334,7 @@
                         </div>
 
                         <a href="{{ route('services.show', $service->slug) }}"
-                            class="mt-4 self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5">
+                            class="mt-auto self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5">
                             <span>{{ $service->button_text }}</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -368,14 +369,15 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. Multi-Stage Quality Control -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left">
+                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="check-circle" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                        style="min-height: 56px;">
                         Multi-Stage Quality Control
                     </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
                         Every batch goes through annotator work, peer review and senior QA sign-off. We audit random samples
                         against your guidelines and send an accuracy report with each delivery.
                     </p>
@@ -383,14 +385,15 @@
 
                 <!-- 2. Pilot First, Then Scale -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left">
+                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="trending-up" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                        style="min-height: 56px;">
                         Pilot First, Then Scale
                     </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
                         We start with a small pilot on your own data. We refine the guidelines with you and calibrate
                         annotators on gold-standard samples before scaling to full production.
                     </p>
@@ -398,14 +401,15 @@
 
                 <!-- 3. Teams That Scale With Your Roadmap -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left">
+                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="users" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                        style="min-height: 56px;">
                         Teams That Scale With Your Roadmap
                     </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
                         Go from a few hundred files to millions without losing consistency. Trained annotator teams ramp up
                         in 3 days, with the same QA process at every volume.
                     </p>
@@ -413,14 +417,15 @@
 
                 <!-- 4. Secure Data Handling -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left">
+                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="shield" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                        style="min-height: 56px;">
                         Secure Data Handling
                     </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
                         NDA signed before any data is shared. Encrypted transfers, role-based access and PII anonymization
                         where required. We can also work inside your VPN or environment.
                     </p>
@@ -428,14 +433,15 @@
 
                 <!-- 5. Works in Your Tools -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left">
+                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="sliders" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                        style="min-height: 56px;">
                         Works in Your Tools
                     </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
                         We label in CVAT, Label Studio, Labelbox, V7, SuperAnnotate, Scale AI, Supervisely, Audacity, Praat,
                         Prodigy, Doccano or in your own platform, so your pipeline and formats stay unchanged.
                     </p>
@@ -443,14 +449,15 @@
 
                 <!-- 6. Clear Communication -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left">
+                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="message-square" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                        style="min-height: 56px;">
                         Clear Communication
                     </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
                         A dedicated project manager, regular progress reports and a fast feedback loop. If a batch misses
                         your accuracy target, we correct it at no extra cost.
                     </p>
@@ -489,28 +496,29 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Automotive & Autonomous Driving -->
                 <div id="automotive"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group">
-                    <div>
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="truck" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                            style="min-height: 56px;">
                             Automotive &amp; Autonomous Driving
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
                             Training data for perception and driver-assistance models.
                         </p>
-                        <div class="pt-4 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
-                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
                                 LiDAR 3D cuboids, lane and road markings, pedestrian and vehicle tracking, camera-LiDAR
                                 sensor fusion.
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
                         <span
                             class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">LiDAR
                             Annotation</span>
@@ -525,28 +533,29 @@
 
                 <!-- Card 2: Healthcare & Medical AI -->
                 <div id="healthcare"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group">
-                    <div>
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="activity" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                            style="min-height: 56px;">
                             Healthcare &amp; Medical AI
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
                             Careful labeling for diagnostic and clinical models.
                         </p>
-                        <div class="pt-4 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
-                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
                                 CT and MRI segmentation, medical image classification, clinical note tagging, on
                                 de-identified data with strict access control.
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
                         <span
                             class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Segmentation</span>
@@ -561,27 +570,28 @@
 
                 <!-- Card 3: Retail & E-Commerce -->
                 <div id="retail"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group">
-                    <div>
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="shopping-bag" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                            style="min-height: 56px;">
                             Retail &amp; E-Commerce
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
                             Cleaner catalogs and smarter product search.
                         </p>
-                        <div class="pt-4 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
-                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
                                 Product attributes, category mapping, shelf and SKU detection, review sentiment.
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
                         <span
                             class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Annotation</span>
@@ -596,28 +606,29 @@
 
                 <!-- Card 4: Agriculture & Drone Imagery -->
                 <div id="agriculture"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group">
-                    <div>
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="sun" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                            style="min-height: 56px;">
                             Agriculture &amp; Drone Imagery
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
                             Aerial and field data for crop-monitoring models.
                         </p>
-                        <div class="pt-4 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
-                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
                                 Crop and weed segmentation, plant health classification from multispectral images, field
                                 boundary mapping.
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
                         <span
                             class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Image
                             Segmentation</span>
@@ -632,28 +643,29 @@
 
                 <!-- Card 5: Voice AI & Conversational Systems -->
                 <div id="voice-ai"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group">
-                    <div>
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="mic" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                            style="min-height: 56px;">
                             Voice AI &amp; Conversational Systems
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
                             Speech and language data for assistants and chatbots.
                         </p>
-                        <div class="pt-4 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
-                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
                                 Multi-language transcription, speaker diarization, sound event tagging, intent and entity
                                 labeling.
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
                         <span
                             class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">Audio
                             Transcription</span>
@@ -665,28 +677,29 @@
 
                 <!-- Card 6: LLM & Generative AI -->
                 <div id="llm"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group">
-                    <div>
+                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                             <i data-feather="cpu" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                            style="min-height: 56px;">
                             LLM &amp; Generative AI
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
                             Human feedback data for model training and evaluation.
                         </p>
-                        <div class="pt-4 border-t border-gray-100 mb-6">
+                        <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
                             <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we
                                 label:</span>
-                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
                                 RLHF preference ranking, prompt and response evaluation, instruction data creation, safety
                                 and quality review.
                             </p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
                         <span
                             class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">RLHF</span>
                         <span
