@@ -308,7 +308,7 @@
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-6">
                                 <div
-                                    class="flex items-center justify-center h-14 w-14 rounded-xl bg-blue-100 text-blue-600 transition-transform group-hover:scale-105">
+                                    class="flex items-center justify-center h-14 w-14 p-3.5 rounded-xl bg-blue-100 text-blue-600 transition-transform group-hover:scale-105">
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                 </div>
                             </div>
