@@ -73,16 +73,16 @@
                     Human-in-the-loop data annotation for computer vision, NLP, audio and video AI. Accurate labels, secure data handling and clear delivery, built around your guidelines.
                 </p>
                 <!-- Social Links: LinkedIn · Facebook -->
-                <div class="pt-2 flex items-center gap-3">
+                <div class="pt-2 flex items-center gap-4 sm:gap-5">
                     <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
                         aria-label="LinkedIn"
-                        class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-700/80"
+                        class="w-10 h-10 p-2.5 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-700/80 shadow-sm"
                         style="background-color: rgba(255, 255, 255, 0.06);">
                         <i data-feather="linkedin" class="w-4 h-4"></i>
                     </a>
                     <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
                         aria-label="Facebook"
-                        class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-700/80"
+                        class="w-10 h-10 p-2.5 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-700/80 shadow-sm"
                         style="background-color: rgba(255, 255, 255, 0.06);">
                         <i data-feather="facebook" class="w-4 h-4"></i>
                     </a>
