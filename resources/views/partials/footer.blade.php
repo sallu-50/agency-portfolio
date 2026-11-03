@@ -42,8 +42,22 @@
         }
 
         .footer-bottom-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .footer-bottom-bar {
+                flex-direction: row;
+                text-align: left;
+            }
         }
     </style>
 
@@ -160,8 +174,7 @@
         </div>
 
         <!-- Bottom Copyright Bar -->
-        <div class="footer-bottom-bar flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left"
-            style="padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="footer-bottom-bar text-xs text-gray-400">
             <p>&copy; 2026 Marveit AI. All rights reserved.</p>
             <div class="flex items-center gap-3 text-gray-400">
                 <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Privacy Policy</a>
