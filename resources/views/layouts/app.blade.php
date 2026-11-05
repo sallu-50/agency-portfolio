@@ -140,9 +140,6 @@
         @yield('content')
     </main>
 
-    <!-- Powered By -->
-    @include('partials.powered-by')
-
     <!-- Footer -->
     @include('partials.footer')
 
