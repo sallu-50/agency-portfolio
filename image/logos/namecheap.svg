@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 36" fill="none">
+  <g transform="translate(0, 6)">
+    <path d="M5.5 19.5L13.8 5.2a3 3 0 0 1 4.2-.9l.5.3a3 3 0 0 1 .9 4.2L11 23a3 3 0 0 1-4.2.9l-.5-.3a3 3 0 0 1-.8-4.1z" fill="#DE3723"/>
+    <path d="M13.2 19.5L21.5 5.2a3 3 0 0 1 4.2-.9l.5.3a3 3 0 0 1 .9 4.2L18.7 23a3 3 0 0 1-4.2.9l-.5-.3a3 3 0 0 1-.8-4.1z" fill="#FF5A00"/>
+  </g>
+  <text x="33" y="24" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="17" letter-spacing="-0.3px">namecheap</text>
+</svg>

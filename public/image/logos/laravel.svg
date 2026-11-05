@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 36" fill="none">
+  <g transform="translate(0, 3)">
+    <path d="M16 2.5l12.8 7.4v14.8L16 32.1 3.2 24.7V9.9L16 2.5z" stroke="#FF2D20" stroke-width="2.2" stroke-linejoin="round" fill="none"/>
+    <path d="M16 2.5v14.8l12.8 7.4" stroke="#FF2D20" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M16 17.3L3.2 9.9" stroke="#FF2D20" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="16" cy="17.3" r="2.2" fill="#FF2D20"/>
+  </g>
+  <text x="38" y="24" fill="#FF2D20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="17" letter-spacing="-0.3px">Laravel</text>
+</svg>

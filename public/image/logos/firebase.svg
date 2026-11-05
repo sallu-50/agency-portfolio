@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 36" fill="none">
+  <g transform="translate(2, 4)">
+    <path d="M2.56 20.48L11.84 3.04a.96.96 0 0 1 1.73.13l3.52 7.04-14.53 10.27z" fill="#FFA000"/>
+    <path d="M2.56 20.48l16.13-11.4 4.51 8.84-20.64 2.56z" fill="#F57C00"/>
+    <path d="M12.4 27.68l-9.84-7.2L17.1 9.08a.96.96 0 0 1 1.76.54l3.71 14.86-10.17 3.2z" fill="#FFCA28"/>
+  </g>
+  <text x="34" y="24" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="16" letter-spacing="-0.2px">Firebase</text>
+</svg>

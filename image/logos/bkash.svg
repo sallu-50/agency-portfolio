@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 36" fill="none">
+  <text x="4" y="25" fill="#E2136E" font-family="'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-weight="700" font-size="22">বিকাশ</text>
+  <g transform="translate(76, 3)">
+    <polygon points="0,15 15,0 20,8 10,18" fill="#E2136E"/>
+    <polygon points="15,0 28,6 20,8" fill="#D1005D"/>
+    <polygon points="10,18 20,8 30,22 18,24" fill="#E2136E"/>
+    <polygon points="20,8 28,6 30,14" fill="#FF2E82"/>
+    <polygon points="30,14 36,12 30,22" fill="#E2136E"/>
+    <polygon points="18,24 22,29 14,27" fill="#B00048"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" fill="none">
+  <g transform="translate(0, 2)">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 4.418 1.791 8.418 4.686 11.314l5.14-5.14A10.87 10.87 0 0 1 7.11 16c0-4.91 3.98-8.89 8.89-8.89 4.91 0 8.89 3.98 8.89 8.89 0 4.91-3.98 8.89-8.89 8.89v7.11c8.837 0 16-7.163 16-16S24.837 0 16 0z" fill="#0080FF"/>
+    <rect x="0" y="22.22" width="6.13" height="6.13" fill="#0080FF"/>
+    <rect x="3.97" y="27.65" width="4.35" height="4.35" fill="#0080FF"/>
+  </g>
+  <text x="40" y="24" fill="#0080FF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="17" letter-spacing="-0.3px">DigitalOcean</text>
+</svg>
