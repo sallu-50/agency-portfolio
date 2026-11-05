@@ -196,9 +196,6 @@
         </div>
     </section>
 
-    <!-- Annotation Tools and Platforms We Work With -->
-    @include('partials.annotation-tools')
-
     <!-- Why Choose Us / Quality Pillars -->
     <section id="about" class="py-24 bg-gray-50/60 border-b border-gray-100 relative">
         <div class="container mx-auto px-6">
@@ -575,6 +572,9 @@
         </div>
     </section>
 
+
+    <!-- Annotation Tools and Platforms We Work With -->
+    @include('partials.annotation-tools')
 
     <!-- Sample Data CTA -->
     <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
