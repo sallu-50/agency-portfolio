@@ -589,7 +589,8 @@
                    style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
                 <div class="inline-flex items-center justify-center mt-2">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-2.5 px-9 py-4 md:px-11 md:py-4.5 rounded-full text-base font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
+                        class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-base font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
+                        style="padding: 14px 38px;">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>
