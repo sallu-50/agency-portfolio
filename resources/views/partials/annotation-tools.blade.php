@@ -1,5 +1,6 @@
 <!-- Annotation Tools and Platforms We Work With (Auto-Scrolling Marquee) -->
-<section id="annotation-tools" class="py-14 md:py-18 bg-white relative overflow-hidden">
+<section id="annotation-tools" class="py-16 md:py-20 bg-white relative overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.03)]"
+         style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);">
     <style>
         @keyframes tools-marquee-scroll {
             0% {
@@ -40,8 +41,9 @@
             </p>
         </div>
 
-        <!-- Marquee Container (Borderless, Clean) -->
-        <div class="tools-marquee-card max-w-6xl mx-auto relative overflow-hidden py-4">
+        <!-- Marquee Card Container - 100% Borderless with All-around (Top, Bottom, Left, Right) Soft Shadow -->
+        <div class="tools-marquee-card max-w-6xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-[0_0_35px_rgba(0,0,0,0.08),0_4px_16px_rgba(0,0,0,0.04)] relative overflow-hidden py-6 sm:py-8 px-4 sm:px-6 my-2"
+             style="box-shadow: 0 0 35px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);">
             <!-- Left Gradient Fade Mask -->
             <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 z-10 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
 
