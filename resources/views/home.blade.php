@@ -174,7 +174,7 @@
                         </div>
 
                         <a href="{{ route('services.show', $service->slug) }}"
-                            class="mt-auto self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5 hover:-translate-y-0.5">
+                            class="mt-auto self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
                             <span>{{ $service->button_text }}</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -188,7 +188,7 @@
 
             <div class="text-center mt-12">
                 <a href="{{ route('services.index') }}"
-                    class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-white border border-blue-200 hover:border-blue-300 px-6 py-3 rounded-full shadow-sm hover:shadow hover:-translate-y-0.5 transition-all">
+                    class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
                     <span>View All Data Annotation Services</span>
                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                 </a>
