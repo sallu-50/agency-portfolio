@@ -314,13 +314,13 @@
                 </p>
                 <div class="inline-flex flex-wrap items-center justify-center gap-3">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:-translate-y-0.5 transition-all duration-200">
-                        Talk to an Expert
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
+                        <span>Talk to an Expert</span>
                     </a>
                 </div>
             </div>
@@ -562,13 +562,13 @@
                 </p>
                 <div class="inline-flex flex-wrap items-center justify-center gap-3">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:-translate-y-0.5 transition-all duration-200">
-                        Talk to an Expert
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
+                        <span>Talk to an Expert</span>
                     </a>
                 </div>
             </div>
@@ -589,7 +589,7 @@
                    style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
                 <div class="inline-flex items-center justify-center">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>
