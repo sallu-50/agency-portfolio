@@ -54,6 +54,77 @@
             border-color: #0E5EDD;
             box-shadow: 0 4px 14px rgba(14, 94, 221, 0.25);
         }
+
+        /* Subtle Interactive Button Hover Movement */
+        button:not(#mobile-menu-button),
+        [role="button"],
+        .btn,
+        .ft-submit-btn,
+        .team-filter-btn,
+        a.inline-flex[class*="rounded-full"],
+        a.inline-flex[class*="rounded-lg"],
+        a.inline-flex[class*="rounded-xl"],
+        a.inline-block[class*="rounded-full"],
+        a.inline-block[class*="rounded-lg"],
+        a[class*="bg-blue-600"],
+        a[class*="bg-gradient-to-r"],
+        a[class*="bg-blue-50"][class*="rounded-full"],
+        a[href*="free-trial"],
+        a[href*="wa.me"] {
+            transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            will-change: transform;
+        }
+
+        button:not(#mobile-menu-button):hover,
+        [role="button"]:hover,
+        .btn:hover,
+        .ft-submit-btn:hover,
+        .team-filter-btn:hover,
+        a.inline-flex[class*="rounded-full"]:hover,
+        a.inline-flex[class*="rounded-lg"]:hover,
+        a.inline-flex[class*="rounded-xl"]:hover,
+        a.inline-block[class*="rounded-full"]:hover,
+        a.inline-block[class*="rounded-lg"]:hover,
+        a[class*="bg-blue-600"]:hover,
+        a[class*="bg-gradient-to-r"]:hover,
+        a[class*="bg-blue-50"][class*="rounded-full"]:hover,
+        a[href*="free-trial"]:hover,
+        a[href*="wa.me"]:hover {
+            transform: translateY(-2px);
+        }
+
+        button:not(#mobile-menu-button):active,
+        [role="button"]:active,
+        .btn:active,
+        .ft-submit-btn:active,
+        .team-filter-btn:active,
+        a.inline-flex[class*="rounded-full"]:active,
+        a.inline-flex[class*="rounded-lg"]:active,
+        a.inline-flex[class*="rounded-xl"]:active,
+        a.inline-block[class*="rounded-full"]:active,
+        a.inline-block[class*="rounded-lg"]:active,
+        a[class*="bg-blue-600"]:active,
+        a[class*="bg-gradient-to-r"]:active,
+        a[class*="bg-blue-50"][class*="rounded-full"]:active,
+        a[href*="free-trial"]:active,
+        a[href*="wa.me"]:active {
+            transform: translateY(0);
+        }
+
+        /* Subtle Arrow Nudge inside Buttons on Hover */
+        button:hover i[data-feather="arrow-right"],
+        button:hover svg.feather-arrow-right,
+        a[class*="rounded-"]:hover i[data-feather="arrow-right"],
+        a[class*="rounded-"]:hover svg.feather-arrow-right,
+        a[class*="bg-"]:hover i[data-feather="arrow-right"],
+        a[class*="bg-"]:hover svg.feather-arrow-right {
+            transform: translateX(3px);
+        }
+
+        i[data-feather="arrow-right"],
+        svg.feather-arrow-right {
+            transition: transform 0.2s ease;
+        }
     </style>
 
     @stack('styles')

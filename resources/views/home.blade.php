@@ -26,7 +26,7 @@
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="{{ route('free-trial') }}"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 inline-flex items-center">
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition duration-300 inline-flex items-center">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </a>
@@ -334,7 +334,7 @@
                         </div>
 
                         <a href="{{ route('services.show', $service->slug) }}"
-                            class="mt-auto self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5">
+                            class="mt-auto self-start text-blue-600 font-semibold text-xs py-2.5 px-4 rounded-full transition duration-300 bg-blue-50 hover:bg-blue-600 hover:text-white border border-blue-100 inline-flex items-center gap-1.5 hover:-translate-y-0.5">
                             <span>{{ $service->button_text }}</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -348,7 +348,7 @@
 
             <div class="text-center mt-12">
                 <a href="{{ route('services.index') }}"
-                    class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-white border border-blue-200 hover:border-blue-300 px-6 py-3 rounded-full shadow-sm hover:shadow transition-all">
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-white border border-blue-200 hover:border-blue-300 px-6 py-3 rounded-full shadow-sm hover:shadow hover:-translate-y-0.5 transition-all">
                     <span>View All Data Annotation Services</span>
                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                 </a>
@@ -471,12 +471,12 @@
                 </p>
                 <div class="inline-flex flex-wrap items-center justify-center gap-3">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-200">
+                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:-translate-y-0.5 transition-all duration-200">
                         Talk to an Expert
                     </a>
                 </div>
@@ -719,12 +719,12 @@
                 </p>
                 <div class="inline-flex flex-wrap items-center justify-center gap-3">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-200">
+                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:-translate-y-0.5 transition-all duration-200">
                         Talk to an Expert
                     </a>
                 </div>
@@ -746,7 +746,7 @@
                    style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
                 <div class="inline-flex items-center justify-center">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">
+                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>

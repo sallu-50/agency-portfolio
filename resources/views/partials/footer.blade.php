@@ -164,7 +164,7 @@
                 <div class="pt-2">
                     <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
                         target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm transition hover:opacity-90"
+                        class="inline-flex items-center gap-2 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm hover:shadow hover:-translate-y-0.5 transition hover:opacity-90"
                         style="background-color: #25D366; color: #ffffff;">
                         <i data-feather="message-circle" class="w-4 h-4"></i>
                         <span>WhatsApp Chat</span>
