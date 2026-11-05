@@ -35,7 +35,7 @@
              style="box-shadow: 0 0 40px rgba(0, 0, 0, 0.08), 0 6px 24px rgba(0, 0, 0, 0.04);">
 
             <!-- Header (Inside the Shadow Card) -->
-            <div class="max-w-3xl mx-auto text-center mb-9 md:mb-12 px-4">
+            <div class="max-w-3xl mx-auto text-center py-6 md:py-8 mb-4 md:mb-6 px-4">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
                     Annotation Tools and Platforms We Work With
                 </h2>
