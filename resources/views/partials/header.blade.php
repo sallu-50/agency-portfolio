@@ -243,9 +243,9 @@
 
         <div class="hidden md:flex items-center gap-3">
             <a href="{{ route('free-trial') }}"
-                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all font-semibold text-sm {{ request()->routeIs('free-trial*') ? 'ring-2 ring-blue-400' : '' }}">
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5 {{ request()->routeIs('free-trial*') ? 'ring-2 ring-blue-300' : '' }}">
                 <span>Free Trial</span>
-                <i data-feather="arrow-right" class="w-4 h-4"></i>
+                <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
         </div>
 
@@ -293,7 +293,7 @@
         </a>
         <div class="px-6 py-4">
             <a href="{{ route('free-trial') }}"
-                class="block w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-2.5 rounded-lg shadow-md hover:shadow-lg transition font-semibold">
+                class="block w-full py-2.5 px-4 rounded-full text-sm font-medium text-center bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200">
                 Free Trial
             </a>
         </div>

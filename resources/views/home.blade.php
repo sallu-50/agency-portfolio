@@ -26,9 +26,9 @@
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="{{ route('free-trial') }}"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition duration-300 inline-flex items-center">
+                        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm sm:text-base font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
                         <span>Start Free Trial</span>
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>
                     <!-- <a href="{{ route('services.index') }}"
                                                                             class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
@@ -587,9 +587,9 @@
                 </h2>
                 <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
                    style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
-                <div class="inline-flex items-center justify-center">
+                <div class="inline-flex items-center justify-center mt-2">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
+                        class="inline-flex items-center justify-center gap-2.5 px-9 py-4 md:px-11 md:py-4.5 rounded-full text-base font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>
