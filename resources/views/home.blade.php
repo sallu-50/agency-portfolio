@@ -26,7 +26,7 @@
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm sm:text-base font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
+                        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>
