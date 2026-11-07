@@ -1570,6 +1570,13 @@
       }
     }
   }
+  .hover\:border-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-blue-600);
+      }
+    }
+  }
   .hover\:border-green-100 {
     &:hover {
       @media (hover: hover) {

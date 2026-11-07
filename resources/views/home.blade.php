@@ -174,7 +174,7 @@
                         </div>
 
                         <a href="{{ route('services.show', $service->slug) }}"
-                            class="mt-auto self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 border border-blue-100 hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5">
+                            class="mt-auto self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5">
                             <span>{{ $service->button_text }}</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
