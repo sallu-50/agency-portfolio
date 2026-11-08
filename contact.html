@@ -370,58 +370,64 @@
             </div>
         </section>
 
-        <!-- Message Form & Consultation Details Section -->
-        <section class="bg-white pt-3 md:pt-4 pb-16 md:pb-24 relative z-0">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="bg-white rounded-3xl overflow-hidden"
-                    style="box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.1), 0 0 1px 1px rgba(15, 23, 42, 0.04);">
-                    <div class="grid grid-cols-1 lg:grid-cols-12">
-                        <!-- Left Column: Text & Trust Bullets -->
-                        <div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between bg-white lg:border-r border-slate-100">
-                            <div>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-6 bg-blue-50 text-blue-700 border border-blue-200">
-                                    <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600"></i> Fast Response Guarantee
-                                </span>
-                                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
-                                    Request a Quote
-                                </h2>
-                                <p class="text-sm leading-relaxed mb-8 text-slate-600">
-                                    Share a short brief and we’ll reply within 24 hours with questions, a quote or an NDA. Want to test our quality first?
-                                    <a href="free-trial.html" class="text-blue-600 hover:text-blue-700 font-semibold underline underline-offset-2 inline-flex items-center gap-0.5 ml-1">
-                                        <span>Start a free pilot</span>
-                                        <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
-                                    </a>
-                                </p>
+        <!-- Request a Quote Section (Free Trial Style: 2 Columns - Left Text Panel, Right Form Card) -->
+        <section class="bg-white pt-6 md:pt-10 pb-16 md:pb-24 relative z-0">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+                    <!-- Left Panel: Text & Trust Bullets -->
+                    <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+                        <div>
+                            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-4 bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
+                                <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600"></i>
+                                <span>Fast Response Guarantee</span>
+                            </span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
+                                Request a Quote
+                            </h2>
+                            <p class="text-base text-gray-600 leading-relaxed">
+                                Share a short brief and we’ll reply within 24 hours with questions, a quote or an NDA. Want to test our quality first?
+                                <a href="free-trial.html" class="text-blue-600 hover:text-blue-700 font-semibold underline underline-offset-2 inline-flex items-center gap-0.5 ml-1">
+                                    <span>Start a free pilot</span>
+                                    <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </p>
+                        </div>
 
-                                <div class="space-y-4 mb-8">
-                                    <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                            <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                                        </div>
-                                        <span class="text-sm leading-snug font-medium text-slate-700">NDA available before you share any data</span>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                            <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                                        </div>
-                                        <span class="text-sm leading-snug font-medium text-slate-700">A named project lead and a direct Slack or Teams channel</span>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                            <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                                        </div>
-                                        <span class="text-sm leading-snug font-medium text-slate-700">Multi-stage QA, with an accuracy report on every delivery</span>
-                                    </div>
+                        <!-- Trust Bullets (3টি) -->
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
+                                <span class="text-sm font-medium text-gray-700 leading-snug">NDA available before you share any data</span>
                             </div>
-
-                            <div class="pt-6 text-xs font-medium text-slate-500 border-t border-slate-100">
-                                Global Headquarters: Dhaka, Bangladesh • Global Remote Operations 24/7
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-700 leading-snug">A named project lead and a direct Slack or Teams channel</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-700 leading-snug">Multi-stage QA, with an accuracy report on every delivery</span>
                             </div>
                         </div>
 
-                        <!-- Right Column: Interactive Form -->
-                        <div class="lg:col-span-7 p-8 md:p-12 bg-white">
+                        <!-- Trust Pill / Headquarters -->
+                        <div class="pt-4">
+                            <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-slate-50 text-xs text-gray-700 border border-gray-200">
+                                <i data-feather="shield" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                                <span>NDA standard bilateral · Global remote operations 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Panel: Form Card (ft-card style) -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 shadow-lg"
+                            style="box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 0 1px 1px rgba(15, 23, 42, 0.03);">
                             <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for reaching out! A technical project lead will contact you within 24 hours.');" class="space-y-5">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <!-- Full Name -->
@@ -511,7 +517,7 @@
                                         <input type="checkbox" name="consent" id="consent" required
                                             class="w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500 cursor-pointer mt-0.5">
                                         <span class="text-xs text-slate-600 leading-relaxed">
-                                            I agree to the <a href="contact.html" class="text-blue-600 hover:underline font-semibold">Privacy Policy</a> and consent to Marveit contacting me about this request. <span class="text-red-500">*</span>
+                                             I agree to the <a href="contact.html" class="text-blue-600 hover:underline font-semibold">Privacy Policy</a> and consent to Marveit contacting me about this request. <span class="text-red-500">*</span>
                                         </span>
                                     </label>
                                 </div>
