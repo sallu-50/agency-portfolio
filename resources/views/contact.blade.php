@@ -116,17 +116,21 @@
                 <div class="bg-white rounded-3xl overflow-hidden"
                     style="box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.1), 0 0 1px 1px rgba(15, 23, 42, 0.04);">
                     <div class="grid grid-cols-1 lg:grid-cols-12">
-                        <!-- Left Column: Form Details & Assurance -->
+                        <!-- Left Column: Text & Trust Bullets -->
                         <div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between bg-white lg:border-r border-slate-100">
                             <div>
                                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-6 bg-blue-50 text-blue-700 border border-blue-200">
                                     <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600"></i> Fast Response Guarantee
                                 </span>
-                                <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
-                                    Request a Benchmark Pilot
-                                </h3>
+                                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
+                                    Request a Quote
+                                </h2>
                                 <p class="text-sm leading-relaxed mb-8 text-slate-600">
-                                    Submit your project specifications or sample instructions. Our engineering team will review your requirements and provide a pilot turnaround within 24–48 hours.
+                                    Share a short brief and we’ll reply within 24 hours with questions, a quote or an NDA. Want to test our quality first?
+                                    <a href="{{ route('free-trial') }}" class="text-blue-600 hover:text-blue-700 font-semibold underline underline-offset-2 inline-flex items-center gap-0.5 ml-1">
+                                        <span>Start a free pilot</span>
+                                        <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                                    </a>
                                 </p>
 
                                 <div class="space-y-4 mb-8">
@@ -134,19 +138,19 @@
                                         <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                         </div>
-                                        <span class="text-sm leading-snug font-medium text-slate-700">Bilateral NDA signed before proprietary dataset ingestion</span>
+                                        <span class="text-sm leading-snug font-medium text-slate-700">NDA available before you share any data</span>
                                     </div>
                                     <div class="flex items-start gap-3">
                                         <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                         </div>
-                                        <span class="text-sm leading-snug font-medium text-slate-700">Dedicated project lead & Slack/Teams communication channel</span>
+                                        <span class="text-sm leading-snug font-medium text-slate-700">A named project lead and a direct Slack or Teams channel</span>
                                     </div>
                                     <div class="flex items-start gap-3">
                                         <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                         </div>
-                                        <span class="text-sm leading-snug font-medium text-slate-700">Strict multi-tier QA with 99.8% precision SLA agreement</span>
+                                        <span class="text-sm leading-snug font-medium text-slate-700">Multi-stage QA, with an accuracy report on every delivery</span>
                                     </div>
                                 </div>
                             </div>
@@ -185,76 +189,108 @@
                                 @csrf
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <!-- Name -->
+                                    <!-- Full Name -->
                                     <div>
                                         <label for="name" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Your Name <span class="text-red-500">*</span>
+                                            Full name <span class="text-red-500">*</span>
                                         </label>
                                         <input type="text" id="name" name="name" value="{{ old('name') }}" required
-                                            placeholder="e.g. John Doe"
+                                            placeholder="Alex Morgan"
                                             class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none @error('name') border-red-400 @enderror">
                                     </div>
 
-                                    <!-- Email -->
+                                    <!-- Business Email -->
                                     <div>
                                         <label for="email" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Business Email <span class="text-red-500">*</span>
+                                            Business email <span class="text-red-500">*</span>
                                         </label>
                                         <input type="email" id="email" name="email" value="{{ old('email') }}" required
-                                            placeholder="john@company.com"
+                                            placeholder="alex@company.com"
                                             class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none @error('email') border-red-400 @enderror">
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <!-- Phone -->
+                                    <!-- Company -->
                                     <div>
-                                        <label for="phone" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Phone / WhatsApp <span class="text-slate-500 font-normal normal-case">(Optional)</span>
+                                        <label for="company" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                                            Company <span class="text-red-500">*</span>
                                         </label>
-                                        <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                            placeholder="+1 (555) 000-0000"
-                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none">
+                                        <input type="text" id="company" name="company" value="{{ old('company') }}" required
+                                            placeholder="Company name"
+                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none @error('company') border-red-400 @enderror">
                                     </div>
 
-                                    <!-- Service Interest -->
+                                    <!-- Phone / WhatsApp -->
                                     <div>
-                                        <label for="service" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Service of Interest
+                                        <label for="phone" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                                            Phone / WhatsApp <span class="text-slate-500 font-normal normal-case">(optional)</span>
                                         </label>
-                                        <select id="service" name="service"
-                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 bg-slate-50 focus:bg-white transition outline-none">
-                                            <option value="">Select a service category</option>
-                                            @foreach ($services as $srv)
-                                                <option value="{{ $srv->title }}"
-                                                    {{ (old('service') == $srv->title || request('service') == $srv->title || request('service') == $srv->slug) ? 'selected' : '' }}>
-                                                    {{ $srv->title }} ({{ $srv->category }})
-                                                </option>
-                                            @endforeach
-                                            <option value="Custom Dataset / Other" {{ old('service') == 'Custom Dataset / Other' ? 'selected' : '' }}>
-                                                Custom Dataset / Other
-                                            </option>
-                                        </select>
+                                        <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
+                                            placeholder="+1 555 000 0000"
+                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none">
                                     </div>
                                 </div>
 
-                                <!-- Message -->
+                                <!-- Service / What do you need labeled? -->
+                                <div>
+                                    <label for="service" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                                        What do you need labeled? <span class="text-red-500">*</span>
+                                    </label>
+                                    <select id="service" name="service" required
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 bg-slate-50 focus:bg-white transition outline-none @error('service') border-red-400 @enderror">
+                                        <option value="" disabled {{ old('service') ? '' : 'selected' }}>Select service</option>
+                                        <option value="Image Annotation" {{ old('service') == 'Image Annotation' ? 'selected' : '' }}>Image Annotation</option>
+                                        <option value="Video Annotation" {{ old('service') == 'Video Annotation' ? 'selected' : '' }}>Video Annotation</option>
+                                        <option value="LiDAR & 3D Annotation" {{ old('service') == 'LiDAR & 3D Annotation' ? 'selected' : '' }}>LiDAR & 3D Annotation</option>
+                                        <option value="Text & NLP Annotation" {{ old('service') == 'Text & NLP Annotation' ? 'selected' : '' }}>Text & NLP Annotation</option>
+                                        <option value="Audio Annotation & Transcription" {{ old('service') == 'Audio Annotation & Transcription' ? 'selected' : '' }}>Audio Annotation & Transcription</option>
+                                        <option value="RLHF & LLM Evaluation" {{ old('service') == 'RLHF & LLM Evaluation' ? 'selected' : '' }}>RLHF & LLM Evaluation</option>
+                                        <option value="Data Collection" {{ old('service') == 'Data Collection' ? 'selected' : '' }}>Data Collection</option>
+                                        <option value="Not sure yet" {{ old('service') == 'Not sure yet' ? 'selected' : '' }}>Not sure yet</option>
+                                    </select>
+                                </div>
+
+                                <!-- Message / Project details -->
                                 <div>
                                     <label for="message" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                        Project Description & Dataset Volume <span class="text-red-500">*</span>
+                                        Project details <span class="text-red-500">*</span>
                                     </label>
                                     <textarea id="message" name="message" rows="4" required
-                                        placeholder="Please detail your data modality, expected volumes, labeling guidelines, timeline, or any custom tool requirements..."
+                                        placeholder="Describe your data type, labels needed, estimated volume and timeline."
                                         class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none resize-y @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
                                 </div>
 
-                                <!-- Submit Button -->
-                                <div>
+                                <!-- NDA Checkbox -->
+                                <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70">
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" name="needs_nda" id="needs_nda" value="1" {{ old('needs_nda') ? 'checked' : '' }}
+                                            class="w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500 cursor-pointer">
+                                        <span class="text-xs sm:text-sm text-slate-700 font-medium">I’d like an NDA signed before sharing data.</span>
+                                    </label>
+                                </div>
+
+                                <!-- Consent Checkbox -->
+                                <div class="pt-1">
+                                    <label class="flex items-start gap-3 cursor-pointer">
+                                        <input type="checkbox" name="consent" id="consent" required
+                                            class="w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500 cursor-pointer mt-0.5">
+                                        <span class="text-xs text-slate-600 leading-relaxed">
+                                            I agree to the <a href="{{ route('contact') }}" class="text-blue-600 hover:underline font-semibold">Privacy Policy</a> and consent to Marveit contacting me about this request. <span class="text-red-500">*</span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <!-- Submit Button & Trust Note -->
+                                <div class="pt-2 space-y-3">
                                     <button type="submit"
-                                        class="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all duration-200 inline-flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
-                                        <span>Send Inquiry</span>
-                                        <i data-feather="send" class="w-4 h-4"></i>
+                                        class="w-full px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-200 inline-flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                                        <span>Send My Request</span>
+                                        <i data-feather="arrow-right" class="w-4 h-4"></i>
                                     </button>
+                                    <p class="text-xs text-slate-500 text-center">
+                                        We reply within 24 hours. Your details are never shared.
+                                    </p>
                                 </div>
                             </form>
                         </div>

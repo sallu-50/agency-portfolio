@@ -283,7 +283,8 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Reply within 24 hours', false);
         $response->assertSee('WhatsApp', false);
         $response->assertSee('ebrahim@marveit.com', false);
-        $response->assertSee('Request a Benchmark Pilot', false);
+        $response->assertSee('Request a Quote', false);
+        $response->assertSee('Send My Request', false);
     }
 
     public function test_contact_form_submission_stores_message_and_redirects(): void
