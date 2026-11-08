@@ -22,12 +22,15 @@ class FreeTrialController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
+            'company' => 'nullable|string|max:255',
             'country' => 'required|string|max:100',
             'phone' => 'nullable|string|max:50',
             'service' => 'nullable|string|max:255',
             'message' => 'required|string|max:5000',
             'project_guideline' => 'nullable|file|mimes:pdf,doc,docx,txt,odt|max:51200',
             'sample_data' => 'nullable|file|mimes:zip,rar,tar,gz,7z,jpg,jpeg,png,webp,mp4,mov,avi|max:102400',
+            'needs_nda' => 'nullable|boolean',
+            'privacy_consent' => 'nullable|boolean',
         ]);
 
         $guidelinePath = null;
@@ -43,12 +46,14 @@ class FreeTrialController extends Controller
         ContactMessage::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
+            'company' => $validated['company'] ?? null,
             'country' => $validated['country'],
             'phone' => $validated['phone'] ?? null,
             'service' => $validated['service'] ?? null,
             'message' => $validated['message'],
             'guideline_file' => $guidelinePath,
             'sample_file' => $samplePath,
+            'needs_nda' => $request->boolean('needs_nda'),
             'type' => 'free_trial',
             'is_read' => false,
         ]);

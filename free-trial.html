@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Free Data Annotation Pilot - Marveit AI</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0E5EDD">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
+        }
+
+        .ft-page-bg {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .ft-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 0 1px 1px rgba(15, 23, 42, 0.02);
+            padding: 24px 28px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 640px) {
+            .ft-card {
+                padding: 18px 16px;
+                border-radius: 16px;
+            }
+        }
+
+        .ft-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 5px;
+            letter-spacing: -0.01em;
+        }
+
+        .ft-label .required {
+            color: #ef4444;
+            font-size: 11.5px;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        .ft-label .hint {
+            font-size: 11.5px;
+            font-weight: 500;
+            color: #64748b;
+            margin-left: 4px;
+        }
+
+        .ft-input,
+        .ft-select {
+            width: 100%;
+            height: 42px;
+            padding: 0 14px;
+            font-size: 13.5px;
+            color: #0f172a;
+            background-color: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 9px;
+            outline: none;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .ft-input::placeholder,
+        .ft-textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .ft-input:hover,
+        .ft-select:hover,
+        .ft-textarea:hover {
+            background-color: #ffffff;
+            border-color: #94a3b8;
+        }
+
+        .ft-input:focus,
+        .ft-select:focus,
+        .ft-textarea:focus {
+            background-color: #ffffff;
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 3.5px rgba(37, 99, 235, 0.18) !important;
+        }
+
+        .ft-textarea {
+            width: 100%;
+            padding: 10px 14px;
+            font-size: 13.5px;
+            color: #0f172a;
+            background-color: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 9px;
+            outline: none;
+            resize: none;
+            min-height: 72px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .ft-upload-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 13px;
+            background: #f8fafc;
+            border: 1.5px dashed #cbd5e1;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .ft-upload-card:hover {
+            background: #eff6ff;
+            border-color: #2563eb;
+        }
+
+        .ft-upload-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #e0f2fe;
+            color: #0284c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .ft-upload-card:hover .ft-upload-icon {
+            transform: scale(1.05);
+            background: #0e5edd;
+            color: #ffffff;
+        }
+
+        .ft-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            height: 42px;
+            padding: 0 26px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #0e5edd;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(14, 94, 221, 0.25);
+        }
+
+        .ft-submit-btn:hover {
+            background-color: #004bbf;
+            box-shadow: 0 6px 20px rgba(14, 94, 221, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .ft-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.25rem;
+            align-items: start;
+        }
+
+        @media (min-width: 1024px) {
+            .ft-layout-grid {
+                grid-template-columns: 5fr 7fr;
+                gap: 3rem;
+                align-items: start;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-white text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <a href="index.html" class="flex items-center" aria-label="Home">
+                <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-10 w-auto">
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 text-sm items-center relative z-50">
+                <!-- Services -->
+                <a href="index.html#services" class="hover:text-blue-600 font-medium">Services</a>
+
+                <!-- Industries -->
+                <a href="index.html#industries" class="hover:text-blue-600 font-medium">Industries</a>
+
+                <!-- Case Studies -->
+                <a href="portfolio.html" class="hover:text-blue-600 font-medium">Case Studies</a>
+
+                <!-- About Us -->
+                <a href="index.html#about" class="hover:text-blue-600 font-medium">About Us</a>
+
+                <!-- Team -->
+                <a href="team.html" class="hover:text-blue-600 font-medium">Our Team</a>
+
+                <!-- Resources -->
+                <a href="resources.html" class="hover:text-blue-600 font-medium">Resources</a>
+
+                <!-- Contact -->
+                <a href="contact.html" class="hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+
+            <a href="free-trial.html"
+                class="hidden md:inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+                <span>Free Trial</span>
+                <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-button" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute top-full left-0 w-full z-40 border-t border-gray-100">
+            <a href="index.html#services" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">Services</a>
+            <a href="index.html#industries" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">Industries</a>
+            <a href="portfolio.html" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">Case Studies</a>
+            <a href="index.html#about" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">About Us</a>
+            <a href="team.html" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">Our Team</a>
+            <a href="resources.html" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">Resources</a>
+            <a href="contact.html" class="block px-6 py-4 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium">Contact</a>
+            <div class="p-6">
+                <a href="free-trial.html" class="block text-center w-full py-3 px-6 rounded-full text-white bg-blue-600 hover:bg-blue-700 font-medium shadow-md">
+                    Free Trial
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Combined Section -->
+    <div class="ft-page-bg min-h-[calc(100vh-80px)] flex flex-col justify-center pt-24 pb-12 md:pt-28 md:pb-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="ft-layout-grid">
+
+                <!-- Left Column: Pilot Intro, Value Props & Workflow -->
+                <div class="text-left space-y-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold mb-3.5 border border-blue-100">
+                            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                            <span>Free Trial Pilot</span>
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-3">
+                            Start Your <span class="text-blue-600">Free Data Annotation Pilot</span>
+                        </h1>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Send us a small sample and your guidelines. We’ll label it and share the results with an accuracy report, so you can judge our quality before committing to a project.
+                        </p>
+                    </div>
+
+                    <!-- What you get -->
+                    <div class="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3.5">What you get:</h3>
+                        <ul class="space-y-2.5">
+                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
+                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                </div>
+                                <span>Labeled sample of your own data</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
+                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                </div>
+                                <span>Accuracy report from our QA team</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
+                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                </div>
+                                <span>Feedback on your guidelines</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
+                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                </div>
+                                <span>A clear quote for full production</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- What happens next -->
+                    <div class="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3.5">What happens next:</h3>
+                        <ol class="space-y-3">
+                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-200">1</span>
+                                <span>Submit the form with your scope and sample.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-200">2</span>
+                                <span>We reply within <strong>1 business day</strong> with questions or an NDA to sign.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-200">3</span>
+                                <span>You receive your labeled pilot in <strong>2–3 business days</strong>.</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Trust line -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white border border-gray-200/80 shadow-2xs text-xs text-gray-700">
+                        <i data-feather="shield" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                        <span>NDA available before you share any data &middot; No credit card required</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Form Card -->
+                <div>
+                    <div class="ft-card">
+                        <form onsubmit="event.preventDefault(); alert('Request submitted! Our team will contact you shortly.');" class="space-y-3.5">
+
+                            <!-- Full Name & Business Email -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label for="name" class="ft-label">
+                                        Full Name <span class="required">(Required)</span>
+                                    </label>
+                                    <input type="text" id="name" name="name" required placeholder="Alex Morgan" class="ft-input">
+                                </div>
+
+                                <div>
+                                    <label for="email" class="ft-label">
+                                        Business Email <span class="required">(Required)</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" required placeholder="alex@company.com" class="ft-input">
+                                </div>
+                            </div>
+
+                            <!-- Company & Country -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label for="company" class="ft-label">
+                                        Company <span class="hint">(optional)</span>
+                                    </label>
+                                    <input type="text" id="company" name="company" placeholder="Company name" class="ft-input">
+                                </div>
+
+                                <div>
+                                    <label for="country" class="ft-label">
+                                        Country <span class="required">(Required)</span>
+                                    </label>
+                                    <select id="country" name="country" required class="ft-select">
+                                        <option value="" disabled selected>Select country</option>
+                                        <option value="United States">United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="France">France</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="Netherlands">Netherlands</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="Sweden">Sweden</option>
+                                        <option value="Norway">Norway</option>
+                                        <option value="Denmark">Denmark</option>
+                                        <option value="Finland">Finland</option>
+                                        <option value="Ireland">Ireland</option>
+                                        <option value="Israel">Israel</option>
+                                        <option value="United Arab Emirates">United Arab Emirates</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="India">India</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="Italy">Italy</option>
+                                        <option value="Poland">Poland</option>
+                                        <option value="Austria">Austria</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="Mexico">Mexico</option>
+                                        <option value="New Zealand">New Zealand</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Phone / WhatsApp & What do you need labeled? -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label for="phone" class="ft-label">
+                                        Phone / WhatsApp (optional)
+                                    </label>
+                                    <input type="text" id="phone" name="phone" placeholder="+1 555 000 0000" class="ft-input">
+                                </div>
+
+                                <div>
+                                    <label for="service" class="ft-label">
+                                        What do you need labeled?
+                                    </label>
+                                    <select id="service" name="service" class="ft-select">
+                                        <option value="" disabled selected>Select service</option>
+                                        <option value="Image Annotation">Image Annotation</option>
+                                        <option value="Video Annotation">Video Annotation</option>
+                                        <option value="LiDAR & 3D Annotation">LiDAR & 3D Annotation</option>
+                                        <option value="Text & NLP Annotation">Text & NLP Annotation</option>
+                                        <option value="Audio Annotation & Transcription">Audio Annotation & Transcription</option>
+                                        <option value="RLHF & LLM Evaluation">RLHF & LLM Evaluation</option>
+                                        <option value="Data Collection">Data Collection</option>
+                                        <option value="Not sure yet">Not sure yet</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Project details (Message) -->
+                            <div>
+                                <label for="message" class="ft-label">
+                                    Project details <span class="required">(Required)</span>
+                                </label>
+                                <textarea id="message" name="message" rows="2" required
+                                    placeholder="Describe your data type, labels needed, volume and any special requirements."
+                                    class="ft-textarea"></textarea>
+                            </div>
+
+                            <!-- Project Guidelines (optional) & Sample Data (optional) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <!-- Project Guidelines -->
+                                <div>
+                                    <label class="ft-label">
+                                        Project Guidelines (optional)
+                                    </label>
+                                    <div class="ft-upload-card" onclick="document.getElementById('project_guideline').click()">
+                                        <input type="file" id="project_guideline" name="project_guideline"
+                                            accept=".pdf,.doc,.docx,.txt,.odt" class="hidden"
+                                            onchange="updateFileName(this, 'guideline_name')">
+                                        <div class="ft-upload-icon">
+                                            <i data-feather="file-text" class="w-3.5 h-3.5"></i>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <div id="guideline_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
+                                                Upload PDF or DOCX
+                                            </div>
+                                            <span class="text-[10px] text-gray-400 block mt-0.5">Upload PDF or DOCX, up to 50 MB</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sample Data -->
+                                <div>
+                                    <label class="ft-label">
+                                        Sample Data (optional)
+                                    </label>
+                                    <div class="ft-upload-card" onclick="document.getElementById('sample_data').click()">
+                                        <input type="file" id="sample_data" name="sample_data"
+                                            accept="image/*,video/*,audio/*,.zip,.rar,.tar,.gz,.7z" class="hidden"
+                                            onchange="updateFileName(this, 'sample_name')">
+                                        <div class="ft-upload-icon">
+                                            <i data-feather="upload-cloud" class="w-3.5 h-3.5"></i>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <div id="sample_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
+                                                Upload Sample Data
+                                            </div>
+                                            <span class="text-[10px] text-gray-400 block mt-0.5">Upload images, video, audio or ZIP, up to 100 MB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- NDA & Data Note -->
+                            <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-100 space-y-2">
+                                <label class="flex items-start gap-2.5 cursor-pointer">
+                                    <input type="checkbox" name="needs_nda" value="1"
+                                        class="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                                    <span class="text-xs font-semibold text-gray-800 leading-snug">
+                                        I need an NDA signed before sharing data.
+                                        <span class="block text-[11px] font-normal text-gray-500 mt-0.5">(চেক করলে আমরা আগে NDA পাঠাব)</span>
+                                    </span>
+                                </label>
+                                <div class="flex items-start gap-2 pt-1 border-t border-blue-100 text-[11px] text-blue-800 leading-snug">
+                                    <i data-feather="info" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                    <span><strong>Tip:</strong> If your sample contains sensitive data, skip the upload and we’ll send an NDA first.</span>
+                                </div>
+                            </div>
+
+                            <!-- Consent Checkbox -->
+                            <div class="pt-1">
+                                <label class="flex items-start gap-2.5 cursor-pointer">
+                                    <input type="checkbox" name="privacy_consent" value="1" required checked
+                                        class="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                                    <span class="text-xs text-gray-600 leading-snug">
+                                        I agree to the <a href="contact.html" class="text-blue-600 font-semibold hover:underline">Privacy Policy</a> and consent to Marveit contacting me about this request.
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Bottom Actions Bar -->
+                            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+                                <div class="flex items-center gap-1.5 text-[11px] text-gray-500">
+                                    <svg class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <span>Protected by mutual NDA &middot; 100% confidential</span>
+                                </div>
+
+                                <button type="submit" class="ft-submit-btn w-full sm:w-auto">
+                                    <span>Request My Free Pilot</span>
+                                    <i data-feather="arrow-right" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- 1. Brand -->
+                <div class="space-y-4 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2" aria-label="Marveit Home">
+                        <img src="image/Marveit ABCD.svg" alt="Marveit Logo" class="h-9 w-auto brightness-0 invert">
+                    </a>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                        Human-in-the-loop data annotation for computer vision, NLP, audio and video AI.
+                    </p>
+                </div>
+
+                <!-- 2. Services -->
+                <div>
+                    <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Services</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
+                        <li><a href="data-collection.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Data Collection</a></li>
+                        <li><a href="computer-vision.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Image Annotation</a></li>
+                        <li><a href="video-annotation.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Video Annotation</a></li>
+                        <li><a href="audio-annotation.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Audio Transcription</a></li>
+                        <li><a href="nlp.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Text & NLP</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Industries -->
+                <div>
+                    <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Industries</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
+                        <li><a href="index.html#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Automotive</a></li>
+                        <li><a href="index.html#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Healthcare</a></li>
+                        <li><a href="index.html#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Retail & E-Commerce</a></li>
+                        <li><a href="index.html#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Robotics</a></li>
+                        <li><a href="index.html#industries" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Agriculture</a></li>
+                    </ul>
+                </div>
+
+                <!-- 4. Company -->
+                <div>
+                    <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Company</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">About Us</a></li>
+                        <li><a href="team.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Team</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Case Studies</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- 5. Get in Touch -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Get in Touch</h4>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                        Tell us about your dataset and model goals. A technical lead will reply within 24 hours.
+                    </p>
+                    <div class="flex flex-col gap-2.5 pt-1">
+                        <a href="mailto:ebrahim@marveit.com"
+                            class="flex items-center gap-2.5 text-gray-300 hover:text-blue-400 transition-colors text-xs sm:text-sm">
+                            <i data-feather="mail" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                            <span class="break-all">ebrahim@marveit.com</span>
+                        </a>
+                        <div class="flex items-start gap-2.5 text-gray-400 text-xs sm:text-sm leading-snug">
+                            <i data-feather="globe" class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5"></i>
+                            <span>Mymensingh, Bangladesh | Serving clients worldwide</span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm transition hover:opacity-90"
+                            style="background-color: #25D366; color: #ffffff;">
+                            <i data-feather="message-circle" class="w-4 h-4"></i>
+                            <span>WhatsApp Chat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left"
+                style="padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p>&copy; 2026 Marveit AI. All rights reserved.</p>
+                <div class="flex items-center gap-3 text-gray-400">
+                    <a href="contact.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="contact.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Interactions -->
+    <script>
+        // Init Feather Icons
+        feather.replace();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        function updateFileName(input, targetId) {
+            const display = document.getElementById(targetId);
+            if (input.files && input.files.length > 0) {
+                const file = input.files[0];
+                const sizeInMb = (file.size / (1024 * 1024)).toFixed(1);
+                display.textContent = `${file.name} (${sizeInMb} MB)`;
+                display.classList.add('text-blue-600', 'font-bold');
+            }
+        }
+    </script>
+</body>
+
+</html>

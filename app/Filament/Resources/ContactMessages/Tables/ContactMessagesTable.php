@@ -23,6 +23,9 @@ class ContactMessagesTable
                     }),
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('company')
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('email')
                     ->label('Email address')
                     ->searchable(),
@@ -40,6 +43,10 @@ class ContactMessagesTable
                     ->label('Sample')
                     ->boolean()
                     ->state(fn ($record): bool => ! empty($record->sample_file))
+                    ->toggleable(),
+                IconColumn::make('needs_nda')
+                    ->label('NDA Req.')
+                    ->boolean()
                     ->toggleable(),
                 TextColumn::make('service')
                     ->searchable()

@@ -454,13 +454,17 @@ class AgencySiteTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Free Trial', false);
-        $response->assertSee('Start Your', false);
+        $response->assertSee('Start Your Free Data Annotation Pilot', false);
         $response->assertSee('Full Name', false);
         $response->assertSee('Business Email', false);
+        $response->assertSee('Company', false);
         $response->assertSee('Country', false);
-        $response->assertSee('Phone Number', false);
-        $response->assertSee('Project Guideline', false);
+        $response->assertSee('Phone / WhatsApp', false);
+        $response->assertSee('What do you need labeled?', false);
+        $response->assertSee('Project details', false);
+        $response->assertSee('Project Guidelines', false);
         $response->assertSee('Sample Data', false);
+        $response->assertSee('Request My Free Pilot', false);
     }
 
     public function test_user_can_submit_free_trial_with_guideline_and_sample_files(): void
@@ -473,12 +477,14 @@ class AgencySiteTest extends TestCase
         $response = $this->post(route('free-trial.store'), [
             'name' => 'Dr. Alex Vance',
             'email' => 'alex@robotics-ai.io',
+            'company' => 'Robotics AI Inc.',
             'country' => 'United States',
             'phone' => '+1 415 555 2671',
             'service' => 'Computer Vision',
             'message' => 'Need 2D bounding boxes on 15,000 traffic surveillance frames.',
             'project_guideline' => $guideline,
             'sample_data' => $sampleData,
+            'needs_nda' => true,
         ]);
 
         $response->assertRedirect(route('free-trial'));
@@ -487,7 +493,9 @@ class AgencySiteTest extends TestCase
         $message = ContactMessage::where('email', 'alex@robotics-ai.io')->first();
         $this->assertNotNull($message);
         $this->assertEquals('Dr. Alex Vance', $message->name);
+        $this->assertEquals('Robotics AI Inc.', $message->company);
         $this->assertEquals('United States', $message->country);
+        $this->assertTrue((bool) $message->needs_nda);
         $this->assertEquals('free_trial', $message->type);
         $this->assertTrue($message->is_free_trial);
         $this->assertNotNull($message->guideline_file);

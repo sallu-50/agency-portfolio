@@ -23,6 +23,8 @@ class ContactMessageForm
                     ->label('Email address')
                     ->email()
                     ->required(),
+                TextInput::make('company')
+                    ->label('Company'),
                 TextInput::make('phone')
                     ->tel(),
                 TextInput::make('country'),
@@ -42,6 +44,9 @@ class ContactMessageForm
                     ->openable()
                     ->downloadable()
                     ->columnSpan(1),
+                Toggle::make('needs_nda')
+                    ->label('NDA Requested')
+                    ->disabled(),
                 Toggle::make('is_read')
                     ->required(),
             ]);
