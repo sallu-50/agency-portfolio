@@ -90,7 +90,7 @@
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     @foreach ($service->features as $feature)
-                                        <div class="p-5 rounded-2xl border border-gray-100 bg-white shadow-xs hover:border-blue-200 hover:shadow-md transition flex items-start gap-3.5">
+                                        <div class="p-5 rounded-2xl border border-gray-100 bg-white shadow-xs hover:border-blue-200 hover:shadow-md transition flex items-start gap-4">
                                             <div class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <i data-feather="check" class="w-4 h-4"></i>
                                             </div>

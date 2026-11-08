@@ -175,6 +175,26 @@
                 align-items: center;
             }
         }
+
+        .ft-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .ft-form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 640px) {
+            .ft-form-row {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                column-gap: 20px;
+                row-gap: 16px;
+            }
+        }
     </style>
 
     <div class="pt-24 md:pt-28">
@@ -365,11 +385,11 @@
                                 </div>
                             @endif
 
-                            <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+                            <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data" class="ft-form space-y-4">
                                 @csrf
 
                                 <!-- Full Name & Business Email -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <div class="ft-form-row grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
                                         <label for="name" class="ft-label">
                                             Full Name <span class="required">(Required)</span>
@@ -389,7 +409,7 @@
                                 </div>
 
                                 <!-- Company & Country -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <div class="ft-form-row grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
                                         <label for="company" class="ft-label">
                                             Company <span class="hint">(optional)</span>
@@ -440,7 +460,7 @@
                                 </div>
 
                                 <!-- Phone / WhatsApp & What do you need labeled? -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <div class="ft-form-row grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
                                         <label for="phone" class="ft-label">
                                             Phone / WhatsApp <span class="hint">(optional)</span>
@@ -478,7 +498,7 @@
                                 </div>
 
                                 <!-- Project Guidelines (optional) & Sample Data (optional) -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <div class="ft-form-row grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <!-- Project Guidelines -->
                                     <div>
                                         <label class="ft-label">
