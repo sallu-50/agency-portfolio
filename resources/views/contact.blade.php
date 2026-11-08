@@ -31,11 +31,12 @@
                 <!-- 4 Channels: WhatsApp, Email, LinkedIn, Facebook -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center items-stretch">
                     <!-- 1. WhatsApp -->
-                    <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-emerald-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
+                    <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
                             <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
                                 target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-                                class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs">
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
+                                style="background-color: #ecfdf5; border: 1px solid #a7f3d0; color: #059669;">
                                 <i data-feather="message-circle" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">WhatsApp</h2>
@@ -43,7 +44,7 @@
                         </div>
                         <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
                             target="_blank" rel="noopener noreferrer"
-                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Chat on WhatsApp</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -54,50 +55,53 @@
                         <div class="flex flex-col items-center w-full">
                             <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI"
                                 aria-label="Email"
-                                class="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs">
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
+                                style="background-color: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb;">
                                 <i data-feather="mail" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">Email</h2>
                             <p class="text-sm font-semibold text-gray-700 break-all mb-5">ebrahim@marveit.com</p>
                         </div>
                         <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI"
-                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Send an Email</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
 
                     <!-- 3. LinkedIn -->
-                    <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-sky-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
+                    <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
                             <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
                                 aria-label="LinkedIn"
-                                class="w-16 h-16 rounded-2xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs">
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
+                                style="background-color: #f0f9ff; border: 1px solid #bae6fd; color: #0284c7;">
                                 <i data-feather="linkedin" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">LinkedIn</h2>
                             <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">Marveit AI</p>
                         </div>
                         <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
-                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Connect on LinkedIn</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
 
                     <!-- 4. Facebook -->
-                    <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-indigo-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
+                    <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
                             <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
                                 aria-label="Facebook"
-                                class="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs">
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
+                                style="background-color: #eef2ff; border: 1px solid #c7d2fe; color: #4f46e5;">
                                 <i data-feather="facebook" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">Facebook</h2>
                             <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">Marveit AI</p>
                         </div>
                         <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
-                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                            class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Visit Our Page</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
