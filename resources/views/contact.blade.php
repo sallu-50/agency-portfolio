@@ -4,6 +4,179 @@
 @section('meta_description', 'Connect directly with Marveit AI leadership and senior technical architects via WhatsApp, Email, or send an inquiry for your data annotation project.')
 
 @section('content')
+    <style>
+        .ft-page-bg {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .ft-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(15, 23, 42, 0.02);
+            padding: 28px 32px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 640px) {
+            .ft-card {
+                padding: 22px 18px;
+                border-radius: 16px;
+            }
+        }
+
+        .ft-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .ft-label .required {
+            color: #ef4444;
+            font-size: 11.5px;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        .ft-label .hint {
+            font-size: 11.5px;
+            font-weight: 500;
+            color: #64748b;
+            margin-left: 4px;
+        }
+
+        .ft-input,
+        .ft-select {
+            width: 100%;
+            height: 44px;
+            padding: 0 14px;
+            font-size: 13.5px;
+            color: #0f172a;
+            background-color: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .ft-input::placeholder,
+        .ft-textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .ft-input:hover,
+        .ft-select:hover,
+        .ft-textarea:hover {
+            background-color: #ffffff;
+            border-color: #94a3b8;
+        }
+
+        .ft-input:focus,
+        .ft-select:focus,
+        .ft-textarea:focus {
+            background-color: #ffffff;
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 3.5px rgba(37, 99, 235, 0.18) !important;
+        }
+
+        .ft-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 13.5px;
+            color: #0f172a;
+            background-color: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+            resize: none;
+            min-height: 76px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .ft-upload-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            background: #f8fafc;
+            border: 1.5px dashed #cbd5e1;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .ft-upload-card:hover {
+            background: #eff6ff;
+            border-color: #2563eb;
+        }
+
+        .ft-upload-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #e0f2fe;
+            color: #0284c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .ft-upload-card:hover .ft-upload-icon {
+            transform: scale(1.05);
+            background: #0e5edd;
+            color: #ffffff;
+        }
+
+        .ft-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 48px;
+            padding: 0 32px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            background-color: #0e5edd;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(14, 94, 221, 0.28);
+        }
+
+        .ft-submit-btn:hover {
+            background-color: #004bbf;
+            box-shadow: 0 6px 22px rgba(14, 94, 221, 0.38);
+            transform: translateY(-1px);
+        }
+
+        .ft-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.75rem;
+            align-items: start;
+        }
+
+        @media (min-width: 1024px) {
+            .ft-layout-grid {
+                grid-template-columns: 5fr 7fr;
+                gap: 3.5rem;
+                align-items: center;
+            }
+        }
+    </style>
+
     <div class="pt-24 md:pt-28">
         <!-- Hero Section with Clean White Theme -->
         <section class="bg-white pt-14 md:pt-20 pb-6 md:pb-8 relative overflow-hidden z-10"
@@ -53,16 +226,15 @@
                     <!-- 2. Email -->
                     <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
-                            <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI"
-                                aria-label="Email"
+                            <a href="mailto:ebrahim@marveit.com" aria-label="Email"
                                 class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
                                 style="background-color: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb;">
                                 <i data-feather="mail" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">Email</h2>
-                            <p class="text-sm font-semibold text-gray-700 break-all mb-5">ebrahim@marveit.com</p>
+                            <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">ebrahim@marveit.com</p>
                         </div>
-                        <a href="mailto:ebrahim@marveit.com?subject=Data%20Annotation%20Project%20Inquiry%20-%20Marveit%20AI"
+                        <a href="mailto:ebrahim@marveit.com"
                             class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Send an Email</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
@@ -75,7 +247,7 @@
                             <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
                                 aria-label="LinkedIn"
                                 class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
-                                style="background-color: #f0f9ff; border: 1px solid #bae6fd; color: #0284c7;">
+                                style="background-color: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a;">
                                 <i data-feather="linkedin" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">LinkedIn</h2>
@@ -111,20 +283,20 @@
         </section>
 
         <!-- Request a Quote Section (Free Trial Style: 2 Columns - Left Text Panel, Right Form Card) -->
-        <section class="bg-white pt-6 md:pt-10 pb-16 md:pb-24 relative z-0">
+        <section class="ft-page-bg py-14 md:py-20 relative z-0 border-t border-slate-100">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-                    <!-- Left Panel: Text & Trust Bullets -->
-                    <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+                <div class="ft-layout-grid">
+                    <!-- Left Column: Intro, Value Props & Workflow (Centered & Balanced) -->
+                    <div class="text-center space-y-8 lg:pr-4 my-auto flex flex-col items-center">
                         <div>
                             <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-4 bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
                                 <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600"></i>
                                 <span>Fast Response Guarantee</span>
                             </span>
-                            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
-                                Request a Quote
+                            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4 text-center">
+                                Request a <span class="text-blue-600">Quote</span>
                             </h2>
-                            <p class="text-base text-gray-600 leading-relaxed">
+                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-lg mx-auto text-center">
                                 Share a short brief and we’ll reply within 24 hours with questions, a quote or an NDA. Want to test our quality first?
                                 <a href="{{ route('free-trial') }}" class="text-blue-600 hover:text-blue-700 font-semibold underline underline-offset-2 inline-flex items-center gap-0.5 ml-1">
                                     <span>Start a free pilot</span>
@@ -133,58 +305,59 @@
                             </p>
                         </div>
 
-                        <!-- Trust Bullets (3টি) -->
-                        <div class="space-y-4 pt-2">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700 leading-snug">NDA available before you share any data</span>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700 leading-snug">A named project lead and a direct Slack or Teams channel</span>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700 leading-snug">Multi-stage QA, with an accuracy report on every delivery</span>
-                            </div>
+                        <!-- What you get -->
+                        <div class="pt-1 text-center w-full">
+                            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 text-center">What you get:</h3>
+                            <ul class="space-y-3.5 inline-flex flex-col items-start mx-auto text-left">
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                    <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                    </div>
+                                    <span>NDA available before you share any data</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                    <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                    </div>
+                                    <span>A named project lead and a direct Slack or Teams channel</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                    <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                                    </div>
+                                    <span>Multi-stage QA, with an accuracy report on every delivery</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <!-- Trust Pill / Headquarters -->
-                        <div class="pt-4">
-                            <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-slate-50 text-xs text-gray-700 border border-gray-200">
-                                <i data-feather="shield" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                                <span>NDA standard bilateral · Global remote operations 24/7</span>
+                        <!-- Headquarters & NDA Trust Pill -->
+                        <div class="pt-2">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-xs text-gray-600 shadow-sm border border-gray-200">
+                                <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-500"></i>
+                                <span>NDA available before you share any data &middot; 100% confidential</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right Panel: Form Card (ft-card style) -->
-                    <div class="lg:col-span-7">
-                        <div class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 shadow-lg"
-                            style="box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 0 1px 1px rgba(15, 23, 42, 0.03);">
-
-                            <!-- Success Alert -->
+                    <!-- Right Column: Form Card -->
+                    <div>
+                        <div class="ft-card">
+                            <!-- Success Notification -->
                             @if (session('success'))
-                                <div class="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-3">
-                                    <i data-feather="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                                <div class="mb-5 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
+                                    <i data-feather="check-circle" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                                     <div>
-                                        <h4 class="font-bold text-sm">Message Sent Successfully!</h4>
-                                        <p class="text-xs mt-0.5">{{ session('success') }}</p>
+                                        <h4 class="font-bold text-xs">Message Sent Successfully!</h4>
+                                        <p class="text-[11px] mt-0.5 text-emerald-800">{{ session('success') }}</p>
                                     </div>
                                 </div>
                             @endif
 
                             <!-- Error Alert -->
                             @if (isset($errors) && $errors->any())
-                                <div class="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800">
-                                    <h4 class="font-bold text-sm mb-1">Please correct the following errors:</h4>
-                                    <ul class="list-disc list-inside text-xs space-y-1">
+                                <div class="mb-5 p-4 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                                    <h4 class="font-bold text-xs mb-1">Please fix the following issues:</h4>
+                                    <ul class="list-disc list-inside text-[11px] space-y-0.5 text-red-700">
                                         @foreach ($errors->all() as $error)
                                             <li>{{ $error }}</li>
                                         @endforeach
@@ -192,118 +365,235 @@
                                 </div>
                             @endif
 
-                            <form action="{{ route('contact.store') }}" method="POST" class="space-y-5">
+                            <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
                                 @csrf
 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <!-- Full Name -->
+                                <!-- Full Name & Business Email -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                     <div>
-                                        <label for="name" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Full name <span class="text-red-500">*</span>
+                                        <label for="name" class="ft-label">
+                                            Full Name <span class="required">(Required)</span>
                                         </label>
                                         <input type="text" id="name" name="name" value="{{ old('name') }}" required
-                                            placeholder="Alex Morgan"
-                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none @error('name') border-red-400 @enderror">
+                                            placeholder="Alex Morgan" class="ft-input @error('name') border-red-400 @enderror">
                                     </div>
 
-                                    <!-- Business Email -->
                                     <div>
-                                        <label for="email" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Business email <span class="text-red-500">*</span>
+                                        <label for="email" class="ft-label">
+                                            Business Email <span class="required">(Required)</span>
                                         </label>
                                         <input type="email" id="email" name="email" value="{{ old('email') }}" required
                                             placeholder="alex@company.com"
-                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none @error('email') border-red-400 @enderror">
+                                            class="ft-input @error('email') border-red-400 @enderror">
                                     </div>
                                 </div>
 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <!-- Company -->
+                                <!-- Company & Country -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                     <div>
-                                        <label for="company" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Company <span class="text-red-500">*</span>
+                                        <label for="company" class="ft-label">
+                                            Company <span class="hint">(optional)</span>
                                         </label>
-                                        <input type="text" id="company" name="company" value="{{ old('company') }}" required
-                                            placeholder="Company name"
-                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none @error('company') border-red-400 @enderror">
+                                        <input type="text" id="company" name="company" value="{{ old('company') }}"
+                                            placeholder="Company name" class="ft-input @error('company') border-red-400 @enderror">
                                     </div>
 
-                                    <!-- Phone / WhatsApp -->
                                     <div>
-                                        <label for="phone" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                            Phone / WhatsApp <span class="text-slate-500 font-normal normal-case">(optional)</span>
+                                        <label for="country" class="ft-label">
+                                            Country <span class="required">(Required)</span>
+                                        </label>
+                                        <select id="country" name="country" class="ft-select @error('country') border-red-400 @enderror">
+                                            <option value="" disabled {{ old('country') ? '' : 'selected' }}>Select country</option>
+                                            <option value="United States" {{ old('country') === 'United States' ? 'selected' : '' }}>United States</option>
+                                            <option value="United Kingdom" {{ old('country') === 'United Kingdom' ? 'selected' : '' }}>United Kingdom</option>
+                                            <option value="Canada" {{ old('country') === 'Canada' ? 'selected' : '' }}>Canada</option>
+                                            <option value="Germany" {{ old('country') === 'Germany' ? 'selected' : '' }}>Germany</option>
+                                            <option value="France" {{ old('country') === 'France' ? 'selected' : '' }}>France</option>
+                                            <option value="Australia" {{ old('country') === 'Australia' ? 'selected' : '' }}>Australia</option>
+                                            <option value="Japan" {{ old('country') === 'Japan' ? 'selected' : '' }}>Japan</option>
+                                            <option value="Singapore" {{ old('country') === 'Singapore' ? 'selected' : '' }}>Singapore</option>
+                                            <option value="Netherlands" {{ old('country') === 'Netherlands' ? 'selected' : '' }}>Netherlands</option>
+                                            <option value="Switzerland" {{ old('country') === 'Switzerland' ? 'selected' : '' }}>Switzerland</option>
+                                            <option value="Sweden" {{ old('country') === 'Sweden' ? 'selected' : '' }}>Sweden</option>
+                                            <option value="Norway" {{ old('country') === 'Norway' ? 'selected' : '' }}>Norway</option>
+                                            <option value="Denmark" {{ old('country') === 'Denmark' ? 'selected' : '' }}>Denmark</option>
+                                            <option value="Finland" {{ old('country') === 'Finland' ? 'selected' : '' }}>Finland</option>
+                                            <option value="Ireland" {{ old('country') === 'Ireland' ? 'selected' : '' }}>Ireland</option>
+                                            <option value="Israel" {{ old('country') === 'Israel' ? 'selected' : '' }}>Israel</option>
+                                            <option value="United Arab Emirates" {{ old('country') === 'United Arab Emirates' ? 'selected' : '' }}>United Arab Emirates</option>
+                                            <option value="Saudi Arabia" {{ old('country') === 'Saudi Arabia' ? 'selected' : '' }}>Saudi Arabia</option>
+                                            <option value="India" {{ old('country') === 'India' ? 'selected' : '' }}>India</option>
+                                            <option value="Bangladesh" {{ old('country') === 'Bangladesh' ? 'selected' : '' }}>Bangladesh</option>
+                                            <option value="South Korea" {{ old('country') === 'South Korea' ? 'selected' : '' }}>South Korea</option>
+                                            <option value="Spain" {{ old('country') === 'Spain' ? 'selected' : '' }}>Spain</option>
+                                            <option value="Italy" {{ old('country') === 'Italy' ? 'selected' : '' }}>Italy</option>
+                                            <option value="Poland" {{ old('country') === 'Poland' ? 'selected' : '' }}>Poland</option>
+                                            <option value="Austria" {{ old('country') === 'Austria' ? 'selected' : '' }}>Austria</option>
+                                            <option value="Belgium" {{ old('country') === 'Belgium' ? 'selected' : '' }}>Belgium</option>
+                                            <option value="Brazil" {{ old('country') === 'Brazil' ? 'selected' : '' }}>Brazil</option>
+                                            <option value="Mexico" {{ old('country') === 'Mexico' ? 'selected' : '' }}>Mexico</option>
+                                            <option value="New Zealand" {{ old('country') === 'New Zealand' ? 'selected' : '' }}>New Zealand</option>
+                                            <option value="South Africa" {{ old('country') === 'South Africa' ? 'selected' : '' }}>South Africa</option>
+                                            <option value="Other" {{ old('country') === 'Other' ? 'selected' : '' }}>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Phone / WhatsApp & What do you need labeled? -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                    <div>
+                                        <label for="phone" class="ft-label">
+                                            Phone / WhatsApp <span class="hint">(optional)</span>
                                         </label>
                                         <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                            placeholder="+1 555 000 0000"
-                                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none">
+                                            placeholder="+1 555 000 0000" class="ft-input">
+                                    </div>
+
+                                    <div>
+                                        <label for="service" class="ft-label">
+                                            What do you need labeled?
+                                        </label>
+                                        <select id="service" name="service" class="ft-select @error('service') border-red-400 @enderror">
+                                            <option value="" disabled {{ old('service') ? '' : 'selected' }}>Select service</option>
+                                            <option value="Image Annotation" {{ old('service') === 'Image Annotation' ? 'selected' : '' }}>Image Annotation</option>
+                                            <option value="Video Annotation" {{ old('service') === 'Video Annotation' ? 'selected' : '' }}>Video Annotation</option>
+                                            <option value="LiDAR & 3D Annotation" {{ old('service') === 'LiDAR & 3D Annotation' ? 'selected' : '' }}>LiDAR & 3D Annotation</option>
+                                            <option value="Text & NLP Annotation" {{ old('service') === 'Text & NLP Annotation' ? 'selected' : '' }}>Text & NLP Annotation</option>
+                                            <option value="Audio Annotation & Transcription" {{ old('service') === 'Audio Annotation & Transcription' ? 'selected' : '' }}>Audio Annotation & Transcription</option>
+                                            <option value="RLHF & LLM Evaluation" {{ old('service') === 'RLHF & LLM Evaluation' ? 'selected' : '' }}>RLHF & LLM Evaluation</option>
+                                            <option value="Data Collection" {{ old('service') === 'Data Collection' ? 'selected' : '' }}>Data Collection</option>
+                                            <option value="Not sure yet" {{ old('service') === 'Not sure yet' ? 'selected' : '' }}>Not sure yet</option>
+                                        </select>
                                     </div>
                                 </div>
 
-                                <!-- Service / What do you need labeled? -->
+                                <!-- Project details (Message) -->
                                 <div>
-                                    <label for="service" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                        What do you need labeled? <span class="text-red-500">*</span>
+                                    <label for="message" class="ft-label">
+                                        Project details <span class="required">(Required)</span>
                                     </label>
-                                    <select id="service" name="service" required
-                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 bg-slate-50 focus:bg-white transition outline-none @error('service') border-red-400 @enderror">
-                                        <option value="" disabled {{ old('service') ? '' : 'selected' }}>Select service</option>
-                                        <option value="Image Annotation" {{ old('service') == 'Image Annotation' ? 'selected' : '' }}>Image Annotation</option>
-                                        <option value="Video Annotation" {{ old('service') == 'Video Annotation' ? 'selected' : '' }}>Video Annotation</option>
-                                        <option value="LiDAR & 3D Annotation" {{ old('service') == 'LiDAR & 3D Annotation' ? 'selected' : '' }}>LiDAR & 3D Annotation</option>
-                                        <option value="Text & NLP Annotation" {{ old('service') == 'Text & NLP Annotation' ? 'selected' : '' }}>Text & NLP Annotation</option>
-                                        <option value="Audio Annotation & Transcription" {{ old('service') == 'Audio Annotation & Transcription' ? 'selected' : '' }}>Audio Annotation & Transcription</option>
-                                        <option value="RLHF & LLM Evaluation" {{ old('service') == 'RLHF & LLM Evaluation' ? 'selected' : '' }}>RLHF & LLM Evaluation</option>
-                                        <option value="Data Collection" {{ old('service') == 'Data Collection' ? 'selected' : '' }}>Data Collection</option>
-                                        <option value="Not sure yet" {{ old('service') == 'Not sure yet' ? 'selected' : '' }}>Not sure yet</option>
-                                    </select>
+                                    <textarea id="message" name="message" rows="2" required
+                                        placeholder="Describe your data type, labels needed, volume and any special requirements."
+                                        class="ft-textarea @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
                                 </div>
 
-                                <!-- Message / Project details -->
-                                <div>
-                                    <label for="message" class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-                                        Project details <span class="text-red-500">*</span>
-                                    </label>
-                                    <textarea id="message" name="message" rows="4" required
-                                        placeholder="Describe your data type, labels needed, estimated volume and timeline."
-                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-sm text-slate-900 placeholder:text-slate-400 bg-slate-50 focus:bg-white transition outline-none resize-y @error('message') border-red-400 @enderror">{{ old('message') }}</textarea>
+                                <!-- Project Guidelines (optional) & Sample Data (optional) -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                    <!-- Project Guidelines -->
+                                    <div>
+                                        <label class="ft-label">
+                                            Project Guidelines <span class="hint">(optional)</span>
+                                        </label>
+                                        <div class="ft-upload-card" onclick="document.getElementById('project_guideline').click()">
+                                            <input type="file" id="project_guideline" name="project_guideline"
+                                                accept=".pdf,.doc,.docx,.txt,.odt" class="hidden"
+                                                onchange="updateFileName(this, 'guideline_name')">
+                                            <div class="ft-upload-icon">
+                                                <i data-feather="file-text" class="w-3.5 h-3.5"></i>
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <div id="guideline_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
+                                                    Upload PDF or DOCX
+                                                </div>
+                                                <span class="text-[10px] text-gray-400 block mt-0.5">Upload PDF or DOCX, up to 50 MB</span>
+                                            </div>
+                                        </div>
+                                        @error('project_guideline')
+                                            <p class="text-[11px] text-red-500 mt-1">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <!-- Sample Data -->
+                                    <div>
+                                        <label class="ft-label">
+                                            Sample Data <span class="hint">(optional)</span>
+                                        </label>
+                                        <div class="ft-upload-card" onclick="document.getElementById('sample_data').click()">
+                                            <input type="file" id="sample_data" name="sample_data"
+                                                accept="image/*,video/*,audio/*,.zip,.rar,.tar,.gz,.7z" class="hidden"
+                                                onchange="updateFileName(this, 'sample_name')">
+                                            <div class="ft-upload-icon">
+                                                <i data-feather="upload-cloud" class="w-3.5 h-3.5"></i>
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <div id="sample_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
+                                                    Upload Sample Data
+                                                </div>
+                                                <span class="text-[10px] text-gray-400 block mt-0.5">Upload images, video, audio or ZIP, up to 100 MB</span>
+                                            </div>
+                                        </div>
+                                        @error('sample_data')
+                                            <p class="text-[11px] text-red-500 mt-1">{{ $message }}</p>
+                                        @enderror
+                                    </div>
                                 </div>
 
-                                <!-- NDA Checkbox -->
-                                <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70">
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox" name="needs_nda" id="needs_nda" value="1" {{ old('needs_nda') ? 'checked' : '' }}
-                                            class="w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500 cursor-pointer">
-                                        <span class="text-xs sm:text-sm text-slate-700 font-medium">I’d like an NDA signed before sharing data.</span>
+                                <!-- NDA & Data Note -->
+                                <div class="mt-6 p-4 rounded-xl space-y-3" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                                    <label class="flex items-start gap-3 cursor-pointer">
+                                        <input type="checkbox" name="needs_nda" value="1" {{ old('needs_nda') ? 'checked' : '' }}
+                                            class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0">
+                                        <div>
+                                            <span class="text-xs sm:text-sm font-semibold text-gray-800 leading-snug">
+                                                I need an NDA signed before sharing data.
+                                            </span>
+                                            <span class="block text-xs text-gray-500 mt-0.5">
+                                                (চেক করলে আমরা আগে NDA পাঠাব)
+                                            </span>
+                                        </div>
                                     </label>
+                                    <div class="flex items-start gap-2.5 pt-2.5 text-xs text-slate-700 leading-relaxed" style="border-top: 1px solid #edf2f7;">
+                                        <i data-feather="info" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                        <span><strong>Tip:</strong> If your sample contains sensitive data, skip the upload and we’ll send an NDA first.</span>
+                                    </div>
                                 </div>
 
                                 <!-- Consent Checkbox -->
-                                <div class="pt-1">
+                                <div class="py-2.5">
                                     <label class="flex items-start gap-3 cursor-pointer">
-                                        <input type="checkbox" name="consent" id="consent" required
-                                            class="w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500 cursor-pointer mt-0.5">
-                                        <span class="text-xs text-slate-600 leading-relaxed">
-                                            I agree to the <a href="{{ route('contact') }}" class="text-blue-600 hover:underline font-semibold">Privacy Policy</a> and consent to Marveit contacting me about this request. <span class="text-red-500">*</span>
+                                        <input type="checkbox" name="privacy_consent" value="1" required {{ old('privacy_consent') ? 'checked' : '' }}
+                                            class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0">
+                                        <span class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                            I agree to the <a href="{{ route('contact') }}" class="text-blue-600 font-semibold hover:underline">Privacy Policy</a> and consent to Marveit contacting me about this request.
                                         </span>
                                     </label>
                                 </div>
 
-                                <!-- Submit Button & Trust Note -->
-                                <div class="pt-2 space-y-3">
-                                    <button type="submit"
-                                        class="w-full px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-200 inline-flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                                <!-- Bottom Actions Bar -->
+                                <div class="pt-4 border-t border-gray-100 flex flex-col items-center gap-3">
+                                    <button type="submit" class="ft-submit-btn w-full">
                                         <span>Send My Request</span>
                                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                                     </button>
-                                    <p class="text-xs text-slate-500 text-center">
+
+                                    <div class="flex items-center justify-center gap-1.5 text-xs text-gray-500 text-center pt-1">
+                                        <svg class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        </svg>
+                                        <span>Protected by mutual NDA &middot; 100% confidential</span>
+                                    </div>
+                                    <p class="text-[11px] text-gray-400 text-center">
                                         We reply within 24 hours. Your details are never shared.
                                     </p>
                                 </div>
                             </form>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        function updateFileName(input, targetId) {
+            const display = document.getElementById(targetId);
+            if (input.files && input.files[0]) {
+                display.textContent = input.files[0].name;
+                display.classList.add('text-blue-600');
+            }
+        }
+    </script>
+@endpush
