@@ -12,15 +12,15 @@
         .ft-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 0 1px 1px rgba(15, 23, 42, 0.02);
-            padding: 24px 28px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(15, 23, 42, 0.02);
+            padding: 28px 32px;
             transition: all 0.3s ease;
         }
 
         @media (max-width: 640px) {
             .ft-card {
-                padding: 18px 16px;
+                padding: 22px 18px;
                 border-radius: 16px;
             }
         }
@@ -30,7 +30,7 @@
             font-size: 13px;
             font-weight: 700;
             color: #0f172a;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             letter-spacing: -0.01em;
         }
 
@@ -51,13 +51,13 @@
         .ft-input,
         .ft-select {
             width: 100%;
-            height: 42px;
+            height: 44px;
             padding: 0 14px;
             font-size: 13.5px;
             color: #0f172a;
             background-color: #f8fafc;
             border: 1.5px solid #cbd5e1;
-            border-radius: 9px;
+            border-radius: 10px;
             outline: none;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             display: block;
@@ -86,15 +86,15 @@
 
         .ft-textarea {
             width: 100%;
-            padding: 10px 14px;
+            padding: 12px 14px;
             font-size: 13.5px;
             color: #0f172a;
             background-color: #f8fafc;
             border: 1.5px solid #cbd5e1;
-            border-radius: 9px;
+            border-radius: 10px;
             outline: none;
             resize: none;
-            min-height: 72px;
+            min-height: 76px;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             display: block;
             box-sizing: border-box;
@@ -103,8 +103,8 @@
         .ft-upload-card {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 13px;
+            gap: 12px;
+            padding: 12px 14px;
             background: #f8fafc;
             border: 1.5px dashed #cbd5e1;
             border-radius: 10px;
@@ -119,8 +119,8 @@
         }
 
         .ft-upload-icon {
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             border-radius: 8px;
             background: #e0f2fe;
             color: #0284c7;
@@ -141,86 +141,82 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            height: 42px;
-            padding: 0 26px;
-            font-size: 13.5px;
-            font-weight: 600;
+            gap: 10px;
+            height: 48px;
+            padding: 0 32px;
+            font-size: 15px;
+            font-weight: 700;
             color: #ffffff;
             background-color: #0e5edd;
             border: none;
             border-radius: 9999px;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 14px rgba(14, 94, 221, 0.25);
+            box-shadow: 0 4px 16px rgba(14, 94, 221, 0.28);
         }
 
         .ft-submit-btn:hover {
             background-color: #004bbf;
-            box-shadow: 0 6px 20px rgba(14, 94, 221, 0.35);
+            box-shadow: 0 6px 22px rgba(14, 94, 221, 0.38);
             transform: translateY(-1px);
         }
 
         .ft-layout-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2.25rem;
+            gap: 2.75rem;
             align-items: start;
         }
 
         @media (min-width: 1024px) {
             .ft-layout-grid {
                 grid-template-columns: 5fr 7fr;
-                gap: 3rem;
+                gap: 3.5rem;
                 align-items: start;
             }
         }
     </style>
 
     <!-- Combined Section -->
-    <div class="ft-page-bg min-h-[calc(100vh-80px)] flex flex-col justify-center pt-24 pb-12 md:pt-28 md:pb-16">
+    <div class="ft-page-bg min-h-[calc(100vh-80px)] flex flex-col justify-center pt-24 pb-14 md:pt-28 md:pb-18">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div class="ft-layout-grid">
 
-                <!-- Left Column: Pilot Intro, Value Props & Workflow -->
-                <div class="text-left space-y-6">
+                <!-- Left Column: Pilot Intro, Value Props & Workflow (Clean, Open, Spaced) -->
+                <div class="text-left space-y-8 lg:pr-4">
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold mb-3.5 border border-blue-100">
-                            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                            <span>Free Trial Pilot</span>
-                        </div>
-                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-3">
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
                             Start Your <span class="text-blue-600">Free Data Annotation Pilot</span>
                         </h1>
-                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-lg">
                             Send us a small sample and your guidelines. We’ll label it and share the results with an accuracy report, so you can judge our quality before committing to a project.
                         </p>
                     </div>
 
                     <!-- What you get -->
-                    <div class="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
-                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3.5">What you get:</h3>
-                        <ul class="space-y-2.5">
-                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
-                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div class="pt-1">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">What you get:</h3>
+                        <ul class="space-y-3.5">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>Labeled sample of your own data</span>
                             </li>
-                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
-                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>Accuracy report from our QA team</span>
                             </li>
-                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
-                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>Feedback on your guidelines</span>
                             </li>
-                            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-medium">
-                                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>A clear quote for full production</span>
@@ -229,28 +225,30 @@
                     </div>
 
                     <!-- What happens next -->
-                    <div class="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
-                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3.5">What happens next:</h3>
-                        <ol class="space-y-3">
-                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
-                                <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-200">1</span>
-                                <span>Submit the form with your scope and sample.</span>
+                    <div class="pt-1">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">What happens next:</h3>
+                        <ol class="space-y-4">
+                            <li class="flex items-start gap-3 text-sm text-gray-700">
+                                <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                                <span class="pt-0.5">Submit the form with your scope and sample.</span>
                             </li>
-                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
-                                <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-200">2</span>
-                                <span>We reply within <strong>1 business day</strong> with questions or an NDA to sign.</span>
+                            <li class="flex items-start gap-3 text-sm text-gray-700">
+                                <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                                <span class="pt-0.5">We reply within <strong class="text-gray-900 font-semibold">1 business day</strong> with questions or an NDA to sign.</span>
                             </li>
-                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
-                                <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-200">3</span>
-                                <span>You receive your labeled pilot in <strong>2–3 business days</strong>.</span>
+                            <li class="flex items-start gap-3 text-sm text-gray-700">
+                                <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                                <span class="pt-0.5">You receive your labeled pilot in <strong class="text-gray-900 font-semibold">2–3 business days</strong>.</span>
                             </li>
                         </ol>
                     </div>
 
                     <!-- Trust line -->
-                    <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white border border-gray-200/80 shadow-2xs text-xs text-gray-700">
-                        <i data-feather="shield" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                        <span>NDA available before you share any data &middot; No credit card required</span>
+                    <div class="pt-2">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white text-xs text-gray-700 shadow-xs border border-gray-100">
+                            <i data-feather="shield" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                            <span>NDA available before you share any data &middot; No credit card required</span>
+                        </div>
                     </div>
                 </div>
 
@@ -259,7 +257,7 @@
                     <div class="ft-card">
                         <!-- Success Notification -->
                         @if (session('success'))
-                            <div class="mb-4 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
+                            <div class="mb-5 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
                                 <i data-feather="check-circle" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                                 <div>
                                     <h4 class="font-bold text-xs">Request Submitted Successfully!</h4>
@@ -270,7 +268,7 @@
 
                         <!-- Error Alert -->
                         @if (isset($errors) && $errors->any())
-                            <div class="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <div class="mb-5 p-4 rounded-xl bg-red-50 border border-red-200 text-red-900">
                                 <h4 class="font-bold text-xs mb-1">Please fix the following issues:</h4>
                                 <ul class="list-disc list-inside text-[11px] space-y-0.5 text-red-700">
                                     @foreach ($errors->all() as $error)
@@ -280,11 +278,11 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('free-trial.store') }}" method="POST" enctype="multipart/form-data" class="space-y-3.5">
+                        <form action="{{ route('free-trial.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
                             @csrf
 
                             <!-- Full Name & Business Email -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                 <div>
                                     <label for="name" class="ft-label">
                                         Full Name <span class="required">(Required)</span>
@@ -304,7 +302,7 @@
                             </div>
 
                             <!-- Company & Country -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                 <div>
                                     <label for="company" class="ft-label">
                                         Company <span class="hint">(optional)</span>
@@ -355,7 +353,7 @@
                             </div>
 
                             <!-- Phone / WhatsApp & What do you need labeled? -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                 <div>
                                     <label for="phone" class="ft-label">
                                         Phone / WhatsApp (optional)
@@ -393,7 +391,7 @@
                             </div>
 
                             <!-- Project Guidelines (optional) & Sample Data (optional) -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                 <!-- Project Guidelines -->
                                 <div>
                                     <label class="ft-label">
@@ -443,46 +441,50 @@
                                 </div>
                             </div>
 
-                            <!-- NDA & Data Note -->
-                            <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-100 space-y-2">
-                                <label class="flex items-start gap-2.5 cursor-pointer">
+                            <!-- NDA & Data Note (Generous Padding & Spacing) -->
+                            <div class="mt-6 p-4 rounded-xl space-y-3" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                                <label class="flex items-start gap-3 cursor-pointer">
                                     <input type="checkbox" name="needs_nda" value="1" {{ old('needs_nda') ? 'checked' : '' }}
-                                        class="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
-                                    <span class="text-xs font-semibold text-gray-800 leading-snug">
-                                        I need an NDA signed before sharing data.
-                                        <span class="block text-[11px] font-normal text-gray-500 mt-0.5">(চেক করলে আমরা আগে NDA পাঠাব)</span>
-                                    </span>
+                                        class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0">
+                                    <div>
+                                        <span class="text-xs sm:text-sm font-semibold text-gray-800 leading-snug">
+                                            I need an NDA signed before sharing data.
+                                        </span>
+                                        <span class="block text-xs text-gray-500 mt-0.5">
+                                            (চেক করলে আমরা আগে NDA পাঠাব)
+                                        </span>
+                                    </div>
                                 </label>
-                                <div class="flex items-start gap-2 pt-1 border-t border-blue-100 text-[11px] text-blue-800 leading-snug">
-                                    <i data-feather="info" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                <div class="flex items-start gap-2.5 pt-2.5 text-xs text-slate-700 leading-relaxed" style="border-top: 1px solid #edf2f7;">
+                                    <i data-feather="info" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
                                     <span><strong>Tip:</strong> If your sample contains sensitive data, skip the upload and we’ll send an NDA first.</span>
                                 </div>
                             </div>
 
-                            <!-- Consent Checkbox -->
-                            <div class="pt-1">
-                                <label class="flex items-start gap-2.5 cursor-pointer">
-                                    <input type="checkbox" name="privacy_consent" value="1" required {{ old('privacy_consent', 1) ? 'checked' : '' }}
-                                        class="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
-                                    <span class="text-xs text-gray-600 leading-snug">
+                            <!-- Consent Checkbox (Spacious Separation, Unchecked by default) -->
+                            <div class="py-2.5">
+                                <label class="flex items-start gap-3 cursor-pointer">
+                                    <input type="checkbox" name="privacy_consent" value="1" required {{ old('privacy_consent') ? 'checked' : '' }}
+                                        class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0">
+                                    <span class="text-xs sm:text-sm text-gray-600 leading-relaxed">
                                         I agree to the <a href="{{ route('contact') }}" class="text-blue-600 font-semibold hover:underline">Privacy Policy</a> and consent to Marveit contacting me about this request.
                                     </span>
                                 </label>
                             </div>
 
-                            <!-- Bottom Actions Bar -->
-                            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
-                                <div class="flex items-center gap-1.5 text-[11px] text-gray-500">
+                            <!-- Bottom Actions Bar: Button placed alone at the bottom with generous padding -->
+                            <div class="pt-4 border-t border-gray-100 flex flex-col items-center gap-3">
+                                <button type="submit" class="ft-submit-btn w-full">
+                                    <span>Request My Free Pilot</span>
+                                    <i data-feather="arrow-right" class="w-4 h-4"></i>
+                                </button>
+
+                                <div class="flex items-center justify-center gap-1.5 text-xs text-gray-500 text-center pt-1">
                                     <svg class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
                                     <span>Protected by mutual NDA &middot; 100% confidential</span>
                                 </div>
-
-                                <button type="submit" class="ft-submit-btn w-full sm:w-auto">
-                                    <span>Request My Free Pilot</span>
-                                    <i data-feather="arrow-right" class="w-4 h-4"></i>
-                                </button>
                             </div>
                         </form>
                     </div>
