@@ -279,8 +279,9 @@ class AgencySiteTest extends TestCase
         $response = $this->get(route('contact'));
 
         $response->assertStatus(200);
-        $response->assertSee('GET IN TOUCH', false);
-        $response->assertSee('WHATSAPP', false);
+        $response->assertSee('Contact Marveit AI', false);
+        $response->assertSee('Reply within 24 hours', false);
+        $response->assertSee('WhatsApp', false);
         $response->assertSee('ebrahim@marveit.com', false);
         $response->assertSee('Request a Benchmark Pilot', false);
     }
