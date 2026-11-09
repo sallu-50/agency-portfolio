@@ -11,7 +11,7 @@
             background-color: #ffffff;
             border-radius: 1.25rem;
             border: 1px solid rgba(226, 232, 240, 0.7);
-            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+            box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.02), 0 1px 3px 0 rgba(15, 23, 42, 0.015);
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
             position: relative;
@@ -22,7 +22,23 @@
                 border-radius: 1.75rem;
                 margin-top: 2rem;
                 margin-bottom: 2rem;
-                box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 23, 42, 0.02);
+                box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.025), 0 1px 4px 0 rgba(15, 23, 42, 0.015);
+            }
+        }
+        .home-hero-section {
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+        @media (min-width: 768px) {
+            .home-hero-section {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .home-hero-section {
+                padding-top: 7rem;
+                padding-bottom: 7rem;
             }
         }
     </style>
@@ -30,7 +46,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 py-16 md:py-24">
+    <section class="home-section home-hero-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
