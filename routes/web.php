@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FreeTrialController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
@@ -35,6 +36,11 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 // Free Trial Pilot
 Route::get('/free-trial', [FreeTrialController::class, 'index'])->name('free-trial');
 Route::post('/free-trial', [FreeTrialController::class, 'store'])->name('free-trial.store');
+
+// Privacy Policy
+Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy-policy');
+Route::redirect('/privacy', '/privacy-policy');
+Route::redirect('/privacy-policy.html', '/privacy-policy');
 
 // Authentication & Admin Redirects to Filament Panel
 Route::get('/login', fn () => redirect()->to('/admin/login'))->name('login');

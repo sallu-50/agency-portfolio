@@ -482,7 +482,7 @@
                                     <input type="checkbox" name="privacy_consent" value="1" required {{ old('privacy_consent') ? 'checked' : '' }}
                                         class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0">
                                     <span class="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                                        I agree to the <a href="{{ route('contact') }}" class="text-blue-600 font-semibold hover:underline">Privacy Policy</a> and consent to Marveit contacting me about this request.
+                                        I agree to the <a href="{{ route('privacy-policy') }}" class="text-blue-600 font-semibold hover:underline">Privacy Policy</a> and consent to Marveit contacting me about this request.
                                     </span>
                                 </label>
                             </div>

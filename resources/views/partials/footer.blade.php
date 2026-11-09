@@ -177,7 +177,7 @@
         <div class="footer-bottom-bar text-xs text-gray-400">
             <p>&copy; 2026 Marveit AI. All rights reserved.</p>
             <div class="flex items-center gap-3 text-gray-400">
-                <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="{{ route('privacy-policy') }}" class="hover:text-white transition-colors">Privacy Policy</a>
                 <span class="text-gray-600">|</span>
                 <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Terms of Service</a>
             </div>
