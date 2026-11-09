@@ -3,16 +3,40 @@
 @section('title', 'Data Annotation & AI Solutions - Marveit AI')
 @section('meta_description', 'Power your machine learning models with pixel-perfect, human-in-the-loop datasets for Computer Vision, NLP, Audio, and Video.')
 
+@section('body_class', 'bg-[#f1f5f9]')
+@section('main_class', 'bg-[#f1f5f9] px-3 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-12')
+
+@push('styles')
+    <style>
+        .home-section {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .home-section {
+                border-radius: 2rem;
+                margin-top: 2.25rem;
+                margin-bottom: 2.25rem;
+            }
+        }
+    </style>
+@endpush
+
 @section('content')
     <!-- Hero Section -->
-    <section class="container mx-auto px-6 py-20 md:py-32 mt-8">
+    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-12 md:py-16">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
-                                                                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
-                                                                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                                                                    <span>High-Quality Data Annotation</span>
-                                                                </div> -->
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    <span>High-Quality Data Annotation</span>
+                </div> -->
                 <h1 class="font-bold text-gray-900 leading-tight mb-6 tracking-tight"
                     style="font-size: 32px; line-height: 1.25;">
                     Data Annotation Services for<span class="text-blue-600"> Computer Vision and Machine Learning</span>
@@ -30,10 +54,6 @@
                         <span>Start Free Trial</span>
                         <i data-feather="arrow-right" class="w-4 h-4"></i>
                     </a>
-                    <!-- <a href="{{ route('services.index') }}"
-                                                                            class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                                                                            <span>Explore Services</span>
-                                                                        </a> -->
                 </div>
             </div>
 
@@ -104,47 +124,44 @@
     </section>
 
     <!-- Metrics Strip -->
-    <section class="border-t border-gray-100 bg-white py-10 shadow-sm relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99%</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">Target Accuracy</p>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100K+</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">Annotations Delivered</p>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">Fast Turnaround</p>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100%</div>
-                    <p class="text-xs md:text-sm text-gray-500 font-medium">NDA-Protected</p>
-                </div>
+    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-8 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div class="pt-2 md:pt-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99%</div>
+                <p class="text-xs md:text-sm text-gray-500 font-medium">Target Accuracy</p>
+            </div>
+            <div class="pt-4 md:pt-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100K+</div>
+                <p class="text-xs md:text-sm text-gray-500 font-medium">Annotations Delivered</p>
+            </div>
+            <div class="pt-4 md:pt-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
+                <p class="text-xs md:text-sm text-gray-500 font-medium">Fast Turnaround</p>
+            </div>
+            <div class="pt-4 md:pt-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100%</div>
+                <p class="text-xs md:text-sm text-gray-500 font-medium">NDA-Protected</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-white border-b border-gray-100 shadow-sm relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto text-center mb-16">
+    <section id="services" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-20 relative z-10">
+        <div class="max-w-2xl mx-auto text-center mb-14">
 
-                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
-                    style="font-size: 24px; line-height: 1.33;">Data Annotation Services
-                    for AI Teams</h2>
-                <p class="text-base md:text-lg text-gray-600">
-                    Human-verified annotation across image, video, text, audio and LiDAR data, built to train and evaluate
-                    production AI models.
-                </p>
-            </div>
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
+                style="font-size: 24px; line-height: 1.33;">Data Annotation Services
+                for AI Teams</h2>
+            <p class="text-base md:text-lg text-gray-600">
+                Human-verified annotation across image, video, text, audio and LiDAR data, built to train and evaluate
+                production AI models.
+            </p>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                @forelse ($services as $service)
-                    <div
-                        class="p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between bg-white border border-gray-100 group text-left h-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @forelse ($services as $service)
+                <div
+                    class="p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 group text-left h-full">
                         <div class="flex-grow flex flex-col">
                             <div class="flex items-center justify-between mb-6">
                                 <div
@@ -197,19 +214,18 @@
     </section>
 
     <!-- Why Choose Us / Quality Pillars -->
-    <section id="about" class="py-24 bg-gray-50/60 border-b border-gray-100 relative">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
-                    style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
-                </h2>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed">Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.</p>
-            </div>
+    <section id="about" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-20 relative z-10">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
+                style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">Accurate labels, predictable delivery and careful data handling, backed by a process you can audit, not just promises.</p>
+        </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. Multi-Stage Quality Control -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="check-circle" class="w-6 h-6"></i>
                     </div>
@@ -225,7 +241,7 @@
 
                 <!-- 2. Pilot First, Then Scale -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="trending-up" class="w-6 h-6"></i>
                     </div>
@@ -241,7 +257,7 @@
 
                 <!-- 3. Teams That Scale With Your Roadmap -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="users" class="w-6 h-6"></i>
                     </div>
@@ -257,7 +273,7 @@
 
                 <!-- 4. Secure Data Handling -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="shield" class="w-6 h-6"></i>
                     </div>
@@ -273,7 +289,7 @@
 
                 <!-- 5. Works in Your Tools -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="sliders" class="w-6 h-6"></i>
                     </div>
@@ -289,7 +305,7 @@
 
                 <!-- 6. Clear Communication -->
                 <div
-                    class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="message-square" class="w-6 h-6"></i>
                     </div>
@@ -325,18 +341,17 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="industries" class="py-24 bg-white border-y border-gray-100 shadow-sm relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
-                    style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed">From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and your industry’s formats.</p>
-            </div>
+    <section id="industries" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-20 relative z-10">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
+                style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">From self-driving perception to medical imaging and voice AI, we label your data to your guidelines and your industry’s formats.</p>
+        </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Automotive & Autonomous Driving -->
                 <div id="automotive"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -373,7 +388,7 @@
 
                 <!-- Card 2: Healthcare & Medical AI -->
                 <div id="healthcare"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -410,7 +425,7 @@
 
                 <!-- Card 3: Retail & E-Commerce -->
                 <div id="retail"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -446,7 +461,7 @@
 
                 <!-- Card 4: Agriculture & Drone Imagery -->
                 <div id="agriculture"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -483,7 +498,7 @@
 
                 <!-- Card 5: Voice AI & Conversational Systems -->
                 <div id="voice-ai"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -517,7 +532,7 @@
 
                 <!-- Card 6: LLM & Generative AI -->
                 <div id="llm"
-                    class="scroll-mt-28 bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -577,24 +592,21 @@
     @include('partials.annotation-tools')
 
     <!-- Sample Data CTA -->
-    <section id="sample-data-cta" class="py-20 bg-gray-50/70 border-t border-gray-100 relative">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-14 border border-gray-100 shadow-md text-center"
-                 style="padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 48px);">
-                <h2 class="text-2xl font-bold text-gray-900 tracking-tight"
-                    style="font-size: 24px; line-height: 1.33; margin-bottom: 20px;">
-                    Let’s Label a Sample of Your Data
-                </h2>
-                <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
-                   style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
-                <div class="inline-flex items-center justify-center mt-2">
-                    <a href="{{ route('free-trial') }}"
-                        class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
-                        style="padding: 14px 38px;">
-                        <span>Start Free Trial</span>
-                        <i data-feather="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
+    <section id="sample-data-cta" class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-14 md:py-18 text-center relative z-10">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight"
+                style="font-size: 24px; line-height: 1.33; margin-bottom: 16px;">
+                Let’s Label a Sample of Your Data
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
+               style="margin-bottom: 32px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
+            <div class="inline-flex items-center justify-center">
+                <a href="{{ route('free-trial') }}"
+                    class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                    style="padding: 14px 38px;">
+                    <span>Start Free Trial</span>
+                    <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
         </div>
     </section>

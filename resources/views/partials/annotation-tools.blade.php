@@ -1,5 +1,5 @@
 <!-- Annotation Tools and Platforms We Work With (Auto-Scrolling Marquee) -->
-<section id="annotation-tools" class="py-12 md:py-16 bg-white relative overflow-hidden">
+<section id="annotation-tools" class="home-section max-w-7xl mx-auto py-12 md:py-16 px-4 sm:px-8 relative overflow-hidden">
     <style>
         @keyframes tools-marquee-scroll {
             0% {
@@ -17,7 +17,7 @@
             will-change: transform;
         }
 
-        .tools-marquee-card:hover .tools-marquee-track {
+        #annotation-tools:hover .tools-marquee-track {
             animation-play-state: paused;
         }
 
@@ -29,10 +29,8 @@
         }
     </style>
 
-    <div class="container mx-auto px-4 sm:px-6">
-        <!-- Single Card Containing Header + Marquee with All-around Soft Shadow & Margin Top/Bottom -->
-        <div class="tools-marquee-card max-w-5xl md:max-w-6xl mx-auto bg-white rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.08),0_6px_24px_rgba(0,0,0,0.04)] py-10 md:py-14 px-4 sm:px-8 my-6 md:my-10 relative overflow-hidden"
-             style="box-shadow: 0 0 40px rgba(0, 0, 0, 0.08), 0 6px 24px rgba(0, 0, 0, 0.04);">
+    <div>
+        <div class="w-full relative overflow-hidden">
 
             <!-- Header (Inside the Shadow Card) -->
             <div class="max-w-3xl mx-auto text-center py-6 md:py-8 mb-4 md:mb-6 px-4">

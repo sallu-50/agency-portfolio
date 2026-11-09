@@ -130,13 +130,13 @@
     @stack('styles')
 </head>
 
-<body class="font-sans bg-white text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
+<body class="font-sans @yield('body_class', 'bg-white') text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- Header Navigation -->
     @include('partials.header')
 
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" class="@yield('main_class')">
         @yield('content')
     </main>
 
