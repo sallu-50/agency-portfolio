@@ -42,11 +42,13 @@
             }
         }
         .home-section .rounded-2xl.bg-white {
-            box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 0 1px 0 rgba(15, 23, 42, 0.03) !important;
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.03), 0 0 1px 0 rgba(15, 23, 42, 0.02) !important;
             transition: all 0.25s ease;
         }
         .home-section .rounded-2xl.bg-white:hover {
-            box-shadow: 0 3px 8px -1px rgba(15, 23, 42, 0.06), 0 1px 2px 0 rgba(15, 23, 42, 0.03) !important;
+            background-color: #ffffff !important;
+            box-shadow: 0 3px 8px -1px rgba(15, 23, 42, 0.05), 0 1px 2px 0 rgba(15, 23, 42, 0.02) !important;
         }
     </style>
 @endpush
