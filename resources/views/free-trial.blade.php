@@ -463,17 +463,12 @@
 
                             <!-- NDA & Data Note (Generous Padding & Spacing) -->
                             <div class="mt-6 p-4 rounded-xl space-y-3" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
-                                <label class="flex items-start gap-3 cursor-pointer">
+                                <label class="flex items-center gap-3 cursor-pointer">
                                     <input type="checkbox" name="needs_nda" value="1" {{ old('needs_nda') ? 'checked' : '' }}
-                                        class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0">
-                                    <div>
-                                        <span class="text-xs sm:text-sm font-semibold text-gray-800 leading-snug">
-                                            I need an NDA signed before sharing data.
-                                        </span>
-                                        <span class="block text-xs text-gray-500 mt-0.5">
-                                            (চেক করলে আমরা আগে NDA পাঠাব)
-                                        </span>
-                                    </div>
+                                        class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0 cursor-pointer">
+                                    <span class="text-xs sm:text-sm font-semibold text-gray-800 leading-snug">
+                                        I need an NDA signed before sharing data.
+                                    </span>
                                 </label>
                                 <div class="flex items-start gap-2.5 pt-2.5 text-xs text-slate-700 leading-relaxed" style="border-top: 1px solid #edf2f7;">
                                     <i data-feather="info" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
