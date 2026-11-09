@@ -3,24 +3,26 @@
 @section('title', 'Data Annotation & AI Solutions - Marveit AI')
 @section('meta_description', 'Power your machine learning models with pixel-perfect, human-in-the-loop datasets for Computer Vision, NLP, Audio, and Video.')
 
-@section('main_class', 'px-3 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-12')
+@section('main_class', 'pt-20 md:pt-24 pb-16')
 
 @push('styles')
     <style>
         .home-section {
             background-color: #ffffff;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
-            border: none;
+            border-radius: 1.25rem;
+            border: 1px solid rgba(226, 232, 240, 0.7);
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
             position: relative;
+            transition: box-shadow 0.3s ease;
         }
         @media (min-width: 768px) {
             .home-section {
-                border-radius: 2rem;
-                margin-top: 2.25rem;
-                margin-bottom: 2.25rem;
+                border-radius: 1.75rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 23, 42, 0.02);
             }
         }
     </style>
@@ -28,7 +30,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-24">
+    <section class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 py-16 md:py-24">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
@@ -123,7 +125,7 @@
     </section>
 
     <!-- Metrics Strip -->
-    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-10 md:py-14 relative z-10">
+    <section class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 py-10 md:py-14 relative z-10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
             <div class="pt-2 md:pt-0">
                 <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99%</div>
@@ -145,7 +147,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 relative z-10">
+    <section id="services" class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 py-20 md:py-28 relative z-10">
         <div class="max-w-2xl mx-auto text-center mb-14">
 
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
@@ -213,7 +215,7 @@
     </section>
 
     <!-- Why Choose Us / Quality Pillars -->
-    <section id="about" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 relative z-10">
+    <section id="about" class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 py-20 md:py-28 relative z-10">
         <div class="max-w-3xl mx-auto text-center mb-14">
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                 style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
@@ -340,7 +342,7 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="industries" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 relative z-10">
+    <section id="industries" class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 py-20 md:py-28 relative z-10">
         <div class="max-w-3xl mx-auto text-center mb-14">
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                 style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
@@ -591,8 +593,8 @@
     @include('partials.annotation-tools')
 
     <!-- Sample Data CTA -->
-    <section id="sample-data-cta" class="home-section max-w-7xl mx-auto text-center relative z-10"
-             style="padding: clamp(64px, 8vw, 110px) clamp(24px, 5vw, 64px);">
+    <section id="sample-data-cta" class="home-section w-[calc(100%-1.5rem)] sm:w-auto container mx-auto px-6 text-center relative z-10"
+             style="padding: clamp(64px, 8vw, 110px) 24px;">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight"
                 style="font-size: 28px; line-height: 1.3; margin-bottom: 20px;">
