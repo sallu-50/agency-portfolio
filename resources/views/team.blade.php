@@ -76,15 +76,11 @@
         <!-- Team Members Grid -->
         <section class="py-16 md:py-24">
             <div class="container mx-auto px-6">
-                <!-- Grid Header with Count -->
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-10 pb-4 border-b border-gray-200/60">
-                    <div>
-                        <h2 class="text-xl md:text-2xl font-bold text-gray-900">All Team Members</h2>
-                        <p class="text-xs md:text-sm text-gray-500 mt-0.5">Sorted by organizational hierarchy & leadership rank</p>
-                    </div>
-                    <span class="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-gray-200 text-gray-700 shadow-xs">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        {{ $counts['all'] ?? count($allMembers) }} Total Active Members
+                <!-- Active Members Button -->
+                <div class="flex justify-center mb-10 md:mb-14">
+                    <span class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold bg-blue-600 text-white shadow-md">
+                        <i data-feather="users" class="w-4 h-4"></i>
+                        <span>{{ $counts['all'] ?? count($allMembers) }} Total Active Members</span>
                     </span>
                 </div>
 
