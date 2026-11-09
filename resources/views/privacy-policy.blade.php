@@ -60,18 +60,20 @@
 
         .pp-section {
             scroll-margin-top: 100px;
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
-            border-bottom: 1px solid #f1f5f9;
+            padding-top: 2.75rem;
+            padding-bottom: 2.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .pp-section:first-child {
-            padding-top: 0;
+            padding-top: 0.5rem;
         }
 
         .pp-section:last-child {
             border-bottom: none;
-            padding-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0.5rem;
         }
 
         .pp-section h2 {
@@ -179,7 +181,7 @@
             </nav>
 
             <!-- Hero Section with generous padding -->
-            <div class="mb-12 text-center max-w-4xl mx-auto px-2 sm:px-4">
+            <div class="mb-16 md:mb-20 text-center max-w-4xl mx-auto px-2 sm:px-4">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider mb-5 shadow-2xs">
                     <i data-feather="shield" class="w-3.5 h-3.5 text-blue-600"></i>
                     <span>Enterprise Data Confidentiality &amp; Privacy</span>
@@ -211,7 +213,7 @@
             </div>
 
             <!-- 4 Trust Pillars Cards Grid with spacious padding -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 md:mb-20">
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2.5 hover:shadow-md transition">
                     <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center font-bold">
                         <i data-feather="award" class="w-5 h-5"></i>
@@ -254,10 +256,10 @@
             </div>
 
             <!-- Main Content Grid: Sidebar + Legal Text -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
                 <!-- Left Sticky Sidebar (Table of Contents & Quick Contact) -->
-                <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+                <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-8">
 
                     <!-- Table of Contents Card -->
                     <div class="pp-card p-6">
@@ -318,25 +320,25 @@
                     </div>
 
                     <!-- Quick NDA Action Box -->
-                    <div class="pp-card p-6 bg-gradient-to-br from-blue-900 to-slate-900 text-white border-0 shadow-lg relative overflow-hidden" style="background: linear-gradient(135deg, #0B132B 0%, #1c2a4a 100%);">
-                        <div class="relative z-10 space-y-3.5">
-                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold border border-blue-400/30">
-                                <i data-feather="check" class="w-3 h-3"></i>
+                    <div class="pp-card p-6 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                        <div class="relative z-10 space-y-3">
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200/80">
+                                <i data-feather="check" class="w-3 h-3 text-blue-600"></i>
                                 <span>Pre-Project Protocol</span>
                             </div>
-                            <h3 class="text-base font-bold text-white tracking-tight">Need an NDA Signed First?</h3>
-                            <p class="text-xs text-gray-300 leading-relaxed">
+                            <h3 class="text-base font-bold text-gray-900 tracking-tight">Need an NDA Signed First?</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">
                                 We regularly sign bilateral NDAs with machine learning teams, autonomous driving labs, and healthcare startups prior to viewing guidelines.
                             </p>
-                            <div class="pt-2 flex flex-col gap-2.5">
+                            <div class="pt-1.5 flex flex-col gap-2">
                                 <a href="{{ route('free-trial') }}"
-                                    class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-md">
+                                    class="inline-flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg transition shadow-xs self-start">
                                     <span>Request a Pilot with NDA</span>
-                                    <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
+                                    <i data-feather="arrow-right" class="w-3 h-3"></i>
                                 </a>
                                 <a href="mailto:ebrahim@marveit.com?subject=NDA%20Request%20-%20Data%20Annotation%20Project"
-                                    class="inline-flex items-center justify-center gap-2 text-xs font-medium text-gray-300 hover:text-white px-3 py-2 transition">
-                                    <i data-feather="mail" class="w-3.5 h-3.5"></i>
+                                    class="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-500 hover:text-blue-600 transition pt-0.5">
+                                    <i data-feather="mail" class="w-3 h-3 text-gray-400"></i>
                                     <span>Send Your Standard NDA Draft</span>
                                 </a>
                             </div>
