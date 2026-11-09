@@ -336,7 +336,7 @@
 
                     <!-- Quick NDA Action Box -->
                     <div
-                        class="pp-card p-6 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                        class="pp-card p-6 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden my-4">
                         <div class="relative z-10 space-y-6">
                             <div
                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200/80">
