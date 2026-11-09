@@ -4,7 +4,7 @@
 @section('meta_description', 'Discover technical articles, data annotation benchmarks, computer vision methodologies, and RLHF alignment guides curated by Marveit AI engineers.')
 
 @section('content')
-    <div class="bg-gray-50/60 pt-24 md:pt-28 pb-20" style="padding-top: 7rem;">
+    <div class="pt-24 md:pt-28 pb-20" style="padding-top: 7rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Hero Header -->
         <section class="container mx-auto px-6 mb-12">
             <div class="max-w-3xl mx-auto text-center">

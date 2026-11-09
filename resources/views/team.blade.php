@@ -37,9 +37,9 @@
 @endpush
 
 @section('content')
-    <div class="pt-24 md:pt-28">
+    <div class="pt-24 md:pt-28" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Team Hero Section -->
-        <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50/80 via-white to-white relative overflow-hidden">
+        <section class="py-16 md:py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
                     <i data-feather="users" class="w-3.5 h-3.5"></i> The Minds Behind Marveit
@@ -74,7 +74,7 @@
         </section>
 
         <!-- Team Members Grid -->
-        <section class="py-16 md:py-24 bg-gray-50/50">
+        <section class="py-16 md:py-24">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="team-grid">
                     @forelse ($allMembers as $member)

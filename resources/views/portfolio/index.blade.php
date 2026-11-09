@@ -9,7 +9,8 @@
             <!-- Dedicated Before & After Image Comparison Sections (Each section styled as an elevated card with rich shadow and spacious padding) -->
             <style>
                 .portfolio-showcase-wrapper {
-                    background-color: #f8fafc;
+                    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+                    min-height: 100vh;
                 }
                 .comparison-section-item {
                     margin: 0 8px 44px 8px;

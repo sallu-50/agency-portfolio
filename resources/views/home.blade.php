@@ -3,8 +3,7 @@
 @section('title', 'Data Annotation & AI Solutions - Marveit AI')
 @section('meta_description', 'Power your machine learning models with pixel-perfect, human-in-the-loop datasets for Computer Vision, NLP, Audio, and Video.')
 
-@section('body_class', 'bg-[#f1f5f9]')
-@section('main_class', 'bg-[#f1f5f9] px-3 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-12')
+@section('main_class', 'px-3 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-12')
 
 @push('styles')
     <style>

@@ -4,9 +4,9 @@
 @section('meta_description', $service->short_description ?: Str::limit($service->description, 150))
 
 @section('content')
-    <div class="pt-24 md:pt-28">
+    <div class="pt-24 md:pt-28" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Breadcrumb & Hero -->
-        <section class="py-12 md:py-16 bg-gradient-to-b from-gray-50 via-white to-white border-b border-gray-100">
+        <section class="py-12 md:py-16 bg-transparent border-b border-gray-100">
             <div class="container mx-auto px-6">
                 <!-- Breadcrumb -->
                 <nav class="flex items-center gap-2 text-xs text-gray-500 mb-6" aria-label="Breadcrumb">
@@ -52,7 +52,7 @@
         </section>
 
         <!-- Main Content & Sidebar Layout -->
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-transparent">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <!-- Left: Detailed Content -->

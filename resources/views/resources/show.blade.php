@@ -4,7 +4,7 @@
 @section('meta_description', $article->excerpt ?? Str::limit(strip_tags($article->content), 150))
 
 @section('content')
-    <div class="bg-gray-50/50 pt-24 md:pt-28 pb-24" style="padding-top: 7rem;">
+    <div class="pt-24 md:pt-28 pb-24" style="padding-top: 7rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Article Header & Breadcrumbs -->
         <article class="container mx-auto px-6 max-w-4xl">
             <!-- Breadcrumbs -->

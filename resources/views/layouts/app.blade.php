@@ -44,6 +44,11 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+        body,
+        #main-content {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+        }
         h1, h2, h3, h4, h5, h6 {
             letter-spacing: -0.025em;
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -130,7 +135,7 @@
     @stack('styles')
 </head>
 
-<body class="font-sans @yield('body_class', 'bg-white') text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
+<body class="font-sans @yield('body_class') text-gray-800 antialiased selection:bg-blue-600 selection:text-white" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
 
     <!-- Header Navigation -->
     @include('partials.header')

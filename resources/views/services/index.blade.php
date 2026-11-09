@@ -4,9 +4,9 @@
 @section('meta_description', 'Explore Marveit AI full-spectrum data annotation services: Computer Vision, NLP text labeling, audio transcription, video object tracking, and custom dataset collection.')
 
 @section('content')
-    <div class="pt-24 md:pt-28">
+    <div class="pt-24 md:pt-28" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Hero Section -->
-        <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50/80 via-white to-white border-b border-gray-100">
+        <section class="py-16 md:py-24 bg-transparent border-b border-gray-100">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <span
                     class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
@@ -30,7 +30,7 @@
         </section>
 
         <!-- Services Grid Section -->
-        <section class="py-20 bg-gray-50/60">
+        <section class="py-20 bg-transparent">
             <div class="container mx-auto px-6">
                 <!-- Group 1: Core Services -->
                 <div class="mb-16">
@@ -185,7 +185,7 @@
         </section>
 
         <!-- Tooling & Integration Strip -->
-        <section class="py-16 bg-white border-t border-gray-100">
+        <section class="py-16 bg-transparent border-t border-gray-100">
             <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h3 class="text-xl font-bold text-gray-900 mb-4">Supported Platforms & Export Formats</h3>
                 <p class="text-sm text-gray-600 mb-8">
@@ -217,7 +217,7 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 bg-gray-50 border-t border-gray-100">
+        <section class="py-20 bg-transparent border-t border-gray-100">
             <div class="container mx-auto px-6 text-center max-w-3xl">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Need a Custom Annotation Schema?</h2>
                 <p class="text-base text-gray-600 mb-8">
