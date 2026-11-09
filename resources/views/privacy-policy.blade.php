@@ -17,11 +17,27 @@
             transition: all 0.3s ease;
         }
 
+        .pp-content-card {
+            padding: 32px 24px;
+        }
+
+        @media (min-width: 640px) {
+            .pp-content-card {
+                padding: 44px 40px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .pp-content-card {
+                padding: 52px 48px;
+            }
+        }
+
         .pp-toc-link {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 9px 14px;
+            padding: 10px 16px;
             border-radius: 10px;
             font-size: 13px;
             font-weight: 500;
@@ -44,8 +60,13 @@
 
         .pp-section {
             scroll-margin-top: 100px;
-            padding-bottom: 2.25rem;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
             border-bottom: 1px solid #f1f5f9;
+        }
+
+        .pp-section:first-child {
+            padding-top: 0;
         }
 
         .pp-section:last-child {
@@ -54,14 +75,15 @@
         }
 
         .pp-section h2 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: #0f172a;
             letter-spacing: -0.02em;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .pp-section h3 {
@@ -69,48 +91,53 @@
             font-weight: 700;
             color: #1e293b;
             letter-spacing: -0.015em;
-            margin-top: 1.25rem;
-            margin-bottom: 0.5rem;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            padding-top: 0.25rem;
         }
 
         .pp-section p {
-            font-size: 14.5px;
-            line-height: 1.75;
+            font-size: 15px;
+            line-height: 1.85;
             color: #475569;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            padding: 2px 0;
         }
 
         .pp-section ul {
             list-style-type: none;
             padding-left: 0;
-            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .pp-section ul li {
             position: relative;
-            padding-left: 1.5rem;
-            font-size: 14px;
-            line-height: 1.7;
+            padding-left: 2rem;
+            padding-top: 0.45rem;
+            padding-bottom: 0.45rem;
+            font-size: 14.5px;
+            line-height: 1.75;
             color: #475569;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
 
         .pp-section ul li::before {
             content: "✓";
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 0.25rem;
+            top: 0.45rem;
             color: #0E5EDD;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 13.5px;
         }
 
         .pp-callout {
             border-radius: 14px;
-            padding: 16px 20px;
-            margin: 1.25rem 0;
-            font-size: 13.5px;
-            line-height: 1.65;
+            padding: 20px 24px;
+            margin: 1.5rem 0;
+            font-size: 14px;
+            line-height: 1.75;
         }
 
         .pp-callout-blue {
@@ -151,21 +178,21 @@
                 <span class="text-gray-900 font-semibold">Privacy Policy</span>
             </nav>
 
-            <!-- Hero Section -->
-            <div class="mb-10 text-center max-w-4xl mx-auto">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4 shadow-2xs">
+            <!-- Hero Section with generous padding -->
+            <div class="mb-12 text-center max-w-4xl mx-auto px-2 sm:px-4">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider mb-5 shadow-2xs">
                     <i data-feather="shield" class="w-3.5 h-3.5 text-blue-600"></i>
-                    <span>Enterprise Data Confidentiality & Privacy</span>
+                    <span>Enterprise Data Confidentiality &amp; Privacy</span>
                 </div>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-5">
                     Privacy Policy &amp; Data Protection
                 </h1>
-                <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-2">
                     At Marveit AI, data security, client confidentiality, and intellectual property protection are the foundation of everything we build. Here is exactly how we handle your confidential datasets, test samples, and personal information.
                 </p>
 
                 <!-- Metadata Row -->
-                <div class="mt-5 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-gray-500">
+                <div class="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-gray-500 py-1">
                     <span class="inline-flex items-center gap-1.5 font-medium">
                         <i data-feather="calendar" class="w-3.5 h-3.5 text-gray-400"></i>
                         <span>Effective Date: <strong>January 1, 2026</strong></span>
@@ -183,43 +210,43 @@
                 </div>
             </div>
 
-            <!-- 4 Trust Pillars Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2 hover:shadow-md transition">
+            <!-- 4 Trust Pillars Cards Grid with spacious padding -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2.5 hover:shadow-md transition">
                     <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center font-bold">
                         <i data-feather="award" class="w-5 h-5"></i>
                     </div>
-                    <div class="font-bold text-gray-900 text-sm">100% Client IP Ownership</div>
+                    <div class="font-bold text-gray-900 text-sm pt-1">100% Client IP Ownership</div>
                     <p class="text-xs text-gray-500 leading-relaxed">
                         You retain full, exclusive intellectual property rights to your raw training samples, custom label taxonomies, and completed annotations.
                     </p>
                 </div>
 
-                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2 hover:shadow-md transition">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2.5 hover:shadow-md transition">
                     <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
                         <i data-feather="slash" class="w-5 h-5"></i>
                     </div>
-                    <div class="font-bold text-gray-900 text-sm">Zero Public Model Training</div>
+                    <div class="font-bold text-gray-900 text-sm pt-1">Zero Public Model Training</div>
                     <p class="text-xs text-gray-500 leading-relaxed">
                         We never feed, train, benchmark, or distill your data into foundation models, public datasets, or third-party AI systems.
                     </p>
                 </div>
 
-                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2 hover:shadow-md transition">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2.5 hover:shadow-md transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center font-bold">
                         <i data-feather="file-text" class="w-5 h-5"></i>
                     </div>
-                    <div class="font-bold text-gray-900 text-sm">Mutual NDA Guarantee</div>
+                    <div class="font-bold text-gray-900 text-sm pt-1">Mutual NDA Guarantee</div>
                     <p class="text-xs text-gray-500 leading-relaxed">
                         We execute bilateral Non-Disclosure Agreements prior to file transfers. Every annotator and project lead is bound by strict NDAs.
                     </p>
                 </div>
 
-                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2 hover:shadow-md transition">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-2xs flex flex-col gap-2.5 hover:shadow-md transition">
                     <div class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 flex items-center justify-center font-bold">
                         <i data-feather="server" class="w-5 h-5"></i>
                     </div>
-                    <div class="font-bold text-gray-900 text-sm">AES-256 &amp; Direct Cloud</div>
+                    <div class="font-bold text-gray-900 text-sm pt-1">AES-256 &amp; Direct Cloud</div>
                     <p class="text-xs text-gray-500 leading-relaxed">
                         Encrypted storage at rest and in transit. Option to label directly inside your own private cloud bucket without raw data leaving your VPC.
                     </p>
@@ -233,8 +260,8 @@
                 <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
 
                     <!-- Table of Contents Card -->
-                    <div class="pp-card p-5 sm:p-6">
-                        <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
+                    <div class="pp-card p-6">
+                        <div class="flex items-center justify-between pb-3.5 mb-3.5 border-b border-gray-100">
                             <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Table of Contents</span>
                             <span class="text-xs text-blue-600 font-semibold">12 Sections</span>
                         </div>
@@ -291,9 +318,9 @@
                     </div>
 
                     <!-- Quick NDA Action Box -->
-                    <div class="pp-card p-5 sm:p-6 bg-gradient-to-br from-blue-900 to-slate-900 text-white border-0 shadow-lg relative overflow-hidden" style="background: linear-gradient(135deg, #0B132B 0%, #1c2a4a 100%);">
-                        <div class="relative z-10 space-y-3">
-                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold border border-blue-400/30">
+                    <div class="pp-card p-6 bg-gradient-to-br from-blue-900 to-slate-900 text-white border-0 shadow-lg relative overflow-hidden" style="background: linear-gradient(135deg, #0B132B 0%, #1c2a4a 100%);">
+                        <div class="relative z-10 space-y-3.5">
+                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold border border-blue-400/30">
                                 <i data-feather="check" class="w-3 h-3"></i>
                                 <span>Pre-Project Protocol</span>
                             </div>
@@ -301,14 +328,14 @@
                             <p class="text-xs text-gray-300 leading-relaxed">
                                 We regularly sign bilateral NDAs with machine learning teams, autonomous driving labs, and healthcare startups prior to viewing guidelines.
                             </p>
-                            <div class="pt-2 flex flex-col gap-2">
+                            <div class="pt-2 flex flex-col gap-2.5">
                                 <a href="{{ route('free-trial') }}"
                                     class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-md">
                                     <span>Request a Pilot with NDA</span>
                                     <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
                                 </a>
                                 <a href="mailto:ebrahim@marveit.com?subject=NDA%20Request%20-%20Data%20Annotation%20Project"
-                                    class="inline-flex items-center justify-center gap-2 text-xs font-medium text-gray-300 hover:text-white px-3 py-1.5 transition">
+                                    class="inline-flex items-center justify-center gap-2 text-xs font-medium text-gray-300 hover:text-white px-3 py-2 transition">
                                     <i data-feather="mail" class="w-3.5 h-3.5"></i>
                                     <span>Send Your Standard NDA Draft</span>
                                 </a>
@@ -317,33 +344,33 @@
                     </div>
 
                     <!-- Contact & DPO Card -->
-                    <div class="pp-card p-5 border-gray-200">
-                        <div class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Data Protection Officer</div>
-                        <div class="space-y-2.5 text-xs text-gray-600">
-                            <div class="flex items-center gap-2">
+                    <div class="pp-card p-6 border-gray-200">
+                        <div class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3.5">Data Protection Officer</div>
+                        <div class="space-y-3 text-xs text-gray-600">
+                            <div class="flex items-center gap-2.5">
                                 <i data-feather="user" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
                                 <span class="font-semibold text-gray-900">Ebrahim Hossain</span>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2.5">
                                 <i data-feather="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
                                 <a href="mailto:ebrahim@marveit.com" class="text-blue-600 hover:underline break-all font-medium">ebrahim@marveit.com</a>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2.5">
                                 <i data-feather="phone" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                                <a href="tel:+8801753499696" class="hover:text-gray-900">+880 1753 499696</a>
+                                <a href="tel:+8801753499696" class="hover:text-gray-900 font-medium">+880 1753 499696</a>
                             </div>
-                            <div class="flex items-start gap-2">
+                            <div class="flex items-start gap-2.5 pt-0.5">
                                 <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                <span>Mymensingh, Bangladesh (Serving global AI teams)</span>
+                                <span class="leading-relaxed">Mymensingh, Bangladesh (Serving global AI teams)</span>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Right Column: Full Comprehensive Policy -->
+                <!-- Right Column: Full Comprehensive Policy with enhanced padding -->
                 <div class="lg:col-span-8">
-                    <div class="pp-card p-6 sm:p-10 space-y-10">
+                    <div class="pp-card pp-content-card">
 
                         <!-- Section 1 -->
                         <div id="section-1" class="pp-section">
@@ -559,20 +586,20 @@
                             <p>
                                 For any questions, mutual NDA execution requests, or data privacy inquiries, please contact our Data Protection Officer:
                             </p>
-                            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 sm:p-6 space-y-3 mt-4">
+                            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-7 space-y-3.5 mt-5">
                                 <div class="text-sm font-bold text-gray-900">Marveit AI - Data Protection &amp; Legal Compliance</div>
-                                <div class="text-xs text-gray-600 leading-relaxed">
-                                    <strong>Contact Person:</strong> Ebrahim Hossain (Technical Lead &amp; Data Protection)<br>
-                                    <strong>Direct Email:</strong> <a href="mailto:ebrahim@marveit.com" class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a><br>
-                                    <strong>Phone / WhatsApp:</strong> <a href="tel:+8801753499696" class="text-blue-600 font-semibold hover:underline">+880 1753 499696</a><br>
-                                    <strong>Operational Base:</strong> Mymensingh, Bangladesh · Serving AI &amp; ML organizations worldwide<br>
-                                    <strong>Website:</strong> <a href="https://marveit.com" class="text-blue-600 font-semibold hover:underline">https://marveit.com</a>
+                                <div class="text-xs sm:text-sm text-gray-600 leading-relaxed space-y-1.5">
+                                    <p class="mb-1"><strong>Contact Person:</strong> Ebrahim Hossain (Technical Lead &amp; Data Protection)</p>
+                                    <p class="mb-1"><strong>Direct Email:</strong> <a href="mailto:ebrahim@marveit.com" class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a></p>
+                                    <p class="mb-1"><strong>Phone / WhatsApp:</strong> <a href="tel:+8801753499696" class="text-blue-600 font-semibold hover:underline">+880 1753 499696</a></p>
+                                    <p class="mb-1"><strong>Operational Base:</strong> Mymensingh, Bangladesh · Serving AI &amp; ML organizations worldwide</p>
+                                    <p class="mb-0"><strong>Website:</strong> <a href="https://marveit.com" class="text-blue-600 font-semibold hover:underline">https://marveit.com</a></p>
                                 </div>
                             </div>
 
-                            <!-- Bottom CTA Banner -->
-                            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                <div>
+                            <!-- Bottom CTA Banner with generous padding -->
+                            <div class="mt-10 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-5">
+                                <div class="space-y-1">
                                     <h4 class="text-sm font-bold text-gray-900">Ready to test our data annotation quality?</h4>
                                     <p class="text-xs text-gray-500">Start with a small pilot under mutual NDA. No commitment required.</p>
                                 </div>
