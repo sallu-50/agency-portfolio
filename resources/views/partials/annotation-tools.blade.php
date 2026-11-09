@@ -45,10 +45,10 @@
             <!-- Marquee Container -->
             <div class="relative overflow-hidden w-full pt-1 pb-1">
                 <!-- Left Gradient Fade Mask -->
-                <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 z-10 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+                <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 z-10" style="background: linear-gradient(to right, #f8fafc, rgba(248, 250, 252, 0.8), transparent);"></div>
 
                 <!-- Right Gradient Fade Mask -->
-                <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 z-10 bg-gradient-to-l from-white via-white/80 to-transparent"></div>
+                <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 z-10" style="background: linear-gradient(to left, #f8fafc, rgba(248, 250, 252, 0.8), transparent);"></div>
 
                 <!-- Scrolling Track -->
                 <div class="overflow-hidden w-full relative">

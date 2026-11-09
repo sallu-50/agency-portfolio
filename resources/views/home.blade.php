@@ -8,10 +8,10 @@
 @push('styles')
     <style>
         .home-section {
-            background-color: #ffffff;
+            background-color: #f8fafc;
             border-radius: 1.25rem;
-            border: 1px solid rgba(226, 232, 240, 0.7);
-            box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.02), 0 1px 3px 0 rgba(15, 23, 42, 0.015);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.02);
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
             position: relative;
@@ -22,7 +22,7 @@
                 border-radius: 1.75rem;
                 margin-top: 2rem;
                 margin-bottom: 2rem;
-                box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.025), 0 1px 4px 0 rgba(15, 23, 42, 0.015);
+                box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.02);
             }
         }
         .home-hero-section {
