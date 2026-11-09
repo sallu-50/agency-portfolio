@@ -592,15 +592,16 @@
     @include('partials.annotation-tools')
 
     <!-- Sample Data CTA -->
-    <section id="sample-data-cta" class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-18 md:py-24 text-center relative z-10">
+    <section id="sample-data-cta" class="home-section max-w-7xl mx-auto text-center relative z-10"
+             style="padding: clamp(64px, 8vw, 110px) clamp(24px, 5vw, 64px);">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-2xl font-bold text-gray-900 tracking-tight"
-                style="font-size: 24px; line-height: 1.33; margin-bottom: 16px;">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight"
+                style="font-size: 28px; line-height: 1.3; margin-bottom: 20px;">
                 Let’s Label a Sample of Your Data
             </h2>
             <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
-               style="margin-bottom: 32px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
-            <div class="inline-flex items-center justify-center">
+               style="margin-bottom: 36px; line-height: 1.7;">Send us a small sample and see our annotation quality before you commit. We follow your guidelines, sign an NDA first, and share an accuracy report with every delivery.</p>
+            <div class="inline-flex items-center justify-center pt-2">
                 <a href="{{ route('free-trial') }}"
                     class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                     style="padding: 14px 38px;">
