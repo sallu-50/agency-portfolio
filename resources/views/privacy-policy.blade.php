@@ -334,9 +334,8 @@
                         </nav>
                     </div>
 
-                    <!-- Quick NDA Action Box -->
-                    <div
-                        class="pp-card p-6 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden"
+
+                    <div class="pp-card p-6 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden"
                         style="margin-top: 2.25rem !important; margin-bottom: 2.25rem !important;">
                         <div class="relative z-10 space-y-6">
                             <div

@@ -42,7 +42,7 @@
         <section class="py-16 md:py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
-                    <i data-feather="users" class="w-3.5 h-3.5"></i> The Minds Behind Marveit
+                    <i data-feather="users" class="w-3.5 h-3.5"></i> The Minds Behind Marveit &bull; {{ $counts['all'] ?? count($allMembers) }} Specialists
                 </span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
                     Meet Our <span class="text-blue-600">Leadership Team</span>
@@ -54,20 +54,20 @@
                 <!-- Stats Summary -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-gray-100 max-w-3xl mx-auto">
                     <div class="p-3">
-                        <div class="text-2xl md:text-3xl font-extrabold text-blue-600">100+</div>
+                        <div class="text-2xl md:text-3xl font-extrabold text-blue-600">{{ $counts['leadership'] ?? 0 }}</div>
+                        <div class="text-xs text-gray-500 font-medium mt-0.5">Leadership & Ops</div>
+                    </div>
+                    <div class="p-3">
+                        <div class="text-2xl md:text-3xl font-extrabold text-gray-900">{{ $counts['team_leads'] ?? 0 }}</div>
+                        <div class="text-xs text-gray-500 font-medium mt-0.5">Team & Pod Leads</div>
+                    </div>
+                    <div class="p-3">
+                        <div class="text-2xl md:text-3xl font-extrabold text-blue-600">{{ $counts['qa_leads'] ?? 0 }}</div>
+                        <div class="text-xs text-gray-500 font-medium mt-0.5">Quality Assurance Leads</div>
+                    </div>
+                    <div class="p-3">
+                        <div class="text-2xl md:text-3xl font-extrabold text-gray-900">{{ $counts['annotators'] ?? 0 }}</div>
                         <div class="text-xs text-gray-500 font-medium mt-0.5">Labeling Specialists</div>
-                    </div>
-                    <div class="p-3">
-                        <div class="text-2xl md:text-3xl font-extrabold text-gray-900">99.8%</div>
-                        <div class="text-xs text-gray-500 font-medium mt-0.5">Precision Quality SLA</div>
-                    </div>
-                    <div class="p-3">
-                        <div class="text-2xl md:text-3xl font-extrabold text-blue-600">50+</div>
-                        <div class="text-xs text-gray-500 font-medium mt-0.5">Enterprise Pipelines</div>
-                    </div>
-                    <div class="p-3">
-                        <div class="text-2xl md:text-3xl font-extrabold text-gray-900">{{ $counts['all'] ?? count($allMembers) }}</div>
-                        <div class="text-xs text-gray-500 font-medium mt-0.5">Core Technical Leads</div>
                     </div>
                 </div>
             </div>
@@ -76,6 +76,18 @@
         <!-- Team Members Grid -->
         <section class="py-16 md:py-24">
             <div class="container mx-auto px-6">
+                <!-- Grid Header with Count -->
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-10 pb-4 border-b border-gray-200/60">
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-900">All Team Members</h2>
+                        <p class="text-xs md:text-sm text-gray-500 mt-0.5">Sorted by organizational hierarchy & leadership rank</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-gray-200 text-gray-700 shadow-xs">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        {{ $counts['all'] ?? count($allMembers) }} Total Active Members
+                    </span>
+                </div>
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="team-grid">
                     @forelse ($allMembers as $member)
                         <div class="team-card group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center h-full">
