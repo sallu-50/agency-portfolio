@@ -623,4 +623,23 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Privacy Policy</a>', false);
         $response->assertSee('Terms of Service</a>', false);
     }
+
+    public function test_privacy_policy_page_loads_successfully(): void
+    {
+        $response = $this->get(route('privacy-policy'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Privacy Policy &amp; Data Protection', false);
+        $response->assertSee('100% Client IP Ownership', false);
+    }
+
+    public function test_terms_of_service_page_loads_successfully(): void
+    {
+        $response = $this->get(route('terms-of-service'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Terms of Service &amp; Engagement Standards', false);
+        $response->assertSee('100% Client IP Ownership', false);
+        $response->assertSee('Guaranteed Quality SLA', false);
+    }
 }

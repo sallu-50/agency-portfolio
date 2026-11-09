@@ -179,7 +179,7 @@
             <div class="flex items-center gap-3 text-gray-400">
                 <a href="{{ route('privacy-policy') }}" class="hover:text-white transition-colors">Privacy Policy</a>
                 <span class="text-gray-600">|</span>
-                <a href="{{ route('contact') }}" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="{{ route('terms-of-service') }}" class="hover:text-white transition-colors">Terms of Service</a>
             </div>
         </div>
     </div>

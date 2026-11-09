@@ -8,6 +8,7 @@ use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TermsOfServiceController;
 use Illuminate\Support\Facades\Route;
 
 // Main Public Pages
@@ -41,6 +42,12 @@ Route::post('/free-trial', [FreeTrialController::class, 'store'])->name('free-tr
 Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy-policy');
 Route::redirect('/privacy', '/privacy-policy');
 Route::redirect('/privacy-policy.html', '/privacy-policy');
+
+// Terms of Service
+Route::get('/terms-of-service', [TermsOfServiceController::class, 'index'])->name('terms-of-service');
+Route::redirect('/terms', '/terms-of-service');
+Route::redirect('/terms-of-service.html', '/terms-of-service');
+Route::redirect('/terms.html', '/terms-of-service');
 
 // Authentication & Admin Redirects to Filament Panel
 Route::get('/login', fn () => redirect()->to('/admin/login'))->name('login');
