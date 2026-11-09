@@ -1,5 +1,5 @@
 <!-- Annotation Tools and Platforms We Work With (Auto-Scrolling Marquee) -->
-<section id="annotation-tools" class="home-section max-w-7xl mx-auto py-12 md:py-16 px-4 sm:px-8 relative overflow-hidden">
+<section id="annotation-tools" class="home-section max-w-7xl mx-auto py-16 md:py-24 px-4 sm:px-8 relative overflow-hidden">
     <style>
         @keyframes tools-marquee-scroll {
             0% {

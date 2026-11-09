@@ -12,7 +12,7 @@
             background-color: #ffffff;
             border-radius: 1.5rem;
             box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
-            border: 1px solid rgba(226, 232, 240, 0.9);
+            border: none;
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
             position: relative;
@@ -29,7 +29,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-12 md:py-16">
+    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-24">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-left">
                 <!-- <div
@@ -124,7 +124,7 @@
     </section>
 
     <!-- Metrics Strip -->
-    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-8 relative z-10">
+    <section class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-10 md:py-14 relative z-10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
             <div class="pt-2 md:pt-0">
                 <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">99%</div>
@@ -146,7 +146,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-20 relative z-10">
+    <section id="services" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 relative z-10">
         <div class="max-w-2xl mx-auto text-center mb-14">
 
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
@@ -161,7 +161,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @forelse ($services as $service)
                 <div
-                    class="p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 group text-left h-full">
+                    class="p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between bg-gray-50/70 hover:bg-white group text-left h-full">
                         <div class="flex-grow flex flex-col">
                             <div class="flex items-center justify-between mb-6">
                                 <div
@@ -214,7 +214,7 @@
     </section>
 
     <!-- Why Choose Us / Quality Pillars -->
-    <section id="about" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-20 relative z-10">
+    <section id="about" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 relative z-10">
         <div class="max-w-3xl mx-auto text-center mb-14">
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                 style="font-size: 24px; line-height: 1.33;">Why AI Teams Choose Marveit for Data Annotation
@@ -225,7 +225,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. Multi-Stage Quality Control -->
                 <div
-                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="check-circle" class="w-6 h-6"></i>
                     </div>
@@ -241,7 +241,7 @@
 
                 <!-- 2. Pilot First, Then Scale -->
                 <div
-                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="trending-up" class="w-6 h-6"></i>
                     </div>
@@ -257,7 +257,7 @@
 
                 <!-- 3. Teams That Scale With Your Roadmap -->
                 <div
-                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="users" class="w-6 h-6"></i>
                     </div>
@@ -273,7 +273,7 @@
 
                 <!-- 4. Secure Data Handling -->
                 <div
-                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="shield" class="w-6 h-6"></i>
                     </div>
@@ -289,7 +289,7 @@
 
                 <!-- 5. Works in Your Tools -->
                 <div
-                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="sliders" class="w-6 h-6"></i>
                     </div>
@@ -305,7 +305,7 @@
 
                 <!-- 6. Clear Communication -->
                 <div
-                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    class="p-8 rounded-2xl bg-gray-50/70 hover:bg-white shadow-xs hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                         <i data-feather="message-square" class="w-6 h-6"></i>
                     </div>
@@ -341,7 +341,7 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="industries" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-20 relative z-10">
+    <section id="industries" class="home-section max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 relative z-10">
         <div class="max-w-3xl mx-auto text-center mb-14">
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4"
                 style="font-size: 24px; line-height: 1.33;">Data Annotation Services for Every AI Industry</h2>
@@ -351,7 +351,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Automotive & Autonomous Driving -->
                 <div id="automotive"
-                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -388,7 +388,7 @@
 
                 <!-- Card 2: Healthcare & Medical AI -->
                 <div id="healthcare"
-                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -425,7 +425,7 @@
 
                 <!-- Card 3: Retail & E-Commerce -->
                 <div id="retail"
-                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -461,7 +461,7 @@
 
                 <!-- Card 4: Agriculture & Drone Imagery -->
                 <div id="agriculture"
-                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -498,7 +498,7 @@
 
                 <!-- Card 5: Voice AI & Conversational Systems -->
                 <div id="voice-ai"
-                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -532,7 +532,7 @@
 
                 <!-- Card 6: LLM & Generative AI -->
                 <div id="llm"
-                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl border border-gray-200/70 hover:border-blue-500 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                    class="scroll-mt-28 bg-gray-50/70 hover:bg-white p-8 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                     <div class="flex-grow flex flex-col">
                         <div
                             class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -592,7 +592,7 @@
     @include('partials.annotation-tools')
 
     <!-- Sample Data CTA -->
-    <section id="sample-data-cta" class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-14 md:py-18 text-center relative z-10">
+    <section id="sample-data-cta" class="home-section max-w-7xl mx-auto px-6 sm:px-10 py-18 md:py-24 text-center relative z-10">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-2xl font-bold text-gray-900 tracking-tight"
                 style="font-size: 24px; line-height: 1.33; margin-bottom: 16px;">
