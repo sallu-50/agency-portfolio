@@ -62,6 +62,18 @@
             transform: translateY(-1px);
         }
 
+        .cr-contact-box {
+            width: 100%;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.5rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.04);
+        }
+
         .cr-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -282,17 +294,17 @@
                     </div>
 
                     <!-- Direct Hiring Contact Box -->
-                    <div class="w-full bg-white rounded-2xl border border-gray-200 p-5 space-y-2.5 text-xs text-gray-600 shadow-xs">
-                        <div class="font-bold text-gray-900 text-sm">Direct Hiring Contact</div>
-                        <div class="flex items-center gap-2">
+                    <div class="cr-contact-box text-xs text-gray-600">
+                        <div class="font-bold text-gray-900 text-sm pb-1">Direct Hiring Contact</div>
+                        <div class="flex items-center gap-2.5">
                             <i data-feather="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
                             <span>Email CV directly: <a href="mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI" class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a></span>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2.5">
                             <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
                             <span>Office Address: Mymensingh, Bangladesh</span>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2.5">
                             <i data-feather="clock" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
                             <span>Hiring Team Response: Within 24 hours</span>
                         </div>
