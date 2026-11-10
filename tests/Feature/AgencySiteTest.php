@@ -672,4 +672,85 @@ class AgencySiteTest extends TestCase
 
         $this->get('/about-us')->assertRedirect('/about');
     }
+
+    public function test_team_page_normalizes_member_names_to_title_case_and_trims_alt_attributes(): void
+    {
+        // Insert raw unformatted rows directly to simulate legacy DB records
+        \Illuminate\Support\Facades\DB::table('team_members')->insert([
+            [
+                'name' => 'hasibul hasnat sabbir',
+                'role' => 'Data Annotator',
+                'department_badge' => 'Data Annotation',
+                'badge_color' => 'blue',
+                'category' => 'cv',
+                'bio' => 'Annotation specialist',
+                'is_active' => true,
+                'designation_rank' => 7,
+                'sort_order' => 1,
+            ],
+            [
+                'name' => 'Ritu panna',
+                'role' => 'Data Annotator',
+                'department_badge' => 'Data Annotation',
+                'badge_color' => 'blue',
+                'category' => 'cv',
+                'bio' => 'Annotation specialist',
+                'is_active' => true,
+                'designation_rank' => 7,
+                'sort_order' => 2,
+            ],
+            [
+                'name' => 'Noyem uddin',
+                'role' => 'Data Annotator',
+                'department_badge' => 'Data Annotation',
+                'badge_color' => 'blue',
+                'category' => 'cv',
+                'bio' => 'Annotation specialist',
+                'is_active' => true,
+                'designation_rank' => 7,
+                'sort_order' => 3,
+            ],
+            [
+                'name' => ' Md Raihan Ferdous Ratul',
+                'role' => 'Data Annotator',
+                'department_badge' => 'Data Annotation',
+                'badge_color' => 'blue',
+                'category' => 'cv',
+                'bio' => 'Annotation specialist',
+                'is_active' => true,
+                'designation_rank' => 7,
+                'sort_order' => 4,
+            ],
+            [
+                'name' => 'Bipro Nandi Argho ',
+                'role' => 'Data Annotator',
+                'department_badge' => 'Data Annotation',
+                'badge_color' => 'blue',
+                'category' => 'cv',
+                'bio' => 'Annotation specialist',
+                'is_active' => true,
+                'designation_rank' => 7,
+                'sort_order' => 5,
+            ],
+        ]);
+
+        $response = $this->get(route('team'));
+        $response->assertStatus(200);
+
+        // Title Case & trimmed names in headings and alt attributes
+        $response->assertSee('alt="Hasibul Hasnat Sabbir"', false);
+        $response->assertSee('alt="Ritu Panna"', false);
+        $response->assertSee('alt="Noyem Uddin"', false);
+        $response->assertSee('alt="Md Raihan Ferdous Ratul"', false);
+        $response->assertSee('alt="Bipro Nandi Argho"', false);
+
+        $response->assertSee('>Hasibul Hasnat Sabbir</h3>', false);
+        $response->assertSee('>Ritu Panna</h3>', false);
+        $response->assertSee('>Noyem Uddin</h3>', false);
+
+        // Untrimmed / lowercase raw forms must not appear
+        $response->assertDontSee('alt=" Md Raihan Ferdous Ratul"', false);
+        $response->assertDontSee('alt="Bipro Nandi Argho "', false);
+        $response->assertDontSee('hasibul hasnat sabbir', false);
+    }
 }

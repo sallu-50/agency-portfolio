@@ -86,18 +86,19 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="team-grid">
                     @forelse ($allMembers as $member)
+                        @php
+                            $displayName = trim(\App\Models\TeamMember::formatName($member->name));
+                        @endphp
                         <div class="team-card group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center h-full">
                             <!-- Photo -->
                             <div class="team-photo-wrapper w-full max-w-[240px] mx-auto mb-5">
-                                <img src="{{ $member->image_url }}" alt="{{ $member->name }}"
+                                <img src="{{ $member->image_url }}" alt="{{ $displayName }}"
                                     loading="lazy">
                             </div>
 
                             <!-- Name & Designation -->
                             <div class="flex flex-col items-center flex-grow justify-center w-full">
-                                <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                                    {{ $member->name }}
-                                </h3>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">{{ $displayName }}</h3>
 
                                 <p class="text-sm font-semibold text-blue-600">{{ $member->role }}</p>
                             </div>

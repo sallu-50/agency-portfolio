@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 
 class TeamMember extends Model
@@ -24,6 +25,27 @@ class TeamMember extends Model
         'Data Annotator' => 7,
     ];
 
+    /**
+     * Normalize a team member's name by trimming extra whitespace and applying Title Case.
+     */
+    public static function formatName(?string $name): string
+    {
+        $collapsed = preg_replace('/\s+/', ' ', trim((string) $name));
+        if ($collapsed === null || $collapsed === '') {
+            return '';
+        }
+
+        return mb_convert_case($collapsed, MB_CASE_TITLE, 'UTF-8');
+    }
+
+    protected function name(): Attribute
+    {
+        return Attribute::make(
+            get: fn (?string $value) => static::formatName($value),
+            set: fn (?string $value) => static::formatName($value),
+        );
+    }
+
     public function designation()
     {
         return $this->belongsTo(Designation::class);
@@ -32,6 +54,10 @@ class TeamMember extends Model
     protected static function booted(): void
     {
         static::saving(function (TeamMember $member) {
+            if (! empty($member->name)) {
+                $member->name = static::formatName($member->name);
+            }
+
             if ($member->designation_id) {
                 $designation = Designation::find($member->designation_id);
                 if ($designation) {
