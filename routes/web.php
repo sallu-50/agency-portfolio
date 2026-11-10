@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FreeTrialController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndustriesController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ResourceController;
@@ -13,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 // Main Public Pages
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Industries
+Route::get('/industries', [IndustriesController::class, 'index'])->name('industries');
+Route::redirect('/industries.html', '/industries');
+
+// About Us
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::redirect('/about-us', '/about');
+Route::redirect('/about.html', '/about');
+Route::redirect('/about-us.html', '/about');
 
 // Services
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');

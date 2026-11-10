@@ -596,12 +596,12 @@ class AgencySiteTest extends TestCase
 
         // Column 3: Industries
         $response->assertSee('Industries</h4>', false);
-        $response->assertSee('/#automotive', false);
-        $response->assertSee('/#healthcare', false);
-        $response->assertSee('/#retail', false);
-        $response->assertSee('/#agriculture', false);
-        $response->assertSee('/#voice-ai', false);
-        $response->assertSee('/#llm', false);
+        $response->assertSee('/industries#automotive', false);
+        $response->assertSee('/industries#healthcare', false);
+        $response->assertSee('/industries#retail', false);
+        $response->assertSee('/industries#agriculture', false);
+        $response->assertSee('/industries#voice-ai', false);
+        $response->assertSee('/industries#llm', false);
 
         // Column 4: Company
         $response->assertSee('Company</h4>', false);
@@ -641,5 +641,35 @@ class AgencySiteTest extends TestCase
         $response->assertSee('Terms of Service &amp; Engagement Standards', false);
         $response->assertSee('100% Client IP Ownership', false);
         $response->assertSee('Guaranteed Quality SLA', false);
+    }
+
+    public function test_industries_page_loads_with_all_six_industries(): void
+    {
+        $response = $this->get(route('industries'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Data Annotation Services for', false);
+        $response->assertSee('Every AI Industry', false);
+        $response->assertSee('Automotive &amp; Autonomous Driving', false);
+        $response->assertSee('Healthcare &amp; Medical AI', false);
+        $response->assertSee('Retail &amp; E-Commerce', false);
+        $response->assertSee('Agriculture &amp; Drone Imagery', false);
+        $response->assertSee('Voice AI &amp; Conversational Systems', false);
+        $response->assertSee('LLM &amp; Generative AI', false);
+        $response->assertSee('Within 24 Hours', false);
+    }
+
+    public function test_about_page_loads_with_mission_profile_and_redirects(): void
+    {
+        $response = $this->get(route('about'));
+
+        $response->assertStatus(200);
+        $response->assertSee('About Marveit AI', false);
+        $response->assertSee('Human-in-the-Loop Precision for', false);
+        $response->assertSee('Mymensingh, Bangladesh', false);
+        $response->assertSee('Within 24 hours', false);
+        $response->assertSee('ebrahim@marveit.com', false);
+
+        $this->get('/about-us')->assertRedirect('/about');
     }
 }

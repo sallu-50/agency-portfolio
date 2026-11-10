@@ -163,8 +163,8 @@
 
             <!-- 2. Industries Dropdown Group -->
             <div class="group relative h-10 flex items-center">
-                <a href="{{ route('home') }}#industries"
-                    class="nav-item-link gap-1 text-gray-700 hover:text-blue-600">
+                <a href="{{ route('industries') }}"
+                    class="nav-item-link gap-1 {{ request()->routeIs('industries*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">
                     <span>Industries</span>
                     <i data-feather="chevron-down"
                         class="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180"></i>
@@ -175,7 +175,7 @@
                     <div
                         class="bg-white rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] border border-gray-100 p-6 ring-1 ring-black/5">
                         <div class="grid grid-cols-2 gap-4">
-                            <a href="{{ route('home') }}#industries"
+                            <a href="{{ route('industries') }}#automotive"
                                 class="p-3 rounded-xl hover:bg-blue-50 transition-all duration-200 group/item border border-transparent hover:border-blue-100">
                                 <div class="flex items-center gap-3 mb-1">
                                     <i data-feather="truck"
@@ -185,7 +185,7 @@
                                 </div>
                                 <p class="text-xs text-gray-500">Autonomous driving data.</p>
                             </a>
-                            <a href="{{ route('home') }}#industries"
+                            <a href="{{ route('industries') }}#healthcare"
                                 class="p-3 rounded-xl hover:bg-green-50 transition-all duration-200 group/item border border-transparent hover:border-green-100">
                                 <div class="flex items-center gap-3 mb-1">
                                     <i data-feather="activity"
@@ -195,7 +195,7 @@
                                 </div>
                                 <p class="text-xs text-gray-500">Medical AI diagnostics.</p>
                             </a>
-                            <a href="{{ route('home') }}#industries"
+                            <a href="{{ route('industries') }}#retail"
                                 class="p-3 rounded-xl hover:bg-purple-50 transition-all duration-200 group/item border border-transparent hover:border-purple-100">
                                 <div class="flex items-center gap-3 mb-1">
                                     <i data-feather="shopping-bag"
@@ -205,7 +205,7 @@
                                 </div>
                                 <p class="text-xs text-gray-500">Visual search & inventory.</p>
                             </a>
-                            <a href="{{ route('home') }}#industries"
+                            <a href="{{ route('industries') }}#agriculture"
                                 class="p-3 rounded-xl hover:bg-yellow-50 transition-all duration-200 group/item border border-transparent hover:border-yellow-100">
                                 <div class="flex items-center gap-3 mb-1">
                                     <i data-feather="sun"
@@ -225,8 +225,8 @@
                 class="nav-item-link {{ request()->routeIs('portfolio*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">Case Studies</a>
 
             <!-- 4. About Us -->
-            <a href="{{ route('home') }}#about"
-                class="nav-item-link text-gray-700 hover:text-blue-600">About Us</a>
+            <a href="{{ route('about') }}"
+                class="nav-item-link {{ request()->routeIs('about*') ? 'text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5' : 'text-gray-700 hover:text-blue-600' }}">About Us</a>
 
             <!-- 5. Team -->
             <a href="{{ route('team') }}"
@@ -267,16 +267,16 @@
             class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('services.*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Services
         </a>
-        <a href="{{ route('home') }}#industries"
-            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
+        <a href="{{ route('industries') }}"
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('industries*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Industries
         </a>
         <a href="{{ route('portfolio') }}"
             class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('portfolio*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             Case Studies
         </a>
-        <a href="{{ route('home') }}#about"
-            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors">
+        <a href="{{ route('about') }}"
+            class="block px-6 py-3.5 border-b border-gray-100 hover:bg-blue-50 text-gray-700 font-medium transition-colors {{ request()->routeIs('about*') ? 'bg-blue-50/70 text-blue-600 font-semibold' : '' }}">
             About Us
         </a>
         <a href="{{ route('team') }}"

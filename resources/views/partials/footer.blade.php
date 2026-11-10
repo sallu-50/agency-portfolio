@@ -112,17 +112,17 @@
             <div>
                 <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Industries</h4>
                 <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
-                    <li><a href="{{ url('/#automotive') }}"
+                    <li><a href="{{ route('industries') }}#automotive"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Automotive</a></li>
-                    <li><a href="{{ url('/#healthcare') }}"
+                    <li><a href="{{ route('industries') }}#healthcare"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Healthcare</a></li>
-                    <li><a href="{{ url('/#retail') }}"
+                    <li><a href="{{ route('industries') }}#retail"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Retail & E-Commerce</a></li>
-                    <li><a href="{{ url('/#agriculture') }}"
+                    <li><a href="{{ route('industries') }}#agriculture"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Agriculture</a></li>
-                    <li><a href="{{ url('/#voice-ai') }}"
+                    <li><a href="{{ route('industries') }}#voice-ai"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Voice AI</a></li>
-                    <li><a href="{{ url('/#llm') }}"
+                    <li><a href="{{ route('industries') }}#llm"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">LLM & Generative AI</a></li>
                 </ul>
             </div>
@@ -131,7 +131,7 @@
             <div>
                 <h4 class="text-white font-bold text-sm tracking-wide mb-3 md:mb-4">Company</h4>
                 <ul class="space-y-2 text-xs sm:text-sm flex flex-col">
-                    <li><a href="{{ route('home') }}#about"
+                    <li><a href="{{ route('about') }}"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">About Us</a></li>
                     <li><a href="{{ route('team') }}"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Team</a></li>
