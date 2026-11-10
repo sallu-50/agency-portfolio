@@ -8,10 +8,6 @@
         <!-- Hero Section -->
         <section class="py-16 md:py-24 bg-transparent border-b border-gray-100">
             <div class="container mx-auto px-6 text-center max-w-4xl">
-                <span
-                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
-                    <i data-feather="cpu" class="w-3.5 h-3.5"></i> End-to-End Ground Truth Engineering
-                </span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
                     Comprehensive <span class="text-blue-600">AI Annotation</span> Services
                 </h1>
@@ -32,16 +28,14 @@
         <!-- Services Grid Section -->
         <section class="py-20 bg-transparent">
             <div class="container mx-auto px-6">
-                <!-- Group 1: Core Services -->
+                <!-- Group 1: Annotation Capabilities -->
                 <div class="mb-16">
                     <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
                         <div>
-                            <h2 class="text-2xl font-bold text-gray-900">Core Annotation Capabilities</h2>
+                            <h2 class="text-2xl font-bold text-gray-900">Annotation Capabilities</h2>
                             <p class="text-xs md:text-sm text-gray-500 mt-1">Foundation data pipelines powering Computer
                                 Vision, NLP, and structured collection.</p>
                         </div>
-                        <span
-                            class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Core</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -58,12 +52,10 @@
                                 <div>
                                     <div class="flex items-center justify-between mb-6">
                                         <div
-                                            class="w-14 h-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center transition-transform group-hover:scale-105">
+                                            class="w-12 h-12 p-3 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center transition-transform group-hover:scale-105"
+                                            style="width: 3.5rem; height: 3.5rem; padding: 0.875rem;">
                                             <i data-feather="{{ $service->icon ?: 'database' }}" class="w-6 h-6"></i>
                                         </div>
-                                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
-                                            {{ $service->category }}
-                                        </span>
                                     </div>
 
                                     <h3
@@ -107,16 +99,14 @@
                     </div>
                 </div>
 
-                <!-- Group 2: Specialized Services -->
+                <!-- Group 2: Multi-Modal Pipelines -->
                 <div>
                     <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
                         <div>
-                            <h2 class="text-2xl font-bold text-gray-900">Specialized & Multi-Modal Pipelines</h2>
+                            <h2 class="text-2xl font-bold text-gray-900">Multi-Modal Pipelines</h2>
                             <p class="text-xs md:text-sm text-gray-500 mt-1">High-complexity spatial tracking, acoustic
                                 diarization, and dynamic streaming datasets.</p>
                         </div>
-                        <span
-                            class="text-xs font-bold text-yellow-600 bg-yellow-50 px-3 py-1 rounded-full border border-yellow-200">Specialized</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,12 +123,10 @@
                                 <div>
                                     <div class="flex items-center justify-between mb-6">
                                         <div
-                                            class="w-14 h-14 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center transition-transform group-hover:scale-105">
+                                            class="w-12 h-12 p-3 rounded-xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center transition-transform group-hover:scale-105"
+                                            style="width: 3.5rem; height: 3.5rem; padding: 0.875rem;">
                                             <i data-feather="{{ $service->icon ?: 'video' }}" class="w-6 h-6"></i>
                                         </div>
-                                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
-                                            {{ $service->category }}
-                                        </span>
                                     </div>
 
                                     <h3

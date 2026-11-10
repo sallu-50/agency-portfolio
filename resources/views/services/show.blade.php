@@ -30,10 +30,7 @@
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold border {{ $colorClasses['pill'] }}">
-                                {{ $service->category }} Service
-                            </span>
-                            <span class="text-xs text-gray-400">• High-Throughput Pipeline</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">High-Throughput Pipeline</span>
                         </div>
                         <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
                             {{ $service->title }}
@@ -61,7 +58,8 @@
                         <div class="p-8 rounded-3xl bg-gray-50/70 border border-gray-100">
                             <div class="flex items-center gap-4 mb-6">
                                 <div
-                                    class="w-14 h-14 rounded-2xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center flex-shrink-0 shadow-sm">
+                                    class="w-12 h-12 p-3 rounded-2xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center flex-shrink-0 shadow-sm"
+                                    style="width: 3.5rem; height: 3.5rem; padding: 0.875rem;">
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-7 h-7"></i>
                                 </div>
                                 <div>
@@ -95,7 +93,8 @@
                                         <div
                                             class="p-5 rounded-2xl border border-gray-100 bg-white shadow-xs hover:border-blue-200 hover:shadow-md transition flex items-start gap-4">
                                             <div
-                                                class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                class="w-8 h-8 p-2 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                                style="width: 2rem; height: 2rem; padding: 0.45rem;">
                                                 <i data-feather="check" class="w-4 h-4"></i>
                                             </div>
                                             <div>
@@ -192,14 +191,14 @@
                                         class="p-3 rounded-xl bg-white border border-gray-100 hover:border-blue-200 hover:bg-blue-50/40 transition-all flex items-center justify-between group">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-blue-100 text-gray-600 group-hover:text-blue-600 flex items-center justify-center flex-shrink-0 transition">
+                                                class="w-9 h-9 p-2 rounded-lg bg-gray-100 group-hover:bg-blue-100 text-gray-600 group-hover:text-blue-600 flex items-center justify-center flex-shrink-0 transition"
+                                                style="width: 2.25rem; height: 2.25rem; padding: 0.5rem;">
                                                 <i data-feather="{{ $other->icon ?: 'database' }}" class="w-4 h-4"></i>
                                             </div>
                                             <div>
                                                 <h5
                                                     class="text-xs font-bold text-gray-800 group-hover:text-blue-600 transition">
                                                     {{ $other->title }}</h5>
-                                                <p class="text-[11px] text-gray-400">{{ $other->category }}</p>
                                             </div>
                                         </div>
                                         <i data-feather="chevron-right"
