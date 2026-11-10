@@ -172,7 +172,24 @@
             .ft-layout-grid {
                 grid-template-columns: 5fr 7fr;
                 gap: 3.5rem;
-                align-items: center;
+                align-items: start;
+            }
+        }
+
+        .ft-left-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .ft-left-panel {
+                padding-top: 0.5rem;
+                padding-right: 1rem;
             }
         }
 
@@ -202,9 +219,9 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div class="ft-layout-grid">
 
-                <!-- Left Column: Pilot Intro, Value Props & Workflow (Left-Aligned) -->
-                <div class="text-left space-y-8 lg:pr-4 my-auto flex flex-col items-start">
-                    <div>
+                <!-- Left Column: Pilot Intro, Value Props & Workflow (Start-Aligned) -->
+                <div class="ft-left-panel text-left">
+                    <div class="w-full text-left">
                         <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
                             Start Your <span class="text-blue-600">Free Data Annotation Pilot</span>
                         </h1>
@@ -216,26 +233,26 @@
                     <!-- What you get -->
                     <div class="pt-1 text-left w-full">
                         <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">What you get:</h3>
-                        <ul class="space-y-3.5 flex flex-col items-start">
-                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                        <ul class="flex flex-col items-start w-full" style="gap: 0.875rem;">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                 <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>Labeled sample of your own data</span>
                             </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                 <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>Accuracy report from our QA team</span>
                             </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                 <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
                                 <span>Feedback on your guidelines</span>
                             </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                 <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                 </div>
@@ -247,16 +264,16 @@
                     <!-- What happens next -->
                     <div class="pt-1 text-left w-full">
                         <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">What happens next:</h3>
-                        <ol class="space-y-4 flex flex-col items-start">
-                            <li class="flex items-start gap-3 text-sm text-gray-700">
+                        <ol class="flex flex-col items-start w-full" style="gap: 1rem;">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 text-left">
                                 <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
                                 <span class="pt-0.5">Submit the form with your scope and sample.</span>
                             </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-700">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 text-left">
                                 <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
                                 <span class="pt-0.5">We reply within <strong class="text-gray-900 font-semibold">1 business day</strong> with questions or an NDA to sign.</span>
                             </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-700">
+                            <li class="flex items-start gap-3 text-sm text-gray-700 text-left">
                                 <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
                                 <span class="pt-0.5">You receive your labeled pilot in <strong class="text-gray-900 font-semibold">2–3 business days</strong>.</span>
                             </li>
@@ -264,7 +281,7 @@
                     </div>
 
                     <!-- Trust line -->
-                    <div class="pt-2 flex justify-start w-full">
+                    <div class="pt-2 flex w-full" style="justify-content: flex-start;">
                         <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white text-xs text-gray-700 shadow-xs border border-gray-100">
                             <i data-feather="shield" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                             <span>NDA available before you share any data &middot; No credit card required</span>
