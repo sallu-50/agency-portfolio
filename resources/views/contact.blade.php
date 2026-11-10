@@ -350,10 +350,14 @@
                             </ul>
                         </div>
 
-                        <!-- Headquarters & NDA Trust Pill -->
-                        <div class="pt-2 flex justify-start w-full">
+                        <!-- Office Address & NDA Trust Pill -->
+                        <div class="pt-2 flex flex-col items-start gap-2.5 w-full">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-xs text-gray-700 shadow-sm border border-gray-200 font-medium">
+                                <i data-feather="map-pin" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
+                                <span>Office Address: Mymensingh, Bangladesh</span>
+                            </div>
                             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-xs text-gray-600 shadow-sm border border-gray-200">
-                                <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-500"></i>
+                                <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0"></i>
                                 <span>NDA available before you share any data &middot; 100% confidential</span>
                             </div>
                         </div>

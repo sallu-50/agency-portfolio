@@ -383,7 +383,7 @@
                             </div>
                             <div class="flex items-start gap-2.5 pt-0.5">
                                 <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                <span class="leading-relaxed">Mymensingh, Bangladesh (Serving global AI teams)</span>
+                                <span class="leading-relaxed">Mymensingh, Bangladesh</span>
                             </div>
                         </div>
                     </div>
@@ -737,8 +737,7 @@
                                             class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a></p>
                                     <p class="mb-1"><strong>Phone / WhatsApp:</strong> <a href="tel:+8801753499696"
                                             class="text-blue-600 font-semibold hover:underline">+880 1753 499696</a></p>
-                                    <p class="mb-1"><strong>Operational Base:</strong> Mymensingh, Bangladesh · Serving AI
-                                        &amp; ML organizations worldwide</p>
+                                    <p class="mb-1"><strong>Office Address:</strong> Mymensingh, Bangladesh</p>
                                     <p class="mb-0"><strong>Website:</strong> <a href="https://marveit.com"
                                             class="text-blue-600 font-semibold hover:underline">https://marveit.com</a></p>
                                 </div>
