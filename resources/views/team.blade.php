@@ -125,9 +125,15 @@
                     We are always looking for passionate ML engineers, annotation pod leads, and subject-matter QA experts to join our global network.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="{{ route('contact') }}"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition">
-                        Get In Touch With Leadership
+                    <a href="{{ route('careers') }}"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition inline-flex items-center gap-2">
+                        <span>Apply on Careers Page</span>
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI"
+                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-8 rounded-full transition inline-flex items-center gap-2">
+                        <i data-feather="mail" class="w-4 h-4"></i>
+                        <span>Email Your CV</span>
                     </a>
                 </div>
             </div>

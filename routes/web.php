@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CareersController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FreeTrialController;
 use App\Http\Controllers\HomeController;
@@ -32,6 +33,11 @@ Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('servic
 
 // Team
 Route::get('/team', [TeamController::class, 'index'])->name('team');
+
+// Careers
+Route::get('/careers', [CareersController::class, 'index'])->name('careers');
+Route::post('/careers', [CareersController::class, 'store'])->name('careers.store');
+Route::redirect('/careers.html', '/careers');
 
 // Portfolio (Public)
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');

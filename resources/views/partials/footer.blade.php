@@ -139,6 +139,8 @@
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Case Studies</a></li>
                     <li><a href="{{ route('resources.index') }}"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Resources</a></li>
+                    <li><a href="{{ route('careers') }}"
+                            class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Careers</a></li>
                     <li><a href="{{ route('contact') }}"
                             class="text-gray-300 hover:text-blue-400 py-0.5 inline-block transition-colors">Contact Us</a></li>
                 </ul>

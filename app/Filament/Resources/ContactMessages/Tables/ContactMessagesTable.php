@@ -19,6 +19,7 @@ class ContactMessagesTable
                     ->badge()
                     ->color(fn (?string $state): string => match ($state) {
                         'free_trial' => 'success',
+                        'career' => 'info',
                         default => 'gray',
                     }),
                 TextColumn::make('name')

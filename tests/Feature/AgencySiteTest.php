@@ -753,4 +753,58 @@ class AgencySiteTest extends TestCase
         $response->assertDontSee('alt="Bipro Nandi Argho "', false);
         $response->assertDontSee('hasibul hasnat sabbir', false);
     }
+
+    public function test_team_page_hiring_cta_links_to_careers_and_direct_email(): void
+    {
+        $response = $this->get(route('team'));
+
+        $response->assertStatus(200);
+        $response->assertSee('We Are Hiring', false);
+        $response->assertSee(route('careers'), false);
+        $response->assertSee('Apply on Careers Page', false);
+        $response->assertSee('mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI', false);
+    }
+
+    public function test_careers_page_loads_and_accepts_application_with_resume(): void
+    {
+        Storage::fake('public');
+
+        $pageResponse = $this->get(route('careers'));
+        $pageResponse->assertStatus(200);
+        $pageResponse->assertSee('Careers at', false);
+        $pageResponse->assertSee('Marveit AI', false);
+        $pageResponse->assertSee('Mymensingh, Bangladesh', false);
+        $pageResponse->assertSee('Within 24 hours', false);
+
+        $resume = UploadedFile::fake()->create('candidate_cv.pdf', 300, 'application/pdf');
+
+        $postResponse = $this->post(route('careers.store'), [
+            'name' => 'Tanvir Hasan',
+            'email' => 'tanvir@example.com',
+            'phone' => '+880 1711 223344',
+            'position' => 'QA Lead',
+            'location' => 'Mymensingh, Bangladesh',
+            'portfolio_url' => 'https://linkedin.com/in/tanvir',
+            'resume' => $resume,
+            'message' => '3 years of QA experience on autonomous driving datasets in CVAT and V7.',
+            'privacy_consent' => true,
+        ]);
+
+        $postResponse->assertRedirect(route('careers'));
+        $postResponse->assertSessionHas('success');
+
+        $application = ContactMessage::where('email', 'tanvir@example.com')->first();
+        $this->assertNotNull($application);
+        $this->assertEquals('career', $application->type);
+        $this->assertEquals('QA Lead', $application->service);
+        $this->assertNotNull($application->guideline_file);
+        Storage::disk('public')->assertExists($application->guideline_file);
+    }
+
+    public function test_careers_application_requires_mandatory_fields(): void
+    {
+        $response = $this->post(route('careers.store'), []);
+
+        $response->assertSessionHasErrors(['name', 'email', 'position', 'message']);
+    }
 }
