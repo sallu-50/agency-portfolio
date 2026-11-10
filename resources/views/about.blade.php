@@ -8,12 +8,83 @@
         .about-page-bg {
             background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
             min-height: 100vh;
+            padding-top: 6rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-page-bg {
+                padding-top: 7rem;
+            }
+        }
+
+        .about-hero-section {
+            padding-top: 4rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-hero-section {
+                padding-top: 5rem;
+                padding-bottom: 4.5rem;
+            }
+        }
+
+        .about-mission-section {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-mission-section {
+                padding-top: 4.5rem;
+                padding-bottom: 4.5rem;
+            }
+        }
+
+        .about-pillars-section {
+            padding-top: 3rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-pillars-section {
+                padding-top: 4rem;
+                padding-bottom: 4.5rem;
+            }
+        }
+
+        .about-cta-section {
+            padding-top: 1.5rem;
+            padding-bottom: 5rem;
+        }
+
+        .about-metric-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.75);
+            border-radius: 1rem;
+            padding: 1.35rem 1.25rem;
+            box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.03);
+        }
+
+        .about-profile-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.85);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+        }
+
+        @media (min-width: 768px) {
+            .about-profile-card {
+                padding: 2.25rem;
+            }
         }
 
         .about-card {
             background-color: rgba(255, 255, 255, 0.92);
             border: 1px solid rgba(226, 232, 240, 0.8);
             border-radius: 1.25rem;
+            padding: 2rem;
             box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.02);
             transition: all 0.25s ease;
         }
@@ -26,43 +97,77 @@
         }
 
         .about-icon-box {
-            width: 3rem;
-            height: 3rem;
+            width: 3.25rem;
+            height: 3.25rem;
             padding: 0.75rem;
             border-radius: 0.875rem;
+            background-color: #dbeafe;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-profile-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            padding: 0.55rem;
+            border-radius: 0.75rem;
+            background-color: #dbeafe;
+            color: #2563eb;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
 
-        .about-hero-pad {
-            padding-top: 3.5rem;
-            padding-bottom: 3.5rem;
+        .about-cta-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.85);
+            border-radius: 1.5rem;
+            padding: 3rem 1.75rem;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
         }
 
         @media (min-width: 768px) {
-            .about-hero-pad {
-                padding-top: 4.5rem;
-                padding-bottom: 4rem;
+            .about-cta-card {
+                padding: 4rem 3rem;
             }
+        }
+
+        .about-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2.25rem;
+            border-radius: 9999px;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #2563eb;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .about-cta-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.32);
         }
     </style>
 @endpush
 
 @section('content')
-    <div class="about-page-bg pt-24 md:pt-28">
+    <div class="about-page-bg">
         <!-- Hero Section -->
-        <section class="about-hero-pad border-b border-gray-200/60">
+        <section class="about-hero-section border-b border-gray-200/60">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-5">
-                        <i data-feather="compass" class="w-3.5 h-3.5"></i>
-                        <span>About Marveit AI</span>
-                    </span>
-
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-5 leading-tight">
-                        Human-in-the-Loop Precision for <span class="text-blue-600">Production AI</span>
+                        About Marveit AI: <span class="text-blue-600">Human-in-the-Loop Precision for Production AI</span>
                     </h1>
 
                     <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-10">
@@ -71,19 +176,19 @@
 
                     <!-- Key Metrics Strip -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
-                        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/70 shadow-xs">
+                        <div class="about-metric-card">
                             <div class="text-2xl md:text-3xl font-extrabold text-blue-600">99.8%</div>
                             <div class="text-xs text-gray-500 font-medium mt-1">Precision Quality SLA</div>
                         </div>
-                        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/70 shadow-xs">
+                        <div class="about-metric-card">
                             <div class="text-2xl md:text-3xl font-extrabold text-gray-900">24h</div>
                             <div class="text-xs text-gray-500 font-medium mt-1">Within 24 Hours Turnaround</div>
                         </div>
-                        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/70 shadow-xs">
+                        <div class="about-metric-card">
                             <div class="text-2xl md:text-3xl font-extrabold text-blue-600">{{ $teamCount }}</div>
                             <div class="text-xs text-gray-500 font-medium mt-1">Core Specialists &amp; Leads</div>
                         </div>
-                        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/70 shadow-xs">
+                        <div class="about-metric-card">
                             <div class="text-2xl md:text-3xl font-extrabold text-gray-900">100%</div>
                             <div class="text-xs text-gray-500 font-medium mt-1">NDA &amp; Client IP Ownership</div>
                         </div>
@@ -93,11 +198,10 @@
         </section>
 
         <!-- Mission & Operational Overview -->
-        <section class="py-16 md:py-20">
+        <section class="about-mission-section">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     <div class="lg:col-span-7 space-y-5">
-                        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Our Mission &amp; Standards</span>
                         <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 leading-snug">
                             Why AI Teams Choose Marveit for Mission-Critical Ground Truth
                         </h2>
@@ -105,30 +209,19 @@
                             Machine learning models are only as reliable as the labels they train on. Instead of crowdsourcing to unverified workers, Marveit AI organizes dedicated, calibrated annotation pods led by experienced team leads and senior QA engineers.
                         </p>
                         <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                            Whether you need {{ $serviceCount }} specialized annotation workflows or a custom multi-modal labeling schema, every batch moves through annotator execution, peer review, and senior QA verification—delivered with an accuracy report and backed by a signed mutual NDA.
+                            Across {{ $serviceCount }} specialized annotation workflows or custom multi-modal labeling schemas, every batch moves through annotator execution, peer review, and senior QA verification—delivered with an accuracy report and backed by a signed mutual NDA.
                         </p>
-                        <div class="pt-2 flex flex-wrap gap-3">
-                            <a href="{{ route('team') }}"
-                                class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md transition">
-                                <span>Meet Our Leadership Team</span>
-                                <i data-feather="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                            <a href="{{ route('services.index') }}"
-                                class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-gray-700 bg-white border border-gray-200 hover:border-blue-300 hover:text-blue-600 transition">
-                                <span>Explore Our Services</span>
-                            </a>
-                        </div>
                     </div>
 
                     <!-- Company Snapshot Card -->
                     <div class="lg:col-span-5">
-                        <div class="bg-white rounded-3xl border border-gray-200/80 p-7 sm:p-8 shadow-sm space-y-5">
+                        <div class="about-profile-card space-y-5">
                             <h3 class="text-lg font-bold text-gray-900 border-b border-gray-100 pb-4">
                                 Company &amp; Operations Profile
                             </h3>
                             <div class="space-y-4 text-sm">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-9 h-9 p-2 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="about-profile-icon">
                                         <i data-feather="map-pin" class="w-4 h-4"></i>
                                     </div>
                                     <div>
@@ -136,8 +229,8 @@
                                         <div class="font-semibold text-gray-900 mt-0.5">Mymensingh, Bangladesh</div>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-9 h-9 p-2 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="about-profile-icon">
                                         <i data-feather="clock" class="w-4 h-4"></i>
                                     </div>
                                     <div>
@@ -145,8 +238,8 @@
                                         <div class="font-semibold text-gray-900 mt-0.5">Within 24 hours</div>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-9 h-9 p-2 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="about-profile-icon">
                                         <i data-feather="shield" class="w-4 h-4"></i>
                                     </div>
                                     <div>
@@ -154,8 +247,8 @@
                                         <div class="font-semibold text-gray-900 mt-0.5">Mutual NDA, RBAC &amp; Zero Public Model Training</div>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-9 h-9 p-2 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="about-profile-icon">
                                         <i data-feather="mail" class="w-4 h-4"></i>
                                     </div>
                                     <div>
@@ -171,7 +264,7 @@
         </section>
 
         <!-- 6 Operational Pillars -->
-        <section class="py-12 md:py-16">
+        <section class="about-pillars-section">
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mx-auto text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
@@ -183,8 +276,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="about-card p-8 flex flex-col">
-                        <div class="about-icon-box bg-blue-100 text-blue-600 mb-6">
+                    <div class="about-card flex flex-col">
+                        <div class="about-icon-box">
                             <i data-feather="check-circle" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Multi-Stage Quality Control</h3>
@@ -193,8 +286,8 @@
                         </p>
                     </div>
 
-                    <div class="about-card p-8 flex flex-col">
-                        <div class="about-icon-box bg-blue-100 text-blue-600 mb-6">
+                    <div class="about-card flex flex-col">
+                        <div class="about-icon-box">
                             <i data-feather="trending-up" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Pilot First, Then Scale</h3>
@@ -203,8 +296,8 @@
                         </p>
                     </div>
 
-                    <div class="about-card p-8 flex flex-col">
-                        <div class="about-icon-box bg-blue-100 text-blue-600 mb-6">
+                    <div class="about-card flex flex-col">
+                        <div class="about-icon-box">
                             <i data-feather="users" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Dedicated Domain Pods</h3>
@@ -213,8 +306,8 @@
                         </p>
                     </div>
 
-                    <div class="about-card p-8 flex flex-col">
-                        <div class="about-icon-box bg-blue-100 text-blue-600 mb-6">
+                    <div class="about-card flex flex-col">
+                        <div class="about-icon-box">
                             <i data-feather="lock" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Enterprise Data Isolation</h3>
@@ -223,8 +316,8 @@
                         </p>
                     </div>
 
-                    <div class="about-card p-8 flex flex-col">
-                        <div class="about-icon-box bg-blue-100 text-blue-600 mb-6">
+                    <div class="about-card flex flex-col">
+                        <div class="about-icon-box">
                             <i data-feather="sliders" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Seamless Tooling Integration</h3>
@@ -233,8 +326,8 @@
                         </p>
                     </div>
 
-                    <div class="about-card p-8 flex flex-col">
-                        <div class="about-icon-box bg-blue-100 text-blue-600 mb-6">
+                    <div class="about-card flex flex-col">
+                        <div class="about-icon-box">
                             <i data-feather="message-square" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Direct Technical Communication</h3>
@@ -247,24 +340,19 @@
         </section>
 
         <!-- Bottom CTA -->
-        <section class="py-12 pb-20">
+        <section class="about-cta-section">
             <div class="container mx-auto px-6">
-                <div class="bg-white rounded-3xl border border-gray-200/80 p-8 md:p-12 shadow-sm text-center max-w-4xl mx-auto">
+                <div class="about-cta-card text-center max-w-4xl mx-auto">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
                         Ready to Evaluate Our Quality on Your Own Data?
                     </h2>
                     <p class="text-sm md:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
                         Send a small sample and your guidelines. We sign an NDA first and deliver your pilot along with a QA accuracy report within 24 hours.
                     </p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <a href="{{ route('free-trial') }}"
-                            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition">
+                    <div>
+                        <a href="{{ route('free-trial') }}" class="about-cta-btn">
                             <span>Start Free Trial</span>
                             <i data-feather="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                        <a href="{{ route('contact') }}"
-                            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition">
-                            <span>Contact Us</span>
                         </a>
                     </div>
                 </div>
