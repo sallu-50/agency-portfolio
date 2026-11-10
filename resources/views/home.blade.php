@@ -161,8 +161,8 @@
                 <p class="text-xs md:text-sm text-gray-500 font-medium">Annotations Delivered</p>
             </div>
             <div class="pt-4 md:pt-0">
-                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
-                <p class="text-xs md:text-sm text-gray-500 font-medium">Fast Turnaround</p>
+                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">24h</div>
+                <p class="text-xs md:text-sm text-gray-500 font-medium">Within 24 Hours Turnaround</p>
             </div>
             <div class="pt-4 md:pt-0">
                 <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1">100%</div>

@@ -533,7 +533,7 @@
                                 <li><strong>Fulfilling Free Pilots &amp; Service Deliveries:</strong> To review sample data,
                                     prepare customized benchmark pilots, conduct QA checks, and generate annotated
                                     deliverable archives.</li>
-                                <li><strong>Communication &amp; Support:</strong> To reply to questions within 24 business
+                                <li><strong>Communication &amp; Support:</strong> To reply to questions within 24
                                     hours, schedule technical discovery calls, and share progress updates via direct
                                     communication channels.</li>
                                 <li><strong>Custom Quotations &amp; Billing:</strong> To calculate transparent cost

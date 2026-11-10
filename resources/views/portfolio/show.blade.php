@@ -169,7 +169,7 @@
                                 Require Similar Labeling Specifications?
                             </h3>
                             <p class="text-xs text-blue-100/80 leading-relaxed mb-6">
-                                Upload your guidelines or discuss volume requirements with our technical lead. Turnaround within 24 to 48 hours.
+                                Upload your guidelines or discuss volume requirements with our technical lead. Turnaround within 24 hours.
                             </p>
 
                             <a href="{{ route('contact', ['service' => $project->category]) }}"

@@ -60,12 +60,14 @@
                         <!-- Overview Card -->
                         <div class="p-8 rounded-3xl bg-gray-50/70 border border-gray-100">
                             <div class="flex items-center gap-4 mb-6">
-                                <div class="w-14 h-14 rounded-2xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center flex-shrink-0 shadow-sm">
+                                <div
+                                    class="w-14 h-14 rounded-2xl {{ $colorClasses['bg'] }} {{ $colorClasses['text'] }} flex items-center justify-center flex-shrink-0 shadow-sm">
                                     <i data-feather="{{ $service->icon ?: 'database' }}" class="w-7 h-7"></i>
                                 </div>
                                 <div>
                                     <h2 class="text-2xl font-bold text-gray-900">Pipeline Overview</h2>
-                                    <p class="text-xs text-gray-500">Customized annotation workflows engineered for high-accuracy ML ingestion.</p>
+                                    <p class="text-xs text-gray-500">Customized annotation workflows engineered for
+                                        high-accuracy ML ingestion.</p>
                                 </div>
                             </div>
 
@@ -90,13 +92,16 @@
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     @foreach ($service->features as $feature)
-                                        <div class="p-5 rounded-2xl border border-gray-100 bg-white shadow-xs hover:border-blue-200 hover:shadow-md transition flex items-start gap-4">
-                                            <div class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div
+                                            class="p-5 rounded-2xl border border-gray-100 bg-white shadow-xs hover:border-blue-200 hover:shadow-md transition flex items-start gap-4">
+                                            <div
+                                                class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <i data-feather="check" class="w-4 h-4"></i>
                                             </div>
                                             <div>
                                                 <h4 class="font-bold text-sm text-gray-800">{{ $feature }}</h4>
-                                                <p class="text-xs text-gray-500 mt-0.5">Handled with custom guidelines, automated pre-labeling, and multi-tier verification.</p>
+                                                <p class="text-xs text-gray-500 mt-0.5">Handled with custom guidelines, automated
+                                                    pre-labeling, and multi-tier verification.</p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -111,7 +116,9 @@
                                 Quality & Security Assurance
                             </h3>
                             <p class="text-xs md:text-sm text-blue-100/90 leading-relaxed mb-6">
-                                All {{ $service->title }} projects are executed under stringent bilateral NDAs, with SOC 2 compliance, encrypted transmission, and continuous consensus arbitration to eliminate labeler bias.
+                                All {{ $service->title }} projects are executed under stringent bilateral NDAs, with SOC 2
+                                compliance, encrypted transmission, and continuous consensus arbitration to eliminate
+                                labeler bias.
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10 text-center">
                                 <div class="p-3 bg-white/5 rounded-xl border border-white/10">
@@ -119,7 +126,7 @@
                                     <div class="text-[11px] text-blue-200/80 mt-0.5">Precision SLA</div>
                                 </div>
                                 <div class="p-3 bg-white/5 rounded-xl border border-white/10">
-                                    <div class="text-lg font-extrabold text-blue-300">24-48h</div>
+                                    <div class="text-lg font-extrabold text-blue-300">Within 24 hours</div>
                                     <div class="text-[11px] text-blue-200/80 mt-0.5">Pilot Turnaround</div>
                                 </div>
                                 <div class="p-3 bg-white/5 rounded-xl border border-white/10">
@@ -142,17 +149,22 @@
                     <!-- Right Sidebar -->
                     <div class="lg:col-span-4 space-y-8">
                         <!-- Direct Quote / Contact Card -->
-                        <div class="p-8 rounded-3xl bg-gradient-to-br from-gray-900 to-blue-950 text-white shadow-xl relative overflow-hidden">
-                            <div class="absolute -right-12 -top-12 w-40 h-40 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                        <div
+                            class="p-8 rounded-3xl bg-gradient-to-br from-gray-900 to-blue-950 text-white shadow-xl relative overflow-hidden">
+                            <div
+                                class="absolute -right-12 -top-12 w-40 h-40 bg-blue-500/20 rounded-full blur-2xl pointer-events-none">
+                            </div>
 
-                            <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-blue-500/30 text-blue-200 border border-blue-400/30 mb-4">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-blue-500/30 text-blue-200 border border-blue-400/30 mb-4">
                                 Pilot Project
                             </span>
                             <h3 class="text-xl font-bold mb-3">
                                 Need {{ $service->title }} for your ML Model?
                             </h3>
                             <p class="text-xs text-blue-100/80 leading-relaxed mb-6">
-                                Send us your sample dataset and guidelines. We will execute a free benchmark validation batch.
+                                Send us your sample dataset and guidelines. We will execute a free benchmark validation
+                                batch.
                             </p>
 
                             <a href="{{ route('contact', ['service' => $service->title]) }}"
@@ -179,15 +191,19 @@
                                     <a href="{{ route('services.show', $other->slug) }}"
                                         class="p-3 rounded-xl bg-white border border-gray-100 hover:border-blue-200 hover:bg-blue-50/40 transition-all flex items-center justify-between group">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-blue-100 text-gray-600 group-hover:text-blue-600 flex items-center justify-center flex-shrink-0 transition">
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-blue-100 text-gray-600 group-hover:text-blue-600 flex items-center justify-center flex-shrink-0 transition">
                                                 <i data-feather="{{ $other->icon ?: 'database' }}" class="w-4 h-4"></i>
                                             </div>
                                             <div>
-                                                <h5 class="text-xs font-bold text-gray-800 group-hover:text-blue-600 transition">{{ $other->title }}</h5>
+                                                <h5
+                                                    class="text-xs font-bold text-gray-800 group-hover:text-blue-600 transition">
+                                                    {{ $other->title }}</h5>
                                                 <p class="text-[11px] text-gray-400">{{ $other->category }}</p>
                                             </div>
                                         </div>
-                                        <i data-feather="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition"></i>
+                                        <i data-feather="chevron-right"
+                                            class="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition"></i>
                                     </a>
                                 @endforeach
                             </div>

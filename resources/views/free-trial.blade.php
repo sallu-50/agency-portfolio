@@ -271,11 +271,11 @@
                             </li>
                             <li class="flex items-start gap-3 text-sm text-gray-700 text-left">
                                 <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
-                                <span class="pt-0.5">We reply within <strong class="text-gray-900 font-semibold">1 business day</strong> with questions or an NDA to sign.</span>
+                                <span class="pt-0.5">We reply <strong class="text-gray-900 font-semibold">within 24 hours</strong> with questions or an NDA to sign.</span>
                             </li>
                             <li class="flex items-start gap-3 text-sm text-gray-700 text-left">
                                 <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
-                                <span class="pt-0.5">You receive your labeled pilot in <strong class="text-gray-900 font-semibold">2–3 business days</strong>.</span>
+                                <span class="pt-0.5">You receive your labeled pilot <strong class="text-gray-900 font-semibold">within 24 hours</strong>.</span>
                             </li>
                         </ol>
                     </div>
