@@ -324,7 +324,7 @@
                         Works in Your Tools
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
-                        We label in CVAT, Label Studio, Labelbox, V7, SuperAnnotate, Scale AI, Supervisely, Audacity, Praat,
+                        We label in CVAT, Label Studio, Labelbox, V7, SuperAnnotate, Supervisely, Audacity, Praat,
                         Prodigy, Doccano or in your own platform, so your pipeline and formats stay unchanged.
                     </p>
                 </div>

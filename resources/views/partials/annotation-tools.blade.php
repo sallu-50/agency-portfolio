@@ -27,6 +27,28 @@
                 overflow-x: auto;
             }
         }
+
+        .tools-marquee-set {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            gap: 2.5rem;
+            padding-right: 2.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .tools-marquee-set {
+                gap: 3.5rem;
+                padding-right: 3.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .tools-marquee-set {
+                gap: 4rem;
+                padding-right: 4rem;
+            }
+        }
     </style>
 
     <div>
@@ -54,7 +76,7 @@
                 <div class="overflow-hidden w-full relative">
                     <div class="tools-marquee-track flex items-center">
                         @for ($set = 0; $set < 2; $set++)
-                            <div class="flex items-center gap-10 sm:gap-14 md:gap-16 shrink-0 pr-10 sm:pr-14 md:pr-16" {!! $set > 0 ? 'aria-hidden="true"' : '' !!}>
+                            <div class="tools-marquee-set" {!! $set > 0 ? 'aria-hidden="true"' : '' !!}>
                                 <!-- 1. CVAT -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
                                     <svg class="h-6 w-6 sm:h-7 sm:w-7 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -100,17 +122,7 @@
                                     <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">SuperAnnotate</span>
                                 </div>
 
-                                <!-- 6. Scale AI -->
-                                <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-5 w-5 sm:h-6 sm:w-6 text-gray-900 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                        <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                                        <rect x="14" y="14" width="7" height="7" rx="1.5" />
-                                        <rect x="8.5" y="3" width="7" height="7" rx="1.5" />
-                                    </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">scale <span class="text-blue-600 font-extrabold text-xs sm:text-sm">AI</span></span>
-                                </div>
-
-                                <!-- 7. Supervisely -->
+                                <!-- 6. Supervisely -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
                                     <svg class="h-6 w-6 sm:h-7 sm:w-7 text-teal-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
                                         <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke="#0d9488" stroke-width="2" />
