@@ -417,7 +417,7 @@
                                         <div id="resume_name" class="text-xs font-semibold text-gray-800 truncate">
                                             Upload Resume / CV
                                         </div>
-                                        <span class="text-gray-400 block mt-0.5" style="font-size: 10.5px; line-height: 1.35;">PDF, DOC, or DOCX up to 20 MB</span>
+                                        <span class="text-gray-500 block mt-0.5" style="font-size: 11.5px; line-height: 1.4;">PDF, DOC, or DOCX up to 20 MB</span>
                                     </div>
                                 </div>
                                 @error('resume')
