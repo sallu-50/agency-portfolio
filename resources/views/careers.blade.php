@@ -417,7 +417,7 @@
                                         <div id="resume_name" class="text-xs font-semibold text-gray-800 truncate">
                                             Upload Resume / CV
                                         </div>
-                                        <span class="text-[10px] text-gray-400 block mt-0.5">PDF, DOC, or DOCX up to 20 MB</span>
+                                        <span class="text-gray-400 block mt-0.5" style="font-size: 10.5px; line-height: 1.35;">PDF, DOC, or DOCX up to 20 MB</span>
                                     </div>
                                 </div>
                                 @error('resume')
@@ -449,7 +449,7 @@
                                     <span>Submit Application</span>
                                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                                 </button>
-                                <p class="text-[11px] text-gray-400 text-center">
+                                <p class="text-xs text-gray-400 text-center" style="font-size: 11px;">
                                     We reply to qualified applicants within 24 hours.
                                 </p>
                             </div>

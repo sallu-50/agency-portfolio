@@ -445,7 +445,7 @@
                                             <div id="guideline_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
                                                 Upload PDF or DOCX
                                             </div>
-                                            <span class="text-[10px] text-gray-400 block mt-0.5">Upload PDF or DOCX, up to 50 MB</span>
+                                            <span class="text-gray-400 block mt-0.5" style="font-size: 10.5px; line-height: 1.35;">Upload PDF or DOCX, up to 50 MB</span>
                                         </div>
                                     </div>
                                     @error('project_guideline')
@@ -469,7 +469,7 @@
                                             <div id="sample_name" class="text-xs font-semibold text-gray-800 truncate max-w-[170px]">
                                                 Upload Sample Data
                                             </div>
-                                            <span class="text-[10px] text-gray-400 block mt-0.5">Upload images, video, audio or ZIP, up to 100 MB</span>
+                                            <span class="text-gray-400 block mt-0.5" style="font-size: 10.5px; line-height: 1.35;">Upload images, video, audio or ZIP, up to 100 MB</span>
                                         </div>
                                     </div>
                                     @error('sample_data')
