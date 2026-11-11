@@ -199,8 +199,7 @@
 
     <div class="pt-24 md:pt-28">
         <!-- Hero Section with Clean White Theme -->
-        <section class="bg-white pt-14 md:pt-20 pb-6 md:pb-8 relative overflow-hidden z-10"
-            style="box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);">
+        <section class="bg-white pt-14 md:pt-20 pb-6 md:pb-8 relative overflow-hidden z-10">
 
             <!-- Subtle background decorative glows -->
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-50 rounded-full blur-3xl pointer-events-none -z-0"></div>
@@ -303,7 +302,7 @@
         </section>
 
         <!-- Request a Quote Section (Free Trial Style: 2 Columns - Left Text Panel, Right Form Card) -->
-        <section class="ft-page-bg py-14 md:py-20 relative z-0 border-t border-slate-100">
+        <section class="ft-page-bg py-14 md:py-20 relative z-0">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div class="ft-layout-grid">
                     <!-- Left Column: Intro, Value Props & Workflow (Left-Aligned) -->
