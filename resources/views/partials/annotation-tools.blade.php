@@ -79,93 +79,92 @@
                             <div class="tools-marquee-set" {!! $set > 0 ? 'aria-hidden="true"' : '' !!}>
                                 <!-- 1. CVAT -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="3" y="3" width="18" height="18" rx="3" stroke="#0284c7" stroke-width="2.2" stroke-dasharray="3 3" />
-                                        <circle cx="12" cy="12" r="3" fill="#0284c7" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <rect x="2" y="2" width="28" height="28" rx="6" fill="#1677FF" />
+                                        <text x="16" y="22" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800">C</text>
                                     </svg>
-                                    <span class="font-extrabold text-base md:text-lg tracking-tight text-gray-800">CVAT</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">CVAT</span>
                                 </div>
 
                                 <!-- 2. Label Studio -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                        <rect x="3" y="3" width="12" height="12" rx="2.5" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="2" />
-                                        <rect x="9" y="9" width="12" height="12" rx="2.5" fill="#f97316" fill-opacity="0.9" stroke="#ea580c" stroke-width="1.5" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <circle cx="16" cy="16" r="12" fill="#FF4D4F" />
+                                        <path d="M10.5 16H21.5M16 10.5V21.5" stroke="#FFFFFF" stroke-width="3" stroke-linecap="butt" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">Label <span class="text-blue-600">Studio</span></span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">Label Studio</span>
                                 </div>
 
-                                <!-- 3. Labelbox -->
+                                <!-- 3. labelbox -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-indigo-600 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <rect x="3" y="3" width="26" height="26" rx="5" stroke="#0A2540" stroke-width="3.6" />
+                                        <rect x="11" y="11" width="10" height="10" fill="#00D4B2" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">labelbox</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">labelbox</span>
                                 </div>
 
                                 <!-- 4. V7 -->
                                 <div class="inline-flex items-center gap-2 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-emerald-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                        <path d="M4 4l6 14 3-7 7-7" stroke="#059669" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <path d="M5 6L16 26L27 6" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    <span class="font-black text-base md:text-lg tracking-tight text-gray-800">V7</span>
+                                    <span class="font-extrabold text-base md:text-lg tracking-tight text-gray-900">V7</span>
                                 </div>
 
                                 <!-- 5. SuperAnnotate -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                        <path d="M18 7c0-2-1.8-3.5-4-3.5H9C6.8 3.5 5 5.3 5 7.5S6.8 11.5 9 11.5h6c2.2 0 4 1.8 4 4s-1.8 4-4 4H8" stroke="#9333ea" stroke-width="2.5" stroke-linecap="round" />
-                                        <circle cx="18" cy="7" r="2" fill="#c026d3" />
-                                        <circle cx="8" cy="19.5" r="2" fill="#9333ea" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <polygon points="16,4 28,16 16,28 4,16" fill="#10B981" />
+                                        <circle cx="16" cy="16" r="4.2" fill="#FFFFFF" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">SuperAnnotate</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">SuperAnnotate</span>
                                 </div>
 
-                                <!-- 6. Supervisely -->
+                                <!-- 6. supervisely -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-teal-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke="#0d9488" stroke-width="2" />
-                                        <circle cx="12" cy="12" r="3" fill="#0d9488" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <rect x="4" y="4" width="24" height="24" rx="4.5" fill="#000000" />
+                                        <circle cx="12" cy="12" r="3" fill="#38BDF8" />
+                                        <circle cx="20" cy="20" r="3" fill="#38BDF8" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">supervisely</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">supervisely</span>
                                 </div>
 
-                                <!-- 8. Audacity -->
+                                <!-- 7. Audacity -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-amber-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
-                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
-                                        <path d="M10 11v2m4-3v4" stroke="#d97706" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <path d="M5 22C5 9.5 27 9.5 27 22" stroke="#2563EB" stroke-width="3.6" stroke-linecap="round" />
+                                        <path d="M11 18V26M16 14V30M21 18V26" stroke="#EA580C" stroke-width="2.4" stroke-linecap="butt" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">Audacity</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">Audacity</span>
                                 </div>
 
-                                <!-- 9. Praat -->
+                                <!-- 8. Praat -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-rose-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M2 10v4m4-8v12m4-10v8m4-12v16m4-10v4m4-2v0" stroke="#e11d48" stroke-width="2.5" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <path d="M6 10.5C12.5 5.8 20.5 12.2 25 18C20.5 23.8 12.5 27.6 6 22Z" fill="#B45309" />
+                                        <path d="M21 10C28 16.5 24 25 17 29.5" stroke="#1D4ED8" stroke-width="3" stroke-linecap="butt" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">Praat</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">Praat</span>
                                 </div>
 
-                                <!-- 10. Prodigy -->
+                                <!-- 9. prodigy -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-violet-700 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                                        <polygon points="12 2 20 8 16 20 8 20 4 8" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="2" />
-                                        <path d="M12 7v10M8 12h8" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <circle cx="16" cy="16" r="12" fill="#000000" />
+                                        <polygon points="12,11 22,16 12,21" fill="#FACC15" />
                                     </svg>
-                                    <span class="font-mono font-bold text-base md:text-lg tracking-tight text-gray-800">prodigy</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">prodigy</span>
                                 </div>
 
-                                <!-- 11. Doccano -->
+                                <!-- 10. doccano -->
                                 <div class="inline-flex items-center gap-2.5 shrink-0 transition-transform duration-200 hover:scale-105 cursor-default">
-                                    <svg class="h-6 w-6 sm:h-7 sm:w-7 text-blue-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                        <polyline points="14 2 14 8 20 8" />
-                                        <line x1="8" y1="13" x2="16" y2="13" stroke="#2563eb" stroke-width="2" />
+                                    <svg class="h-7 w-7 flex-shrink-0" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                        <rect x="4" y="4" width="24" height="24" rx="4.5" fill="#4F46E5" />
+                                        <path d="M9.5 11.5H22.5M9.5 16.5H22.5M9.5 21.5H17.5" stroke="#FFFFFF" stroke-width="2.2" />
                                     </svg>
-                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-800">doccano</span>
+                                    <span class="font-bold text-base md:text-lg tracking-tight text-gray-900">doccano</span>
                                 </div>
                             </div>
                         @endfor
