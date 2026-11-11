@@ -172,7 +172,24 @@
             .ft-layout-grid {
                 grid-template-columns: 5fr 7fr;
                 gap: 3.5rem;
-                align-items: center;
+                align-items: start;
+            }
+        }
+
+        .ft-left-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .ft-left-panel {
+                padding-top: 0.5rem;
+                padding-right: 1rem;
             }
         }
 
@@ -305,9 +322,9 @@
         <section class="ft-page-bg py-14 md:py-20 relative z-0">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div class="ft-layout-grid">
-                    <!-- Left Column: Intro, Value Props & Workflow (Left-Aligned) -->
-                    <div class="text-left space-y-8 lg:pr-4 my-auto flex flex-col items-start">
-                        <div>
+                    <!-- Left Column: Intro, Value Props & Workflow (Start-Aligned) -->
+                    <div class="ft-left-panel text-left">
+                        <div class="w-full text-left">
                             <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-4 bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
                                 <i data-feather="zap" class="w-3.5 h-3.5 text-blue-600"></i>
                                 <span>Fast Response Guarantee</span>
@@ -327,20 +344,20 @@
                         <!-- What you get -->
                         <div class="pt-1 text-left w-full">
                             <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">What you get:</h3>
-                            <ul class="space-y-3.5 flex flex-col items-start">
-                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                            <ul class="flex flex-col items-start w-full" style="gap: 0.875rem;">
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                     <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                         <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                     </div>
                                     <span>NDA available before you share any data</span>
                                 </li>
-                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                     <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                         <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                     </div>
                                     <span>A named project lead and a direct Slack or Teams channel</span>
                                 </li>
-                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium text-left">
                                     <div class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                         <i data-feather="check" class="w-3.5 h-3.5 stroke-[2.5]"></i>
                                     </div>
