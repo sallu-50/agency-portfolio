@@ -212,30 +212,30 @@
         <!-- CTA Callout Banner -->
         <section class="container mx-auto px-6 max-w-6xl mt-20" style="margin-top: 5rem; margin-bottom: 2rem;">
             <div
-                class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl"
-                style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #312e81 100%); color: #ffffff;">
+                class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 relative overflow-hidden shadow-xl"
+                style="background-color: #ffffff; border: 1px solid #e2e8f0;">
                 <div class="relative z-10 max-w-2xl">
                     <span
-                        class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-200 border border-blue-400/30 mb-4"
-                        style="background-color: rgba(59, 130, 246, 0.25); color: #bfdbfe; border-color: rgba(96, 165, 250, 0.35);">
+                        class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
                         Tailored Machine Learning Pipelines
                     </span>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold mb-3 leading-tight" style="color: #ffffff;">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 leading-tight" style="color: #0f172a;">
                         Need Custom Datasets Engineered to Your Precise Spec?
                     </h3>
-                    <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-6" style="color: #dbeafe;">
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6" style="color: #475569;">
                         Accelerate model convergence with pixel-accurate 2D/3D annotation, rigorous QA SLAs, and guaranteed
                         security compliance.
                     </p>
                     <div class="flex flex-wrap items-center gap-4">
                         <a href="{{ route('free-trial') }}"
-                            class="bg-white text-blue-700 hover:bg-blue-50 font-bold px-6 py-3 rounded-xl transition shadow-lg text-sm inline-flex items-center gap-2">
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-lg text-sm inline-flex items-center gap-2"
+                            style="background-color: #2563eb; color: #ffffff;">
                             <span>Start Free Pilot</span>
                             <i data-feather="arrow-right" class="w-4 h-4"></i>
                         </a>
                         <a href="{{ route('contact') }}"
-                            class="bg-blue-700/60 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition border border-blue-400/30 text-sm"
-                            style="background-color: rgba(29, 78, 216, 0.6); color: #ffffff; border-color: rgba(96, 165, 250, 0.35);">
+                            class="bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold px-6 py-3 rounded-xl transition border border-gray-200 text-sm"
+                            style="background-color: #f8fafc; color: #1e293b; border: 1px solid #cbd5e1;">
                             Speak to an AI Specialist
                         </a>
                     </div>

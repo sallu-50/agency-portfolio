@@ -210,20 +210,21 @@
             @endif
 
             <!-- Bottom CTA Box -->
-            <div class="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-3xl p-8 sm:p-10 text-white text-center shadow-xl"
-                style="background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%); color: #ffffff; margin-bottom: 2rem;">
-                <h3 class="text-2xl font-extrabold mb-2" style="color: #ffffff;">Ready to Power Your Models with Precision Data?</h3>
-                <p class="text-blue-100 text-sm max-w-lg mx-auto mb-6" style="color: #dbeafe;">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-gray-100 text-center shadow-xl"
+                style="background-color: #ffffff; border: 1px solid #e2e8f0; margin-bottom: 2rem;">
+                <h3 class="text-2xl font-extrabold text-gray-900 mb-2" style="color: #0f172a;">Ready to Power Your Models with Precision Data?</h3>
+                <p class="text-gray-600 text-sm max-w-lg mx-auto mb-6" style="color: #475569;">
                     Run a complimentary pilot with Marveit AI. Benchmark our accuracy, speed, and strict NDA compliance on your dataset.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="{{ route('free-trial') }}"
-                        class="bg-white text-blue-700 hover:bg-blue-50 font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition shadow">
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition shadow"
+                        style="background-color: #2563eb; color: #ffffff;">
                         Start Free Trial Pilot
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="bg-blue-800 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition border border-blue-400/30"
-                        style="background-color: #1e40af; color: #ffffff; border-color: rgba(96, 165, 250, 0.35);">
+                        class="bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition border border-gray-200"
+                        style="background-color: #f8fafc; color: #1e293b; border: 1px solid #cbd5e1;">
                         Contact Sales
                     </a>
                 </div>
