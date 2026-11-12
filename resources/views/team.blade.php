@@ -37,7 +37,7 @@
 @endpush
 
 @section('content')
-    <div class="pt-24 md:pt-28" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
+    <div class="pt-24 md:pt-28 pb-20" style="padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Team Hero Section -->
         <section class="py-16 md:py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 text-center max-w-4xl">
@@ -113,28 +113,31 @@
         </section>
 
         <!-- Join Our Team CTA -->
-        <section class="py-20 bg-white" style="padding-top: 5rem; padding-bottom: 5rem; margin-bottom: 3rem;">
-            <div class="container mx-auto px-6 text-center max-w-3xl">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-4">
-                    <i data-feather="smile" class="w-3.5 h-3.5"></i> We Are Hiring
-                </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-                    Want to Shape the Future of AI?
-                </h2>
-                <p class="text-base text-gray-600 mb-8 leading-relaxed">
-                    We are always looking for passionate ML engineers, annotation pod leads, and subject-matter QA experts to join our global network.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="{{ route('careers') }}"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition inline-flex items-center gap-2">
-                        <span>Apply on Careers Page</span>
-                        <i data-feather="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                    <a href="mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI"
-                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-8 rounded-full transition inline-flex items-center gap-2">
-                        <i data-feather="mail" class="w-4 h-4"></i>
-                        <span>Email Your CV</span>
-                    </a>
+        <section style="padding-top: 2rem;">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-3xl border border-gray-100 shadow-xl p-8 sm:p-12 text-center max-w-4xl mx-auto"
+                    style="background-color: #ffffff; border: 1px solid #e2e8f0;">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-4">
+                        <i data-feather="smile" class="w-3.5 h-3.5"></i> We Are Hiring
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                        Want to Shape the Future of AI?
+                    </h2>
+                    <p class="text-base text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                        We are always looking for passionate ML engineers, annotation pod leads, and subject-matter QA experts to join our global network.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="{{ route('careers') }}"
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition inline-flex items-center gap-2">
+                            <span>Apply on Careers Page</span>
+                            <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI"
+                            class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-8 rounded-full transition inline-flex items-center gap-2">
+                            <i data-feather="mail" class="w-4 h-4"></i>
+                            <span>Email Your CV</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
