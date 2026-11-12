@@ -167,7 +167,7 @@
         }
     </style>
 
-    <div class="pp-page-bg min-h-screen pt-24 md:pt-28 pb-20" style="padding-top: 6.5rem;">
+    <div class="pp-page-bg min-h-screen pt-24 md:pt-28 pb-20" style="padding-top: 6.5rem; padding-bottom: 5rem;">
         <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
 
             <!-- Breadcrumbs -->

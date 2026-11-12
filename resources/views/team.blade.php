@@ -113,7 +113,7 @@
         </section>
 
         <!-- Join Our Team CTA -->
-        <section class="py-20 bg-white border-t border-gray-100">
+        <section class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center max-w-3xl">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-4">
                     <i data-feather="smile" class="w-3.5 h-3.5"></i> We Are Hiring

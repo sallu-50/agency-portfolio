@@ -116,7 +116,7 @@
 @section('content')
     <div class="ind-page-bg">
         <!-- Hero Section -->
-        <section class="ind-hero-section border-b border-gray-200/60">
+        <section class="ind-hero-section">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-5 leading-tight">

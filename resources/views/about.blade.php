@@ -163,7 +163,7 @@
 @section('content')
     <div class="about-page-bg">
         <!-- Hero Section -->
-        <section class="about-hero-section border-b border-gray-200/60">
+        <section class="about-hero-section">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-5 leading-tight">

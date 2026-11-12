@@ -6,7 +6,7 @@
 @section('content')
     <div class="pt-24 md:pt-28" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Breadcrumb & Header -->
-        <section class="py-12 md:py-16 bg-transparent border-b border-gray-100">
+        <section class="py-12 md:py-16 bg-transparent">
             <div class="container mx-auto px-6">
                 <!-- Breadcrumb -->
                 <nav class="flex items-center gap-2 text-xs text-gray-500 mb-6" aria-label="Breadcrumb">

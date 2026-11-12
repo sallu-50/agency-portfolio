@@ -215,7 +215,7 @@
     </style>
 
     <!-- Combined Section -->
-    <div class="ft-page-bg min-h-[calc(100vh-80px)] flex flex-col justify-center pt-24 pb-14 md:pt-28 md:pb-18">
+    <div class="ft-page-bg min-h-[calc(100vh-80px)] flex flex-col justify-center pt-24 pb-14 md:pt-28 md:pb-18" style="padding-bottom: 5rem;">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div class="ft-layout-grid">
 
