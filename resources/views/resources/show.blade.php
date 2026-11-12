@@ -4,7 +4,7 @@
 @section('meta_description', $article->excerpt ?? Str::limit(strip_tags($article->content), 150))
 
 @section('content')
-    <div class="pt-24 md:pt-28 pb-24" style="padding-top: 7rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
+    <div class="pt-24 md:pt-28 pb-24" style="padding-top: 7rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Article Header & Breadcrumbs -->
         <article class="container mx-auto px-6 max-w-4xl">
             <!-- Breadcrumbs -->
@@ -210,9 +210,10 @@
             @endif
 
             <!-- Bottom CTA Box -->
-            <div class="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-3xl p-8 sm:p-10 text-white text-center shadow-xl">
-                <h3 class="text-2xl font-extrabold mb-2">Ready to Power Your Models with Precision Data?</h3>
-                <p class="text-blue-100 text-sm max-w-lg mx-auto mb-6">
+            <div class="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-3xl p-8 sm:p-10 text-white text-center shadow-xl"
+                style="background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%); color: #ffffff; margin-bottom: 2rem;">
+                <h3 class="text-2xl font-extrabold mb-2" style="color: #ffffff;">Ready to Power Your Models with Precision Data?</h3>
+                <p class="text-blue-100 text-sm max-w-lg mx-auto mb-6" style="color: #dbeafe;">
                     Run a complimentary pilot with Marveit AI. Benchmark our accuracy, speed, and strict NDA compliance on your dataset.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
@@ -221,7 +222,8 @@
                         Start Free Trial Pilot
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="bg-blue-800 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition border border-blue-400/30">
+                        class="bg-blue-800 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition border border-blue-400/30"
+                        style="background-color: #1e40af; color: #ffffff; border-color: rgba(96, 165, 250, 0.35);">
                         Contact Sales
                     </a>
                 </div>

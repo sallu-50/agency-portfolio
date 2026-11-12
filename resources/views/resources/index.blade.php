@@ -4,7 +4,7 @@
 @section('meta_description', 'Discover technical articles, data annotation benchmarks, computer vision methodologies, and RLHF alignment guides curated by Marveit AI engineers.')
 
 @section('content')
-    <div class="pt-24 md:pt-28 pb-20" style="padding-top: 7rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
+    <div class="pt-24 md:pt-28 pb-20" style="padding-top: 7rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Hero Header -->
         <section class="container mx-auto px-6 mb-12">
             <div class="max-w-3xl mx-auto text-center">
@@ -210,18 +210,20 @@
         </section>
 
         <!-- CTA Callout Banner -->
-        <section class="container mx-auto px-6 max-w-6xl mt-20">
+        <section class="container mx-auto px-6 max-w-6xl mt-20" style="margin-top: 5rem; margin-bottom: 2rem;">
             <div
-                class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl">
+                class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl"
+                style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #312e81 100%); color: #ffffff;">
                 <div class="relative z-10 max-w-2xl">
                     <span
-                        class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-200 border border-blue-400/30 mb-4">
+                        class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-200 border border-blue-400/30 mb-4"
+                        style="background-color: rgba(59, 130, 246, 0.25); color: #bfdbfe; border-color: rgba(96, 165, 250, 0.35);">
                         Tailored Machine Learning Pipelines
                     </span>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold mb-3 leading-tight">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold mb-3 leading-tight" style="color: #ffffff;">
                         Need Custom Datasets Engineered to Your Precise Spec?
                     </h3>
-                    <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-6">
+                    <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-6" style="color: #dbeafe;">
                         Accelerate model convergence with pixel-accurate 2D/3D annotation, rigorous QA SLAs, and guaranteed
                         security compliance.
                     </p>
@@ -232,7 +234,8 @@
                             <i data-feather="arrow-right" class="w-4 h-4"></i>
                         </a>
                         <a href="{{ route('contact') }}"
-                            class="bg-blue-700/60 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition border border-blue-400/30 text-sm">
+                            class="bg-blue-700/60 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition border border-blue-400/30 text-sm"
+                            style="background-color: rgba(29, 78, 216, 0.6); color: #ffffff; border-color: rgba(96, 165, 250, 0.35);">
                             Speak to an AI Specialist
                         </a>
                     </div>
