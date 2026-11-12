@@ -30,7 +30,7 @@
             <div class="container mx-auto px-6">
                 <!-- Group 1: Annotation Capabilities -->
                 <div class="mb-16">
-                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
+                    <div class="flex items-center justify-between mb-8">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900">Annotation Capabilities</h2>
                             <p class="text-xs md:text-sm text-gray-500 mt-1">Foundation data pipelines powering Computer
@@ -101,7 +101,7 @@
 
                 <!-- Group 2: Multi-Modal Pipelines -->
                 <div>
-                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
+                    <div class="flex items-center justify-between mb-8">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900">Multi-Modal Pipelines</h2>
                             <p class="text-xs md:text-sm text-gray-500 mt-1">High-complexity spatial tracking, acoustic
