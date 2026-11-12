@@ -4,7 +4,8 @@
 @section('meta_description', $article->excerpt ?? Str::limit(strip_tags($article->content), 150))
 
 @section('content')
-    <div class="pt-24 md:pt-28 pb-24" style="padding-top: 7rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
+    <div class="pt-24 md:pt-28 pb-24"
+        style="padding-top: 7rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Article Header & Breadcrumbs -->
         <article class="container mx-auto px-6 max-w-4xl">
             <!-- Breadcrumbs -->
@@ -41,7 +42,8 @@
                 <!-- Author Row -->
                 <div class="flex items-center justify-between py-4 border-y border-gray-100">
                     <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md">
+                        <div
+                            class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md">
                             {{ substr($article->author_name ?? 'M', 0, 1) }}
                         </div>
                         <div>
@@ -60,14 +62,16 @@
 
             <!-- Featured Image -->
             @if ($article->image)
-                <div class="mb-12 rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-gray-950 aspect-video max-h-[500px]">
+                <div
+                    class="mb-12 rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-gray-950 aspect-video max-h-[500px]">
                     <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="w-full h-full object-cover">
                 </div>
             @endif
 
             <!-- Excerpt Callout (if present) -->
             @if ($article->excerpt)
-                <div class="p-6 sm:p-8 bg-blue-50/70 border-l-4 border-blue-600 rounded-2xl mb-10 text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
+                <div
+                    class="p-6 sm:p-8 bg-blue-50/70 border-l-4 border-blue-600 rounded-2xl mb-10 text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
                     {{ $article->excerpt }}
                 </div>
             @endif
@@ -80,9 +84,11 @@
                         font-size: 1.05rem;
                         line-height: 1.85;
                     }
+
                     .article-prose p {
                         margin-bottom: 1.5rem;
                     }
+
                     .article-prose h2 {
                         color: #111827;
                         font-size: 1.65rem;
@@ -92,6 +98,7 @@
                         margin-bottom: 1rem;
                         line-height: 1.3;
                     }
+
                     .article-prose h3 {
                         color: #1f2937;
                         font-size: 1.3rem;
@@ -100,19 +107,25 @@
                         margin-bottom: 0.75rem;
                         line-height: 1.35;
                     }
-                    .article-prose ul, .article-prose ol {
+
+                    .article-prose ul,
+                    .article-prose ol {
                         margin-bottom: 1.5rem;
                         padding-left: 1.5rem;
                     }
+
                     .article-prose ul {
                         list-style-type: disc;
                     }
+
                     .article-prose ol {
                         list-style-type: decimal;
                     }
+
                     .article-prose li {
                         margin-bottom: 0.5rem;
                     }
+
                     .article-prose blockquote {
                         border-left: 4px solid #3b82f6;
                         padding: 1rem 1.5rem;
@@ -122,16 +135,19 @@
                         color: #1e293b;
                         margin: 2rem 0;
                     }
+
                     .article-prose img {
                         border-radius: 1rem;
                         margin: 2rem 0;
-                        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+                        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
                     }
+
                     .article-prose a {
                         color: #2563eb;
                         text-decoration: underline;
                         font-weight: 600;
                     }
+
                     .article-prose code {
                         background: #f1f5f9;
                         padding: 0.2rem 0.4rem;
@@ -163,15 +179,19 @@
             </div>
 
             <!-- Author Bio Box -->
-            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm mb-16 flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg shrink-0">
+            <div
+                class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm mb-16 flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg shrink-0">
                     {{ substr($article->author_name ?? 'M', 0, 1) }}
                 </div>
                 <div>
                     <h3 class="text-base font-bold text-gray-900 mb-1">Written by {{ $article->author_name }}</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-2">{{ $article->author_role ?? 'Marveit AI Annotation & Engineering Team' }}</p>
+                    <p class="text-xs text-blue-600 font-semibold mb-2">
+                        {{ $article->author_role ?? 'Marveit AI Annotation & Engineering Team' }}</p>
                     <p class="text-xs text-gray-500 leading-relaxed">
-                        Specializing in computer vision benchmarks, active learning loops, multi-modal sensor fusion, and verified human-in-the-loop workflows for deep learning production models.
+                        Specializing in computer vision benchmarks, active learning loops, multi-modal sensor fusion, and
+                        verified human-in-the-loop workflows for deep learning production models.
                     </p>
                 </div>
             </div>
@@ -181,7 +201,8 @@
                 <div class="mb-16">
                     <div class="flex items-center justify-between mb-8">
                         <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Related Articles</h3>
-                        <a href="{{ route('resources.index') }}" class="text-xs font-bold text-blue-600 hover:underline">View All Resources →</a>
+                        <a href="{{ route('resources.index') }}" class="text-xs font-bold text-blue-600 hover:underline">View
+                            All Resources →</a>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -192,16 +213,19 @@
                                     <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-2 block">
                                         {{ $related->category ?? 'AI' }}
                                     </span>
-                                    <h4 class="text-sm font-bold text-gray-900 group-hover:text-blue-600 transition line-clamp-2 mb-2 leading-snug">
+                                    <h4
+                                        class="text-sm font-bold text-gray-900 group-hover:text-blue-600 transition line-clamp-2 mb-2 leading-snug">
                                         {{ $related->title }}
                                     </h4>
                                     <p class="text-xs text-gray-500 line-clamp-2 leading-relaxed mb-4">
                                         {{ $related->excerpt }}
                                     </p>
                                 </div>
-                                <div class="text-[11px] text-gray-400 font-medium pt-3 border-t border-gray-50 flex items-center justify-between">
+                                <div
+                                    class="text-[11px] text-gray-400 font-medium pt-3 border-t border-gray-50 flex items-center justify-between">
                                     <span>{{ $related->read_time }}</span>
-                                    <span class="text-blue-600 font-bold group-hover:translate-x-0.5 transition-transform">Read →</span>
+                                    <span class="text-blue-600 font-bold group-hover:translate-x-0.5 transition-transform">Read
+                                        →</span>
                                 </div>
                             </a>
                         @endforeach
@@ -212,9 +236,11 @@
             <!-- Bottom CTA Box -->
             <div class="bg-white rounded-3xl p-8 sm:p-10 border border-gray-100 text-center shadow-xl"
                 style="background-color: #ffffff; border: 1px solid #e2e8f0; margin-bottom: 2rem;">
-                <h3 class="text-2xl font-extrabold text-gray-900 mb-2" style="color: #0f172a;">Ready to Power Your Models with Precision Data?</h3>
+                <h3 class="text-2xl font-extrabold text-gray-900 mb-2" style="color: #0f172a;">Ready to Power Your Models
+                    with Precision Data?</h3>
                 <p class="text-gray-600 text-sm max-w-lg mx-auto mb-6" style="color: #475569;">
-                    Run a complimentary pilot with Marveit AI. Benchmark our accuracy, speed, and strict NDA compliance on your dataset.
+                    Run a complimentary pilot with Marveit AI. Benchmark our accuracy, speed, and strict NDA compliance on
+                    your dataset.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="{{ route('free-trial') }}"
@@ -223,12 +249,24 @@
                         Start Free Trial Pilot
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition border border-gray-200"
-                        style="background-color: #f8fafc; color: #1e293b; border: 1px solid #cbd5e1;">
+                        class="resource-cta-secondary-btn font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition">
                         Contact Sales
                     </a>
                 </div>
             </div>
+            <style>
+                .resource-cta-secondary-btn {
+                    background-color: #ffffff;
+                    color: #1e293b;
+                    border: 1px solid #cbd5e1;
+                }
+
+                .resource-cta-secondary-btn:hover {
+                    background-color: #2563eb;
+                    color: #ffffff;
+                    border-color: #2563eb;
+                }
+            </style>
         </article>
     </div>
 @endsection

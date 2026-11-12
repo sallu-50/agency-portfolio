@@ -4,7 +4,8 @@
 @section('meta_description', 'Discover technical articles, data annotation benchmarks, computer vision methodologies, and RLHF alignment guides curated by Marveit AI engineers.')
 
 @section('content')
-    <div class="pt-24 md:pt-28 pb-20" style="padding-top: 7rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
+    <div class="pt-24 md:pt-28 pb-20"
+        style="padding-top: 7rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); min-height: 100vh;">
         <!-- Hero Header -->
         <section class="container mx-auto px-6 mb-12">
             <div class="max-w-3xl mx-auto text-center">
@@ -211,15 +212,15 @@
 
         <!-- CTA Callout Banner -->
         <section class="container mx-auto px-6 max-w-6xl mt-20" style="margin-top: 5rem; margin-bottom: 2rem;">
-            <div
-                class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 relative overflow-hidden shadow-xl"
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 relative overflow-hidden shadow-xl"
                 style="background-color: #ffffff; border: 1px solid #e2e8f0;">
                 <div class="relative z-10 max-w-2xl">
                     <span
                         class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
                         Tailored Machine Learning Pipelines
                     </span>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 leading-tight" style="color: #0f172a;">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 leading-tight"
+                        style="color: #0f172a;">
                         Need Custom Datasets Engineered to Your Precise Spec?
                     </h3>
                     <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6" style="color: #475569;">
@@ -234,13 +235,25 @@
                             <i data-feather="arrow-right" class="w-4 h-4"></i>
                         </a>
                         <a href="{{ route('contact') }}"
-                            class="bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold px-6 py-3 rounded-xl transition border border-gray-200 text-sm"
-                            style="background-color: #f8fafc; color: #1e293b; border: 1px solid #cbd5e1;">
+                            class="resource-cta-secondary-btn font-semibold px-6 py-3 rounded-xl transition text-sm">
                             Speak to an AI Specialist
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        <style>
+            .resource-cta-secondary-btn {
+                background-color: #ffffff;
+                color: #1e293b;
+                border: 1px solid #cbd5e1;
+            }
+
+            .resource-cta-secondary-btn:hover {
+                background-color: #2563eb;
+                color: #ffffff;
+                border-color: #2563eb;
+            }
+        </style>
     </div>
 @endsection
