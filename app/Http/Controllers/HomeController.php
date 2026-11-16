@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AnnotationTool;
 use App\Models\HeroVideo;
+use App\Models\Industry;
+use App\Models\QualityPillar;
 use App\Models\Service;
 
 class HomeController extends Controller
@@ -30,7 +33,13 @@ class HomeController extends Controller
 
         $services = Service::where('is_active', true)->orderBy('sort_order')->get();
         $heroVideo = HeroVideo::where('is_active', true)->latest('id')->first();
+        $industries = Industry::where('is_active', true)->orderBy('sort_order')->get();
+        $qualityPillars = QualityPillar::where('is_active', true)
+            ->whereIn('target_page', ['home', 'both'])
+            ->orderBy('sort_order')
+            ->get();
+        $annotationTools = AnnotationTool::where('is_active', true)->orderBy('sort_order')->get();
 
-        return view('home', compact('services', 'heroVideo'));
+        return view('home', compact('services', 'heroVideo', 'industries', 'qualityPillars', 'annotationTools'));
     }
 }

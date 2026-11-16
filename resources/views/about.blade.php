@@ -253,7 +253,7 @@
                                     </div>
                                     <div>
                                         <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Direct Contact</div>
-                                        <a href="mailto:ebrahim@marveit.com" class="font-semibold text-blue-600 hover:underline mt-0.5 inline-block">ebrahim@marveit.com</a>
+                                        <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}" class="font-semibold text-blue-600 hover:underline mt-0.5 inline-block">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -276,65 +276,20 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="about-card flex flex-col">
-                        <div class="about-icon-box">
-                            <i data-feather="check-circle" class="w-6 h-6"></i>
+                    @php
+                        $pillars = $qualityPillars ?? \App\Models\QualityPillar::where('is_active', true)->whereIn('target_page', ['about', 'both'])->orderBy('sort_order')->get();
+                    @endphp
+                    @foreach ($pillars as $pillar)
+                        <div class="about-card flex flex-col">
+                            <div class="about-icon-box">
+                                <i data-feather="{{ $pillar->icon ?? 'check-circle' }}" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">{{ $pillar->title }}</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                {{ $pillar->description }}
+                            </p>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Multi-Stage Quality Control</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Every batch undergoes primary annotation, peer consensus review, and senior QA sign-off against your exact edge-case guidelines.
-                        </p>
-                    </div>
-
-                    <div class="about-card flex flex-col">
-                        <div class="about-icon-box">
-                            <i data-feather="trending-up" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Pilot First, Then Scale</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            We deliver a labeled pilot sample within 24 hours so you can audit our precision on gold-standard examples before committing.
-                        </p>
-                    </div>
-
-                    <div class="about-card flex flex-col">
-                        <div class="about-icon-box">
-                            <i data-feather="users" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Dedicated Domain Pods</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Scale from hundreds of validation frames to millions of production annotations with calibrated teams trained specifically on your ontology.
-                        </p>
-                    </div>
-
-                    <div class="about-card flex flex-col">
-                        <div class="about-icon-box">
-                            <i data-feather="lock" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Enterprise Data Isolation</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Bilateral NDA signed upfront, encrypted transfers, strict role-based access control, and optional work directly inside your private VPN.
-                        </p>
-                    </div>
-
-                    <div class="about-card flex flex-col">
-                        <div class="about-icon-box">
-                            <i data-feather="sliders" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Seamless Tooling Integration</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            We operate natively in CVAT, Label Studio, Labelbox, V7, SuperAnnotate, Prodigy, Doccano, or your proprietary annotation pipeline.
-                        </p>
-                    </div>
-
-                    <div class="about-card flex flex-col">
-                        <div class="about-icon-box">
-                            <i data-feather="message-square" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Direct Technical Communication</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Work directly with a dedicated project manager via Slack, Teams, or email—with responses within 24 hours and free QA rework if targets miss.
-                        </p>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>

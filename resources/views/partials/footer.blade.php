@@ -74,13 +74,13 @@
                 </p>
                 <!-- Social Links: LinkedIn · Facebook -->
                 <div class="pt-2 flex items-center gap-4 sm:gap-5">
-                    <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
+                    <a href="{{ \App\Models\SiteSetting::get('linkedin_url', 'https://www.linkedin.com/company/marveit') }}" target="_blank" rel="noopener noreferrer"
                         aria-label="LinkedIn"
                         class="w-10 h-10 p-2.5 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-700/80 shadow-sm"
                         style="background-color: rgba(255, 255, 255, 0.06);">
                         <i data-feather="linkedin" class="w-4 h-4"></i>
                     </a>
-                    <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
+                    <a href="{{ \App\Models\SiteSetting::get('facebook_url', 'https://www.facebook.com/marveit') }}" target="_blank" rel="noopener noreferrer"
                         aria-label="Facebook"
                         class="w-10 h-10 p-2.5 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all border border-gray-700/80 shadow-sm"
                         style="background-color: rgba(255, 255, 255, 0.06);">
@@ -153,18 +153,18 @@
                     Tell us about your dataset and model goals. A technical lead will reply within 24 hours.
                 </p>
                 <div class="flex flex-col gap-2.5 pt-1">
-                    <a href="mailto:ebrahim@marveit.com"
+                    <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}"
                         class="flex items-center gap-2.5 text-gray-300 hover:text-blue-400 transition-colors text-xs sm:text-sm">
                         <i data-feather="mail" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
-                        <span class="break-all">ebrahim@marveit.com</span>
+                        <span class="break-all">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</span>
                     </a>
                     <div class="flex items-start gap-2.5 text-gray-400 text-xs sm:text-sm leading-snug">
                         <i data-feather="globe" class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5"></i>
-                        <span>Mymensingh, Bangladesh | Serving clients worldwide</span>
+                        <span>{{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }} | Serving clients worldwide</span>
                     </div>
                 </div>
                 <div class="pt-2">
-                    <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
+                    <a href="https://wa.me/{{ \App\Models\SiteSetting::get('whatsapp_number', '8801753499696') }}?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
                         target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm hover:shadow hover:-translate-y-0.5 transition hover:opacity-90"
                         style="background-color: #25D366; color: #ffffff;">
@@ -177,7 +177,7 @@
 
         <!-- Bottom Copyright Bar -->
         <div class="footer-bottom-bar text-xs text-gray-400">
-            <p>&copy; 2026 Marveit AI. All rights reserved.</p>
+            <p>{!! \App\Models\SiteSetting::get('copyright_text', '&copy; 2026 Marveit AI. All rights reserved.') !!}</p>
             <div class="flex items-center gap-3 text-gray-400">
                 <a href="{{ route('privacy-policy') }}" class="hover:text-white transition-colors">Privacy Policy</a>
                 <span class="text-gray-600">|</span>

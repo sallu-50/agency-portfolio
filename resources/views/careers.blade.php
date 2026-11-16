@@ -252,45 +252,21 @@
                     <div class="w-full space-y-3">
                         <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Open Roles (Click to Select)</h2>
 
-                        <button type="button" onclick="selectCareerRole('Data Annotator')" class="cr-role-card">
-                            <div class="flex items-center justify-between gap-3">
-                                <div>
-                                    <div class="text-sm font-bold text-gray-900">Data Annotator (CV / NLP / Audio)</div>
-                                    <div class="text-xs text-gray-500 mt-0.5">Mymensingh, Bangladesh &middot; Full-Time</div>
+                        @forelse ($openings as $opening)
+                            <button type="button" onclick="selectCareerRole('{{ $opening->role_key ?? $opening->title }}')" class="cr-role-card">
+                                <div class="flex items-center justify-between gap-3">
+                                    <div>
+                                        <div class="text-sm font-bold text-gray-900">{{ $opening->title }}</div>
+                                        <div class="text-xs text-gray-500 mt-0.5">{{ $opening->location }} &middot; {{ $opening->employment_type }}</div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-blue-600">Apply &rarr;</span>
                                 </div>
-                                <span class="text-xs font-semibold text-blue-600">Apply &rarr;</span>
+                            </button>
+                        @empty
+                            <div class="p-4 rounded-xl bg-gray-50 text-gray-500 text-xs">
+                                No open positions listed at the moment. You can still submit an open application below!
                             </div>
-                        </button>
-
-                        <button type="button" onclick="selectCareerRole('Senior Data Annotator')" class="cr-role-card">
-                            <div class="flex items-center justify-between gap-3">
-                                <div>
-                                    <div class="text-sm font-bold text-gray-900">Senior Data Annotator</div>
-                                    <div class="text-xs text-gray-500 mt-0.5">Mymensingh, Bangladesh &middot; Full-Time</div>
-                                </div>
-                                <span class="text-xs font-semibold text-blue-600">Apply &rarr;</span>
-                            </div>
-                        </button>
-
-                        <button type="button" onclick="selectCareerRole('QA Lead')" class="cr-role-card">
-                            <div class="flex items-center justify-between gap-3">
-                                <div>
-                                    <div class="text-sm font-bold text-gray-900">QA Lead (Quality Assurance)</div>
-                                    <div class="text-xs text-gray-500 mt-0.5">Mymensingh, Bangladesh &middot; Full-Time</div>
-                                </div>
-                                <span class="text-xs font-semibold text-blue-600">Apply &rarr;</span>
-                            </div>
-                        </button>
-
-                        <button type="button" onclick="selectCareerRole('Team Lead')" class="cr-role-card">
-                            <div class="flex items-center justify-between gap-3">
-                                <div>
-                                    <div class="text-sm font-bold text-gray-900">Annotation Team Lead</div>
-                                    <div class="text-xs text-gray-500 mt-0.5">Mymensingh, Bangladesh &middot; Full-Time</div>
-                                </div>
-                                <span class="text-xs font-semibold text-blue-600">Apply &rarr;</span>
-                            </div>
-                        </button>
+                        @endforelse
                     </div>
 
                     <!-- Direct Hiring Contact Box -->
@@ -298,15 +274,15 @@
                         <div class="font-bold text-gray-900 text-sm pb-1">Direct Hiring Contact</div>
                         <div class="flex items-center gap-2.5">
                             <i data-feather="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                            <span>Email CV directly: <a href="mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI" class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a></span>
+                            <span>Email CV directly: <a href="mailto:{{ \App\Models\SiteSetting::get('careers_email', 'ebrahim@marveit.com') }}?subject=Career%20Application%20-%20Marveit%20AI" class="text-blue-600 font-semibold hover:underline">{{ \App\Models\SiteSetting::get('careers_email', 'ebrahim@marveit.com') }}</a></span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                            <span>Office Address: Mymensingh, Bangladesh</span>
+                            <span>Office Address: {{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}</span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <i data-feather="clock" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                            <span>Hiring Team Response: Within 24 hours</span>
+                            <span>Hiring Team Response: {{ \App\Models\SiteSetting::get('sla_response_time', 'Within 24 hours') }}</span>
                         </div>
                     </div>
                 </div>
@@ -376,11 +352,13 @@
                                     </label>
                                     <select id="position" name="position" required class="cr-select">
                                         <option value="" disabled {{ old('position') ? '' : 'selected' }}>Select a role</option>
-                                        <option value="Data Annotator" {{ old('position') === 'Data Annotator' ? 'selected' : '' }}>Data Annotator (CV / NLP / Audio)</option>
-                                        <option value="Senior Data Annotator" {{ old('position') === 'Senior Data Annotator' ? 'selected' : '' }}>Senior Data Annotator</option>
-                                        <option value="QA Lead" {{ old('position') === 'QA Lead' ? 'selected' : '' }}>QA Lead (Quality Assurance)</option>
-                                        <option value="Team Lead" {{ old('position') === 'Team Lead' ? 'selected' : '' }}>Annotation Team Lead</option>
+                                        @foreach ($openings as $opening)
+                                            <option value="{{ $opening->role_key ?? $opening->title }}" {{ old('position') === ($opening->role_key ?? $opening->title) ? 'selected' : '' }}>
+                                                {{ $opening->title }}
+                                            </option>
+                                        @endforeach
                                         <option value="ML Data Engineer" {{ old('position') === 'ML Data Engineer' ? 'selected' : '' }}>ML Data Engineer</option>
+                                        <option value="Other / General Application" {{ old('position') === 'Other / General Application' ? 'selected' : '' }}>Other / General Application</option>
                                     </select>
                                 </div>
                             </div>

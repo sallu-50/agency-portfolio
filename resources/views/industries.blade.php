@@ -134,211 +134,40 @@
         <section class="ind-grid-section">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    @forelse ($industries as $industry)
+                        <div id="{{ $industry->slug }}" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="ind-icon-box">
+                                    <i data-feather="{{ $industry->icon ?? 'box' }}" class="w-6 h-6"></i>
+                                </div>
 
-                    <!-- 1. Automotive & Autonomous Driving -->
-                    <div id="automotive" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="ind-icon-box">
-                                <i data-feather="truck" class="w-6 h-6"></i>
-                            </div>
+                                <h2 class="text-xl font-bold text-gray-900 mb-3">
+                                    {{ $industry->name }}
+                                </h2>
+                                <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                                    {{ $industry->short_description }}
+                                </p>
 
-                            <h2 class="text-xl font-bold text-gray-900 mb-3">
-                                Automotive &amp; Autonomous Driving
-                            </h2>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                                High-precision sensor fusion and spatial ground truth for L2–L5 autonomous perception and driver-assistance models.
-                            </p>
-
-                            <div class="pt-4 border-t border-gray-100">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
-                                <ul class="space-y-2.5 text-xs text-gray-600">
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>LiDAR 3D cuboids &amp; point cloud segmentation</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Lane markings, drivable area &amp; traffic sign tagging</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Multi-frame pedestrian, cyclist &amp; vehicle tracking</span>
-                                    </li>
-                                </ul>
+                                @if (!empty($industry->what_we_label))
+                                    <div class="pt-4 border-t border-gray-100">
+                                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
+                                        <ul class="space-y-2.5 text-xs text-gray-600">
+                                            @foreach ((array) $industry->what_we_label as $bullet)
+                                                <li class="flex items-start gap-2">
+                                                    <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                                    <span>{{ $bullet }}</span>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                             </div>
                         </div>
-                    </div>
-
-                    <!-- 2. Healthcare & Medical AI -->
-                    <div id="healthcare" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="ind-icon-box">
-                                <i data-feather="activity" class="w-6 h-6"></i>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-gray-900 mb-3">
-                                Healthcare &amp; Medical AI
-                            </h2>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                                Carefully verified diagnostic and clinical labeling executed on de-identified datasets under strict role-based access.
-                            </p>
-
-                            <div class="pt-4 border-t border-gray-100">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
-                                <ul class="space-y-2.5 text-xs text-gray-600">
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>CT, MRI &amp; X-ray volumetric organ segmentation</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Pathology &amp; histology lesion polygon masks</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Clinical note entity recognition &amp; PII redaction</span>
-                                    </li>
-                                </ul>
-                            </div>
+                    @empty
+                        <div class="col-span-full py-12 text-center text-gray-500">
+                            No industries available at the moment.
                         </div>
-                    </div>
-
-                    <!-- 3. Retail & E-Commerce -->
-                    <div id="retail" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="ind-icon-box">
-                                <i data-feather="shopping-bag" class="w-6 h-6"></i>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-gray-900 mb-3">
-                                Retail &amp; E-Commerce
-                            </h2>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                                Cleaner product taxonomies, sharper visual search, and accurate in-store shelf analytics for modern commerce AI.
-                            </p>
-
-                            <div class="pt-4 border-t border-gray-100">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
-                                <ul class="space-y-2.5 text-xs text-gray-600">
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Shelf &amp; SKU bounding boxes for planogram audits</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Apparel, furniture &amp; attribute taxonomy tagging</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Search relevance ranking &amp; customer sentiment</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. Agriculture & Drone Imagery -->
-                    <div id="agriculture" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="ind-icon-box">
-                                <i data-feather="sun" class="w-6 h-6"></i>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-gray-900 mb-3">
-                                Agriculture &amp; Drone Imagery
-                            </h2>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                                Pixel-accurate aerial, satellite, and field-level image annotation for autonomous farming and crop-health models.
-                            </p>
-
-                            <div class="pt-4 border-t border-gray-100">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
-                                <ul class="space-y-2.5 text-xs text-gray-600">
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Crop vs. weed semantic segmentation masks</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Multispectral plant stress &amp; disease detection</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Orchard canopy counting &amp; field boundary polygons</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Voice AI & Conversational Systems -->
-                    <div id="voice-ai" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="ind-icon-box">
-                                <i data-feather="mic" class="w-6 h-6"></i>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-gray-900 mb-3">
-                                Voice AI &amp; Conversational Systems
-                            </h2>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                                Verbatim speech transcription, acoustic event tagging, and conversational intent annotation for voice assistants.
-                            </p>
-
-                            <div class="pt-4 border-t border-gray-100">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
-                                <ul class="space-y-2.5 text-xs text-gray-600">
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Multi-language timestamped audio transcription</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Speaker diarization &amp; overlap boundary markers</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Noise tagging, prosody &amp; intent slot classification</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 6. LLM & Generative AI -->
-                    <div id="llm" class="ind-card scroll-mt-28 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="ind-icon-box">
-                                <i data-feather="cpu" class="w-6 h-6"></i>
-                            </div>
-
-                            <h2 class="text-xl font-bold text-gray-900 mb-3">
-                                LLM &amp; Generative AI
-                            </h2>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                                Human feedback, structured rubric evaluation, and domain reasoning datasets for foundation models and agents.
-                            </p>
-
-                            <div class="pt-4 border-t border-gray-100">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">What We Label</h3>
-                                <ul class="space-y-2.5 text-xs text-gray-600">
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>RLHF pairwise response preference &amp; ranking</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Supervised fine-tuning (SFT) prompt-response writing</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-feather="check" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                        <span>Safety red-teaming, hallucination &amp; fact-checking</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforelse
                 </div>
             </div>
         </section>

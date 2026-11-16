@@ -132,7 +132,7 @@
                             <span>Apply on Careers Page</span>
                             <i data-feather="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="mailto:ebrahim@marveit.com?subject=Career%20Application%20-%20Marveit%20AI"
+                        <a href="mailto:{{ \App\Models\SiteSetting::get('careers_email', 'ebrahim@marveit.com') }}?subject=Career%20Application%20-%20Marveit%20AI"
                             class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3.5 px-8 rounded-full transition inline-flex items-center gap-2">
                             <i data-feather="mail" class="w-4 h-4"></i>
                             <span>Email Your CV</span>

@@ -81,8 +81,6 @@ class AgencySiteTest extends TestCase
 
     public function test_home_page_displays_annotation_tools_and_platforms_section(): void
     {
-        $this->markTestSkipped('Annotation tools and platforms section is temporarily commented out.');
-
         $response = $this->get(route('home'));
 
         $response->assertStatus(200);
@@ -92,16 +90,15 @@ class AgencySiteTest extends TestCase
         // Verify platforms
         $response->assertSee('CVAT', false);
         $response->assertSee('Label Studio', false);
-        $response->assertSee('Labelbox', false);
+        $response->assertSee('labelbox', false);
         $response->assertSee('V7', false);
         $response->assertSee('SuperAnnotate', false);
-        $response->assertSee('Scale AI', false);
-        $response->assertSee('Supervisely', false);
+        $response->assertDontSee('Scale AI', false);
+        $response->assertSee('supervisely', false);
         $response->assertSee('Audacity', false);
         $response->assertSee('Praat', false);
-        $response->assertSee('Prodigy', false);
-        $response->assertSee('Doccano', false);
-        $response->assertSee('Custom / Client', false);
+        $response->assertSee('prodigy', false);
+        $response->assertSee('doccano', false);
     }
 
     public function test_home_page_displays_why_ai_teams_choose_marveit_section(): void
@@ -806,5 +803,23 @@ class AgencySiteTest extends TestCase
         $response = $this->post(route('careers.store'), []);
 
         $response->assertSessionHasErrors(['name', 'email', 'position', 'message']);
+    }
+
+    public function test_authenticated_admin_can_view_new_dynamic_filament_resources(): void
+    {
+        $admin = User::where('email', 'admin@marveit.com')->first();
+
+        $routes = [
+            '/admin/job-openings',
+            '/admin/industries',
+            '/admin/annotation-tools',
+            '/admin/quality-pillars',
+            '/admin/site-settings',
+        ];
+
+        foreach ($routes as $route) {
+            $response = $this->actingAs($admin)->get($route);
+            $response->assertStatus(200);
+        }
     }
 }

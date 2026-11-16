@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactMessage;
+use App\Models\JobOpening;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -11,7 +12,9 @@ class CareersController extends Controller
 {
     public function index(): View
     {
-        return view('careers');
+        $openings = JobOpening::where('is_active', true)->orderBy('sort_order')->get();
+
+        return view('careers', compact('openings'));
     }
 
     public function store(Request $request): RedirectResponse

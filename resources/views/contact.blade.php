@@ -242,16 +242,16 @@
                     <!-- 1. WhatsApp -->
                     <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
-                            <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
+                            <a href="https://wa.me/{{ \App\Models\SiteSetting::get('whatsapp_number', '8801753499696') }}?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
                                 target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
                                 class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
                                 style="background-color: #ecfdf5; border: 1px solid #a7f3d0; color: #059669;">
                                 <i data-feather="message-circle" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">WhatsApp</h2>
-                            <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">+880 1753 499696</p>
+                            <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}</p>
                         </div>
-                        <a href="https://wa.me/8801753499696?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
+                        <a href="https://wa.me/{{ \App\Models\SiteSetting::get('whatsapp_number', '8801753499696') }}?text=Hello%20Marveit%20AI%20Team!%20I%20would%20like%20to%20discuss%20a%20data%20annotation%20project."
                             target="_blank" rel="noopener noreferrer"
                             class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Chat on WhatsApp</span>
@@ -262,15 +262,15 @@
                     <!-- 2. Email -->
                     <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
-                            <a href="mailto:ebrahim@marveit.com" aria-label="Email"
+                            <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}" aria-label="Email"
                                 class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
                                 style="background-color: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb;">
                                 <i data-feather="mail" class="w-7 h-7"></i>
                             </a>
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">Email</h2>
-                            <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">ebrahim@marveit.com</p>
+                            <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</p>
                         </div>
-                        <a href="mailto:ebrahim@marveit.com"
+                        <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}"
                             class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Send an Email</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
@@ -280,7 +280,7 @@
                     <!-- 3. LinkedIn -->
                     <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
-                            <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
+                            <a href="{{ \App\Models\SiteSetting::get('linkedin_url', 'https://www.linkedin.com/company/marveit') }}" target="_blank" rel="noopener noreferrer"
                                 aria-label="LinkedIn"
                                 class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
                                 style="background-color: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a;">
@@ -289,7 +289,7 @@
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">LinkedIn</h2>
                             <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">Marveit AI</p>
                         </div>
-                        <a href="https://www.linkedin.com/company/marveit" target="_blank" rel="noopener noreferrer"
+                        <a href="{{ \App\Models\SiteSetting::get('linkedin_url', 'https://www.linkedin.com/company/marveit') }}" target="_blank" rel="noopener noreferrer"
                             class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Connect on LinkedIn</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>
@@ -299,7 +299,7 @@
                     <!-- 4. Facebook -->
                     <div class="p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-between group shadow-xs hover:-translate-y-1">
                         <div class="flex flex-col items-center w-full">
-                            <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
+                            <a href="{{ \App\Models\SiteSetting::get('facebook_url', 'https://www.facebook.com/marveit') }}" target="_blank" rel="noopener noreferrer"
                                 aria-label="Facebook"
                                 class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-xs"
                                 style="background-color: #eef2ff; border: 1px solid #c7d2fe; color: #4f46e5;">
@@ -308,7 +308,7 @@
                             <h2 class="text-lg font-bold text-gray-900 mb-1.5 tracking-wide">Facebook</h2>
                             <p class="text-sm font-semibold text-gray-700 tracking-wide mb-5">Marveit AI</p>
                         </div>
-                        <a href="https://www.facebook.com/marveit" target="_blank" rel="noopener noreferrer"
+                        <a href="{{ \App\Models\SiteSetting::get('facebook_url', 'https://www.facebook.com/marveit') }}" target="_blank" rel="noopener noreferrer"
                             class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-100 hover:border-blue-600 transition-all duration-200 hover:-translate-y-0.5 shadow-xs">
                             <span>Visit Our Page</span>
                             <i data-feather="arrow-right" class="w-3.5 h-3.5"></i>

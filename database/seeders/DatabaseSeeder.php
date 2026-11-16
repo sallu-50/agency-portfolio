@@ -286,5 +286,12 @@ class DatabaseSeeder extends Seeder
 
         // 6. Seed Articles & Resources
         $this->call(ArticleSeeder::class);
+
+        // 7. Seed Dynamic Agency Site Data
+        $this->call(SiteSettingSeeder::class);
+        $this->call(JobOpeningSeeder::class);
+        $this->call(IndustrySeeder::class);
+        $this->call(AnnotationToolSeeder::class);
+        $this->call(QualityPillarSeeder::class);
     }
 }
