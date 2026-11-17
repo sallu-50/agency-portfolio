@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\SiteSettings;
 
-use App\Filament\Resources\SiteSettings\Pages\CreateSiteSetting;
-use App\Filament\Resources\SiteSettings\Pages\EditSiteSetting;
 use App\Filament\Resources\SiteSettings\Pages\ListSiteSettings;
 use App\Filament\Resources\SiteSettings\Schemas\SiteSettingForm;
 use App\Filament\Resources\SiteSettings\Tables\SiteSettingsTable;
@@ -13,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
 use UnitEnum;
 
 class SiteSettingResource extends Resource
@@ -24,6 +23,16 @@ class SiteSettingResource extends Resource
     protected static string|UnitEnum|null $navigationGroup = 'Settings';
 
     protected static ?int $navigationSort = 1;
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return false;
+    }
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +55,6 @@ class SiteSettingResource extends Resource
     {
         return [
             'index' => ListSiteSettings::route('/'),
-            'create' => CreateSiteSetting::route('/create'),
-            'edit' => EditSiteSetting::route('/{record}/edit'),
         ];
     }
 }
