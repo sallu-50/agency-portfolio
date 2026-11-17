@@ -173,7 +173,7 @@
                             </a>
 
                             <div class="mt-4 text-center">
-                                <a href="https://wa.me/8801753499696?text={{ urlencode('Hello! I want to discuss ' . $service->title . ' dataset annotation.') }}"
+                                <a href="https://wa.me/{{ \App\Models\SiteSetting::get('whatsapp_number', '8801753499696') }}?text={{ urlencode('Hello! I want to discuss ' . $service->title . ' dataset annotation.') }}"
                                     target="_blank" rel="noopener noreferrer"
                                     class="text-xs text-emerald-300 hover:text-white transition inline-flex items-center gap-1.5 underline underline-offset-4">
                                     <i data-feather="message-circle" class="w-3.5 h-3.5"></i>

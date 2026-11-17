@@ -358,15 +358,15 @@
                             </div>
                             <div class="flex items-center gap-2.5">
                                 <i data-feather="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                                <a href="mailto:ebrahim@marveit.com" class="text-blue-600 hover:underline break-all font-medium">ebrahim@marveit.com</a>
+                                <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}" class="text-blue-600 hover:underline break-all font-medium">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a>
                             </div>
                             <div class="flex items-center gap-2.5">
                                 <i data-feather="phone" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                                <a href="tel:+8801753499696" class="hover:text-gray-900 font-medium">+880 1753 499696</a>
+                                <a href="tel:{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}" class="hover:text-gray-900 font-medium">{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}</a>
                             </div>
                             <div class="flex items-start gap-2.5 pt-0.5">
                                 <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                <span class="leading-relaxed">Mymensingh, Bangladesh</span>
+                                <span class="leading-relaxed">{{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}</span>
                             </div>
                         </div>
                     </div>
@@ -616,9 +616,9 @@
                                 <p class="font-bold text-gray-900 mb-1">Marveit AI Legal &amp; Commercial Operations</p>
                                 <p class="text-xs text-gray-700 leading-relaxed mb-0">
                                     Attention: Ebrahim Hossain (Operations Director)<br>
-                                    Email: <a href="mailto:ebrahim@marveit.com" class="text-blue-600 underline font-semibold">ebrahim@marveit.com</a><br>
-                                    Phone / WhatsApp: <a href="tel:+8801753499696" class="text-blue-600 font-semibold">+880 1753 499696</a><br>
-                                    Office Address: Mymensingh, Bangladesh
+                                    Email: <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}" class="text-blue-600 underline font-semibold">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a><br>
+                                    Phone / WhatsApp: <a href="tel:{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}" class="text-blue-600 font-semibold">{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}</a><br>
+                                    Office Address: {{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}
                                 </p>
                             </div>
                             <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">

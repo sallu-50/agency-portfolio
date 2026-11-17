@@ -274,7 +274,7 @@
                         <div class="font-bold text-gray-900 text-sm pb-1">Direct Hiring Contact</div>
                         <div class="flex items-center gap-2.5">
                             <i data-feather="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                            <span>Email CV directly: <a href="mailto:{{ \App\Models\SiteSetting::get('careers_email', 'ebrahim@marveit.com') }}?subject=Career%20Application%20-%20Marveit%20AI" class="text-blue-600 font-semibold hover:underline">{{ \App\Models\SiteSetting::get('careers_email', 'ebrahim@marveit.com') }}</a></span>
+                            <span>Email CV directly: <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}?subject=Career%20Application%20-%20Marveit%20AI" class="text-blue-600 font-semibold hover:underline">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a></span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>

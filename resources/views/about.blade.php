@@ -226,7 +226,7 @@
                                     </div>
                                     <div>
                                         <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Office Address</div>
-                                        <div class="font-semibold text-gray-900 mt-0.5">Mymensingh, Bangladesh</div>
+                                        <div class="font-semibold text-gray-900 mt-0.5">{{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}</div>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-3.5">
@@ -235,7 +235,7 @@
                                     </div>
                                     <div>
                                         <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Response &amp; Pilot SLA</div>
-                                        <div class="font-semibold text-gray-900 mt-0.5">Within 24 hours</div>
+                                        <div class="font-semibold text-gray-900 mt-0.5">{{ \App\Models\SiteSetting::get('sla_response_time', 'Within 24 hours') }}</div>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-3.5">

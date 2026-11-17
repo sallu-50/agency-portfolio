@@ -25,6 +25,15 @@ class SiteSetting extends Model
     public static function get(string $key, ?string $default = null): ?string
     {
         try {
+            // Unify careers_email to contact_email fallback if careers_email does not exist
+            if ($key === 'careers_email') {
+                $setting = static::where('key', 'careers_email')->first();
+                if ($setting && $setting->value !== null && $setting->value !== '') {
+                    return $setting->value;
+                }
+                return static::get('contact_email', $default);
+            }
+
             $setting = static::where('key', $key)->first();
             if ($setting && $setting->value !== null && $setting->value !== '') {
                 return $setting->value;

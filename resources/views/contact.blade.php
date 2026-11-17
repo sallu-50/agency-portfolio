@@ -370,7 +370,7 @@
                         <div class="pt-2 flex flex-col items-start gap-2.5 w-full">
                             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-xs text-gray-700 shadow-sm border border-gray-200 font-medium">
                                 <i data-feather="map-pin" class="w-3.5 h-3.5 text-blue-600 flex-shrink-0"></i>
-                                <span>Office Address: Mymensingh, Bangladesh</span>
+                                <span>Office Address: {{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}</span>
                             </div>
                             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-xs text-gray-600 shadow-sm border border-gray-200">
                                 <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0"></i>

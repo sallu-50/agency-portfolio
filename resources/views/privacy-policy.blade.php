@@ -374,16 +374,16 @@
                             </div>
                             <div class="flex items-center gap-2.5">
                                 <i data-feather="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                                <a href="mailto:ebrahim@marveit.com"
-                                    class="text-blue-600 hover:underline break-all font-medium">ebrahim@marveit.com</a>
+                                <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}"
+                                    class="text-blue-600 hover:underline break-all font-medium">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a>
                             </div>
                             <div class="flex items-center gap-2.5">
                                 <i data-feather="phone" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-                                <a href="tel:+8801753499696" class="hover:text-gray-900 font-medium">+880 1753 499696</a>
+                                <a href="tel:{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}" class="hover:text-gray-900 font-medium">{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}</a>
                             </div>
                             <div class="flex items-start gap-2.5 pt-0.5">
                                 <i data-feather="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-                                <span class="leading-relaxed">Mymensingh, Bangladesh</span>
+                                <span class="leading-relaxed">{{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}</span>
                             </div>
                         </div>
                     </div>
@@ -679,8 +679,8 @@
                             </ul>
                             <p>
                                 To exercise any of these statutory rights, please email our Data Protection team at <a
-                                    href="mailto:ebrahim@marveit.com"
-                                    class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a>. We will
+                                    href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}"
+                                    class="text-blue-600 font-semibold hover:underline">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a>. We will
                                 respond to verified requests within thirty (30) days without undue delay.
                             </p>
                         </div>
@@ -733,11 +733,11 @@
                                 <div class="text-xs sm:text-sm text-gray-600 leading-relaxed space-y-1.5">
                                     <p class="mb-1"><strong>Contact Person:</strong> Ebrahim Hossain (Technical Lead &amp;
                                         Data Protection)</p>
-                                    <p class="mb-1"><strong>Direct Email:</strong> <a href="mailto:ebrahim@marveit.com"
-                                            class="text-blue-600 font-semibold hover:underline">ebrahim@marveit.com</a></p>
-                                    <p class="mb-1"><strong>Phone / WhatsApp:</strong> <a href="tel:+8801753499696"
-                                            class="text-blue-600 font-semibold hover:underline">+880 1753 499696</a></p>
-                                    <p class="mb-1"><strong>Office Address:</strong> Mymensingh, Bangladesh</p>
+                                    <p class="mb-1"><strong>Direct Email:</strong> <a href="mailto:{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}"
+                                            class="text-blue-600 font-semibold hover:underline">{{ \App\Models\SiteSetting::get('contact_email', 'ebrahim@marveit.com') }}</a></p>
+                                    <p class="mb-1"><strong>Phone / WhatsApp:</strong> <a href="tel:{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}"
+                                            class="text-blue-600 font-semibold hover:underline">{{ \App\Models\SiteSetting::get('contact_phone', '+880 1753 499696') }}</a></p>
+                                    <p class="mb-1"><strong>Office Address:</strong> {{ \App\Models\SiteSetting::get('office_address', 'Mymensingh, Bangladesh') }}</p>
                                     <p class="mb-0"><strong>Website:</strong> <a href="https://marveit.com"
                                             class="text-blue-600 font-semibold hover:underline">https://marveit.com</a></p>
                                 </div>
