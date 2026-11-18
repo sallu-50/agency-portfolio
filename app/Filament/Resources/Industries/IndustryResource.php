@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\Industries;
 
-use App\Filament\Resources\Industries\Pages\CreateIndustry;
-use App\Filament\Resources\Industries\Pages\EditIndustry;
 use App\Filament\Resources\Industries\Pages\ListIndustries;
 use App\Filament\Resources\Industries\Schemas\IndustryForm;
 use App\Filament\Resources\Industries\Tables\IndustriesTable;
@@ -23,7 +21,13 @@ class IndustryResource extends Resource
 
     protected static string|UnitEnum|null $navigationGroup = 'Site Content';
 
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 5;
+
+    protected static ?string $navigationLabel = 'Industries (ইন্ডাস্ট্রি তালিকা)';
+
+    protected static ?string $modelLabel = 'Industry';
+
+    protected static ?string $pluralModelLabel = 'Industries';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +50,6 @@ class IndustryResource extends Resource
     {
         return [
             'index' => ListIndustries::route('/'),
-            'create' => CreateIndustry::route('/create'),
-            'edit' => EditIndustry::route('/{record}/edit'),
         ];
     }
 }

@@ -5,8 +5,8 @@ namespace App\Filament\Resources\Services\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
 class ServicesTable
@@ -14,35 +14,32 @@ class ServicesTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->defaultSort('sort_order', 'asc')
             ->columns([
-                TextColumn::make('slug')
-                    ->searchable(),
                 TextColumn::make('title')
-                    ->searchable(),
+                    ->label('সার্ভিসের নাম (Title)')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold'),
                 TextColumn::make('category')
-                    ->searchable(),
-                TextColumn::make('icon')
-                    ->searchable(),
-                TextColumn::make('badge_color')
-                    ->searchable(),
-                TextColumn::make('short_description')
+                    ->label('ক্যাটেগরি (Category)')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'Core' => 'success',
+                        'Specialized' => 'info',
+                        default => 'gray',
+                    })
+                    ->sortable(),
+                TextColumn::make('slug')
+                    ->label('স্লাগ (Slug)')
+                    ->badge()
                     ->searchable(),
                 TextColumn::make('sort_order')
+                    ->label('ক্রম (Order)')
                     ->numeric()
                     ->sortable(),
-                IconColumn::make('is_active')
-                    ->boolean(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
-            ->filters([
-                //
+                ToggleColumn::make('is_active')
+                    ->label('লাইভ (Active)'),
             ])
             ->recordActions([
                 EditAction::make(),

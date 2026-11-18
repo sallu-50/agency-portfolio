@@ -24,6 +24,8 @@ class DesignationResource extends Resource
 
     protected static ?int $navigationSort = 4;
 
+    protected static ?string $navigationLabel = 'Designations (পদবি ও পদক্রম)';
+
     public static function form(Schema $schema): Schema
     {
         return DesignationForm::configure($schema);

@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\TeamMembers;
 
-use App\Filament\Resources\TeamMembers\Pages\CreateTeamMember;
-use App\Filament\Resources\TeamMembers\Pages\EditTeamMember;
 use App\Filament\Resources\TeamMembers\Pages\ListTeamMembers;
 use App\Filament\Resources\TeamMembers\Schemas\TeamMemberForm;
 use App\Filament\Resources\TeamMembers\Tables\TeamMembersTable;
@@ -24,6 +22,12 @@ class TeamMemberResource extends Resource
     protected static string|UnitEnum|null $navigationGroup = 'Site Content';
 
     protected static ?int $navigationSort = 3;
+
+    protected static ?string $navigationLabel = 'Team Members (টিম মেম্বার)';
+
+    protected static ?string $modelLabel = 'Team Member';
+
+    protected static ?string $pluralModelLabel = 'Team Members';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +50,6 @@ class TeamMemberResource extends Resource
     {
         return [
             'index' => ListTeamMembers::route('/'),
-            'create' => CreateTeamMember::route('/create'),
-            'edit' => EditTeamMember::route('/{record}/edit'),
         ];
     }
 }

@@ -25,7 +25,7 @@ class BeforeAfterSliderResource extends Resource
 
     protected static ?int $navigationSort = 2;
 
-    protected static ?string $navigationLabel = 'Before & After Sliders';
+    protected static ?string $navigationLabel = 'Before & After Sliders (তুলনামূলক স্লাইডার)';
 
     protected static ?string $modelLabel = 'Comparison Section';
 

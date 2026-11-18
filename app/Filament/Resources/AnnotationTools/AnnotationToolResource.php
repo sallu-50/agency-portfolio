@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\AnnotationTools;
 
-use App\Filament\Resources\AnnotationTools\Pages\CreateAnnotationTool;
-use App\Filament\Resources\AnnotationTools\Pages\EditAnnotationTool;
 use App\Filament\Resources\AnnotationTools\Pages\ListAnnotationTools;
 use App\Filament\Resources\AnnotationTools\Schemas\AnnotationToolForm;
 use App\Filament\Resources\AnnotationTools\Tables\AnnotationToolsTable;
@@ -24,6 +22,12 @@ class AnnotationToolResource extends Resource
     protected static string|UnitEnum|null $navigationGroup = 'Site Content';
 
     protected static ?int $navigationSort = 7;
+
+    protected static ?string $navigationLabel = 'Annotation Tools (অ্যানোটেশন টুলস)';
+
+    protected static ?string $modelLabel = 'Annotation Tool';
+
+    protected static ?string $pluralModelLabel = 'Annotation Tools';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +50,6 @@ class AnnotationToolResource extends Resource
     {
         return [
             'index' => ListAnnotationTools::route('/'),
-            'create' => CreateAnnotationTool::route('/create'),
-            'edit' => EditAnnotationTool::route('/{record}/edit'),
         ];
     }
 }

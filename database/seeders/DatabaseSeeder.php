@@ -287,7 +287,10 @@ class DatabaseSeeder extends Seeder
         // 6. Seed Articles & Resources
         $this->call(ArticleSeeder::class);
 
-        // 7. Seed Dynamic Agency Site Data
+        // 7. Seed Hero Video
+        $this->call(HeroVideoSeeder::class);
+
+        // 8. Seed Dynamic Agency Site Data
         $this->call(SiteSettingSeeder::class);
         $this->call(JobOpeningSeeder::class);
         $this->call(IndustrySeeder::class);

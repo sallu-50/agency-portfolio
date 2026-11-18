@@ -5,8 +5,8 @@ namespace App\Filament\Resources\Industries\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
 class IndustriesTable
@@ -14,23 +14,26 @@ class IndustriesTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->defaultSort('sort_order', 'asc')
             ->columns([
                 TextColumn::make('name')
+                    ->label('ইন্ডাস্ট্রির নাম (Name)')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->weight('bold'),
                 TextColumn::make('slug')
+                    ->label('স্লাগ (Slug)')
+                    ->badge()
                     ->searchable(),
                 TextColumn::make('icon')
-                    ->searchable(),
+                    ->label('আইকন (Icon)')
+                    ->badge(),
                 TextColumn::make('sort_order')
+                    ->label('ক্রম (Order)')
                     ->numeric()
                     ->sortable(),
-                IconColumn::make('is_active')
-                    ->boolean(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                ToggleColumn::make('is_active')
+                    ->label('লাইভ (Active)'),
             ])
             ->recordActions([
                 EditAction::make(),

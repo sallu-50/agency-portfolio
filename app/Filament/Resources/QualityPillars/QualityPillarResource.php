@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\QualityPillars;
 
-use App\Filament\Resources\QualityPillars\Pages\CreateQualityPillar;
-use App\Filament\Resources\QualityPillars\Pages\EditQualityPillar;
 use App\Filament\Resources\QualityPillars\Pages\ListQualityPillars;
 use App\Filament\Resources\QualityPillars\Schemas\QualityPillarForm;
 use App\Filament\Resources\QualityPillars\Tables\QualityPillarsTable;
@@ -24,6 +22,12 @@ class QualityPillarResource extends Resource
     protected static string|UnitEnum|null $navigationGroup = 'Site Content';
 
     protected static ?int $navigationSort = 8;
+
+    protected static ?string $navigationLabel = 'Quality Pillars (কোয়ালিটি পিলার)';
+
+    protected static ?string $modelLabel = 'Quality Pillar';
+
+    protected static ?string $pluralModelLabel = 'Quality Pillars';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +50,6 @@ class QualityPillarResource extends Resource
     {
         return [
             'index' => ListQualityPillars::route('/'),
-            'create' => CreateQualityPillar::route('/create'),
-            'edit' => EditQualityPillar::route('/{record}/edit'),
         ];
     }
 }

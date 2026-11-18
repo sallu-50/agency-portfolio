@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\HeroVideos;
 
-use App\Filament\Resources\HeroVideos\Pages\CreateHeroVideo;
-use App\Filament\Resources\HeroVideos\Pages\EditHeroVideo;
 use App\Filament\Resources\HeroVideos\Pages\ListHeroVideos;
 use App\Filament\Resources\HeroVideos\Schemas\HeroVideoForm;
 use App\Filament\Resources\HeroVideos\Tables\HeroVideosTable;
@@ -25,11 +23,16 @@ class HeroVideoResource extends Resource
 
     protected static ?int $navigationSort = 3;
 
-    protected static ?string $navigationLabel = 'Home Hero Video';
+    protected static ?string $navigationLabel = 'Home Hero Video (হিরো ভিডিও)';
 
     protected static ?string $modelLabel = 'Hero Video';
 
     protected static ?string $pluralModelLabel = 'Hero Videos';
+
+    public static function canCreate(): bool
+    {
+        return HeroVideo::count() === 0;
+    }
 
     public static function form(Schema $schema): Schema
     {
@@ -52,8 +55,6 @@ class HeroVideoResource extends Resource
     {
         return [
             'index' => ListHeroVideos::route('/'),
-            'create' => CreateHeroVideo::route('/create'),
-            'edit' => EditHeroVideo::route('/{record}/edit'),
         ];
     }
 }

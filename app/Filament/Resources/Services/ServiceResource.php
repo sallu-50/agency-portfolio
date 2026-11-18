@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\Services;
 
-use App\Filament\Resources\Services\Pages\CreateService;
-use App\Filament\Resources\Services\Pages\EditService;
 use App\Filament\Resources\Services\Pages\ListServices;
 use App\Filament\Resources\Services\Schemas\ServiceForm;
 use App\Filament\Resources\Services\Tables\ServicesTable;
@@ -24,6 +22,12 @@ class ServiceResource extends Resource
     protected static string|UnitEnum|null $navigationGroup = 'Site Content';
 
     protected static ?int $navigationSort = 2;
+
+    protected static ?string $navigationLabel = 'Services (সার্ভিস সমূহ)';
+
+    protected static ?string $modelLabel = 'Service';
+
+    protected static ?string $pluralModelLabel = 'Services';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +50,6 @@ class ServiceResource extends Resource
     {
         return [
             'index' => ListServices::route('/'),
-            'create' => CreateService::route('/create'),
-            'edit' => EditService::route('/{record}/edit'),
         ];
     }
 }

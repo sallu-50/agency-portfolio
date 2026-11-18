@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\JobOpenings;
 
-use App\Filament\Resources\JobOpenings\Pages\CreateJobOpening;
-use App\Filament\Resources\JobOpenings\Pages\EditJobOpening;
 use App\Filament\Resources\JobOpenings\Pages\ListJobOpenings;
 use App\Filament\Resources\JobOpenings\Schemas\JobOpeningForm;
 use App\Filament\Resources\JobOpenings\Tables\JobOpeningsTable;
@@ -23,7 +21,13 @@ class JobOpeningResource extends Resource
 
     protected static string|UnitEnum|null $navigationGroup = 'Site Content';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 6;
+
+    protected static ?string $navigationLabel = 'Job Openings (চাকরির সার্কুলার)';
+
+    protected static ?string $modelLabel = 'Job Opening';
+
+    protected static ?string $pluralModelLabel = 'Job Openings';
 
     public static function form(Schema $schema): Schema
     {
@@ -46,8 +50,6 @@ class JobOpeningResource extends Resource
     {
         return [
             'index' => ListJobOpenings::route('/'),
-            'create' => CreateJobOpening::route('/create'),
-            'edit' => EditJobOpening::route('/{record}/edit'),
         ];
     }
 }

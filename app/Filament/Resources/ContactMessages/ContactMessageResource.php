@@ -25,6 +25,8 @@ class ContactMessageResource extends Resource
 
     protected static ?int $navigationSort = 4;
 
+    protected static ?string $navigationLabel = 'Contact Messages (ইনবক্স / বার্তা)';
+
     public static function form(Schema $schema): Schema
     {
         return ContactMessageForm::configure($schema);

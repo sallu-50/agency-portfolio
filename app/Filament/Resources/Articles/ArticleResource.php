@@ -25,7 +25,7 @@ class ArticleResource extends Resource
 
     protected static ?int $navigationSort = 3;
 
-    protected static ?string $navigationLabel = 'Articles & Resources';
+    protected static ?string $navigationLabel = 'Articles & Resources (ব্লগ ও আর্টিকেল)';
 
     public static function form(Schema $schema): Schema
     {

@@ -25,6 +25,12 @@ class PortfolioItemResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
+    protected static ?string $navigationLabel = 'Portfolio Items (পোর্টফোলিও প্রকল্প)';
+
+    protected static ?string $modelLabel = 'Portfolio Project';
+
+    protected static ?string $pluralModelLabel = 'Portfolio Projects';
+
     public static function form(Schema $schema): Schema
     {
         return PortfolioItemForm::configure($schema);
