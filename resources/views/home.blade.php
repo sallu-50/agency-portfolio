@@ -187,7 +187,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @forelse ($services as $service)
                 <div
-                    class="p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between bg-white group text-left h-full">
+                    class="p-8 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/80 transition-all duration-300 flex flex-col justify-between bg-white group text-left h-full">
                         <div class="flex-grow flex flex-col">
                             <div class="flex items-center justify-between mb-6">
                                 <div
@@ -236,7 +236,6 @@
                     <i data-feather="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
-        </div>
     </section>
 
     <!-- Why Choose Us / Quality Pillars -->
@@ -253,7 +252,7 @@
                     $pillars = $qualityPillars ?? \App\Models\QualityPillar::where('is_active', true)->whereIn('target_page', ['home', 'both'])->orderBy('sort_order')->get();
                 @endphp
                 @foreach ($pillars as $pillar)
-                    <div class="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                    <div class="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md border border-gray-100/80 transition-all duration-300 flex flex-col text-left h-full">
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                             <i data-feather="{{ $pillar->icon ?? 'check-circle' }}" class="w-6 h-6"></i>
                         </div>
@@ -285,7 +284,6 @@
                     </a>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Industries Section -->
@@ -302,7 +300,7 @@
                 @endphp
                 @foreach ($industriesList as $industry)
                     <div id="{{ $industry->slug }}"
-                        class="scroll-mt-28 bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                        class="scroll-mt-28 bg-white p-8 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/80 transition-all duration-300 flex flex-col justify-between text-left group h-full">
                         <div class="flex-grow flex flex-col">
                             <div
                                 class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -354,7 +352,6 @@
                     </a>
                 </div>
             </div>
-        </div>
     </section>
 
 
