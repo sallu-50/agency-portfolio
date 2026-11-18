@@ -264,8 +264,16 @@ class DatabaseSeeder extends Seeder
             ],
         ];
 
+        // 2a. Seed Designations first so Team Members have foreign keys
+        $this->call(DesignationSeeder::class);
+        $designationMap = \App\Models\Designation::pluck('id', 'name')->toArray();
+
         foreach ($team as $member) {
-            TeamMember::updateOrCreate(['name' => $member['name']], $member);
+            $memberData = $member;
+            if (isset($designationMap[$member['role']])) {
+                $memberData['designation_id'] = $designationMap[$member['role']];
+            }
+            TeamMember::updateOrCreate(['name' => $member['name']], $memberData);
         }
 
         // 3. Seed Default Admin User

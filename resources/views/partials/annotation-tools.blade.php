@@ -76,7 +76,16 @@
                 <div class="overflow-hidden w-full relative">
                     <div class="tools-marquee-track flex items-center">
                         @php
-                            $toolsList = $annotationTools ?? \App\Models\AnnotationTool::where('is_active', true)->orderBy('sort_order')->get();
+                            $toolsList = $annotationTools ?? null;
+                            if (empty($toolsList) || (is_countable($toolsList) && count($toolsList) === 0)) {
+                                if (\App\Models\AnnotationTool::count() === 0) {
+                                    (new \Database\Seeders\AnnotationToolSeeder())->run();
+                                }
+                                $toolsList = \App\Models\AnnotationTool::where('is_active', true)->orderBy('sort_order')->get();
+                                if ($toolsList->isEmpty()) {
+                                    $toolsList = \App\Models\AnnotationTool::orderBy('sort_order')->get();
+                                }
+                            }
                         @endphp
                         @for ($set = 0; $set < 2; $set++)
                             <div class="tools-marquee-set" {!! $set > 0 ? 'aria-hidden="true"' : '' !!}>

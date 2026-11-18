@@ -187,7 +187,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @forelse ($services as $service)
                 <div
-                    class="p-8 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/80 transition-all duration-300 flex flex-col justify-between bg-white group text-left h-full">
+                    class="p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between bg-white group text-left h-full">
                         <div class="flex-grow flex flex-col">
                             <div class="flex items-center justify-between mb-6">
                                 <div
@@ -249,10 +249,16 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @php
-                    $pillars = $qualityPillars ?? \App\Models\QualityPillar::where('is_active', true)->whereIn('target_page', ['home', 'both'])->orderBy('sort_order')->get();
+                    $pillars = $qualityPillars ?? null;
+                    if (empty($pillars) || (is_countable($pillars) && count($pillars) === 0)) {
+                        $pillars = \App\Models\QualityPillar::where('is_active', true)->whereIn('target_page', ['home', 'both'])->orderBy('sort_order')->get();
+                        if ($pillars->isEmpty()) {
+                            $pillars = \App\Models\QualityPillar::orderBy('sort_order')->get();
+                        }
+                    }
                 @endphp
-                @foreach ($pillars as $pillar)
-                    <div class="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md border border-gray-100/80 transition-all duration-300 flex flex-col text-left h-full">
+                @forelse ($pillars as $pillar)
+                    <div class="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
                         <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                             <i data-feather="{{ $pillar->icon ?? 'check-circle' }}" class="w-6 h-6"></i>
                         </div>
@@ -264,7 +270,29 @@
                             {{ $pillar->description }}
                         </p>
                     </div>
-                @endforeach
+                @empty
+                    @foreach ([
+                        ['icon' => 'check-circle', 'title' => 'Multi-Stage Quality Control', 'desc' => 'Every batch goes through annotator work, peer review and senior QA sign-off. We audit random samples against your guidelines and send an accuracy report with each delivery.'],
+                        ['icon' => 'trending-up', 'title' => 'Pilot First, Then Scale', 'desc' => 'We start with a small pilot on your own data. We refine the guidelines with you and calibrate annotators on gold-standard samples before scaling to full production.'],
+                        ['icon' => 'users', 'title' => 'Teams That Scale With Your Roadmap', 'desc' => 'Go from a few hundred files to millions without losing consistency. Trained annotator teams ramp up in 3 days, with the same QA process at every volume.'],
+                        ['icon' => 'shield', 'title' => 'Secure Data Handling', 'desc' => 'NDA signed before any data is shared. Encrypted transfers, role-based access and PII anonymization where required. We can also work inside your VPN or environment.'],
+                        ['icon' => 'sliders', 'title' => 'Works in Your Tools', 'desc' => 'We label in CVAT, Label Studio, Labelbox, V7, SuperAnnotate, Supervisely, Audacity, Praat, Prodigy, Doccano or in your own platform, so your pipeline and formats stay unchanged.'],
+                        ['icon' => 'message-square', 'title' => 'Clear Communication', 'desc' => 'A dedicated project manager, regular progress reports and a fast feedback loop. If a batch misses your accuracy target, we correct it at no extra cost.'],
+                    ] as $defaultPillar)
+                        <div class="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col text-left h-full">
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                                <i data-feather="{{ $defaultPillar['icon'] }}" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 transition-colors leading-snug"
+                                style="min-height: 56px;">
+                                {{ $defaultPillar['title'] }}
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed" style="min-height: 72px;">
+                                {{ $defaultPillar['desc'] }}
+                            </p>
+                        </div>
+                    @endforeach
+                @endforelse
             </div>
 
             <!-- Bottom CTA Sub-block -->
@@ -296,11 +324,17 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @php
-                    $industriesList = $industries ?? \App\Models\Industry::where('is_active', true)->orderBy('sort_order')->get();
+                    $industriesList = $industries ?? null;
+                    if (empty($industriesList) || (is_countable($industriesList) && count($industriesList) === 0)) {
+                        $industriesList = \App\Models\Industry::where('is_active', true)->orderBy('sort_order')->get();
+                        if ($industriesList->isEmpty()) {
+                            $industriesList = \App\Models\Industry::orderBy('sort_order')->get();
+                        }
+                    }
                 @endphp
-                @foreach ($industriesList as $industry)
+                @forelse ($industriesList as $industry)
                     <div id="{{ $industry->slug }}"
-                        class="scroll-mt-28 bg-white p-8 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/80 transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                        class="scroll-mt-28 bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
                         <div class="flex-grow flex flex-col">
                             <div
                                 class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
@@ -332,7 +366,48 @@
                             </div>
                         @endif
                     </div>
-                @endforeach
+                @empty
+                    @foreach ([
+                        ['slug' => 'automotive', 'name' => 'Automotive & Autonomous Driving', 'icon' => 'truck', 'desc' => 'Point cloud, camera and radar annotation for perception models.', 'what' => '3D cuboids on LiDAR point clouds, 2D/3D lane lines, free space segmentation, drivable area polygons, cross-camera vehicle tracking.', 'tags' => ['LiDAR 3D', 'Camera', 'Radar']],
+                        ['slug' => 'healthcare', 'name' => 'Healthcare & Medical AI', 'icon' => 'activity', 'desc' => 'Medical imaging and clinical text annotated under strict quality processes.', 'what' => 'DICOM and NIfTI segmentation, tumor and lesion contouring, cell counting, clinical report NER, medical transcription.', 'tags' => ['DICOM', 'HIPAA Ready', 'Multi-Reader']],
+                        ['slug' => 'retail', 'name' => 'Retail & E-Commerce', 'icon' => 'shopping-bag', 'desc' => 'Catalog enrichment, shelf recognition and visual search training data.', 'what' => 'SKU identification, shelf-level object detection, out-of-stock tagging, product attribute labeling, receipt and invoice OCR parsing.', 'tags' => ['Product Tagging', 'Shelf Analytics', 'OCR']],
+                        ['slug' => 'robotics', 'name' => 'Robotics & Manufacturing', 'icon' => 'cpu', 'desc' => 'Spatial understanding and defect detection for industrial automation.', 'what' => '6-DoF pose estimation, defect segmentation, surface crack detection, robotic arm grasp point annotation, assembly step verification.', 'tags' => ['6-DoF Pose', 'Defect Inspection', 'RGB-D']],
+                        ['slug' => 'security', 'name' => 'Smart Cities & Security', 'icon' => 'shield', 'desc' => 'Perimeter monitoring, traffic flow and anomaly detection labeling.', 'what' => 'Pedestrian detection, crowd flow analysis, vehicle classification, incident tagging, license plate anonymization.', 'tags' => ['Surveillance', 'Traffic AI', 'Privacy Blur']],
+                        ['slug' => 'agriculture', 'name' => 'Agriculture & Drone Imagery', 'icon' => 'sun', 'desc' => 'Aerial and multispectral labeling for crop and land management.', 'what' => 'Field boundary segmentation, crop health index labeling, weed identification, fruit counting, drone orthomosaic tiling.', 'tags' => ['Aerial', 'Multispectral', 'GeoTIFF']],
+                        ['slug' => 'voice-ai', 'name' => 'Voice AI & Conversational Systems', 'icon' => 'mic', 'desc' => 'Speech-to-text, speaker diarization and audio classification.', 'what' => 'Multi-speaker diarization, phonetic transcription, intent and entity tagging, audio event classification, emotion labeling.', 'tags' => ['ASR', 'Diarization', 'Multi-Language']],
+                        ['slug' => 'llm', 'name' => 'LLM & Generative AI', 'icon' => 'cpu', 'desc' => 'Human feedback data for model training and evaluation.', 'what' => 'RLHF preference ranking, prompt and response evaluation, instruction data creation, safety and quality review.', 'tags' => ['RLHF', 'Text Annotation', 'Data Collection']],
+                    ] as $defaultInd)
+                        <div id="{{ $defaultInd['slug'] }}"
+                            class="scroll-mt-28 bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left group h-full">
+                            <div class="flex-grow flex flex-col">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                                    <i data-feather="{{ $defaultInd['icon'] }}" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3 leading-snug"
+                                    style="min-height: 56px;">
+                                    {{ $defaultInd['name'] }}
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6" style="min-height: 48px;">
+                                    {{ $defaultInd['desc'] }}
+                                </p>
+                                <div class="pt-4 border-t border-gray-100 mb-6 flex-grow flex flex-col">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">What we label:</span>
+                                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed" style="min-height: 72px;">
+                                        {{ $defaultInd['what'] }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 mt-auto" style="min-height: 70px; align-content: flex-start;">
+                                @foreach ($defaultInd['tags'] as $tag)
+                                    <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">
+                                        {{ $tag }}
+                                    </span>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endforeach
+                @endforelse
             </div>
 
             <!-- Bottom CTA Sub-block -->
